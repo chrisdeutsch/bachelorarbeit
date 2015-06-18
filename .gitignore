@@ -1,1 +1,10 @@
 *~
+*.pdf
+*.aux
+*.log
+*.synctex.gz
+*.toc
+*.out
+.DS_store
+*.lof
+*.lot

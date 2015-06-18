@@ -1,0 +1,79 @@
+% PAKETE UND DOKUMENTKONFIGURATION
+\documentclass[11pt, a4paper]{scrbook}
+
+% Encoding für Umlaute
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Silbentrennung
+\usepackage[ngerman]{babel}
+
+% erweiterte Matheumgebungen und Formelnummer mit Sectionnummer
+\usepackage{amsmath}
+
+% zusätzliche mathematische Schriftarten
+\usepackage{amsfonts}
+
+% verschiedene mathematische Symbole
+\usepackage{amssymb}
+
+% Einheiten setzen z.B. \SI{10}{\kilo\gram\meter\per\second\squared}
+% Fehler: \SI{10 +- 0,2e-4}{\metre}
+\usepackage{siunitx}
+\sisetup{
+  output-decimal-marker={,},
+  separate-uncertainty
+}
+
+% Bilder einfügen
+\usepackage{graphicx}
+
+% Textfarbe
+\usepackage{color}
+
+% Verweise innerhalb des Dokuments
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	allcolors = {black}
+}
+
+\title{Störkörpermessung an Beschleunigungsresonatoren}
+\author{Christopher Deutsch}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	\tableofcontents
+	
+	\mainmatter
+	
+	\chapter{Einleitung}
+	
+	\chapter{Theorie}
+	
+	\chapter{Störkörpermessung}
+	
+	\chapter{Fazit}
+	
+	\backmatter
+	
+	\chapter{Literatur}
+	
+	\begin{thebibliography}{19}
+	\bibitem{javan}
+		A. Javan, W. R. Bennett, Jr., and D. R. Herriott,
+		\emph{Population Inversion and Continuous Optical Maser Oscillation in a Gas Discharge Containing a He-Ne Mixture},
+		Phys. Rev. Lett. 6, 106 – Published 1 February 1961
+	
+	\end{thebibliography}
+	
+	\chapter{Danksagung}
+	
+	\chapter{Abbildungsverzeichnis}
+	\listoffigures
+	
+	\chapter{Tabellenverzeichnis}
+	\listoftables
+	
+\end{document}
