@@ -38,6 +38,10 @@ pos = np.array([ufloat(x, pos_err) for x in data[:, 0]])
 dv_err = 100
 dv = -np.array([ufloat(x, dv_err) for x in data[:, 3]])
 
+# setze negative Frequenzverschiebungen auf 0
+for i in range(len(dv)):
+    if dv[i] < 0: dv[i] = 0
+
 # Feldberechnung
 field = unumpy.sqrt(2 * E / alpha_s * dv / v0)
 
