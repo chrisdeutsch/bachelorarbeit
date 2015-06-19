@@ -1,6 +1,7 @@
 import numpy as np
 from uncertainties import ufloat
 import uncertainties.unumpy as unumpy
+import uncertainties.umath as umath
 
 
 # Berechnung der Störkörperkonstante
@@ -38,14 +39,20 @@ pos = np.array([ufloat(x, pos_err) for x in data[:, 0]])
 dv_err = 100
 dv = -np.array([ufloat(x, dv_err) for x in data[:, 3]])
 
-# setze negative Frequenzverschiebungen auf 0
-for i in range(len(dv)):
-    if dv[i] < 0: dv[i] = 0
+# Feldberechnung (Dirty Hack?)
+field_square = 2 * E / alpha_s * dv / v0
 
-# Feldberechnung
-field = unumpy.sqrt(2 * E / alpha_s * dv / v0)
+for i in range(len(field_square)):
+    if field_square[i].n < 0:
+        field_square[i] = ufloat(0.0, field_square[i].s)
 
-# Ergebnisse speichern
+field = unumpy.sqrt(field_square)
+
+for i in range(len(field)):
+    if umath.isnan(field[i].s):
+        field[i] = ufloat(field[i].n, np.sqrt(field_square[i].s))       
+
+# Ergebnisse speichern (Alternative: unumpy.nominal_values(arr) / unumpy.std_devs(arr))
 pos_out = np.array([[x.nominal_value, x.std_dev] for x in pos])
 field_out = np.array([[x.nominal_value, x.std_dev] for x in field])
 
