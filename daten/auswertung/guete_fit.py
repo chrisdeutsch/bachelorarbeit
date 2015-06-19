@@ -1,24 +1,32 @@
+import sys
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit, minimize_scalar, bisect
 from scipy.interpolate import interp1d
 
-infile = "guete_031.tsv"
 
+infile = sys.argv[1]
+
+# Kopfzeile auslesen
+with open(infile, "r") as f:
+    for line in f:
+        el = line.split()
+        if el[0] != "#": break
+        
+        if el[1] == "Center:": center = float(el[-1])
+        if el[1] == "Span:": span = float(el[-1])
+        if el[1] == "Points:": points = int(el[-1])
+
+start = center - 0.5 * span
+stop = center + 0.5 * span
+
+# Datenpunkte einlesen
 data = np.loadtxt(infile)
 
 re = np.array(data[:,0])
 im = np.array(data[:,1])
 mag = np.sqrt(re**2 + im**2)
-
-# TODO: Auslesen aus Datei
-center = 499500000.0
-span = 100000.0
-points = 2001
-
-start = center - 0.5 * span
-stop = center + 0.5 * span
 
 v = np.linspace(start, stop, points)
 
@@ -55,9 +63,14 @@ fitrange = (v_lo < v) & (v < v_hi)
 
 popt, pcov = curve_fit(rho, v[fitrange], mag[fitrange], p0 = [Q0, kappa, v0])
 
-mag_fit = rho(v, *popt)
+print("infile: {}".format(sys.argv[1]))
+print("Q0 = {}".format(popt[0]))
+print("k = {}".format(popt[1]))
+print("v0 = {}".format(popt[2]))
 
-plt.plot(v, mag, 'r-', linewidth=1.0)
-plt.plot(v[fitrange], mag_fit[fitrange], 'b-', linewidth=1.0)
+#mag_fit = rho(v, *popt)
 
-plt.show()
+#plt.plot(v, mag, 'r-', linewidth=1.0)
+#plt.plot(v[fitrange], mag_fit[fitrange], 'b-', linewidth=1.0)
+
+#plt.show()
