@@ -45,57 +45,61 @@ def fit(file):
     
     f = lambda v: float(interpolation(v)) - fwhm_thr
     
-    v_lo = bisect(f, v[0], v0)
-    v_hi = bisect(f, v0, v[points-1])
+    try:
+        v_lo = bisect(f, v[0], v0)
+        v_hi = bisect(f, v0, v[points-1])
+    except ValueError:
+        v_lo = v[0]
+        v_hi = v[points-1]
+            
     dv = v_hi - v_lo
-    
     Q0 = (1 + kappa) * v0 / dv
-    
-    # Fit der Resonanzkurve
-    def rho(v, v0, Q0, kappa):
-        return np.sqrt( ((kappa - 1)**2 + Q0**2 * (v/v0 - v0/v)**2) / ((kappa + 1)**2 + Q0**2 * (v/v0 - v0/v)**2))
     
     # Fitrange
     fitrange = (v_lo < v) & (v < v_hi)
     
+    # Fit der Resonanzkurve
+    def rho(v, v0, Q0, kappa):
+        return np.sqrt( ((kappa - 1)**2 + Q0**2 * (v/v0 - v0/v)**2) / ((kappa + 1)**2 + Q0**2 * (v/v0 - v0/v)**2))
+        
     popt, pcov = curve_fit(rho, v[fitrange], mag[fitrange], p0 = [v0, Q0, kappa])
     perr = np.sqrt(np.diag(pcov))
     
-    #mag_fit = rho(v, *popt)
-    #plt.plot(v, mag, 'r-', linewidth=1.0, label="data")
-    #plt.plot(v[fitrange], mag_fit[fitrange], 'b-', linewidth=1.0, label="fit")
-    #plt.legend()
-    #plt.show()
+    mag_fit = rho(v, *popt)
+    plt.plot(v, mag, 'r-', linewidth=1.0, label="data")
+    plt.plot(v[fitrange], mag_fit[fitrange], 'b-', linewidth=1.0, label="fit")
+    plt.legend()
+    plt.show()
     
     return (popt, perr)
 
-#if __name__ == '__main__':
-#    infile = sys.argv[1]
-#    
-#    popt, perr = fit(infile)
-#    
-#    print("v0 = {} +- {}".format(popt[0], np.sqrt(perr[0])))
-#    print("Q0 = {} +- {}".format(popt[1], np.sqrt(perr[1])))
-#    print("k = {} +- {}".format(popt[2], np.sqrt(perr[2])))
-
-import glob
 if __name__ == '__main__':
-    refs = list(glob.iglob('*_ref.tsv'))
-    refs.sort()
+    infile = sys.argv[1]
     
-    pts = list(glob.iglob('*mm.tsv'))
-    pts.sort()
+    popt, perr = fit(infile)
     
-    with open('evaluated.tsv', 'w') as f:
-        f.write("# Pos v0 d Q0 d k d v0r d Q0r d kr d\n")
-        for ref, pt in zip(refs, pts):
-            print(pt)
-            pos = int(ref[0:4])
-            assert(pos == int(pt[0:4]))
-            
-            ref_opt, ref_err = fit(ref)
-            opt, err = fit(pt)
-            
-            outlist = [pos, opt[0], err[0], opt[1], err[1], opt[2], err[2], ref_opt[0], ref_err[0], ref_opt[1], ref_err[1], ref_opt[2], ref_err[2]]
-            
-            f.write('\t'.join(map(str,outlist)) + '\n')
+    print("v0 = {} +- {}".format(popt[0], np.sqrt(perr[0])))
+    print("Q0 = {} +- {}".format(popt[1], np.sqrt(perr[1])))
+    print("k = {} +- {}".format(popt[2], np.sqrt(perr[2])))
+
+#import glob
+#if __name__ == '__main__':
+#    refs = list(glob.iglob('*_ref.tsv'))
+#    refs.sort()
+#    
+#    pts = list(glob.iglob('*mm.tsv'))
+#    pts.sort()
+#    
+#    with open('evaluated.tsv', 'w') as f:
+#        f.write("# Pos v0 d Q0 d k d v0r d Q0r d kr d\n")
+#        for ref, pt in zip(refs, pts):
+#            print(pt)
+#            pos = int(ref[0:4])
+#            assert(pos == int(pt[0:4]))
+#            
+#            ref_opt, ref_err = fit(ref)
+#            opt, err = fit(pt)
+#            
+#            outlist = [pos, opt[0], err[0], opt[1], err[1], opt[2], err[2], ref_opt[0], ref_err[0], ref_opt[1], ref_err[1], ref_opt[2], ref_err[2]]
+#            
+#            f.write('\t'.join(map(str,outlist)) + '\n')
