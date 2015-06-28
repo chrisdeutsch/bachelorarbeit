@@ -59,7 +59,55 @@
 	\chapter{Theorie}
 	
 	\section{Hohlraumresonatoren}
-	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.35\textwidth]{./figures/RLC_circuit.pdf}
+		\caption{RLC Parallelschwingkreis}
+		\label{fig:rlc_circuit}
+	\end{figure}
+	Die elektrischen Eigenschaften von Hohlraumresonatoren in der Nähe einer Resonanz können durch das Modell eines Parallelschwingkreises erklärt werden.
+	Die Resonanzfrequenz ist gegeben durch die Thomson'sche Schwingungsgleichung:
+	\begin{align}
+		\omega_0 = \frac{1}{\sqrt{L C}}
+	\end{align}
+	(Güte)
+	Die Impedanz des Schwingkreises ist gegeben durch:
+	\begin{align}
+		Z_\mathrm{LCR} = \left( \frac{1}{R} + \frac{1}{i \omega L} + i \omega C \right)
+	\end{align}
+	Unter der Verwendung der Ausdrücke von Resonanzfrequenz und Güte kann dies geschrieben werden als:
+	\begin{align}
+		Z_\mathrm{LCR} = \frac{R}{1 + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
+	\end{align}
+	(Maybe Phasensprung, im fall von resonanz reell)
+	Durch die magnetische Kopplung wird die Impedanz des Resonators transformiert und wird beschrieben durch:
+	\begin{align}
+		\kappa = \frac{Z^\prime(\omega_0)}{Z_0}
+	\end{align}
+	($\kappa < 1$ unterkritisch, $\kappa = 0$ kritisch, $\kappa > 1$ überkritisch)
+	wobei $Z^\prime$ die transformierte Impedanz ist und $Z_0$ der Wellenwiderstand des Wellenleiters.
+	Ebenfalls wird die zusätzliche Impedanz des Leiters in den Resonator transformiert, was die Güte des Gesamtsystems verändert:
+	\begin{align}
+		\frac{1}{Q} = \frac{1}{Q_0} + \frac{1}{Q_\mathrm{ext}} \\
+		Q_0 = (1 + \kappa) \cdot Q
+	\end{align}
+	Im folgenden ist der komplexe Reflexionsfaktor $\rho$ von besonderem Interesse:
+	\begin{align}
+		\rho = \frac{U_{-}}{U_{+}} = \frac{Z^\prime - Z_0}{Z^\prime + Z_0}
+	\end{align}
+%	($Z^\prime$ transformierte Impedanz, $Z_0$ Wellenwiderstand)
+	Es folgt für den Reflexionsfaktor
+	\begin{align}
+		\rho(\omega) = \frac{(\kappa - 1) + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
+	\end{align}
+	Mit dem Betrag:
+	\begin{align}
+		| \rho(\omega) | = \sqrt{\frac{(\kappa - 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}{(\kappa + 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}}
+	\end{align}
+	Damit ist die vom Resonator aufgenommene Leistung:
+	\begin{align}
+		P_\mathrm{a} = P_0 (1- |\rho|^2)
+	\end{align}
 	\section{Resonante Störkörpermessung}
 	Feld der ungestörten Cavity $\ve_0$ und der gestörten $\ve_1$:
 	\begin{subequations}
@@ -144,10 +192,13 @@
 	\chapter{Fazit}
 	
 	\backmatter
-	
-	\chapter{Literatur}
-	
+		
 	\begin{thebibliography}{19}
+	\bibitem{jackson}
+		J.\ D.\ Jackson,
+		\emph{Classical Electrodynamics},
+		Wiley, New York, 1962.
+		
 	\bibitem{javan}
 		A. Javan, W. R. Bennett, Jr., and D. R. Herriott,
 		\emph{Population Inversion and Continuous Optical Maser Oscillation in a Gas Discharge Containing a He-Ne Mixture},
@@ -157,10 +208,7 @@
 	
 	\chapter{Danksagung}
 	
-	\chapter{Abbildungsverzeichnis}
 	\listoffigures
-	
-	\chapter{Tabellenverzeichnis}
 	\listoftables
 	
 \end{document}
