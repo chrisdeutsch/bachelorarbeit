@@ -166,29 +166,29 @@
 	\end{align}
 	Da der Störkörper die Energie des Resonators kaum beeinflusst, kann im Nenner das gestörte Feld durch das ungestörte genähert werden und man erhält:
 	\begin{align}
-		\frac{\omega_1 - \omega_0}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \vb_0^* \cdot \vec{M} + \ve_0^* \cdot \vec{P} \right]}{2 W_0}
+		\frac{\omega_1 - \omega_0}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \vb_0^* \cdot \vec{M} + \ve_0^* \cdot \vec{P} \right]}{4 W_0}
 	\end{align}
-	wobei $W_0 = \int_V w_\mathrm{em} \, \mathrm{d}V = \int_V \frac{1}{2} (\ve \cdot \vd + \vb \cdot \vh) \, \mathrm{d}V$ die Energie des elektromagnetischen Feldes im Resonator ist.
+	wobei $W_0 = \int_V w_\mathrm{em} \, \mathrm{d}V = \int_V \frac{1}{2} (\ve \cdot \vd + \vb \cdot \vh) \, \mathrm{d}V$ die Energie des elektromagnetischen Feldes im Resonator ist. NEIN VIERFACHE ENERGIE.
 	Im Rahmen dieser Bachelorarbeit wird eine dielektrische Kugel verwendet $\vec{M} = 0$, welche klein gegen die Dimensionen des Resonators ist. Für die Polarisation folgt (Jackson S.\ 115) unter der Annahme eines homogenen Feldes:
 	\begin{align}
 		\vec{P} = 3 \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \epsilon_0 \ve_0
 	\end{align}
 	und damit:
 	\begin{align}
-		\frac{\omega_1 - \omega_0}{\omega_0} = - 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s} \frac{|\ve_0|^2}{2 W_0}
+		\frac{\omega_1 - \omega_0}{\omega_0} = - 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s} \frac{|\ve_0|^2}{4 W_0}
 	\end{align}
 	\begin{align}
 		\alpha_\mathrm{s} = 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s}
 	\end{align}
 	\begin{align}
-		\frac{\Delta \omega}{\omega_0} = \frac{\omega_0 - \omega_1}{\omega_0} = \alpha_\mathrm{s} \cdot \frac{|\ve|^2}{2 W_0}
+		\frac{\Delta \omega}{\omega_0} = \frac{\omega_0 - \omega_1}{\omega_0} = \alpha_\mathrm{s} \cdot \frac{|\ve|^2}{4 W_0}
 	\end{align}
 	\begin{align}
-		|\ve| = \sqrt{2 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}}
+		|\ve| = \sqrt{4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}}
 	\end{align}
 	Ist die unbelastete Güte des Resonators bekannt, so kann das elektrische Feld in Abhängigkeit der Verlustleistung des Resonators geschrieben werden als:
 	\begin{align}
-		\frac{|E_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{2 \frac{Q_0}{\alpha_s} \frac{\Delta \omega}{\omega_0^2}}
+		\frac{|E_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{4 \frac{Q_0}{\alpha_s} \frac{\Delta \omega}{\omega_0^2}}
 	\end{align}
 	
 	
