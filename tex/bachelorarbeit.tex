@@ -73,7 +73,7 @@
 	(Güte)
 	Die Impedanz des Schwingkreises ist gegeben durch:
 	\begin{align}
-		Z_\mathrm{LCR} = \left( \frac{1}{R} + \frac{1}{i \omega L} + i \omega C \right)
+		Z_\mathrm{LCR} = \left( \frac{1}{R} + \frac{1}{i \omega L} + i \omega C \right)^{-1}
 	\end{align}
 	Unter der Verwendung der Ausdrücke von Resonanzfrequenz und Güte kann dies geschrieben werden als:
 	\begin{align}
@@ -98,7 +98,7 @@
 %	($Z^\prime$ transformierte Impedanz, $Z_0$ Wellenwiderstand)
 	Es folgt für den Reflexionsfaktor
 	\begin{align}
-		\rho(\omega) = \frac{(\kappa - 1) + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
+		\rho(\omega) = \frac{(\kappa - 1) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
 	\end{align}
 	Mit dem Betrag:
 	\begin{align}
@@ -186,6 +186,11 @@
 	\begin{align}
 		|\ve| = \sqrt{2 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}}
 	\end{align}
+	Ist die unbelastete Güte des Resonators bekannt, so kann das elektrische Feld in Abhängigkeit der Verlustleistung des Resonators geschrieben werden als:
+	\begin{align}
+		\frac{|E_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{2 \frac{Q_0}{\alpha_s} \frac{\Delta \omega}{\omega_0^2}}
+	\end{align}
+	
 	
 	\chapter{Störkörpermessung}
 	
