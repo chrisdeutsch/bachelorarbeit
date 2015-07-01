@@ -29,7 +29,7 @@
 \usepackage{graphicx}
 
 % Textfarbe
-\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
 
 % Verweise innerhalb des Dokuments
 \usepackage{hyperref}
@@ -43,6 +43,8 @@
 \newcommand{\vb}{\vec{B}}
 \newcommand{\vh}{\vec{H}}
 \newcommand{\vd}{\vec{D}}
+
+\newcommand{\todo}[1]{{\textcolor{Green}{(#1)}}}
 
 \title{Störkörpermessung an Beschleunigungsresonatoren}
 \author{Christopher Deutsch}
@@ -58,6 +60,12 @@
 	
 	
 	\chapter{Theorie}
+	Kavitäten -> Beschleunigen Teilchen
+	Beschleunigung benutzt Hochfrequenz -> EM-Wellen -> Hohlleiter / Cavities\\
+	Beschleunigung durch travelling wave nicht möglich -> Randbedingung (Leiter) muss existieren um Feld in Propagationsrichtung der Welle zu bekommen (Hohlleiter).
+	Beschleunigung in Hohlleitern ebenfalls nicht möglich da die Phasengeschwindigkeit der EM-Welle in Hohlleitern größer ist als Lichtgeschwindigkeit.
+	[WIEDEMANN] Reduzierung der Phasengeschwindigkeit (traveling wave linac structures) oder Ausbilden von stehenden Wellen (single accelerating cavities)
+	
 	Resonanzüberhöhung, Hohlraumresonatoren, Schwingung angeregt ausgeprägtes (longitudinales) Feld TM010\\
 	Oftmals Kette mehrerer Zellen (Phase?), Kopplung durch Irisblenden.
 	Modell: Durch Irisblenden belasteter Hohlleiter. (Stehwellenresonator)
@@ -72,6 +80,17 @@
 	$p$ halbe Perioden der Feldkomponenten in longitudinaler Richtung
 	
 	\section{Hohlraumresonatoren}
+	Ein Hohlraumresonator besteht aus einem evakuierten Hohlraum, welcher durch ein leitendes Material begrenzt wird.
+	Die im Hohlraum propagierenden elektromagnetischen Wellen werden an den leitenden Wänden reflektiert und führen zur Ausbildung von stehenden elektromagnetischen Wellen im Resonatorinnenraum, welche unter anderem zur Beschleunigung von elektrisch geladenen Teilchen genutzt werden können.
+	Aufgrund der Randbedingungen an der leitenden Grenzfläche müssen die folgenden Anforderungen an das elektromagnetische Feld gestellt werden:
+	\begin{align}
+		E_\parallel = 0 \qquad \text{und} \qquad B_\perp = 0\text{,}
+	\end{align}
+	wobei $E_\parallel$ die Tangentialkomponente und $B_\perp$ die Normalkomponente des elektrischen bzw.\ magnetischen Feldes auf der Grenzfläche kennzeichnet.
+	Die Lösung der \textsc{Maxwell}-Gleichungen unter Beachtung dieser Grenzbedingungen zeigt, dass abhängig von der Geometrie des Hohlraums, nur gewisse Moden mit bestimmten Frequenzen im Resonator auftreten können.
+	Die Klassifizierung der einzelnen Moden erfolgt dabei anhand ihrer Feldkonfiguration in TE- und TM-Moden \todo{Weitererklären}
+	
+	\section{Hohlraumresonatoren2}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.35\textwidth]{./figures/RLC_circuit.pdf}
