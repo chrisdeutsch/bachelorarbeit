@@ -76,7 +76,7 @@
 	
 	$TM_{mnp}, TE_{mnp}$:\\
 	$m$ volle Perioden der Feldkomponenten in azimutaler Richtung\\
-	$n$ Anzahl der Knoten der longitudinalen Feldkomponente in der radialen Richtung\\
+	$n$ Anzahl der Knoten der longitudinalen Feldkomponente in der radialen Richtung (ohne $r=0$)\\
 	$p$ halbe Perioden der Feldkomponenten in longitudinaler Richtung
 	
 	\section{Hohlraumresonatoren}
@@ -88,7 +88,19 @@
 	\end{align}
 	wobei $E_\parallel$ die Tangentialkomponente und $B_\perp$ die Normalkomponente des elektrischen bzw.\ magnetischen Feldes auf der Grenzfläche kennzeichnet.
 	Die Lösung der \textsc{Maxwell}-Gleichungen unter Beachtung dieser Grenzbedingungen zeigt, dass abhängig von der Geometrie des Hohlraums, nur gewisse Moden mit bestimmten Frequenzen im Resonator auftreten können.
-	Die Klassifizierung der einzelnen Moden erfolgt dabei anhand ihrer Feldkonfiguration in TE- und TM-Moden \todo{Weitererklären}
+	Die Klassifizierung der einzelnen Moden erfolgt dabei anhand ihrer Feldkonfiguration relativ zur Propagationsrichtung der hin- beziehungsweise rücklaufenden Wellen im Resonator.
+	Dabei unterscheidet man zwischen transversal elektrischen (TE)-Moden, welche lediglich transversale elektrische und longitudinal magnetische Felder aufweisen und transversal magnetischen (TM)-Moden, bei denen der umgekehrte Fall eintritt.
+	\cite{wangler}:
+	\begin{align}
+	\text{TM-Moden:} \quad E_z = E_0 J_m(k_{mn} r) \cos(m \theta) \cos\left(\frac{p \pi z}{l}\right) \exp(i \omega t) \qquad B_z = 0\\
+	\text{TE-Moden:} \quad E_z = 0 \qquad B_z = B_0 J_m(k_{mn} r) \cos(m \theta) \sin\left(\frac{p \pi z}{l}\right) \exp(i \omega t)
+	\end{align}
+	\begin{align}
+	k_{mn} = \frac{x_{mn}}{R}
+	\end{align}
+	mit Radius $R$ und Nullstelle $x_{mn}$ die $n$-te Nullstelle ($>0$) der Besselfunktion $J_m$
+	
+	
 	
 	\section{Hohlraumresonatoren2}
 	\begin{figure}[h]
@@ -231,6 +243,11 @@
 	\backmatter
 		
 	\begin{thebibliography}{19}
+	\bibitem{wangler}
+		\textsc{T.\ P.\ Wangler},
+		\emph{Principles of RF Linear Accelerators},
+		Wiley, New York, 1998.
+	
 	\bibitem{jackson}
 		\textsc{J.\ D.\ Jackson},
 		\emph{Classical Electrodynamics}, 1st ed.,
