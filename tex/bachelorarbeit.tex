@@ -17,6 +17,9 @@
 % verschiedene mathematische Symbole
 \usepackage{amssymb}
 
+%
+\usepackage{textcomp}
+
 % Einheiten setzen z.B. \SI{10}{\kilo\gram\meter\per\second\squared}
 % Fehler: \SI{10 +- 0,2e-4}{\metre}
 \usepackage{siunitx}
@@ -59,26 +62,7 @@
 	\chapter{Einleitung}
 	
 	
-	\chapter{Theorie}
-	Kavitäten -> Beschleunigen Teilchen
-	Beschleunigung benutzt Hochfrequenz -> EM-Wellen -> Hohlleiter / Cavities\\
-	Beschleunigung durch travelling wave nicht möglich -> Randbedingung (Leiter) muss existieren um Feld in Propagationsrichtung der Welle zu bekommen (Hohlleiter).
-	Beschleunigung in Hohlleitern ebenfalls nicht möglich da die Phasengeschwindigkeit der EM-Welle in Hohlleitern größer ist als Lichtgeschwindigkeit.
-	[WIEDEMANN] Reduzierung der Phasengeschwindigkeit (traveling wave linac structures) oder Ausbilden von stehenden Wellen (single accelerating cavities)
-	
-	Resonanzüberhöhung, Hohlraumresonatoren, Schwingung angeregt ausgeprägtes (longitudinales) Feld TM010\\
-	Oftmals Kette mehrerer Zellen (Phase?), Kopplung durch Irisblenden.
-	Modell: Durch Irisblenden belasteter Hohlleiter. (Stehwellenresonator)
-	Oft benutzt für Elektronen $\beta = 1$: \url{https://cas.web.cern.ch/cas/Denmark-2010/Lectures/Gerigk.pdf}
-	(konstante Zellenlänge).
-	
-	Randbedingungen: tangential $\ve$ und normal $\vb$ muss verschwinden.
-	
-	$TM_{mnp}, TE_{mnp}$:\\
-	$m$ volle Perioden der Feldkomponenten in azimutaler Richtung\\
-	$n$ Anzahl der Knoten der longitudinalen Feldkomponente in der radialen Richtung (ohne $r=0$)\\
-	$p$ halbe Perioden der Feldkomponenten in longitudinaler Richtung
-	
+	\chapter{Theorie}	
 	\section{Hohlraumresonatoren}
 	Ein Hohlraumresonator besteht aus einem evakuierten Hohlraum, welcher durch ein leitendes Material begrenzt wird.
 	Die im Hohlraum propagierenden elektromagnetischen Wellen werden an den leitenden Wänden reflektiert und führen zur Ausbildung von stehenden elektromagnetischen Wellen im Resonatorinnenraum, welche unter anderem zur Beschleunigung von elektrisch geladenen Teilchen genutzt werden können.
@@ -88,17 +72,18 @@
 		\label{eq:randbedingung_leiter}
 	\end{align}
 	wobei $E_\parallel$ die Tangentialkomponente und $B_\perp$ die Normalkomponente des elektrischen bzw.\ magnetischen Feldes auf der Grenzfläche kennzeichnet.
-	Die Lösung der \textsc{Maxwell}-Gleichungen unter Beachtung dieser Grenzbedingungen zeigt, dass in Abhängigkeit der Geometrie des Hohlraums, nur gewisse Moden mit bestimmten Frequenzen im Resonator auftreten können.
+	Die Lösung der \textsc{Maxwell}-Gleichungen unter Beachtung dieser Grenzbedingungen zeigt, dass in Abhängigkeit der Geometrie des Hohlraums, nur eine unbegrenzte Anzahl von Moden mit bestimmten Frequenzen im Resonator auftreten können.
 	Die Klassifizierung der einzelnen Moden erfolgt dabei anhand ihrer Feldkonfiguration relativ zur Propagationsrichtung der hin- und rücklaufenden Wellen im Resonator.
 	Dabei unterscheidet man zwischen transversal elektrischen (TE)-Moden, welche lediglich transversale elektrische und longitudinal magnetische Felder aufweisen und transversal magnetischen (TM)-Moden, bei denen der umgekehrte Fall eintritt.
 	
-	Viele der in Beschleunigern verwendeten Kavitäten\footnote{von lat. \emph{cavum} "Höhle": Hohlraumresonator oftmals engl. \emph{Cavity}} basieren auf kreiszylindrischen Resonatoren\footnote{engl. \emph{Pillbox-Cavities}, für deren Ähnlichkeit mit einer Tablettenschachtel}, welche eine analytische Lösung der \textsc{Maxwell}-Gleichungen erlauben.
+	Viele der in Beschleunigern verwendeten Kavitäten\footnote{von lat.\ \emph{cavum} "Höhle": Hohlraumresonator oftmals engl. \emph{Cavity}} basieren auf kreiszylindrischen Resonatoren\footnote{engl. \emph{Pillbox-Cavities}, für deren Ähnlichkeit mit einer Tablettenschachtel}, welche eine analytische Lösung der \textsc{Maxwell}-Gleichungen erlauben.
 	Daher soll im Folgenden die Feldkonfiguration der verschiedenen Moden am Beispiel der \emph{Pillbox-Cavity} (Abb. ???) dargestellt und die in dieser Arbeit verwendete Notation eingeführt werden.
-	Für die longitudinalen Felder in einem zylindrischen Hohlraum mit Radius~$R$ und Länge~$L$ erhält man in Zylinderkoordinaten $(r, \theta, z)$ \cite{wangler}:
+	Dabei genügt die Betrachtung der longitudinalen Felder eines zylindrischen Hohlraums mit Radius~$R$ und Länge~$L$ in Zylinderkoordinaten $(r, \theta, z)$, da durch diese die transversalen Feldkomponenten eindeutig festgelegt sind \cite{hillert}.
+	Man findet für die Moden in dem kreiszylindrischen Resonator \cite{wangler}:
 	\begin{subequations}
 		\begin{align}
 		\mathrm{TM}_{mnp}\text{-Mode:} \quad E_z = E_0 J_m(k_{mn} r) \cos(m \theta) \cos\left(\frac{p \pi z}{L}\right) \exp(i \omega_{mnp} t) \qquad B_z = 0\\
-		\mathrm{TE}_{mnp}\text{-Mode:} \quad B_z = B_0 J_m(k_{mn}^\prime r) \cos(m \theta) \sin\left(\frac{p \pi z}{L}\right) \exp(i \omega_{mnp} t) \qquad  E_z = 0
+		\mathrm{TE}_{mnp}\text{-Mode:} \quad B_z = B_0 J_m(k_{mn}^\prime r) \cos(m \theta) \sin\left(\frac{p \pi z}{L}\right) \exp(i \omega_{mnp}^\prime t) \qquad  E_z = 0
 		\end{align}
 		\label{eqs:felder_pillbox}
 	\end{subequations}
@@ -108,17 +93,18 @@
 	\end{align}
 	mit der $n$-ten positiven Nullstelle $x_{mn}$ Besselfunktion $m$-ter Ordnung $J_m(x)$ respektive ihrer Ableitung $J_m^\prime(x)$.
 	Aus Gleichungen \eqref{eqs:felder_pillbox} folgt dann die Bedeutung der Indizes $m, n$ und $p$:
-	Der Index $m$ beschreibt die Periodenzahl der Feldkomponente in azimutaler Richtung.
-	Weiterhin wird durch $n$ die Anzahl der Knoten der longitudinalen Feldkomponente in radialer Richtung (ausgenommen Knoten im Ursprung mit $r=0$) gegeben.
-	Schließlich gibt der Index $p$ die Anzahl der halben Perioden in longitudinaler Richtung an.
+	Der Index $m$ ($m=0, 1, \dots$) beschreibt die Periodenzahl der Feldkomponente in azimutaler Richtung.
+	Weiterhin wird durch $n$ ($n=1, 2, \dots$) die Anzahl der Knoten der longitudinalen Feldkomponente in radialer Richtung (ausgenommen Knoten im Ursprung mit $r=0$) gegeben.
+	Schließlich gibt der Index $p$ (TM-Mode: $p= 0, 1, \dots$; TE-Mode: $p = 1, 2, \dots$) die Anzahl der halben Perioden in longitudinaler Richtung an.
 	
-	"Fundamental"moden: $\mathrm{TM}_{010}$ und $\mathrm{TE}_{011}$
+	Die Kreisfrequenz~$\omega_{mnp}$ der einzelnen Moden ist dabei gegeben durch \cite{wangler}:
+	\begin{align}
+	\omega_{mnp}^{(\prime)} = c \cdot \sqrt{\left( k_{mn}^{(\prime)}\right)^2 + \left( \frac{p \pi z}{L} \right)^2}
+	\end{align}
+	Die Mode mit der niedrigsten Frequenz (Fundamentalmode) ist damit $\mathrm{TM}_{010}$, welche in Abbildung 
 	
-	
-	
-	Es genügt sich dabei die longitudinalen Felder $E_z$ und $B_z$ zu betrachten,..
-	
-	Kompliziertere Geometrien -- Simulation
+	Eine analytische Berechnung von komplexeren Resonatorgeometrien 
+	\emph{CST Microwave Studio\textsuperscript{\textregistered}}
 	
 	\section{Hohlraumresonatoren2}
 	\begin{figure}[h]
@@ -127,7 +113,7 @@
 		\caption{RLC Parallelschwingkreis}
 		\label{fig:rlc_circuit}
 	\end{figure}
-	Die elektrischen Eigenschaften von Hohlraumresonatoren in der Nähe einer Resonanz können durch das Modell eines Parallelschwingkreises erklärt werden.
+	Die elektrischen Eigenschaften von Hohlraumresonatoren in der Nähe einer Resonanz können durch das Modell eines Parallelschwingkreises erklärt werden. (Mit wesentlich höherer Güte)
 	Die Resonanzfrequenz ist gegeben durch die Thomson'sche Schwingungsgleichung:
 	\begin{align}
 		\omega_0 = \frac{1}{\sqrt{L C}}
@@ -261,11 +247,15 @@
 	\backmatter
 		
 	\begin{thebibliography}{19}
+	\bibitem{hillert}
+		\textsc{W.\ Hillert},
+		\emph{E 106: Cavities, Details on the experimental method}, Bonn, 2008.
+
 	\bibitem{wangler}
 		\textsc{T.\ P.\ Wangler},
 		\emph{Principles of RF Linear Accelerators},
-		Wiley, New York, 1998.
-	
+		Wiley, New York, 1998.	
+
 	\bibitem{jackson}
 		\textsc{J.\ D.\ Jackson},
 		\emph{Classical Electrodynamics}, 1st ed.,
