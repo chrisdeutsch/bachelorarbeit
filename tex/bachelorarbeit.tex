@@ -126,23 +126,29 @@
 	\begin{align}
 		Q_0 &\coloneqq 2\pi \cdot \frac{\text{gespeicherte Energie}}{\text{Energieverlust pro Periode}} = \omega_0 R C
 	\end{align}
-	Nach der Einführung dieser Kenngrößen kann die Impedanz des Kreises ausgedrückt werden als:
+	Nach der Einführung dieser Kenngrößen kann die Impedanz des Kreises beziehungsweise des Hohlraumresonators ausgedrückt werden als:
 	\begin{align}
-		Z = \frac{R}{1 + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
+		Z(\omega) = \frac{R}{1 + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
 	\end{align}
 	
+	Bisher war die Betrachtung auf ungetriebene Resonatoren beschränkt und soll nun auf die Anregung durch ein externes Hochfrequenzsignal erweitert werden.
+	Zur Übertragung der Leistung aus einem Wellenleiter mit charakteristischer Impedanz $Z_0$ in eine Schwingungsmode der Kavität können verschiedene Methoden verwendet werden.
+	Eine ist die induktive Kopplung an das Magnetfeld der Mode, bei der der Wellenleiter mit einer Leiterschleife (die sog.\ Koppelschleife) im Resonator verbunden ist.
+	Dadurch wird in der Leiterschleife ein hochfrequenter Wechselstrom angeregt, welcher wiederum ein Magnetfeld erzeugt, dass Moden in der Kavität resonant anregen kann\footnote{Dies ist nur möglich wenn die jeweilige Mode am Ort der Koppelschleife ein nicht verschwindendes Magnetfeld besitzt.}.
 	
-	
-	
-	
-	
-	(Maybe Phasensprung, im fall von resonanz reell)
-	Durch die magnetische Kopplung wird die Impedanz des Resonators transformiert und wird beschrieben durch:
+	Im Modell des Parallelschwingkreises bedeutet dies, dass die Impedanz~$Z(\omega)$ der Kavität durch die induktive Kopplung transformiert wird.
+	Direkt hinter der Koppelschleife habe der Resonator die transformierte\footnote{insbesondere gilt: $Z^\prime(\omega) \propto Z(\omega)$ \todo{Hier}} Impedanz $Z^\prime(\omega)$.
+	Man definiert als Maß für die Kopplung den sog.\ Koppelfaktor:
 	\begin{align}
 		\kappa = \frac{Z^\prime(\omega_0)}{Z_0}
+		\label{eq:koppelfaktor}
 	\end{align}
-	($\kappa < 1$ unterkritisch, $\kappa = 0$ kritisch, $\kappa > 1$ überkritisch)
-	wobei $Z^\prime$ die transformierte Impedanz ist und $Z_0$ der Wellenwiderstand des Wellenleiters.
+	mit dem Wellenwiderstand~$Z_0$ des Wellenleiters.
+	Man unterscheidet zwischen unterkritischer $(\kappa < 1)$, kritischer $(\kappa = 1)$ und überkritischer Kopplung $(\kappa > 1)$.
+	Im Falle von resonanter Anregung bei kritischer Kopplung folgert man aus Gleichung \eqref{eq:koppelfaktor}, dass der Wellenleiter mit seiner charakteristischen Impedanz abgeschlossen ist und somit keine Reflexionen an der Koppelschleife entstehen.
+	Dies ist für den Betrieb von Beschleunigungsresonatoren wünschenswert, da dadurch die gesamte Leistung in den Resonators transmittiert wird\todo{weg?}.
+	
+	\todo{Hier weiter}
 	Ebenfalls wird die zusätzliche Impedanz des Leiters in den Resonator transformiert, was die Güte des Gesamtsystems verändert:
 	\begin{align}
 		\frac{1}{Q} = \frac{1}{Q_0} + \frac{1}{Q_\mathrm{ext}} \\
