@@ -19,6 +19,7 @@
 
 %
 \usepackage{textcomp}
+\usepackage{mathtools}
 
 % Einheiten setzen z.B. \SI{10}{\kilo\gram\meter\per\second\squared}
 % Fehler: \SI{10 +- 0,2e-4}{\metre}
@@ -72,7 +73,7 @@
 		\label{eq:randbedingung_leiter}
 	\end{align}
 	wobei $E_\parallel$ die Tangentialkomponente und $B_\perp$ die Normalkomponente des elektrischen bzw.\ magnetischen Feldes auf der Grenzfläche kennzeichnet.
-	Die Lösung der \textsc{Maxwell}-Gleichungen unter Beachtung dieser Grenzbedingungen zeigt, dass in Abhängigkeit der Geometrie des Hohlraums, nur eine unbegrenzte Anzahl von Moden mit bestimmten Frequenzen im Resonator auftreten können.
+	Die Lösung der \textsc{Maxwell}-Gleichungen unter Beachtung dieser Grenzbedingungen zeigt, dass in Abhängigkeit der Geometrie des Hohlraums, eine unbegrenzte Anzahl von Moden mit bestimmten Frequenzen im Resonator auftreten können.
 	Die Klassifizierung der einzelnen Moden erfolgt dabei anhand ihrer Feldkonfiguration relativ zur Propagationsrichtung der hin- und rücklaufenden Wellen im Resonator.
 	Dabei unterscheidet man zwischen transversal elektrischen (TE)-Moden, welche lediglich transversale elektrische und longitudinal magnetische Felder aufweisen und transversal magnetischen (TM)-Moden, bei denen der umgekehrte Fall eintritt.
 	
@@ -82,8 +83,8 @@
 	Man findet für die Moden in dem kreiszylindrischen Resonator \cite{wangler}:
 	\begin{subequations}
 		\begin{align}
-		\mathrm{TM}_{mnp}\text{-Mode:} \quad E_z = E_0 J_m(k_{mn} r) \cos(m \theta) \cos\left(\frac{p \pi z}{L}\right) \exp(i \omega_{mnp} t) \qquad B_z = 0\\
-		\mathrm{TE}_{mnp}\text{-Mode:} \quad B_z = B_0 J_m(k_{mn}^\prime r) \cos(m \theta) \sin\left(\frac{p \pi z}{L}\right) \exp(i \omega_{mnp}^\prime t) \qquad  E_z = 0
+		\mathrm{TM}_{mnp}\text{-Mode:} \quad E_z = E_0 J_m(k_{mn} r) \cos(m \theta) \cos\left(\frac{p \pi}{L}\right) \exp(i \omega_{mnp} t) \qquad B_z = 0\\
+		\mathrm{TE}_{mnp}\text{-Mode:} \quad B_z = B_0 J_m(k_{mn}^\prime r) \cos(m \theta) \sin\left(\frac{p \pi}{L}\right) \exp(i \omega_{mnp}^\prime t) \qquad  E_z = 0
 		\end{align}
 		\label{eqs:felder_pillbox}
 	\end{subequations}
@@ -101,10 +102,10 @@
 	\begin{align}
 	\omega_{mnp}^{(\prime)} = c \cdot \sqrt{\left( k_{mn}^{(\prime)}\right)^2 + \left( \frac{p \pi z}{L} \right)^2}
 	\end{align}
-	Die Mode mit der niedrigsten Frequenz (Fundamentalmode) ist damit $\mathrm{TM}_{010}$, welche in Abbildung 
+	\todo{Bilder Pillbox, Felder und TM010 im Beschleuniger}
 	
-	Eine analytische Berechnung von komplexeren Resonatorgeometrien 
-	\emph{CST Microwave Studio\textsuperscript{\textregistered}}
+	Eine analytische Berechnung der Moden von komplexeren Resonatorgeometrien ist nicht mehr möglich und es muss auf numerische Methoden zurückgegriffen werden.
+	Dazu wird in dieser Arbeit \emph{CST Microwave Studio\textsuperscript{\textregistered}} verwendet, welches die Lösung der Maxwell-Gleichungen diskretisiert und auf ein Eigenwertproblem zurückführt.
 	
 	\section{Hohlraumresonatoren2}
 	\begin{figure}[h]
@@ -113,20 +114,28 @@
 		\caption{RLC Parallelschwingkreis}
 		\label{fig:rlc_circuit}
 	\end{figure}
-	Die elektrischen Eigenschaften von Hohlraumresonatoren in der Nähe einer Resonanz können durch das Modell eines Parallelschwingkreises erklärt werden. (Mit wesentlich höherer Güte)
-	Die Resonanzfrequenz ist gegeben durch die Thomson'sche Schwingungsgleichung:
+	Die elektrischen Eigenschaften von Hohlraumresonatoren in der Nähe einer Resonanz können durch das Modell des Parallelschwingkreises erklärt werden.
+	Zur vollständigen Beschreibung ist die Angabe der drei Kenngrößen: Widerstand~$R$, Induktivität~$L$ und Kapazität~$C$ ausreichend.
+	Für die Behandlung von Kavitäten ist es zweckmäßig andere Parameter zur Beschreibung zu verwenden.
+	Dazu verwendet man die Eigenfrequenz~$\omega_0$, Kreisgüte~$Q_0$ und Widerstand~$R$ des Schwingkreises.
+	Die Eigenfrequenz des Kreises folgt aus der \textsc{Thomson}schen Schwingungsgleichung:
 	\begin{align}
 		\omega_0 = \frac{1}{\sqrt{L C}}
 	\end{align}
-	(Güte)
-	Die Impedanz des Schwingkreises ist gegeben durch:
+	und die Kreisgüte aus ihrer Definition:
 	\begin{align}
-		Z_\mathrm{LCR} = \left( \frac{1}{R} + \frac{1}{i \omega L} + i \omega C \right)^{-1}
+		Q_0 &\coloneqq 2\pi \cdot \frac{\text{gespeicherte Energie}}{\text{Energieverlust pro Periode}} = \omega_0 R C
 	\end{align}
-	Unter der Verwendung der Ausdrücke von Resonanzfrequenz und Güte kann dies geschrieben werden als:
+	Nach der Einführung dieser Kenngrößen kann die Impedanz des Kreises ausgedrückt werden als:
 	\begin{align}
-		Z_\mathrm{LCR} = \frac{R}{1 + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
+		Z = \frac{R}{1 + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
 	\end{align}
+	
+	
+	
+	
+	
+	
 	(Maybe Phasensprung, im fall von resonanz reell)
 	Durch die magnetische Kopplung wird die Impedanz des Resonators transformiert und wird beschrieben durch:
 	\begin{align}
@@ -254,8 +263,13 @@
 	\bibitem{wangler}
 		\textsc{T.\ P.\ Wangler},
 		\emph{Principles of RF Linear Accelerators},
-		Wiley, New York, 1998.	
-
+		Wiley, New York, 1998.
+	
+	\bibitem{pozar}
+		\textsc{D.\ M.\ Pozar},
+		\emph{Microwave Engineering}, 4th ed.,
+		Wiley, New York, 2011.
+	
 	\bibitem{jackson}
 		\textsc{J.\ D.\ Jackson},
 		\emph{Classical Electrodynamics}, 1st ed.,
