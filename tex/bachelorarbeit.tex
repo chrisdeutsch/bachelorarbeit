@@ -148,6 +148,14 @@
 	Im Falle von resonanter Anregung bei kritischer Kopplung folgert man aus Gleichung \eqref{eq:koppelfaktor}, dass der Wellenleiter mit seiner charakteristischen Impedanz abgeschlossen ist und somit keine Reflexionen an der Koppelschleife entstehen.
 	Dies ist für den Betrieb von Beschleunigungsresonatoren wünschenswert, da dadurch die gesamte Leistung in den Resonators transmittiert wird\todo{weg?}.
 	
+	Von besonderem Interesse ist der komplexe Reflexionskoeffizient $\rho$, da dieser direkt mit einem vektoriellen Netzwerkanalysator messbar ist.
+	Er beschreibt das Verhältnis der komplexen Spannungsamplituden von hin- und rücklaufender Welle in einem Wellenleiter.
+	Aus der Leitungstheorie \cite{pozar} folgt für den Reflexionskoeffizienten am Übergang von einem Wellenleiter mit Wellenwiderstand $Z_0$ auf eine Abschlussimpedanz $Z^\prime$:
+	\begin{align}
+		\rho = \frac{U_{-}}{U_{+}} = \frac{Z^\prime - Z_0}{Z^\prime + Z_0}
+	\end{align}
+	
+	
 	\todo{Hier weiter}
 	Ebenfalls wird die zusätzliche Impedanz des Leiters in den Resonator transformiert, was die Güte des Gesamtsystems verändert:
 	\begin{align}
@@ -155,10 +163,7 @@
 		Q_0 = (1 + \kappa) \cdot Q
 	\end{align}
 	Im folgenden ist der komplexe Reflexionsfaktor $\rho$ von besonderem Interesse:
-	\begin{align}
-		\rho = \frac{U_{-}}{U_{+}} = \frac{Z^\prime - Z_0}{Z^\prime + Z_0}
-	\end{align}
-%	($Z^\prime$ transformierte Impedanz, $Z_0$ Wellenwiderstand)
+
 	Es folgt für den Reflexionsfaktor
 	\begin{align}
 		\rho(\omega) = \frac{(\kappa - 1) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
