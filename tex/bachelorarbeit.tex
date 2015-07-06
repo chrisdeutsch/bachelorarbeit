@@ -137,7 +137,7 @@
 	Dadurch wird in der Leiterschleife ein hochfrequenter Wechselstrom angeregt, welcher wiederum ein Magnetfeld erzeugt, dass Moden in der Kavität resonant anregen kann\footnote{Dies ist nur möglich wenn die jeweilige Mode am Ort der Koppelschleife ein nicht verschwindendes Magnetfeld besitzt.}.
 	
 	Im Modell des Parallelschwingkreises bedeutet dies, dass die Impedanz~$Z(\omega)$ der Kavität durch die induktive Kopplung transformiert wird.
-	Direkt hinter der Koppelschleife habe der Resonator die transformierte\footnote{insbesondere gilt: $Z^\prime(\omega) \propto Z(\omega)$ \todo{Hier}} Impedanz $Z^\prime(\omega)$.
+	Direkt hinter der Koppelschleife habe der Resonator die transformierte\footnote{insbesondere gilt: $Z^\prime(\omega) \propto Z(\omega) \longrightarrow \frac{Z^\prime(\omega)}{Z_0} = \frac{\kappa}{R} \cdot Z(\omega)$ \todo{Hier}} Impedanz $Z^\prime(\omega)$.
 	Man definiert als Maß für die Kopplung den sog.\ Koppelfaktor:
 	\begin{align}
 		\kappa = \frac{Z^\prime(\omega_0)}{Z_0}
@@ -152,30 +152,19 @@
 	Er beschreibt das Verhältnis der komplexen Spannungsamplituden von hin- und rücklaufender Welle in einem Wellenleiter.
 	Aus der Leitungstheorie \cite{pozar} folgt für den Reflexionskoeffizienten am Übergang von einem Wellenleiter mit Wellenwiderstand $Z_0$ auf eine Abschlussimpedanz $Z^\prime$:
 	\begin{align}
-		\rho = \frac{U_{-}}{U_{+}} = \frac{Z^\prime - Z_0}{Z^\prime + Z_0}
+		\rho = \frac{Z^\prime - Z_0}{Z^\prime + Z_0}
+		\label{eq:reflexionskoeff_trans_line}
 	\end{align}
-	
-	
-	\todo{Hier weiter}
-	Ebenfalls wird die zusätzliche Impedanz des Leiters in den Resonator transformiert, was die Güte des Gesamtsystems verändert:
+	Es folgt nach Einsetzen von () in \eqref{eq:reflexionskoeff_trans_line} der Ausdruck für den Reflexionskoeffizienten 
 	\begin{align}
-		\frac{1}{Q} = \frac{1}{Q_0} + \frac{1}{Q_\mathrm{ext}} \\
-		Q_0 = (1 + \kappa) \cdot Q
+		\rho(\omega) = \frac{\frac{\kappa}{R} \cdot Z(\omega) - 1}{\frac{\kappa}{R} \cdot Z(\omega) + 1} = \frac{(\kappa - 1) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
 	\end{align}
-	Im folgenden ist der komplexe Reflexionsfaktor $\rho$ von besonderem Interesse:
-
-	Es folgt für den Reflexionsfaktor
-	\begin{align}
-		\rho(\omega) = \frac{(\kappa - 1) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
-	\end{align}
-	Mit dem Betrag:
+	\todo{Abschlusssatz}
+	Mit dem Betrag \todo{WEG DAMIT!}:
 	\begin{align}
 		| \rho(\omega) | = \sqrt{\frac{(\kappa - 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}{(\kappa + 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}}
 	\end{align}
-	Damit ist die vom Resonator aufgenommene Leistung:
-	\begin{align}
-		P_\mathrm{a} = P_0 (1- |\rho|^2)
-	\end{align}
+
 	\section{Resonante Störkörpermessung}
 	Feld der ungestörten Cavity $\ve_0$ und der gestörten $\ve_1$:
 	\begin{subequations}
