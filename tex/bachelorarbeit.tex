@@ -172,93 +172,97 @@
 	Um quantitative Aussagen über das Feld am Ort des  Störkörpers
 	
 	
-	Feld der ungestörten Cavity $\ve_0$ und der gestörten $\ve_1$:
-	\begin{subequations}
-		\begin{align}
-		\ve_{0,1}(x,y,z,t) = \ve_{0,1}(x,y,z) \, e^{i \omega_{0,1} t} \\
-		\vh_{0,1}(x,y,z,t) = \vh_{0,1}(x,y,z) \, e^{i \omega_{0,1} t}
-		\end{align}
-	\end{subequations}
-	wobei im folgenden mit nur mit den komplexen Amplituden gerechnet wird.
-	Mit den Maxwell-Gleichungen:
-	\begin{subequations}
-		\begin{align}
-			&\vnabla \times \ve = - \frac{\partial \vb}{\partial t} \\
-			&\vnabla \times \vh = \frac{\partial \vd}{\partial t}
-		\end{align}
-	\end{subequations}
-	folgt nach Elimination der Zeitabhängigkeit:
-	\begin{subequations}
-		\begin{align}
-			&\vnabla \times \ve_{0,1} = - i \omega_{0,1} \vb_{0,1} \\
-			&\vnabla \times \vh_{0,1} = i \omega_{0,1} \vd_{0,1}
-		\end{align}
-	\end{subequations}
-	Unter der Verwendung dieser zeitunabhängigen Gleichungen bildet man:
-	\begin{align}
-	\vnabla \cdot \left( \ve_0^* \times \vh_1\right) &= \vh_1 \cdot \left( \vnabla \times \ve_0^* \right) - \ve_0^* \cdot \left( \vnabla \times \vh_1 \right) \nonumber \\
-	&= i \omega_0 \vb_0^* \vh_1 - i \omega_1 \ve_0^* \vd_1 \label{eq:e0h1}
-	\end{align}
-	und
-	\begin{align}
-		\vnabla \cdot \left( \ve_1 \times \vh_0^* \right) &= \vh_0^* \cdot \left( \vnabla \times \ve_1 \right) - \ve_1 \cdot \left( \vnabla \times \vh_0^* \right) \nonumber \\
-		&= i \omega_0 \ve_1 \vd_0^* - i \omega_1 \vb_1 \vh_0^* \label{eq:e1h0}
-	\end{align}
-	Anschließend führt man die Integration über das Resonatorvolumen $V$ durch:
-	\begin{align}
-		\int_{V} \mathrm{d}V \left[ \vnabla \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right) \right] = \int_{\partial V} \mathrm{d}S \left[ \vec{n} \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right)\right] \label{eq:volint}
-	\end{align}
-	Aufgrund der Randbedingungen am leitenden Material des Resonators gilt $\ve \times \vh \perp \vec{n}$ und somit ist die verschwindet die rechte Seite von Gleichung \eqref{eq:volint} folgt nach Einsetzen der Relationen \eqref{eq:e0h1} und \eqref{eq:e1h0}:
-	\begin{align}
-		\omega_0 \int_{V} \mathrm{d}V \left( \vb_0^* \cdot \vh_1 + \ve_1 \cdot \vd_0^* \right) = \omega_1 \int_{V} \mathrm{d}V \left( \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right)
-	\end{align}
-	Nach Umformung folgt:
-	\begin{align}
-		\frac{\omega_1 - \omega_0}{\omega_0} = \frac{\int_{V} \mathrm{d}V \left[ \left( \vb_0^* \cdot \vh_1 - \vb_1 \cdot \vh_0^* \right) + \left( \ve_0^* \cdot \vd_1 - \ve_0^* \cdot \vd_1 \right)\right]}{\int_V \mathrm{d}V \left[ \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right] }
-	\end{align}
-	Unter der Verwendung von:
-	\begin{subequations}
-		\begin{align}
-			&\vd = \epsilon_0 \ve + \vec{P} \\
-			&\vh = \frac{1}{\mu_0} \vb - \vec{M}
-		\end{align}
-	\end{subequations}
-	folgt die Slater-Formel?:
-	\begin{align}
-		\frac{\omega_1 - \omega_0}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \vb_0^* \cdot \vec{M} + \ve_0^* \cdot \vec{P} \right]}{\int_V \mathrm{d}V \left[ \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right]}
-	\end{align}
-	Da der Störkörper die Energie des Resonators kaum beeinflusst, kann im Nenner das gestörte Feld durch das ungestörte genähert werden und man erhält:
-	\begin{align}
-		\frac{\omega_1 - \omega_0}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \vb_0^* \cdot \vec{M} + \ve_0^* \cdot \vec{P} \right]}{4 W_0}
-	\end{align}
-	wobei $W_0 = \int_V w_\mathrm{em} \, \mathrm{d}V = \int_V \frac{1}{2} (\ve \cdot \vd + \vb \cdot \vh) \, \mathrm{d}V$ die Energie des elektromagnetischen Feldes im Resonator ist. NEIN VIERFACHE ENERGIE.
-	Im Rahmen dieser Bachelorarbeit wird eine dielektrische Kugel verwendet $\vec{M} = 0$, welche klein gegen die Dimensionen des Resonators ist. Für die Polarisation folgt (Jackson S.\ 115) unter der Annahme eines homogenen Feldes:
-	\begin{align}
-		\vec{P} = 3 \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \epsilon_0 \ve_0
-	\end{align}
-	und damit:
-	\begin{align}
-		\frac{\omega_1 - \omega_0}{\omega_0} = - 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s} \frac{|\ve_0|^2}{4 W_0}
-	\end{align}
-	\begin{align}
-		\alpha_\mathrm{s} = 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s}
-	\end{align}
-	\begin{align}
-		\frac{\Delta \omega}{\omega_0} = \frac{\omega_0 - \omega_1}{\omega_0} = \alpha_\mathrm{s} \cdot \frac{|\ve|^2}{4 W_0}
-	\end{align}
-	\begin{align}
-		|\ve| = \sqrt{4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}}
-	\end{align}
-	Ist die unbelastete Güte des Resonators bekannt, so kann das elektrische Feld in Abhängigkeit der Verlustleistung des Resonators geschrieben werden als:
-	\begin{align}
-		\frac{|E_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{4 \frac{Q_0}{\alpha_s} \frac{\Delta \omega}{\omega_0^2}}
-	\end{align}
+	
 	
 	
 	\chapter{Störkörpermessung}
 	
 	\chapter{Fazit}
 	
+	\appendix
+	\chapter{Herleitung der Frequenzverschiebung bei Störkörpermessung}
+	Feld der ungestörten Cavity $\ve_0$ und der gestörten $\ve_1$:
+		\begin{subequations}
+			\begin{align}
+			\ve_{0,1}(x,y,z,t) = \ve_{0,1}(x,y,z) \, e^{i \omega_{0,1} t} \\
+			\vh_{0,1}(x,y,z,t) = \vh_{0,1}(x,y,z) \, e^{i \omega_{0,1} t}
+			\end{align}
+		\end{subequations}
+		wobei im folgenden mit nur mit den komplexen Amplituden gerechnet wird.
+		Mit den Maxwell-Gleichungen:
+		\begin{subequations}
+			\begin{align}
+				&\vnabla \times \ve = - \frac{\partial \vb}{\partial t} \\
+				&\vnabla \times \vh = \frac{\partial \vd}{\partial t}
+			\end{align}
+		\end{subequations}
+		folgt nach Elimination der Zeitabhängigkeit:
+		\begin{subequations}
+			\begin{align}
+				&\vnabla \times \ve_{0,1} = - i \omega_{0,1} \vb_{0,1} \\
+				&\vnabla \times \vh_{0,1} = i \omega_{0,1} \vd_{0,1}
+			\end{align}
+		\end{subequations}
+		Unter der Verwendung dieser zeitunabhängigen Gleichungen bildet man:
+		\begin{align}
+		\vnabla \cdot \left( \ve_0^* \times \vh_1\right) &= \vh_1 \cdot \left( \vnabla \times \ve_0^* \right) - \ve_0^* \cdot \left( \vnabla \times \vh_1 \right) \nonumber \\
+		&= i \omega_0 \vb_0^* \vh_1 - i \omega_1 \ve_0^* \vd_1 \label{eq:e0h1}
+		\end{align}
+		und
+		\begin{align}
+			\vnabla \cdot \left( \ve_1 \times \vh_0^* \right) &= \vh_0^* \cdot \left( \vnabla \times \ve_1 \right) - \ve_1 \cdot \left( \vnabla \times \vh_0^* \right) \nonumber \\
+			&= i \omega_0 \ve_1 \vd_0^* - i \omega_1 \vb_1 \vh_0^* \label{eq:e1h0}
+		\end{align}
+		Anschließend führt man die Integration über das Resonatorvolumen $V$ durch:
+		\begin{align}
+			\int_{V} \mathrm{d}V \left[ \vnabla \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right) \right] = \int_{\partial V} \mathrm{d}S \left[ \vec{n} \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right)\right] \label{eq:volint}
+		\end{align}
+		Aufgrund der Randbedingungen am leitenden Material des Resonators gilt $\ve \times \vh \perp \vec{n}$ und somit ist die verschwindet die rechte Seite von Gleichung \eqref{eq:volint} folgt nach Einsetzen der Relationen \eqref{eq:e0h1} und \eqref{eq:e1h0}:
+		\begin{align}
+			\omega_0 \int_{V} \mathrm{d}V \left( \vb_0^* \cdot \vh_1 + \ve_1 \cdot \vd_0^* \right) = \omega_1 \int_{V} \mathrm{d}V \left( \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right)
+		\end{align}
+		Nach Umformung folgt:
+		\begin{align}
+			\frac{\omega_1 - \omega_0}{\omega_0} = \frac{\int_{V} \mathrm{d}V \left[ \left( \vb_0^* \cdot \vh_1 - \vb_1 \cdot \vh_0^* \right) + \left( \ve_0^* \cdot \vd_1 - \ve_0^* \cdot \vd_1 \right)\right]}{\int_V \mathrm{d}V \left[ \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right] }
+		\end{align}
+		Unter der Verwendung von:
+		\begin{subequations}
+			\begin{align}
+				&\vd = \epsilon_0 \ve + \vec{P} \\
+				&\vh = \frac{1}{\mu_0} \vb - \vec{M}
+			\end{align}
+		\end{subequations}
+		folgt die Slater-Formel?:
+		\begin{align}
+			\frac{\omega_1 - \omega_0}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \vb_0^* \cdot \vec{M} + \ve_0^* \cdot \vec{P} \right]}{\int_V \mathrm{d}V \left[ \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right]}
+		\end{align}
+		Da der Störkörper die Energie des Resonators kaum beeinflusst, kann im Nenner das gestörte Feld durch das ungestörte genähert werden und man erhält:
+		\begin{align}
+			\frac{\omega_1 - \omega_0}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \vb_0^* \cdot \vec{M} + \ve_0^* \cdot \vec{P} \right]}{4 W_0}
+		\end{align}
+		wobei $W_0 = \int_V w_\mathrm{em} \, \mathrm{d}V = \int_V \frac{1}{2} (\ve \cdot \vd + \vb \cdot \vh) \, \mathrm{d}V$ die Energie des elektromagnetischen Feldes im Resonator ist. NEIN VIERFACHE ENERGIE.
+		Im Rahmen dieser Bachelorarbeit wird eine dielektrische Kugel verwendet $\vec{M} = 0$, welche klein gegen die Dimensionen des Resonators ist. Für die Polarisation folgt (Jackson S.\ 115) unter der Annahme eines homogenen Feldes:
+		\begin{align}
+			\vec{P} = 3 \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \epsilon_0 \ve_0
+		\end{align}
+		und damit:
+		\begin{align}
+			\frac{\omega_1 - \omega_0}{\omega_0} = - 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s} \frac{|\ve_0|^2}{4 W_0}
+		\end{align}
+		\begin{align}
+			\alpha_\mathrm{s} = 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s}
+		\end{align}
+		\begin{align}
+			\frac{\Delta \omega}{\omega_0} = \frac{\omega_0 - \omega_1}{\omega_0} = \alpha_\mathrm{s} \cdot \frac{|\ve|^2}{4 W_0}
+		\end{align}
+		\begin{align}
+			|\ve| = \sqrt{4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}}
+		\end{align}
+		Ist die unbelastete Güte des Resonators bekannt, so kann das elektrische Feld in Abhängigkeit der Verlustleistung des Resonators geschrieben werden als:
+		\begin{align}
+			\frac{|E_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{4 \frac{Q_0}{\alpha_s} \frac{\Delta \omega}{\omega_0^2}}
+		\end{align}
+		
 	\backmatter
 		
 	\begin{thebibliography}{19}
