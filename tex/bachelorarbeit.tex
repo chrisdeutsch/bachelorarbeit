@@ -225,34 +225,38 @@
 		\int_{V} \mathrm{d}V \left[ \vnabla \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right) \right] = \oint_{\partial V} \mathrm{d}S \left[ \vec{n} \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right)\right] \label{eq:volint}
 	\end{align}
 	wobei $\vec{n}$ den Normaleneinheitsvektor auf dem Rand $\partial V$ des Resonatorhohlraums darstellt.
-	\todo{Unsinn:}Aufgrund der Randbedingungen für das elektrische und magnetische Feld am idealen Leiter \eqref{eq:randbedingung_leiter} folgt, dass das Skalarprodukt mit dem Normalenvektor auf dem Rand des Volumens~$\partial V$ identisch verschwindet\footnote{Das Kreuzprodukt von elektrischer und magnetischer Feldstärke steht stehts senkrecht zum Normalenvektor der ideal leitenden Grenzfläche: $\ve \times \vh \perp \vec{n}$}.
-
-
-
-
+	Die Randbedingungen für das elektrische und magnetische Feld am idealen Leiter \eqref{eq:randbedingung_leiter} sorgen dafür, dass das Skalarprodukt im Integranden der rechten Seite auf dem Rand des Volumens $\partial V$ identisch verschwindet\footnote{Das Kreuzprodukt von elektrischer und magnetischer Feldstärke steht stehts senkrecht zum Normalenvektor der ideal leitenden Grenzfläche: $\ve \times \vh \perp \vec{n}$}.
+	Setzt man die gefundenen Identitäten \eqref{eq:skm_vektoridentitaeten} in das Integral über das Resonatorvolumen ein, so erhält den Zusammenhang zwischen ungestörter~$\omega_0$ und gestörter Resonanzfrequenz~$\omega_1$:
+	\begin{align}
+		\omega_0 \int_{V} \mathrm{d}V \left( \vb_0^* \cdot \vh_1 + \ve_1 \cdot \vd_0^* \right) = \omega_1 \int_{V} \mathrm{d}V \left( \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right)
+	\end{align}
+	Dieser Zusammenhang ermöglicht es einen Ausdruck ermöglicht die Angabe der relativen Frequenzverschiebung:
+	\begin{align}
+		\frac{\Delta \omega}{\omega_0}= \frac{\omega_1 - \omega_0}{\omega_0} = \frac{\int_{V} \mathrm{d}V \left[ \left( \ve_0^* \cdot \vd_1 - \ve_0^* \cdot \vd_1 \right) + \left( \vb_0^* \cdot \vh_1 - \vb_1 \cdot \vh_0^* \right)\right]}{\int_V \mathrm{d}V \left[\ve_0^* \cdot \vd_1 + \vb_1 \cdot \vh_0^* \right] }
+		\label{eq:skm_rel_freqabweichung_schritt}
+	\end{align}
+	Unter Verwendung der Definitionen für die magnetische Feldstärke $\vh$ und der elektrischen Flussdichte $\vd$:
+	\begin{subequations}
 		\begin{align}
-			\omega_0 \int_{V} \mathrm{d}V \left( \vb_0^* \cdot \vh_1 + \ve_1 \cdot \vd_0^* \right) = \omega_1 \int_{V} \mathrm{d}V \left( \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right)
+			&\vd \coloneqq \epsilon_0 \ve + \vec{P}\\
+			&\vh \coloneqq \frac{1}{\mu_0} \vb - \vec{M}
 		\end{align}
-		Nach Umformung folgt:
-		\begin{align}
-			\frac{\omega_1 - \omega_0}{\omega_0} = \frac{\int_{V} \mathrm{d}V \left[ \left( \vb_0^* \cdot \vh_1 - \vb_1 \cdot \vh_0^* \right) + \left( \ve_0^* \cdot \vd_1 - \ve_0^* \cdot \vd_1 \right)\right]}{\int_V \mathrm{d}V \left[ \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right] }
-		\end{align}
-		Unter der Verwendung von:
-		\begin{subequations}
-			\begin{align}
-				&\vd = \epsilon_0 \ve + \vec{P} \\
-				&\vh = \frac{1}{\mu_0} \vb - \vec{M}
-			\end{align}
-		\end{subequations}
-		folgt die Slater-Formel?:
-		\begin{align}
-			\frac{\omega_1 - \omega_0}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \vb_0^* \cdot \vec{M} + \ve_0^* \cdot \vec{P} \right]}{\int_V \mathrm{d}V \left[ \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right]}
-		\end{align}
-		Da der Störkörper die Energie des Resonators kaum beeinflusst, kann im Nenner das gestörte Feld durch das ungestörte genähert werden und man erhält:
-		\begin{align}
-			\frac{\omega_1 - \omega_0}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \vb_0^* \cdot \vec{M} + \ve_0^* \cdot \vec{P} \right]}{4 W_0}
-		\end{align}
-		wobei $W_0 = \int_V w_\mathrm{em} \, \mathrm{d}V = \int_V \frac{1}{2} (\ve \cdot \vd + \vb \cdot \vh) \, \mathrm{d}V$ die Energie des elektromagnetischen Feldes im Resonator ist. NEIN VIERFACHE ENERGIE.
+	\end{subequations}
+	mit den Vektorfeldern der Polarisation $\vec{P}$ und Magnetisierung $\vec{M}$ folgt aus \eqref{eq:skm_rel_freqabweichung_schritt}:
+	\begin{align}
+		\frac{\Delta \omega}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vec{P} + \vb_0^* \cdot \vec{M} \right]}{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vd_1 + \vb_1 \cdot \vh_0^* \right]} \label{eq:skm_rel_freqabweichung_schritt2}
+	\end{align}
+	Schließlich wird angenommen, dass das Volumen des Störkörpers klein ist gegen das gesamte Resonatorvolumen.
+	Dadurch können bei Integration über das Resonatorvolumen im Nenner von \eqref{eq:skm_rel_freqabweichung_schritt2}, die gestörten Felder im Integranden durch die Ungestörten genähert werden.
+	Beachtet man weiterhin, dass die Phasendifferenz von elektrischem und magnetischem Feld bei stehenden elektromagnetischen Wellen $\pi / 2$ beträgt, so erhält man nach Ausführen der Integration im Nenner die vierfache im Feld des Resonators gespeicherte Energie~$W_0$:
+	\begin{align}
+		\frac{\Delta \omega}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vec{P} + \vb_0^* \cdot \vec{M} \right]}{4 W_0}
+	\end{align}
+	Diese Gleichung verknüpft die Verschiebung der Resonanzfrequenz durch einen Störkörper mit den ungestörten elektrischen und magnetischen Feldern und ermöglicht die Messung der Felder bei geeigneter Wahl des Störkörpers.
+	
+	
+	
+	
 		Im Rahmen dieser Bachelorarbeit wird eine dielektrische Kugel verwendet $\vec{M} = 0$, welche klein gegen die Dimensionen des Resonators ist. Für die Polarisation folgt (Jackson S.\ 115) unter der Annahme eines homogenen Feldes:
 		\begin{align}
 			\vec{P} = 3 \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \epsilon_0 \ve_0
