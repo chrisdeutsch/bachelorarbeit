@@ -122,7 +122,7 @@
 	\begin{align}
 		\omega_0 = \frac{1}{\sqrt{L C}}
 	\end{align}
-	und die Kreisgüte aus ihrer Definition:
+	und die Kreisgüte aus ihrer Definition \todo{Definition mit Verlustleistung}:
 	\begin{align}
 		Q_0 &\coloneqq 2\pi \cdot \frac{\text{gespeicherte Energie}}{\text{Energieverlust pro Periode}} = \omega_0 R C
 	\end{align}
@@ -166,11 +166,41 @@
 	\end{align}
 
 	\section{Resonante Störkörpermessung}
+	\todo{Vernachlässigung von Luft $\mu$, $\epsilon$}
 	Die resonante\footnote{\todo{Was ist nicht resonante SKM?}} Störkörpermessung basiert auf der Störung eines Hohlraumresonators durch einen dielektrischen oder magnetischen Körper (dem sog.\ Störkörper), welcher durch das Feld im Resonator polarisiert beziehungsweise magnetisiert wird.
 	Eine solche lokalisierte Störung verursacht eine Verschiebung der Resonanzfrequenz~$\Delta \omega$ in Abhängigkeit des elektrischen und magnetischen Feldes am Ort des Störkörpers.
+	Quantitativ kann die Verschiebung beschrieben werden durch (für eine Herleitung siehe Anhang \ref{app:herleitung_frequenzverschiebung}):
+	\begin{align}
+		\frac{\Delta \omega}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vec{P} + \vb_0^* \cdot \vec{M} \right]}{4 W_0}
+		\label{eq:frequenzverschiebung}
+	\end{align}
+	mit dem Resonatorvolumen~$V$, der Polarisation~$\vec{P}$, der Magnetisierung~$\vec{M}$, der im elektromagnetischen Feld gespeicherten Energie~$W_0$ und den komplex konjugierten Feldern $\ve_0^*, \vb_0^*$ des ungestörten Resonators.
 	
-	Um quantitative Aussagen über das Feld am Ort des  Störkörpers
+	Im Rahmen dieser Arbeit wird eine dielektrische Kugel mit relativer elektrischer Permittivität~$\epsilon_\mathrm{r}$ verwendet.
+	Darüber hinaus sei die magnetische Permeablität~$\mu$ vernachlässigbar, sodass es zu keiner Magnetisierung ($\vec{M} = 0$) des Störkörpers kommt.
+	Weiterhin wird angenommen, dass das Volumen des kugelförmigen Störkörpers wesentlich kleiner ist als das Resonatorvolumen, sodass am Ort des Störkörpers das elektrische Feld als homogen angesehen werden kann.
+	Dadurch kann die Polarisation $\vec{P}$ der dielektrischen Kugel im homogenen elektrischen Feld $\ve_0$ ausgedrückt werden als \cite{jackson}:
+	\begin{align}
+		\vec{P} = 3 \, \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \, \epsilon_0 \ve_0
+		\label{eq:polarisation_kugel}
+	\end{align}
+	mit der elektrischen Feldkonstante~$\epsilon_0$.
+	Durch die Annahme der Homogenität der Felder und verschwindender Polarisation und Magnetisierung außerhalb des Störkörpervolumens~$V_\mathrm{s}$ kann direkt die Amplitude $|\ve_0|$ des elektrischen Feldes am Ort des Störkörpers berechnet werden:\todo{Übergang unklar, vorallem was Positionsabhängigkeit der Felder angeht und Verschwindender Polarisation/Magnetisierung im Resonatorvolumen}
+	\begin{align}
+		|\ve| = \sqrt{-4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}}
+	\end{align}
+	wobei man die sogenannte Störkörperkonstante $\alpha_\mathrm{s}$ definiert:
+	\begin{align}
+		\alpha_\mathrm{s} \coloneqq 3 \, \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \, \epsilon_0 V_\mathrm{s}
+	\end{align}
 	
+	
+
+
+		Ist die unbelastete Güte des Resonators bekannt, so kann das elektrische Feld in Abhängigkeit der Verlustleistung des Resonators geschrieben werden als:
+		\begin{align}
+		\frac{|E_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{4 \frac{Q_0}{\alpha_s} \frac{\Delta \omega}{\omega_0^2}}
+		\end{align}
 	
 	
 	
@@ -181,6 +211,7 @@
 	
 	\appendix
 	\chapter{Herleitung der Frequenzverschiebung bei Störkörpermessung}
+	\label{app:herleitung_frequenzverschiebung}
 	Man betrachte das zeit- und ortsabhängige elektromagnetische Feld in einem Hohlraumresonators, charakterisiert durch elektrische Feldstärke~$\ve$ und magnetische Feldstärke~$\vh$.
 	Die Felder des ungestörten Resonators seien gegeben durch $(\ve_0, \vh_0)$ und die des gestörten Resonators durch $(\ve_1, \vh_1)$.
 	Bei Verwendung der komplexen Darstellung der stehenden Welle im Resonator, kann das elektromagnetische Feld angegeben werden als:
@@ -253,31 +284,7 @@
 		\frac{\Delta \omega}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vec{P} + \vb_0^* \cdot \vec{M} \right]}{4 W_0}
 	\end{align}
 	Diese Gleichung verknüpft die Verschiebung der Resonanzfrequenz durch einen Störkörper mit den ungestörten elektrischen und magnetischen Feldern und ermöglicht die Messung der Felder bei geeigneter Wahl des Störkörpers.
-	
-	
-	
-	
-		Im Rahmen dieser Bachelorarbeit wird eine dielektrische Kugel verwendet $\vec{M} = 0$, welche klein gegen die Dimensionen des Resonators ist. Für die Polarisation folgt (Jackson S.\ 115) unter der Annahme eines homogenen Feldes:
-		\begin{align}
-			\vec{P} = 3 \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \epsilon_0 \ve_0
-		\end{align}
-		und damit:
-		\begin{align}
-			\frac{\omega_1 - \omega_0}{\omega_0} = - 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s} \frac{|\ve_0|^2}{4 W_0}
-		\end{align}
-		\begin{align}
-			\alpha_\mathrm{s} = 3 \left( \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \right) \epsilon_0 V_\mathrm{s}
-		\end{align}
-		\begin{align}
-			\frac{\Delta \omega}{\omega_0} = \frac{\omega_0 - \omega_1}{\omega_0} = \alpha_\mathrm{s} \cdot \frac{|\ve|^2}{4 W_0}
-		\end{align}
-		\begin{align}
-			|\ve| = \sqrt{4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}}
-		\end{align}
-		Ist die unbelastete Güte des Resonators bekannt, so kann das elektrische Feld in Abhängigkeit der Verlustleistung des Resonators geschrieben werden als:
-		\begin{align}
-			\frac{|E_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{4 \frac{Q_0}{\alpha_s} \frac{\Delta \omega}{\omega_0^2}}
-		\end{align}
+	\todo{Frequenzverschiebung ist negativ}
 		
 	\backmatter
 		
