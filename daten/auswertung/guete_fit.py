@@ -55,7 +55,7 @@ def fit(file):
     dv = v_hi - v_lo
     Q0 = (1 + kappa) * v0 / dv
     
-    # Fitrange
+    # Fitrange Automatisieren!
     fitrange = (v_lo < v) & (v < v_hi)
     
     # Fit der Resonanzkurve
@@ -73,33 +73,26 @@ def fit(file):
     
     return (popt, perr)
 
-if __name__ == '__main__':
-    infile = sys.argv[1]
-    
-    popt, perr = fit(infile)
-    
-    print("v0 = {} +- {}".format(popt[0], np.sqrt(perr[0])))
-    print("Q0 = {} +- {}".format(popt[1], np.sqrt(perr[1])))
-    print("k = {} +- {}".format(popt[2], np.sqrt(perr[2])))
 
-#import glob
 #if __name__ == '__main__':
-#    refs = list(glob.iglob('*_ref.tsv'))
-#    refs.sort()
+#    infile = sys.argv[1]
 #    
-#    pts = list(glob.iglob('*mm.tsv'))
-#    pts.sort()
+#    popt, perr = fit(infile)
 #    
-#    with open('evaluated.tsv', 'w') as f:
-#        f.write("# Pos v0 d Q0 d k d v0r d Q0r d kr d\n")
-#        for ref, pt in zip(refs, pts):
-#            print(pt)
-#            pos = int(ref[0:4])
-#            assert(pos == int(pt[0:4]))
-#            
-#            ref_opt, ref_err = fit(ref)
-#            opt, err = fit(pt)
-#            
-#            outlist = [pos, opt[0], err[0], opt[1], err[1], opt[2], err[2], ref_opt[0], ref_err[0], ref_opt[1], ref_err[1], ref_opt[2], ref_err[2]]
-#            
-#            f.write('\t'.join(map(str,outlist)) + '\n')
+#    print("v0 = {} +- {}".format(popt[0], np.sqrt(perr[0])))
+#    print("Q0 = {} +- {}".format(popt[1], np.sqrt(perr[1])))
+#    print("k = {} +- {}".format(popt[2], np.sqrt(perr[2])))
+
+import glob
+if __name__ == '__main__':
+    measurements = list(glob.iglob('*.tsv'))
+    measurements.sort()
+    
+    with open('evaluated.tsv', 'w') as f:
+        f.write("#v0\tdv0\tQ0\tdQ0\tk\tdk\n")
+        for m in measurements:
+            opt, err = fit(m)
+            
+            outlist = [opt[0], err[0], opt[1], err[1], opt[2], err[2]]
+            f.write('\t'.join(map(str, outlist)) + '\n')
+            
