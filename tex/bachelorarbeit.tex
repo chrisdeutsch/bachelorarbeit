@@ -124,7 +124,8 @@
 	\end{align}
 	und die Kreisgüte aus ihrer Definition \todo{Definition mit Verlustleistung}:
 	\begin{align}
-		Q_0 &\coloneqq 2\pi \cdot \frac{\text{gespeicherte Energie}}{\text{Energieverlust pro Periode}} = \omega_0 R C
+		Q_0 &\coloneqq 2\pi \cdot \frac{\text{gespeicherte Energie}}{\text{Energieverlust pro Periode}} = \frac{\omega_0 W_0}{P_\mathrm{V}} = \omega_0 R C
+		\label{eq:def_guete}
 	\end{align}
 	Nach der Einführung dieser Kenngrößen kann die Impedanz des Kreises beziehungsweise des Hohlraumresonators ausgedrückt werden als:
 	\begin{align}
@@ -185,25 +186,20 @@
 		\label{eq:polarisation_kugel}
 	\end{align}
 	mit der elektrischen Feldkonstante~$\epsilon_0$.
-	Durch die Annahme der Homogenität der Felder und verschwindender Polarisation und Magnetisierung außerhalb des Störkörpervolumens~$V_\mathrm{s}$ kann direkt die Amplitude $|\ve_0|$ des elektrischen Feldes am Ort des Störkörpers berechnet werden:\todo{Übergang unklar, vorallem was Positionsabhängigkeit der Felder angeht und Verschwindender Polarisation/Magnetisierung im Resonatorvolumen}
+	Durch die Annahme der Homogenität der Felder und verschwindender Polarisation und Magnetisierung außerhalb des Störkörpervolumens~$V_\mathrm{s}$ kann direkt die Amplitude $|\ve_0|$ des elektrischen Feldes am Ort des Störkörpers berechnet werden:\todo{Übergang unklar, vorallem was Positionsabhängigkeit der Felder angeht und Verschwindender Polarisation/Magnetisierung im Resonatorvolumen, negatives Vorzeichen in der Wurzel}
 	\begin{align}
-		|\ve| = \sqrt{-4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}}
+		|\ve_0| = \sqrt{-4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}} \label{eq:skm_e_feld}
 	\end{align}
 	wobei man die sogenannte Störkörperkonstante $\alpha_\mathrm{s}$ definiert:
 	\begin{align}
 		\alpha_\mathrm{s} \coloneqq 3 \, \frac{\epsilon_\mathrm{r} - 1}{\epsilon_\mathrm{r} + 2} \, \epsilon_0 V_\mathrm{s}
 	\end{align}
-	
-	
-
-
-		Ist die unbelastete Güte des Resonators bekannt, so kann das elektrische Feld in Abhängigkeit der Verlustleistung des Resonators geschrieben werden als:
-		\begin{align}
-		\frac{|E_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{4 \frac{Q_0}{\alpha_s} \frac{\Delta \omega}{\omega_0^2}}
-		\end{align}
-	
-	
-	
+	Die Amplitude des elektrischen Feldes in Gleichung \eqref{eq:skm_e_feld} ist von der im Resonator gespeicherten Energie $W_0$ abhängig, welche wiederum von der in den Resonator eingekoppelten Leistung abhängt.
+	Daher ist es zweckmäßig die gespeicherte Energie $W_0$ über Gleichung \eqref{eq:def_guete} in abhängigkeit der Güte $Q_0$ und Verlustleistung $P_\mathrm{V}$ auszudrücken.
+	Die Amplitude des elektrischen Feldes kann dann auf die Wurzel der Verlustleistung normiert werden und man erhält:
+	\begin{align}
+		\frac{|\ve_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{-4 \cdot \frac{Q_0}{\alpha_s} \cdot \frac{\Delta \omega}{\omega_0^2}}
+	\end{align}	
 	
 	\chapter{Störkörpermessung}
 	
