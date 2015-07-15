@@ -161,10 +161,6 @@
 		\rho(\omega) = \frac{\frac{\kappa}{R} \cdot Z(\omega) - 1}{\frac{\kappa}{R} \cdot Z(\omega) + 1} = \frac{(\kappa - 1) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
 	\end{align}
 	\todo{Abschlusssatz}
-	Mit dem Betrag \todo{WEG DAMIT!}:
-	\begin{align}
-		| \rho(\omega) | = \sqrt{\frac{(\kappa - 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}{(\kappa + 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}}
-	\end{align}
 
 	\section{Resonante Störkörpermessung}
 	\todo{Vernachlässigung von Luft $\mu$, $\epsilon$}
@@ -186,7 +182,7 @@
 		\label{eq:polarisation_kugel}
 	\end{align}
 	mit der elektrischen Feldkonstante~$\epsilon_0$.
-	Durch die Annahme der Homogenität der Felder und verschwindender Polarisation und Magnetisierung außerhalb des Störkörpervolumens~$V_\mathrm{s}$ kann direkt die Amplitude $|\ve_0|$ des elektrischen Feldes am Ort des Störkörpers berechnet werden:\todo{Übergang unklar, vorallem was Positionsabhängigkeit der Felder angeht und Verschwindender Polarisation/Magnetisierung im Resonatorvolumen, negatives Vorzeichen in der Wurzel}
+	Durch die Annahme der Homogenität der Felder und verschwindender Polarisation und Magnetisierung außerhalb des Störkörpervolumens~$V_\mathrm{s}$ kann direkt crcdie Amplitude $|\ve_0|$ des elektrischen Feldes am Ort des Störkörpers berechnet werden:\todo{Übergang unklar, vorallem was Positionsabhängigkeit der Felder angeht und Verschwindender Polarisation/Magnetisierung im Resonatorvolumen, negatives Vorzeichen in der Wurzel}
 	\begin{align}
 		|\ve_0| = \sqrt{-4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}} \label{eq:skm_e_feld}
 	\end{align}
@@ -202,9 +198,30 @@
 	\end{align}	
 	
 	\chapter{Störkörpermessung}
+	Permittivität Teflon \cite{CRC} $\epsilon_\mathrm{r} = \num{2.1}$.
+	Berechnen der Störkörperkonstante \todo{Fehler ist noch nicht richtig!}:
+	\begin{align}
+		\alpha_\mathrm{s} = \SI{2.985 +- 0.1e-17}{\ampere\second\metre\squared\per\volt}
+	\end{align}
+
+
+	
+	Mit dem Betrag:
+	\begin{align}
+		| \rho(\omega) | = \sqrt{\frac{(\kappa - 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}{(\kappa + 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}}
+	\end{align}
+	\begin{figure}[ht]
+		\centering
+		\input{./plots/outfile.tex}
+		\caption{Gütefit}
+		\label{fig:gütefit}
+	\end{figure}
+	
+	
+	
 	
 	\chapter{Fazit}
-	
+	     
 	\appendix
 	\chapter{Herleitung der Frequenzverschiebung bei Störkörpermessung}
 	\label{app:herleitung_frequenzverschiebung}
@@ -296,13 +313,19 @@
 	
 	\bibitem{pozar}
 		\textsc{D.\ M.\ Pozar},
-		\emph{Microwave Engineering}, 4th ed.,
+		\emph{Microwave Engineering}, 4.\ Auflage,
 		Wiley, New York, 2011.
 	
 	\bibitem{jackson}
 		\textsc{J.\ D.\ Jackson},
-		\emph{Classical Electrodynamics}, 1st ed.,
+		\emph{Classical Electrodynamics}, 1.\ Auflage,
 		Wiley, New York, 1962.
+	
+	\bibitem{CRC}
+		\textsc{D.\ R.\ Lide} (Hrsg.),
+		\emph{CRC Handbook of Chemistry and Physics}, 90. Auflage,
+		CRC Press, Florida, 2010.
+		
 	
 	\end{thebibliography}
 	
