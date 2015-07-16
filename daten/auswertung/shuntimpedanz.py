@@ -59,15 +59,40 @@ voltage = ufloat(*trapz(x, y, dy))
 # Shunt-Impedanz (instantan)
 rs = 0.5 * voltage**2
 
-# Delay-Coefficient
-c0 = 299792458.0
+# Berechnung des Delay-Koeffizienten
+c0 = 299792458.0 # Lichtgeschwindigkeit
+
+# Phase definieren TODO: Schön machen
+phase = np.zeros_like(x)
+phase[0:74-7] = 0
+phase[74-7:134-7] = np.pi
+phase[134-7:194-7] = 0
+phase[194-7:254-7] = np.pi
+phase[254-7:314-7] = 0
+phase[314-7:374-7] = np.pi
+phase[374-7:434] = 0
+
 def eff_voltage(phi0):
-  harm_dep = np.sin(2 * np.pi * v0 / c0 * pos + phase + phi0)
+  harm_dep = unumpy.sin(2 * np.pi * v0 / c0 * x + phase + phi0)
   eff_field = e_field * harm_dep
   return trapz(x, unumpy.nominal_values(eff_field), unumpy.std_devs(eff_field))
 
-f = lambda phi0: -eff_voltage(phi0)
-min_res = minimize_scalar(f, bounds=(0, 2*np.pi), method='bounded')
+def minimizer(phi0):
+  x, y = eff_voltage(phi0)
+  return -x
+
+min_res = minimize_scalar(minimizer, bounds=(-np.pi, np.pi), method='bounded')
+phi0 = min_res.x
+
+effv = ufloat(*eff_voltage(phi0))
+
+delay_coeff = effv / voltage
+
+# effektive Beschleunigungsspannung
+voltage_eff = voltage * delay_coeff
+
+# effektive Shunt-Impedanz
+rs_eff = rs * delay_coeff**2
 
 ### Abspeichern der Ergebnisse
 field_out = np.column_stack((unumpy.nominal_values(pos), unumpy.std_devs(pos),
