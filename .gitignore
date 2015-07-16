@@ -8,3 +8,5 @@
 .DS_store
 *.lof
 *.lot
+__pycache__
+
