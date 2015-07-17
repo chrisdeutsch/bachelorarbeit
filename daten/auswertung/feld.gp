@@ -18,15 +18,13 @@ set decimalsign '{,}'
 set xrange [0:*]
 set yrange [0:*]
 set xlabel '$d$ / \si{mm}'
-set ylabel '$E$ / \si{\volt\per\metre}'
+set ylabel '$E/\sqrt{P}$ / \si{\volt\per\metre\per\watt\tothe{0.5}}'
 
 set grid
 
-#set label 1 "$U_\\mathrm{max} = \\SI{434.4+-0.5}{V}$" at 1900, 320
-#set label 2 "$R_\\mathrm{S} = \\SI{23.7+-1.1}{\\mega\\ohm}$" at 1900, 280
-
 set bars small
 
-plot 'eval.tsv' using 1:3:2:4 w xyerrorbars t"Messpunkte" pt 7 ps 0.4
+plot 'feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" pt 7 ps 0.4,\
+     'eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" pt 7 ps 0.4
 
 unset output

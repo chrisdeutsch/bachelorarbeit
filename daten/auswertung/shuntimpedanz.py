@@ -50,7 +50,7 @@ for i in range(len(e_field)):
 
 ### Berechnung der Shuntimpedanz ###
 # Instantane Spannung
-x = unumpy.nominal_values(pos) / 1000.0
+x = unumpy.nominal_values(pos) / 1000.0  # Umrechnung in Meter
 y = unumpy.nominal_values(e_field)
 dy = unumpy.std_devs(e_field)
 
@@ -59,7 +59,7 @@ voltage = ufloat(*trapz(x, y, dy))
 # Shunt-Impedanz (instantan)
 rs = 0.5 * voltage**2
 
-# Berechnung des Delay-Koeffizienten
+# Berechnung des effektiven elektrischen Feldes (Zeitabhängigkeit
 c0 = 299792458.0 # Lichtgeschwindigkeit
 
 # Phase definieren TODO: Schön machen
@@ -72,24 +72,30 @@ phase[254-7:314-7] = 0
 phase[314-7:374-7] = np.pi
 phase[374-7:434] = 0
 
-def eff_voltage(phi0):
+# Funktion zur Berechnung der effektiven Spannung in Abhängigkeit der Eintritts-
+# phase des Teilchens in die Cavity (soll maximiert werden)
+def calc_eff_voltage(phi0):
+  # Zeitabhängigkeit des Feldes
+  global harm_dep
+  global eff_field
+  
   harm_dep = unumpy.sin(2 * np.pi * v0 / c0 * x + phase + phi0)
   eff_field = e_field * harm_dep
+  
   return trapz(x, unumpy.nominal_values(eff_field), unumpy.std_devs(eff_field))
 
-def minimizer(phi0):
-  x, y = eff_voltage(phi0)
-  return -x
+# Maximierung der Effektivspannung
+f = lambda phi0: -calc_eff_voltage(phi0)[0]
+min_res = minimize_scalar(f, bounds=(-np.pi, np.pi), method='bounded')
 
-min_res = minimize_scalar(minimizer, bounds=(-np.pi, np.pi), method='bounded')
+# Eintrittsphase bei der die effektive Beschleunigungsspannung maximal ist
 phi0 = min_res.x
 
-effv = ufloat(*eff_voltage(phi0))
+# Berechnung der effektiven Beschleunigungsspannung
+eff_voltage = ufloat(*calc_eff_voltage(phi0))
 
-delay_coeff = effv / voltage
-
-# effektive Beschleunigungsspannung
-voltage_eff = voltage * delay_coeff
+# Berechnung des Delay-Koeffizienten
+delay_coeff = eff_voltage / voltage
 
 # effektive Shunt-Impedanz
 rs_eff = rs * delay_coeff**2
@@ -98,5 +104,9 @@ rs_eff = rs * delay_coeff**2
 field_out = np.column_stack((unumpy.nominal_values(pos), unumpy.std_devs(pos),
   unumpy.nominal_values(e_field), unumpy.std_devs(e_field)))
 
+eff_field_out = np.column_stack((unumpy.nominal_values(pos), unumpy.std_devs(pos),
+  unumpy.nominal_values(eff_field), unumpy.std_devs(eff_field)))
+
 np.savetxt('feld.tsv', field_out, delimiter='\t')
+np.savetxt('eff_feld.tsv', eff_field_out, delimiter='\t')
 
