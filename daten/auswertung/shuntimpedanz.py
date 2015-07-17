@@ -8,6 +8,16 @@ from scipy.optimize import minimize_scalar
 
 ### Berechnung des elektrischen Feldes ###
 
+# Güte und Resonanzfrequenz
+# TODO: Frequenzverschiebung aufgrund der Luft im Resonator
+Q0 = ufloat(29000.0, 200.0)
+v0 = ufloat(499.67E+6, 0.01E+6)
+
+# Resonanzfrequenz Vakuum->Luft?
+epsilon_r_air = 1.0005364
+v0 *= 0.5 * (3.0 - epsilon_r_air)
+
+
 # Berechnung der Störkörperkonstante
 radius = ufloat(0.01, 0.0001)
 epsilon = ufloat(2.1, 0.01)
@@ -17,10 +27,6 @@ epsilon0 = 8.85418781762E-12
 vol_s = 4.0 / 3.0 * np.pi * radius**3
 alpha_s = 3.0 * (epsilon - 1.0) / (epsilon + 2.0) * epsilon0 * vol_s
 
-# Güte und Resonanzfrequenz
-# TODO: Frequenzverschiebung aufgrund der Luft im Resonator
-Q0 = ufloat(29000.0, 200.0)
-v0 = ufloat(499.67E+6, 0.01E+6) # Resonanzfrequenz Vakuum->Luft?
 
 # Daten einlesen
 data = np.loadtxt("pi_messung_1.tsv")
