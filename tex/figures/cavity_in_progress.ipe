@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150716211205" modified="D:20150717172637"/>
+<info created="D:20150716211205" modified="D:20150717173451"/>
 <bitmap id="1" width="897" height="954" length="32546" ColorSpace="DeviceRGB" Filter="FlateDecode" BitsPerComponent="8" encoding="base64">
 eNrt3emaozjTcGufgM7/cNnfu7uf7EwbsAANIeleP+rqrsq0IdCwCE3bBgAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAGB1Xq+XIAAAAICCAgAAgIICAAAAFBQAAAAUFAAAAKCgAAAAoKAAAAAA
@@ -5671,36 +5671,6 @@ h
 72.7692 0 0 72.7692 191.908 201.89 e
 </path>
 </group>
-<group matrix="0.222714 0 0 0.222714 259.325 607.746">
-<path stroke="black">
-56.7 0 0 56.7 191.908 201.89 e
-</path>
-<path stroke="black">
-5.02733 0 0 5.02733 191.908 201.89 e
-</path>
-<path stroke="black">
-182.764 201.861 m
-9.14493 0 0 -9.14493 191.908 201.89 201.053 201.9 a
-</path>
-<path stroke="black">
-182.764 201.861 m
-182.764 145.932 l
-</path>
-<path stroke="black">
-201.053 201.9 m
-201.053 145.932 l
-</path>
-<path stroke="black">
-67.8739 0 0 67.8739 191.908 201.89 e
-</path>
-<path stroke="black">
-182.764 174.557 m
-28.8222 0 0 -28.8222 191.908 201.89 201.053 174.557 a
-</path>
-<path stroke="black">
-72.7692 0 0 72.7692 191.908 201.89 e
-</path>
-</group>
 <path matrix="1 0 0 0.643236 0 200.509" stroke="black" fill="gray">
 49.9884 579.681 m
 49.9884 573.822 l
@@ -6269,6 +6239,34 @@ h
 176.477 573.38 l
 166.451 573.38 l
 </path>
+</group>
+<path matrix="0.222714 0 0 0.222714 259.325 607.746" stroke="black">
+72.7692 0 0 72.7692 191.908 201.89 e
+</path>
+<group>
+<path matrix="0.222714 0 0 0.222714 259.325 607.746" stroke="black" fill="darkred">
+67.8739 0 0 67.8739 191.908 201.89 e
+</path>
+<group matrix="1 0 0 1 0.00140169 0.00027054">
+<path stroke="black" fill="white">
+12.628 0 0 12.628 302.066 652.71 e
+</path>
+<group matrix="1 0 0 1 -0.00040169 -0.00027054">
+<path stroke="black" fill="darkred">
+6.41911 0 0 6.41911 302.066 652.71 e
+</path>
+<path matrix="1 0 0 1 -0.00040169 -0.00027054" stroke="black" fill="darkred">
+304.102 640.247 m
+12.6279 0 0 -12.6279 302.065 652.71 300.029 640.247 a
+300.029 652.703 l
+2.0367 0 0 -2.0367 302.066 652.71 304.102 652.712 a
+304.102 640.247 l
+</path>
+<path matrix="0.222714 0 0 0.222714 259.325 607.747" stroke="black" fill="darkred">
+5.02733 0 0 5.02733 191.908 201.89 e
+</path>
+</group>
+</group>
 </group>
 </page>
 </ipe>
