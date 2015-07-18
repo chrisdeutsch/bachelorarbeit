@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.5">
-<info created="D:20150716211205" modified="D:20150718113055"/>
+<info created="D:20150716211205" modified="D:20150718121903"/>
 <bitmap id="1" width="897" height="954" length="32546" ColorSpace="DeviceRGB" Filter="FlateDecode" BitsPerComponent="8" encoding="base64">
 eNrt3emaozjTcGufgM7/cNnfu7uf7EwbsAANIeleP+rqrsq0IdCwCE3bBgAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAGB1Xq+XIAAAAICCAgAAgIICAAAAFBQAAAAUFAAAAKCgAAAAoKAAAAAA
@@ -6333,7 +6333,7 @@ h
 176 384 l
 h
 </path>
-<group matrix="1 0 0 1 24 -52">
+<group matrix="1 0 0 1 184 40">
 <path stroke="black" fill="0.651">
 128 444.5 m
 128 440 l
@@ -7076,7 +7076,7 @@ h
 h
 </path>
 </group>
-<group matrix="0 1 -1 0 552 128">
+<group matrix="0 2.38462 -1 0 552 94.7692">
 <path stroke="black" fill="0.651">
 128 444.5 m
 128 440 l
@@ -7115,7 +7115,7 @@ h
 h
 </path>
 </group>
-<group matrix="0.461538 0 0 1 100.923 -220">
+<group matrix="0.384615 0 0 1 102.769 -217.437">
 <path stroke="black" fill="0.651">
 128 444.5 m
 128 440 l
@@ -7138,7 +7138,7 @@ h
 h
 </path>
 </group>
-<path matrix="1 0 0 1 -25.5 -112" stroke="black" fill="0.839">
+<path matrix="1 0 0 1 -25.5 -109.437" stroke="black" fill="0.839">
 137.5 344 m
 137.5 356 l
 140 356 l
@@ -7147,7 +7147,7 @@ h
 149.5 344 l
 h
 </path>
-<path matrix="1 0 0 1 -13.5 24" stroke="black" fill="0.839">
+<path matrix="1 0 0 1 146.5 116" stroke="black" fill="0.839">
 137.5 344 m
 137.5 356 l
 140 356 l
@@ -7156,13 +7156,224 @@ h
 149.5 344 l
 h
 </path>
-<path matrix="-0 -1 1 -0 -232 357.5" stroke="black" fill="0.839">
+<path matrix="-0 -1 1 -0 -232 360.063" stroke="black" fill="0.839">
 137.5 344 m
 137.5 356 l
 140 356 l
 140 346.5 l
 149.5 346.5 l
 149.5 344 l
+h
+</path>
+<path matrix="-1 0 0 1 891.236 -240" stroke="black" fill="0.478">
+160 384 m
+160 416 l
+176 416 l
+176 384 l
+h
+</path>
+<group matrix="-0.738113 0 0 1 825.715 -240">
+<path matrix="1 0 0 1 0 -36" stroke="black" fill="0.651">
+24 447.5 m
+24 452 l
+128 452 l
+128 447.5 l
+h
+</path>
+<path matrix="1 0 0 1 0 -36" stroke="black" fill="0.839">
+24 447.5 m
+24 444.5 l
+128 444.5 l
+128 447.5 l
+h
+</path>
+<path matrix="1 0 0 1 0 -48" stroke="black" fill="0.651">
+128 444.5 m
+128 440 l
+24 440 l
+24 444.5 l
+h
+</path>
+<path matrix="1 0 0 1 0 -48" stroke="black" fill="0.839">
+24 447.5 m
+24 444.5 l
+128 444.5 l
+128 447.5 l
+h
+</path>
+<path stroke="black" fill="0.651">
+24 404 m
+24 408.5 l
+128 408.5 l
+128 404 l
+128 399.5 l
+24 399.5 l
+h
+</path>
+</group>
+<group matrix="-1 0 0 1 887.236 -272">
+<path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
+32 416 m
+32 392 l
+44 392 l
+44 416 l
+h
+</path>
+<path stroke="black" fill="0.839">
+156 448 m
+156 424 l
+153.5 424 l
+153.5 448 l
+h
+</path>
+</group>
+<group matrix="1 0 0 -1 628 600">
+<path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
+32 416 m
+32 392 l
+44 392 l
+44 416 l
+h
+</path>
+<path stroke="black" fill="0.839">
+156 448 m
+156 424 l
+153.5 424 l
+153.5 448 l
+h
+</path>
+</group>
+<group matrix="0 1.92308 1 0 344 105.846">
+<path stroke="black" fill="0.651">
+128 444.5 m
+128 440 l
+24 440 l
+24 444.5 l
+h
+</path>
+<path stroke="black" fill="0.651">
+24 447.5 m
+24 452 l
+128 452 l
+128 447.5 l
+h
+</path>
+<path stroke="black" fill="0.839">
+24 447.5 m
+24 444.5 l
+128 444.5 l
+128 447.5 l
+h
+</path>
+</group>
+<group matrix="-1 0 0 1 952 -272">
+<path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
+32 416 m
+32 392 l
+44 392 l
+44 416 l
+h
+</path>
+<path stroke="black" fill="0.839">
+156 448 m
+156 424 l
+153.5 424 l
+153.5 448 l
+h
+</path>
+</group>
+<group matrix="-1 0 0 1 896 -48">
+<path matrix="1 0 0 1 -64 -32" stroke="black" fill="0.839">
+164 432 m
+176 432 l
+182.064 427.957 l
+182.544 420.363 l
+176 416 l
+164 416 l
+h
+</path>
+<path matrix="1 0 0 1 -75.9132 -32.1721" stroke="black" fill="0.651">
+6.26129 -0.109131 0.109131 6.26129 192 424 e
+</path>
+<path matrix="0.0677395 0 0 0.0677395 106.332 361.752" stroke="black" fill="black">
+4 0 0 4 144 444 e
+</path>
+</group>
+<group matrix="-1 0 0 1 896.086 -152.903">
+<path matrix="1 0 0 1 -64 -32" stroke="black" fill="0.839">
+164 432 m
+176 432 l
+182.064 427.957 l
+182.544 420.363 l
+176 416 l
+164 416 l
+h
+</path>
+<path matrix="1 0 0 1 -75.9132 -32.1721" stroke="black" fill="0.651">
+6.26129 -0.109131 0.109131 6.26129 192 424 e
+</path>
+<path matrix="0.0677395 0 0 0.0677395 106.332 361.752" stroke="black" fill="black">
+4 0 0 4 144 444 e
+</path>
+</group>
+<group>
+<path matrix="1 0 0 1 0 -155.337" stroke="black" fill="0.651">
+4 0 0 4 144 384 e
+</path>
+<path matrix="0.0677395 0 0 0.0677395 134.246 198.587" stroke="black" fill="black">
+4 0 0 4 144 444 e
+</path>
+</group>
+<group>
+<path matrix="1 0 0 1 -37.9943 -199.543" stroke="black" fill="0.651">
+4 0 0 4 144 384 e
+</path>
+<path matrix="0.0677395 0 0 0.0677395 96.2512 154.38" stroke="black" fill="black">
+4 0 0 4 144 444 e
+</path>
+</group>
+<group>
+<path matrix="1 0 0 1 -64 -32" stroke="black" fill="0.839">
+164 432 m
+176 432 l
+182.064 427.957 l
+182.544 420.363 l
+176 416 l
+164 416 l
+h
+</path>
+<path matrix="1 0 0 1 -75.9132 -32.1721" stroke="black" fill="0.651">
+6.26129 -0.109131 0.109131 6.26129 192 424 e
+</path>
+<path matrix="0.0677395 0 0 0.0677395 106.332 361.752" stroke="black" fill="black">
+4 0 0 4 144 444 e
+</path>
+</group>
+<group matrix="0.766861 0 0 0.766861 -14.428 18.0649">
+<path stroke="black" fill="0.651">
+12 0 0 12 144 352 e
+</path>
+<path stroke="black" fill="0.839">
+8 0 0 8 144 352 e
+</path>
+<path matrix="0.0677395 0 0 0.0677395 134.246 321.924" stroke="black" fill="black">
+4 0 0 4 144 444 e
+</path>
+</group>
+<path stroke="black" pen="heavier">
+109.846 391.312 m
+6.28389 0 0 -6.28389 116.108 391.83 115.858 398.109 a
+780.674 350.044 l
+6.26185 0 0 -6.26185 779.914 343.828 786.175 343.859 a
+786.261 238.884 l
+6.2619 0 0 -6.2619 780 238.925 779.935 232.663 a
+143.995 232.663 l
+4 0 0 4 144 228.663 141.067 231.383 a
+109.052 181.864 l
+4 0 0 -4 106.006 184.457 102.011 184.665 a
+105.202 288.097 l
+9.20233 0 0 9.20233 96 288 86.7982 287.901 a
+9.20233 0 0 9.20233 96 288 105.202 287.982 a
 h
 </path>
 </page>
