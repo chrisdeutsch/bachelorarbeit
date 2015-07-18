@@ -1,0 +1,31 @@
+%------------------------------------------------------------------------------
+\chapter{Störkörpermessung}
+\label{sec:stoerkoerpermessung}
+%------------------------------------------------------------------------------
+
+Permittivität Teflon \cite{CRC}(S. 2201) $\epsilon_\mathrm{r} = \num{2.1}$.
+Berechnen der Störkörperkonstante \todo{Fehler ist noch nicht richtig!}:
+\begin{align}
+  \alpha_\mathrm{s} = \SI{2.985 +- 0.092e-17}{\ampere\second\metre\squared\per\volt}
+\end{align}
+
+Unterschied Vakuum--Luft \cite{pozar} (S. 308):
+\begin{align}
+\omega \approx \omega_0 \cdot \frac{3 - \epsilon_\mathrm{r}}{2}
+\end{align}
+Permittivität Luft (trocken und CO2-frei) \cite{CRC} (S.1093):
+\begin{align}
+\epsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}
+\end{align}
+
+
+Mit dem Betrag:
+\begin{align}
+  | \rho(\omega) | = \sqrt{\frac{(\kappa - 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}{(\kappa + 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}}
+\end{align}
+\begin{figure}[ht]
+  \centering
+  %\input{./plots/outfile.tex}
+  \caption{Gütefit}
+  \label{fig:gütefit}
+\end{figure}

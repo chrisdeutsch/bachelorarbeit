@@ -1,0 +1,115 @@
+% PAKETE UND DOKUMENTKONFIGURATION
+\documentclass[11pt, a4paper]{scrbook}
+
+% Encoding für Umlaute
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Silbentrennung
+\usepackage[ngerman]{babel}
+
+% erweiterte Matheumgebungen und Formelnummer mit Sectionnummer
+\usepackage{amsmath}
+
+% zusätzliche mathematische Schriftarten
+\usepackage{amsfonts}
+
+% verschiedene mathematische Symbole
+\usepackage{amssymb}
+
+%
+\usepackage{textcomp}
+\usepackage{mathtools}
+
+% Einheiten setzen z.B. \SI{10}{\kilo\gram\meter\per\second\squared}
+% Fehler: \SI{10 +- 0,2e-4}{\metre}
+\usepackage{siunitx}
+\sisetup{
+  output-decimal-marker={,},
+  separate-uncertainty
+}
+
+% Bilder einfügen
+\usepackage{graphicx}
+
+% Textfarbe
+\usepackage[dvipsnames]{xcolor}
+
+% Verweise innerhalb des Dokuments
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	allcolors = {black}
+}
+
+\newcommand{\vnabla}{\vec{\nabla}}
+\newcommand{\ve}{\vec{E}}
+\newcommand{\vb}{\vec{B}}
+\newcommand{\vh}{\vec{H}}
+\newcommand{\vd}{\vec{D}}
+
+\newcommand{\todo}[1]{{\textcolor{Green}{(#1)}}}
+
+\title{Störkörpermessung an Beschleunigungsresonatoren}
+\author{Christopher Deutsch}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	\tableofcontents
+	
+	\mainmatter
+	
+	\chapter{Einleitung}
+	
+	
+	\chapter{Theorie}	
+
+	
+	\chapter{Störkörpermessung}
+
+	
+	
+	
+	
+	\chapter{Fazit}
+	     
+	\appendix
+
+		
+	\backmatter
+		
+	\begin{thebibliography}{19}
+	\bibitem{hillert}
+		\textsc{W.\ Hillert},
+		\emph{E 106: Cavities, Details on the experimental method}, Bonn, 2008.
+
+	\bibitem{wangler}
+		\textsc{T.\ P.\ Wangler},
+		\emph{Principles of RF Linear Accelerators},
+		Wiley, New York, 1998.
+	
+	\bibitem{pozar}
+		\textsc{D.\ M.\ Pozar},
+		\emph{Microwave Engineering}, 4.\ Auflage,
+		Wiley, New York, 2011.
+	
+	\bibitem{jackson}
+		\textsc{J.\ D.\ Jackson},
+		\emph{Classical Electrodynamics}, 1.\ Auflage,
+		Wiley, New York, 1962.
+	
+	\bibitem{CRC}
+		\textsc{D.\ R.\ Lide} (Hrsg.),
+		\emph{CRC Handbook of Chemistry and Physics}, 90. Auflage,
+		CRC Press, Florida, 2010.
+		
+	
+	\end{thebibliography}
+	
+	\chapter{Danksagung}
+	
+	\listoffigures
+	\listoftables
+	
+\end{document}
