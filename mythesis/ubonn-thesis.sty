@@ -1,0 +1,555 @@
+% Style file for a thesis written in the University of Bonn
+%------------------------------------------------------------------------------
+\ProvidesPackage{ubonn-thesis}[2015/02/20 Version 3.0 University of Bonn thesis package]
+\NeedsTeXFormat{LaTeX2e}
+
+% Set TeX Live version
+\providecommand*{\texlive}{2014}
+
+% Set institute information
+\providecommand*{\InstituteName}{\PI}
+\providecommand*{\inInstitute}{\inPI}
+\providecommand*{\InstituteAddress}{\PIaddress}
+
+% ifthen package gives more possibilities than native \if
+\RequirePackage{ifthen}
+
+% Use kvoptions package to set options
+\RequirePackage{kvoptions}
+\SetupKeyvalOptions{
+  family=UBN,
+  prefix=UBN@
+}
+\DeclareBoolOption[false]{newtx}
+\DeclareBoolOption[true]{txfonts}
+\DeclareBoolOption[false]{palatino}
+\DeclareBoolOption[false]{feynmf}
+\DeclareBoolOption[false]{feynmp}
+\DeclareBoolOption[true]{subcaption}
+\DeclareBoolOption[false]{subfig}
+\DeclareBoolOption[false]{subfigure}
+\DeclareBoolOption[true]{xtab}
+\DeclareBoolOption[false]{longtable}
+\DeclareBoolOption[false]{supertabular}
+\DeclareBoolOption[true]{biblatex}
+\DeclareBoolOption[true]{siunitx}
+\DeclareBoolOption[true]{dcolumn}
+\DeclareBoolOption[true]{mhchem}
+\DeclareBoolOption[false]{titlesec}
+\DeclareBoolOption[false]{astrobib}
+\DeclareBoolOption[true]{floatopt}
+\DeclareStringOption{texlive}
+\DeclareStringOption[true]{backref}
+\DeclareStringOption[biber]{backend}
+\DeclareStringOption{bibencoding}
+\DeclareStringOption[numeric-comp]{bibstyle}
+\ProcessKeyvalOptions*
+
+% TeX Live version specified as an option
+\ifx\UBN@texlive\@empty
+  \relax
+\else
+  \renewcommand*{\texlive}{\UBN@texlive}
+\fi
+
+% Only one font package at a time!
+\ifUBN@newtx
+  \typeout{Using newtx fonts}
+  \UBN@txfontsfalse
+  \UBN@palatinofalse
+\else
+  \ifUBN@palatino
+    \typeout{Using Palatino fonts}
+    \UBN@txfontsfalse
+    \UBN@newtxfalse
+  \else
+    \ifUBN@txfonts
+      \typeout{Using txfonts}
+      \UBN@newtxfalse
+      \UBN@palatinofalse
+    \fi
+  \fi
+\fi
+
+% xtab and supertabular do not mix
+\ifUBN@supertabular
+  \UBN@xtabfalse
+\else
+  \ifUBN@xtab
+    \UBN@supertabularfalse
+  \fi
+\fi
+
+% Only one subfigure package at a time!
+\ifUBN@subfigure
+  \UBN@subfigfalse
+  \UBN@subcaptionfalse
+\else
+  \ifUBN@subfig
+    \UBN@subfigurefalse
+    \UBN@subcaptionfalse
+  \else
+    \ifUBN@subcaption
+      \UBN@subfigurefalse
+      \UBN@subfigfalse
+    \fi
+  \fi
+\fi
+
+% Check backend - if TeX Live is earlier than 2011 and backend is biber,
+% change it to something more appropriate
+\ifthenelse {\texlive < 2011 \AND \equal{\UBN@backend}{biber}}{%
+  \typeout{*** ubonn-thesis: setting backend to bibtex8}
+  \renewcommand*{\UBN@backend}{bibtex8,bibencoding=latin1}
+}{%
+}
+
+% Switch from subcaption to subfig if TeX Live is earlier than 2012
+\ifthenelse {\texlive < 2012 \AND \boolean{UBN@subcaption}}{%
+  \typeout{*** ubonn-thesis: use subfig instead of subcaption}
+    \UBN@subfigurefalse
+    \UBN@subfigtrue
+    \UBN@subcaptionfalse
+}{%
+}
+
+%------------------------------------------------------------------------------
+% General KOMA script options - other options affecting header/footer
+% section titles and captions are at the end of this file
+\KOMAoptions{fontsize=11pt,paper=a4,twoside}
+% Add List of Figures/Tables to Table of Contents
+\KOMAoptions{listof=totoc}
+% Also add bibliography to the Table of Contents - this option only
+% works for BiBTeX. If you use biblatex you have to add the option
+% [heading=bibintoc] to \printbibliography
+\KOMAoptions{bibliography=totocnumbered}
+% No paragraph indentation, but instead half-line space
+% \KOMAoptions{parskip=half}
+
+%------------------------------------------------------------------------------
+% Page layout
+% You can either use geometry or the built-in typearea
+% Typarea allows you to easily take into acccount extra space needed
+% for binding using the BCOR parameter.
+% The DIV parameter tells it how many elements the page
+% should be split into.
+% \RequirePackage[scale=0.75]{geometry}
+\KOMAoptions{DIV=14,BCOR=8mm}
+\KOMAoptions{headinclude=true}
+% Header and footer
+\RequirePackage[headsepline]{scrpage2}
+
+%-------------------------------------------------------------------------------
+% Math packages that have to come early 
+% AMS math (for some font collections this has to come before their selection)
+\RequirePackage{amsmath,amssymb}
+% Nicer fractions
+\RequirePackage{xfrac}
+
+%-------------------------------------------------------------------------------
+% Input encoding, font and language
+\RequirePackage[utf8]{inputenc}
+
+% New version of the txfonts times-roman font
+\ifUBN@newtx
+  \RequirePackage{newtxtext}
+  \RequirePackage{newtxmath}
+\fi
+% Times-roman font
+\ifUBN@txfonts
+  \RequirePackage[varg]{txfonts} % Used in ATLAS papers
+  \RequirePackage[T1]{fontenc}
+\fi
+% Palatino font
+\ifUBN@palatino
+  % Palatino for rm and math | Helvetica for ss | Courier for tt
+  \RequirePackage{mathpazo} % math & rm
+  \linespread{1.05}         % Palatino needs more leading (space between lines)
+  \RequirePackage[scaled]{helvet} % ss
+  \RequirePackage{courier}  % tt
+  \normalfont
+  \RequirePackage[T1]{fontenc}
+\fi
+% Other font collections one can consider
+% \RequirePackage{lmodern}
+% Variations with times
+% \RequirePackage{mathptmx}      % Included as an option in ATLAS papers
+% \RequirePackage{times}
+% Math design
+% \RequirePackage[utopia]{mathdesign}
+% \RequirePackage[charter]{mathdesign}
+% Palatino
+% \RequirePackage{pxfonts}
+% Collections with different fonts for numbers in text and math mode
+% \RequirePackage{bookman}
+% \RequirePackage{newcent}
+% \RequirePackage{palatino}
+
+%------------------------------------------------------------------------------
+% Specify the language(s) in the documentclass and then use babel.
+% csquotes is recommended for quoting correctly for the language used
+% The option autostyle=true continuously adapts the style to the language.
+% Use autostyle=once to fix it to the main language of the document.
+\RequirePackage{babel}
+% \RequirePackage[german=guillemets,autostyle=true,style=mythesis]{csquotes}
+\ifthenelse {\texlive < 2010} {%
+  % Use babel=true for older versions (2009 and earlier) of csquotes
+  \RequirePackage[babel=true]{csquotes}
+}{%
+  % Use autostyle=true for newer versions (2011 and later) of csquotes
+  % Use American quotes `` xxx `yyy' '' instead of British default.
+  \RequirePackage[autostyle=true]{csquotes}
+  % \RequirePackage[german=guillemets,autostyle=true]{csquotes}
+}
+
+% It seems common in British documents to use American-like quotes,
+% i.e. outer double quotes and inner single quotes
+% The following commands define a new variant called myenglish
+% and then use this variant if the language is set to british or UKenglish
+\DeclareQuoteStyle[mybritish]{myenglish}%
+  {\textquotedblleft}{\textquotedblright}%
+  {\textquoteleft}{\textquoteright}
+\DeclareQuoteAlias[mybritish]{myenglish}{myenglish}
+\DeclareQuoteAlias{myenglish}{british}
+\DeclareQuoteAlias{myenglish}{UKenglish}
+
+% It is possible for you to define your own quotation style
+% \DeclareQuoteStyle{mythesis}%
+%   {\textquotedblleft}{\textquotedblright}%
+%   {\textquoteleft}{\textquoteright}
+% \setquotestyle{mythesis}
+
+%-------------------------------------------------------------------------------
+\ifUBN@siunitx 
+  \ifthenelse {\texlive < 2011} {%
+    \RequirePackage[seperr,
+    repeatunits=false,
+    noload=addn,
+    alsoload=hep]{siunitx}
+    \sisetup{obeyall}
+    \newunit{\barn}{b}
+    \newunit{\TeVc}{\tera\eVperc}
+    \newunit{\GeVc}{\giga\eVperc}
+    \newunit{\MeVc}{\mega\eVperc}
+    \newunit{\keVc}{\kilo\eVperc}
+    \newunit{\eVc}{\eVperc}
+  }{%
+    \RequirePackage[separate-uncertainty,
+    range-units = repeat]{siunitx}
+    \sisetup{detect-family = true}
+    \ifthenelse {\texlive < 2012} {%
+      \sisetup{group-decimal-digits=false, group-four-digits=true}
+    }{%
+      \sisetup{group-digits=integer, group-minimum-digits=4}
+    }
+  }
+  % Units - for German thesis \num{4.3} will be printed as 4,3
+  \addto\extrasngerman{\sisetup{locale = DE}}
+  \addto\extrasamerican{\sisetup{locale = US}}
+  \addto\extrasUSenglish{\sisetup{locale = US}}
+  \addto\extrasbritish{\sisetup{locale = UK}}
+  \addto\extrasUKenglish{\sisetup{locale = UK}}
+\fi
+% \RequirePackage{units}
+% \RequirePackage{hepunits}
+% \RequirePackage[squaren]{SIunits}
+
+%-------------------------------------------------------------------------------
+% Figures and graphics
+\RequirePackage{graphicx}
+\ifUBN@feynmf
+  \RequirePackage{feynmf}
+\fi
+\ifUBN@feynmp
+  \RequirePackage{feynmp}
+  \DeclareGraphicsRule{*}{mps}{*}{}
+\fi
+
+\ifUBN@subcaption
+  \RequirePackage{subcaption}
+\else
+  \ifUBN@subfig
+    \RequirePackage{subfig}
+  \else
+    \ifUBN@subfigure
+      \RequirePackage{subfigure}
+    \fi
+  \fi
+\fi
+% \RequirePackage[lofdepth,lotdepth]{subfig}
+% Alternative to subfig, which is also newer
+% \RequirePackage{subcaption}
+
+%-------------------------------------------------------------------------------
+% Tables
+\RequirePackage{rotating}
+\RequirePackage{array}
+\RequirePackage{booktabs}
+\ifUBN@dcolumn
+  \RequirePackage{dcolumn}
+\fi
+\ifUBN@xtab
+  \RequirePackage[pageshow]{xtab}
+\fi
+\ifUBN@longtable
+  \RequirePackage{longtable}
+\fi
+\ifUBN@supertabular
+  \RequirePackage{supertabular}
+\fi
+% Be careful trying to use ziffer and dcolumn together
+% \RequirePackage{ziffer}
+% Multiple references - does not seem to work together with hyperref
+% Also is not compatible with biblatex, which is probably the way of
+% the future
+% \RequirePackage{mcite}
+% Chemical elements
+\RequirePackage[version=3]{mhchem}
+
+\RequirePackage{xcolor}
+\RequirePackage{xspace}
+\RequirePackage{setspace}
+\RequirePackage{scrdate,scrtime}
+
+%-------------------------------------------------------------------------------
+% Use biblatex and biber for the bibliography
+% Style is numeric and comp option changes [1,2,3] into [1-3]
+% sorting=none    means the order is as they are cited
+% block=ragged    turns off block form, which avoids large spaces
+% firstinits=true means initials are used for first names
+% Some more tweaks should be made to the appearance,
+% see/include bibtex/bst/atlas-biblatex.sty
+\ifUBN@biblatex
+  \ifx\UBN@bibencoding\@empty
+    \newcommand*{\UBN@biblatexencoding}{}
+  \else
+    \newcommand*{\UBN@biblatexencoding}{bibencoding=\UBN@bibencoding,}
+  \fi
+  \ifUBN@astrobib
+%    \RequirePackage[backend=\UBN@backend,backref=\UBN@backref,
+%      style=authoryear,uniquelist=minyear,uniquename=init,refsection=chapter,natbib=true,
+%      block=none]{biblatex}
+    \RequirePackage[backend=\UBN@backend,\UBN@biblatexencoding
+    backref=\UBN@backref,
+    style=authoryear,natbib=true,refsection=chapter,
+    block=none,firstinits=true]{biblatex}
+  \else
+    \ifthenelse {\texlive < 2010} {%
+      \RequirePackage[backend=\UBN@backend,hyperref=true,\UBN@biblatexencoding
+        backref=\UBN@backref,
+        style=\UBN@bibstyle,sorting=none,
+        block=ragged,firstinits=true]{biblatex}
+    }{%
+      \RequirePackage[backend=\UBN@backend,\UBN@biblatexencoding
+        backref=\UBN@backref,
+        style=\UBN@bibstyle,sorting=none,
+        block=ragged,firstinits=true]{biblatex}
+    }
+  \fi
+\fi
+
+%-------------------------------------------------------------------------------
+% Add ability to click on links and references.
+% Define some darker colours first
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkyellow}{rgb}{0.5,0.5,0}
+\definecolor{darkcyan}{rgb}{0,0.5,0.5}
+\definecolor{darkmagenta}{rgb}{0.5,0,0.5}
+% Note that the colours also apply to the printed version.
+% It probably make sense to keep them for an online version and set
+% them all to black when producing the printed thesis.
+% The hyperref package should come last
+\PassOptionsToPackage{hyphens}{url}
+% \RequirePackage[colorlinks=true,linkcolor=blue,citecolor=green,
+% urlcolor=black,bookmarksopen]{hyperref}
+\RequirePackage[colorlinks=true,linkcolor=blue,citecolor=darkmagenta,
+  urlcolor=darkgreen,bookmarksopen]{hyperref}
+% \newcommand{\url}[1]{\texttt{#1}}
+
+%-------------------------------------------------------------------------------
+% More options for KOMA script
+
+% Turn on bold math when using \bfseries
+\def\bfseries{\fontseries\bfdefault\selectfont\boldmath}
+
+% General font for title, section headings etc.
+% \setkomafont{disposition}{\rmfamily\bfseries\upshape}
+\setkomafont{title}{\normalfont\bfseries\huge}
+\setkomafont{subtitle}{\normalfont\Large}
+
+% Do not put a dot after Section/Chapter, nor in the figure caption.
+\KOMAoptions{numbers=noendperiod}
+% Write Chapter 1 at beginning of each chapter
+\KOMAoptions{chapterprefix=true,appendixprefix=true}
+
+%-------------------------------------------------------------------------------
+\ifUBN@titlesec
+% Packages to change the chapter heading format
+% titlesec works, but gives a warning from KOMA-Script
+  \RequirePackage{titlesec}
+  \titleformat{\chapter}[display]
+    {\bfseries\sffamily\huge}
+    {\filleft\MakeUppercase{\Large\chaptertitlename} \Huge\thechapter}
+    {2ex}
+    {\titlerule
+      \vspace{1ex}%
+      \filright}
+    [\vspace{1ex}%
+    \titlerule]
+\else
+  % Adjust the \chapter heading
+  % Taken from http://tex.stackexchange.com/questions/173389/chapter-title-adjusting-with-koma-script
+  \def\@makechapterhead#1{%
+    \vspace*{10\p@}%
+    {\parindent \z@ \raggedleft \reset@font
+      \sffamily \bfseries \Huge \MakeUppercase{\Large\@chapapp}  \thechapter\vspace*{-5\p@}
+      \par\nobreak
+      \interlinepenalty\@M\hrulefill\newline\vspace*{-5\p@}
+      \huge \bfseries #1\par\nobreak
+      \vspace*{-8\p@}%
+      \hrulefill
+      \par\nobreak
+      \vskip 30\p@
+    }
+  }
+  
+  % Adjust the \chapter* heading
+  \def\@makeschapterhead#1{%
+    \vspace*{4\p@}%
+    {\parindent \z@ \raggedright \reset@font
+      \sffamily
+      \interlinepenalty\@M\hrulefill\newline\vspace*{-5\p@}
+      \huge \bfseries #1\par\nobreak
+      \vspace*{-8\p@}%
+      \hrulefill
+      \par\nobreak
+      \vskip 30\p@
+    }
+  }
+\fi
+
+%\setkomafont{chapter}{\raggedleft\huge}
+%
+%%\let\origchapapp\chapapp
+%%\renewcommand{\chapapp}{\scshape{\origchapapp}}  % or \scshape{\origchapapp}
+%
+%%\renewcommand*{\chapterheadstartvskip}{\vskip-10pt}
+%\renewcommand*{\chapterformat}{%
+%  \raggedleft
+%  {\MakeUppercase{\Large\chapapp}}\enskip\thechapter\\
+%  \hrulefill\\[-9pt]
+%}
+%\renewcommand*{\chapterheadendvskip}{%
+%  \vspace{-12pt}\noindent{\setlength{\parskip}{0pt}\Huge\hrulefill\par}
+%  \vspace{\baselineskip}
+%}
+
+% Packages to change the chapter heading format
+% titlesec works, but gives a warning from KOMA-Script
+%\RequirePackage{titlesec}
+%\titleformat{\chapter}[display]
+%  {\bfseries\sffamily\huge}
+%  {\filleft\MakeUppercase{\Large\chaptertitlename} \Huge\thechapter}
+%  {2ex}
+%  {\titlerule
+%    \vspace{1ex}%
+%    \filright}
+%  [\vspace{1ex}%
+%  \titlerule]
+% \newcommand*{\justifyheading}{\raggedleft}
+% \titleformat{\chapter}[display]
+%   {\normalfont\huge\bfseries\justifyheading}{{\fontsize{60}{72}\selectfont\thechapter}}
+%   {20pt}{\Huge}
+% \RequirePackage[Sonny]{fncychap}
+% \RequirePackage[libertine]{quotchap}
+
+%-------------------------------------------------------------------------------
+% Do not centre one-line figure captions.
+% \KOMAoptions{captions=nooneline}
+% Font and layout for figure and table captions
+\setkomafont{caption}{\normalfont\small}
+% \setkomafont{caption}{\normalfont\slshape}
+% Do not include a : after the figure/table number
+% \renewcommand*{\captionformat}{\ }
+% \renewcommand*{\figureformat}{\bfseries\slshape Fig.\ \thefigure}
+\setcapindent{0pt}
+
+% Default width for figures
+\newlength{\figwidth}
+\setlength{\figwidth}{0.8\textwidth}
+
+% More space between rows in tables
+% \setlength{\extrarowheight}{0.5ex}
+
+% Adjust float settings to try to avoid problems.
+% These follow the UK FAQ - see also P.199-200 of the LaTeX Book
+\ifUBN@floatopt
+  \renewcommand{\topfraction}{0.85}
+  \renewcommand{\bottomfraction}{0.70}
+  \renewcommand{\textfraction}{0.15}
+  \renewcommand{\floatpagefraction}{0.66}
+  \renewcommand{\dbltopfraction}{0.66}
+  \renewcommand{\dblfloatpagefraction}{0.66}
+  \setcounter{topnumber}{9}
+  \setcounter{bottomnumber}{9}
+  \setcounter{totalnumber}{20}
+\fi
+
+%-------------------------------------------------------------------------------
+% Set the header and footer
+% The optional argument is for pages in scrplain mode - first page of chapters etc.
+% The required argument is for the usual scrheadings pages
+%
+% Use the following to debug what header/footer is used where
+% \ihead[Scrplain ihead]{Scrheadings ihead}
+% \chead[Scrplain chead]{Scrheadings chead}
+% \ohead[Scrplain ohead]{Scrheadings ohead}
+% \ifoot[Scrplain ifoot]{Scrheadings ifoot}
+% \cfoot[Scrplain cfoot]{Scrheadings cfoot}
+% \ofoot[Scrplain ofoot]{Scrheadings ofoot}
+%
+% \cfoot[\thepage]{\thepage}
+\pagestyle{scrheadings}
+
+% Footnote settings
+\deffootnote{1em}{1em}{\textsuperscript{\thefootnotemark}\ }
+
+% Unit of length used for Feynman graphs in feynmf
+\setlength{\unitlength}{1mm}
+
+% Make sure everything is set up properly, even after spacings have
+% been changed.
+\KOMAoptions{DIV=last}
+
+%-------------------------------------------------------------------------------
+% Institutes names and addresses - maybe put in an extra file?
+\newcommand*{\PI}{Physikalisches Institut}
+\newcommand*{\inPI}{im Physikalischen Institut}
+\newcommand{\PIaddress}{Physikalisches Institut der\\
+Universität Bonn\\
+Nussallee 12\\
+D-53115 Bonn}
+
+\newcommand*{\HISKP}{Helmholtz-Institut für\\ Strahlen- und Kernphysik}
+\newcommand*{\inHISKP}{im Helmholtz-Institut für Strahlen- und Kernphysik}
+\newcommand{\HISKPaddress}{Helmholtz-Institut für\\
+ Strahlen- und Kernphysik\\
+Universität Bonn\\
+Nussallee 14--16\\
+D-53115 Bonn}
+
+\newcommand*{\IAP}{Institut für Angewandte Physik}
+\newcommand*{\inIAP}{im Institut für Angewandte Physik}
+\newcommand{\IAPaddress}{Institut für Angewandte Physik\\
+Universität Bonn\\
+Wegelstr.\ 8\\
+D-53115 Bonn}
+
+\newcommand*{\AIFA}{Argelander-Institut für Astronomie}
+\newcommand*{\inAIFA}{im Argelander-Institut für Astronomie}
+\newcommand{\AIFAaddress}{Argelander-Institut für Astronomie\\
+Universität Bonn\\
+Auf dem Hügel 71\\
+D-53121 Bonn}

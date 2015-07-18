@@ -1,0 +1,169 @@
+%-------------------------------------------------------------------------------
+% This file contains adjustments to the numeric-comp (and numeric)
+% biblatex styles that are suggested for University of Bonn theses.
+%
+% See ChangeLog or SVN log for history of changes.
+% Responsible: Ian Brock (ian.brock@cern.ch)
+%-------------------------------------------------------------------------------
+\ProvidesPackage{ubonn-biblatex}[2015/02/20 Version 3.0 University of Bonn biblatex style]
+\NeedsTeXFormat{LaTeX2e}
+
+%\typeout{University of Bonn biblatex style Version 3.0}
+
+% Use kvoptions package to set options
+\RequirePackage{kvoptions}
+\SetupKeyvalOptions{
+  family=UBNB,
+  prefix=UBNB@
+}
+\DeclareBoolOption[true]{articletitle}
+\DeclareBoolOption[false]{titlequote}
+\DeclareBoolOption[false]{boldvol}
+\DeclareBoolOption[false]{showdoi}
+\DeclareBoolOption[true]{showurl}
+\DeclareBoolOption[true]{eprint}
+\DeclareStringOption{texlive}
+\ProcessKeyvalOptions*
+
+% TeX Live version not specified as an option
+\ifx\UBNB@texlive\@empty
+  \renewcommand*{\UBNB@texlive}{\texlive}
+\fi
+
+% Include the DOI as a hyerlink with the journal.
+\ifUBNB@showdoi
+  \relax
+\else
+  \ExecuteBibliographyOptions{doi=false}
+  \newbibmacro{string+doi}[1]{%
+    \iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
+  %\DeclareFieldFormat{title}{\usebibmacro{string+doi}{\mkbibemph{#1}}}
+\fi
+
+% Turn off printing of arXiv
+\ifUBNB@eprint
+  \relax
+\else
+  \ExecuteBibliographyOptions{eprint=false}
+\fi
+
+% date=year option works for TeX Live 2013 or so onwards
+\typeout{atlasbiblatex: UBNB@texlive is [\UBNB@texlive]}
+\ifthenelse{\UBNB@texlive < 2013}{%
+  \relax
+}{%
+  \ExecuteBibliographyOptions{date=year}
+}
+
+
+% Turn off title for articles and booklets (CONF/PUB notes)
+\ifUBNB@articletitle
+  % Titles all in italics or in quotes
+  \ifUBNB@titlequote
+    \DeclareFieldFormat[article]{title}{\mkbibquote{#1}\isdot}
+    \DeclareFieldFormat[booklet]{title}{\mkbibquote{#1}\isdot}
+    \DeclareFieldFormat[report]{title}{\mkbibquote{#1}\isdot}
+    \DeclareFieldFormat[thesis]{title}{\mkbibquote{#1}\isdot}
+  \else
+    \DeclareFieldFormat[article]{title}{\emph{#1}\isdot}
+    \DeclareFieldFormat[booklet]{title}{\emph{#1}\isdot}
+    \DeclareFieldFormat[report]{title}{\emph{#1}\isdot}
+    \DeclareFieldFormat[thesis]{title}{\emph{#1}\isdot}
+  \fi
+\else
+  \AtEveryBibitem{
+    \ifentrytype{article}{\clearfield{title}}{}
+    \ifentrytype{booklet}{\clearfield{title}}{}
+  }
+\fi
+
+% Journal in upright font
+\DeclareFieldFormat[article]{journaltitle}{#1\isdot}
+\DeclareFieldFormat[article]{journalsubtitle}{#1\isdot}
+
+% Volume in bold font
+\ifUBNB@boldvol
+  \relax
+\else
+  \DeclareFieldFormat[article]{volume}{\textbf{#1}\isdot}
+\fi
+
+% DOI as link with journal reference
+\ifUBNB@showdoi
+  \relax
+\else
+  %\DeclareFieldFormat[article]{journaltitle}{\usebibmacro{string+doi}{#1\isdot}}
+  %\DeclareFieldFormat[article]{journal+issuetitle}{\usebibmacro{string+doi}{#1}}
+  % Adapted from /usr/local/texlive/2014/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+  % Merge page number into jounral+issuetitle and remove it from note+pages
+  \renewbibmacro*{journal+issuetitle}{%
+    \usebibmacro{string+doi}{%
+    \usebibmacro{journal}%
+    \setunit*{\addspace}%
+    \iffieldundef{series}
+      {}
+      {\newunit
+       \printfield{series}%
+       \setunit{\addspace}}%
+    \usebibmacro{volume+number+eid}%
+    \setunit{\addspace}%
+    \usebibmacro{issue+date}%
+    \setunit{\addcolon\space}%
+    \usebibmacro{issue}%
+    \setunit{\bibpagespunct}%
+    \printfield{pages}%
+    \newunit
+    }%
+  }
+  \renewbibmacro*{note+pages}{%
+    \printfield{note}%
+    %\setunit{\bibpagespunct}%
+    %\printfield{pages}%
+    \newunit}
+\fi
+
+% Change punctuation to comma
+\renewcommand*{\newunitpunct}{\addcomma\space}
+
+% You can include the following line(s) if you want to shorten your
+% bibliography by not including url fields
+\ifUBNB@showurl
+  \relax
+\else
+  \AtEveryBibitem{\clearfield{url}}
+  \AtEveryCitekey{\clearfield{url}}
+\fi
+
+% Do not add "In:"
+\renewbibmacro{in:}{}
+% \renewbibmacro{in:}{%
+%   \ifentrytype{article}{}{%
+%   \printtext{\bibstring{in}\intitlepunct}}}
+
+% Remove p. or pp. by pages - this has to be done for every language
+% separately as these strings depend on the language
+\renewcommand{\bibpagespunct}{\space}
+\DefineBibliographyStrings{UKenglish}{%
+  page = {},
+  pages = {}
+}
+\DefineBibliographyStrings{USenglish}{%
+  page = {},
+  pages = {}
+}
+\DefineBibliographyStrings{ngerman}{%
+  page = {},
+  pages = {}
+}
+
+% If you get an error here use institution+location+year
+% \renewbibmacro*{institution+location+year}{%
+\renewbibmacro*{institution+location+date}{%
+  % \printlist{location}%
+  \iflistundef{institution}
+    {\setunit*{\addcomma\space}}
+    {\setunit*{\addcolon\space}}%
+  \printlist{institution}%
+  \setunit*{\addcomma\space}%
+  \usebibmacro{date}%
+  \newunit}
