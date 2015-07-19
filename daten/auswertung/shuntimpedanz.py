@@ -9,11 +9,10 @@ from scipy.optimize import minimize_scalar
 ### Berechnung des elektrischen Feldes ###
 
 # Güte und Resonanzfrequenz
-# TODO: Frequenzverschiebung aufgrund der Luft im Resonator
 Q0 = ufloat(29000.0, 200.0)
 v0 = ufloat(499.67E+6, 0.01E+6)
 
-# Resonanzfrequenz Vakuum->Luft?
+# Resonanzfrequenz Luft->Vakuum
 epsilon_r_air = 1.0005364
 v0 *= 0.5 * (3.0 - epsilon_r_air)
 
@@ -23,10 +22,17 @@ radius = ufloat(0.01, 0.0001)
 epsilon = ufloat(2.1, 0.01)
 epsilon0 = 8.85418781762E-12
 
-# Einfluss des Bohrlochs?
-vol_s = 4.0 / 3.0 * np.pi * radius**3
+# Bohrung
+diameter = ufloat(0.0, 0.0) / 1000.0  # [mm]
+
+# V   =          KUGELVOLUMEN         -       ZYLINDERVOLUMEN BOHRUNG
+vol_s = 4.0 / 3.0 * np.pi * radius**3 - np.pi * (0.5 * diameter)**2 * 2 * radius
 alpha_s = 3.0 * (epsilon - 1.0) / (epsilon + 2.0) * epsilon0 * vol_s
 
+# Systematischen Fehler abspalten (Berechne separat für alpha_s + dalpha und -dalpha)
+alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
+#alpha_s -= err_alpha_s
+#alpha_s += err_alpha_s
 
 # Daten einlesen
 data = np.loadtxt("pi_messung_1.tsv")
