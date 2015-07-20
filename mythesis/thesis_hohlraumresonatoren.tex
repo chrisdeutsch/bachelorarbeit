@@ -1,11 +1,11 @@
 %------------------------------------------------------------------------------
-\chapter{Theorie}
-\label{sec:theorie}
+\chapter{Hohlraumresonatoren}
+\label{sec:hohlraumresonatoren}
 %------------------------------------------------------------------------------
 
 
 %------------------------------------------------------------------------------
-\section{Hohlraumresonatoren}
+\section{Felder und Moden}
 %------------------------------------------------------------------------------
 Ein Hohlraumresonator besteht aus einem evakuierten Hohlraum, welcher durch ein leitendes Material begrenzt wird.
 Die im Hohlraum propagierenden elektromagnetischen Wellen werden an den leitenden Wänden reflektiert und führen zur Ausbildung von stehenden elektromagnetischen Wellen im Resonatorinnenraum, welche unter anderem zur Beschleunigung von elektrisch geladenen Teilchen genutzt werden können.
@@ -48,8 +48,10 @@ Die Kreisfrequenz~$\omega_{mnp}$ der einzelnen Moden ist dabei gegeben durch \ci
 
 Eine analytische Berechnung der Moden von komplexeren Resonatorgeometrien ist nicht mehr möglich und es muss auf numerische Methoden zurückgegriffen werden.
 Dazu wird in dieser Arbeit \emph{CST Microwave Studio\textsuperscript{\textregistered}} verwendet, welches die Lösung der Maxwell-Gleichungen diskretisiert und auf ein Eigenwertproblem zurückführt.
+
+
 %------------------------------------------------------------------------------
-\section{Hohlraumresonatoren2}
+\section{Kenngrößen von Resonatoren am Modell des RLC-Parallelkreises}
 %------------------------------------------------------------------------------
 \begin{figure}[h]
   \centering
@@ -105,6 +107,12 @@ Es folgt nach Einsetzen von () in \eqref{eq:reflexionskoeff_trans_line} der Ausd
 \end{align}
 \todo{Abschlusssatz}
 
+
+%------------------------------------------------------------------------------
+\section{Kopplung mehrerer Resonatoren}
+%------------------------------------------------------------------------------
+
+
 %------------------------------------------------------------------------------
 \section{Resonante Störkörpermessung}
 %------------------------------------------------------------------------------
@@ -140,4 +148,9 @@ Daher ist es zweckmäßig die gespeicherte Energie $W_0$ über Gleichung \eqref{
 Die Amplitude des elektrischen Feldes kann dann auf die Wurzel der Verlustleistung normiert werden und man erhält:
 \begin{align}
   \frac{|\ve_0|}{\sqrt{P_\mathrm{V}}} = \sqrt{-4 \cdot \frac{Q_0}{\alpha_s} \cdot \frac{\Delta \omega}{\omega_0^2}}
-\end{align}	
+\end{align}
+
+
+%------------------------------------------------------------------------------
+\section{Makroskopische Kenngrößen}
+%------------------------------------------------------------------------------
