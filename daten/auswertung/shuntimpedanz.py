@@ -8,42 +8,56 @@ from scipy.optimize import minimize_scalar
 
 ### Berechnung des elektrischen Feldes ###
 
+# Offset Längenmessung
+offset = 30.0 # [mm]
+
+
 # Güte und Resonanzfrequenz
 Q0 = ufloat(29000.0, 200.0)
 v0 = ufloat(499.67E+6, 0.01E+6)
+
 
 # Resonanzfrequenz Luft->Vakuum
 epsilon_r_air = 1.0005364
 v0 *= 0.5 * (3.0 - epsilon_r_air)
 
+# Messfehler:
+dv_err = 100.0
+pos_err = 0.5
 
 # Berechnung der Störkörperkonstante
-radius = ufloat(0.01, 0.0001)
+radius = 0.5 * ufloat(20.05E-3, 0.02E-3) # 0.5*diameter
 epsilon = ufloat(2.1, 0.01)
 epsilon0 = 8.85418781762E-12
 
 # Bohrung
-diameter = ufloat(0.0, 0.0) / 1000.0  # [mm]
+diameter = ufloat(1.3E-3, 0.05E-3)
 
 # V   =          KUGELVOLUMEN         -       ZYLINDERVOLUMEN BOHRUNG
 vol_s = 4.0 / 3.0 * np.pi * radius**3 - np.pi * (0.5 * diameter)**2 * 2 * radius
 alpha_s = 3.0 * (epsilon - 1.0) / (epsilon + 2.0) * epsilon0 * vol_s
+2
 
 # Systematischen Fehler abspalten (Berechne separat für alpha_s + dalpha und -dalpha)
-alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
+#alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
 #alpha_s -= err_alpha_s
 #alpha_s += err_alpha_s
+
+c0 = 299792458.0 # Lichtgeschwindigkeit
 
 # Daten einlesen
 data = np.loadtxt("pi_messung_1.tsv")
 
 # Position extrahieren [mm]
-pos_err = 0.5
 pos = np.array([ufloat(pos, pos_err) for pos in data[:, 0]])
 
+# Offset addieren
+pos += offset
+
+
 # Frequenzverschiebung extrahieren
-dv_err = 100.0
 dv = np.array([ufloat(dv, dv_err) for dv in data[:, 3]])
+
 
 # Elektrisches Feld ist auf !!!P_V normiert!!!
 e_field_sq = -2.0 * Q0 * dv / (np.pi * alpha_s * v0**2)
@@ -72,7 +86,6 @@ voltage = ufloat(*trapz(x, y, dy))
 rs = 0.5 * voltage**2
 
 # Berechnung des effektiven elektrischen Feldes (Zeitabhängigkeit
-c0 = 299792458.0 # Lichtgeschwindigkeit
 
 # Phase definieren TODO: Schön machen
 phase = np.zeros_like(x)

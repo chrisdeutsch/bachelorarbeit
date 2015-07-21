@@ -15,7 +15,7 @@ set key top right
 
 set decimalsign '{,}'
 
-set xrange [0:*]
+set xrange [0:2220]
 set yrange [0:*]
 set xlabel '$d$ / \si{mm}'
 set ylabel '$E/\sqrt{P}$ / \si{\volt\per\metre\per\watt\tothe{0.5}}'
