@@ -15,13 +15,13 @@ Aufgrund der Randbedingungen an der näherungsweise ideal leitenden Grenzfläche
   \label{eq:randbedingung_leiter}
 \end{align}
 wobei $E_\parallel$ die Tangentialkomponente und $B_\perp$ die Normalkomponente des elektrischen bzw.\ magnetischen Feldes auf der Grenzfläche kennzeichnet.
-Die Lösung der \textsc{Maxwell}-Gleichungen unter Beachtung dieser Grenzbedingungen zeigt, dass in Abhängigkeit der Geometrie des Hohlraums, eine unbegrenzte Anzahl von Moden mit bestimmten Frequenzen im Resonator auftreten können.
+Die Lösung der \textsc{Maxwell}-Gleichungen unter Beachtung dieser Randbedingungen zeigt, dass in Abhängigkeit der Geometrie des Hohlraums, eine unbegrenzte Anzahl von Moden mit bestimmten Frequenzen im Resonator auftreten können.
 Die Klassifizierung der einzelnen Moden erfolgt dabei anhand ihrer Feldkonfiguration relativ zur Propagationsrichtung der hin- und rücklaufenden Wellen im Resonator.
 Dabei unterscheidet man zwischen transversal-elektrischen (TE)-Moden, welche lediglich transversale elektrische und longitudinal magnetische Felder aufweisen und transversal-magnetischen (TM)-Moden, bei denen der umgekehrte Fall eintritt.
 
 Viele der in Beschleunigern verwendeten Kavitäten\footnote{von lat.\ \emph{cavum} "Höhle": Hohlraumresonator oftmals engl. \emph{Cavity}} basieren auf kreiszylindrischen Resonatoren\footnote{engl. \emph{Pillbox-Cavities}, für deren Ähnlichkeit mit einer Tablettenschachtel}, welche eine analytische Lösung der \textsc{Maxwell}-Gleichungen erlauben.
 Daher soll im Folgenden die Feldkonfiguration der verschiedenen Moden in einem solchen Resonator dargestellt werden und die in dieser Arbeit verwendete Notation eingeführt werden.
-Dabei genügt die Betrachtung der longitudinalen Felder eines zylindrischen Hohlraums mit Radius~$R$ und Länge~$L$ in Zylinderkoordinaten $(r, \theta, z)$ \todo{Wie liegt das KS, $z=0$ liegt auf einer Stirnfläche}, da durch diese die transversalen Feldkomponenten eindeutig festgelegt sind \cite[S.\ 4]{hillert}.
+Dabei genügt die Betrachtung der longitudinalen Felder eines zylindrischen Hohlraums mit Radius~$R$ und Länge~$L$ in Zylinderkoordinaten~$(r \in [0, R], \theta \in [0,2\pi), z \in [0, L])$, da durch diese die transversalen Feldkomponenten eindeutig festgelegt sind \cite[S.\ 4]{hillert}.
 Man findet für die Moden in dem kreiszylindrischen Resonator \cite[S. 28 ff.]{wangler}:
 \begin{subequations}
   \begin{align}
@@ -51,7 +51,7 @@ Dazu wird in dieser Arbeit \emph{CST Microwave Studio\textsuperscript{\textregis
 %------------------------------------------------------------------------------
 \section{Kenngrößen von Resonatoren am Modell des RLC-Parallelkreises}
 %------------------------------------------------------------------------------
-\begin{figure}[h]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale=1.4]{./figs/RLC_circuit.pdf}
   \caption{Ein getriebener Parallelschwingkreis bestehend aus dem ohm'schen Widerstand~$R$, der Induktivität~$L$ und der Kapazität~$C$ als Modell für die elektrischen Eigenschaften eines Hohlraumresonators in der Nähe einer Resonanz.}
@@ -76,19 +76,19 @@ Nach der Einführung dieser Kenngrößen kann die Impedanz des Kreises beziehung
   Z(\omega) = \frac{R}{1 + i Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
 \end{align}
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=1.4]{./figs/RLC_coupling.pdf}
-  \caption{Modell der induktiven Kopplung eines treibenden Hochfrequenzsignals $U_0$ über die Koppelschleife an den Resonator. Die Signalquelle ist mit einem Wellenleiter charakteristischer Impedanz~$Z_0$ mit der Koppelschleife verbunden. Die Impedanz des Resonators $Z$ im Sekundärkreis wird durch die induktive Kopplung zur Impedanz $Z^\prime$ im Primärkreis transformiert.}
-  \label{fig:rlc_coupling}
-\end{figure}
 Bisher war die Betrachtung auf ungetriebene Resonatoren beschränkt und soll nun auf die Anregung durch ein externes Hochfrequenzsignal erweitert werden.
 Zur Übertragung der Leistung aus einem Wellenleiter mit charakteristischer Impedanz $Z_0$ in eine Schwingungsmode der Kavität können verschiedene Methoden verwendet werden.
 Eine ist die induktive Kopplung an das Magnetfeld der Mode, bei der der Wellenleiter mit einer Leiterschleife (die sog.\ Koppelschleife) im Resonator verbunden ist.
 Dadurch wird in der Leiterschleife ein hochfrequenter Wechselstrom angeregt, welcher ein zeitlich veränderliches Magnetfeld erzeugt. Dieses kann an das Magnetfeld verschiedener Moden der Kavität koppeln und diese resonant anregen.
 
-Im Modell des Parallelschwingkreises bedeutet dies, dass die Impedanz~$Z(\omega)$ der Kavität durch die induktive Kopplung transformiert wird.
-Direkt hinter der Koppelschleife habe der Resonator die transformierte Impedanz $Z^\prime(\omega)$.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=1.4]{./figs/RLC_coupling.pdf}
+  \caption{Modell der induktiven Kopplung eines treibenden Hochfrequenzsignals $U_0$ über die Koppelschleife an den Resonator. Die Signalquelle ist mit einem Wellenleiter charakteristischer Impedanz~$Z_0$ mit der Koppelschleife verbunden. Die Impedanz des Resonators~$Z$ im Sekundärkreis wird durch die induktive Kopplung zur Impedanz~$Z^\prime$ im Primärkreis transformiert.}
+  \label{fig:rlc_coupling}
+\end{figure}
+Im Modell des Parallelschwingkreises (vgl.\ Abb.\ \ref{fig:rlc_coupling}) bedeutet dies, dass die Impedanz~$Z(\omega)$ der Kavität durch die induktive Kopplung transformiert wird.
+Direkt hinter der Koppelschleife habe der Resonator die transformierte Impedanz~$Z^\prime(\omega)$.
 Man definiert als Maß für die Kopplung den sog.\ Koppelfaktor:
 \begin{align}
   \kappa \coloneqq \frac{Z^\prime(\omega_0)}{Z_0}
@@ -119,7 +119,7 @@ Diese Gleichung ermöglicht den experimentellen Zugang zur Bestimmung von Koppel
 %------------------------------------------------------------------------------
 \section{Resonante Störkörpermessung}
 %------------------------------------------------------------------------------
-Die resonante Störkörpermessung dient der Bestimmung des ortsabhängigen elektrischen und magnetischen Feldamplituden in Hohlraumresonatoren.
+Die resonante Störkörpermessung dient der Bestimmung der ortsabhängigen elektrischen und magnetischen Feldamplituden in Hohlraumresonatoren.
 Sie basiert auf der Störung des elektromagnetischen Feldes im Resonatorinnenraum durch einen dielektrischen oder magnetischen Körper (dem sog.\ Störkörper), welcher durch das Feld polarisiert beziehungsweise magnetisiert wird.
 Eine solche lokalisierte Störung verursacht eine Verschiebung der Resonanzfrequenz~$\Delta \omega$ in Abhängigkeit des elektrischen und magnetischen Feldes am Ort des Störkörpers.
 Quantitativ kann die Verschiebung beschrieben werden durch (für eine Herleitung siehe Anhang \ref{app:herleitung_frequenzverschiebung}):
@@ -141,7 +141,7 @@ mit der elektrischen Feldkonstante~$\epsilon_0$.
 Durch die Annahme der Homogenität der Felder am Ort des Störkörpers und verschwindender Polarisation und Magnetisierung außerhalb des Störkörpervolumens~$V_\mathrm{s}$ kann von der Integration über das Resonatorvolumen~$V$ in Gleichung \eqref{eq:frequenzverschiebung} zur Integration über das Störkörpervolumen übergangen werden.
 Nach Einsetzen der Polarisation der dielektrischen Kugel in Gleichung \eqref{eq:frequenzverschiebung} folgt für die Amplitude des elektrischen Feldes am Ort des Störkörpers $(x_\mathrm{s}, y_\mathrm{s}, z_\mathrm{s})$:
 \begin{align}
-  |\ve_0|(x_\mathrm{s}, y_\mathrm{s}, z_\mathrm{s}) = \sqrt{-4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}} \label{eq:skm_e_feld}
+  |\ve_0(x_\mathrm{s}, y_\mathrm{s}, z_\mathrm{s})| = \sqrt{-4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}} \label{eq:skm_e_feld}
 \end{align}
 (folglich durch $|\ve_0|$ abgekürzt) und der Störkörperkonstanten~$\alpha_\mathrm{s}$ für sphärische Störkörper:
 \begin{align}
@@ -158,13 +158,31 @@ Diese Größe ist unabhängig von der in den Resonator eingekoppelten Leistung u
 \section{Charakteristische Größen von Beschleunigungsresonatoren}
 \label{sec:resonator_charakteristiken}
 %------------------------------------------------------------------------------
-
-
-zeitunabhängige Größen / effektive Größen:
-Beschleunigungsspannung $U$, Shuntimpedanz $R_\mathrm{S}$, $R$ über $Q_0$\footnote{Unabhängig von Verlusten, nur Geometrieabhängig}: $R_\mathrm{S}/Q_0$, Laufzeitfaktor $\Lambda$. 
-
-
+\todo{Mehr auf Moden eingehen}
+Eine der wichtigsten Kenngrößen von Beschleunigungsresonatoren ist die \todo{axiale} Beschleunigungsspannung~$U$:
 \begin{align}
-  T = \frac{\left| \int_0^L |\ve_0|(z) \cdot \sin\left( \frac{\omega}{c} z + \varphi_0 \right) \, \mathrm{d}z \right|}{\int_0^L |\ve_0|(z) \, \mathrm{d}z }
+  U = \int_0^L |\ve_0 (z)| \, \mathrm{d}z
+\end{align}
+Um ein Maß für den Energiegewinn eines Teilchens beim Passieren eines Resonators zu erhalten, muss die endliche Geschwindigkeit des Teilchens und die harmonische Zeitabhängigkeit des Feldes beachtet werden.
+Dazu definiert man den Laufzeitfaktor~$\Lambda$:
+\begin{align}
+  \Lambda = \left| \frac{ \int_0^L |\ve_0(z)| \cdot \sin\left( \frac{\omega}{c} z + \varphi_0 \right) \, \mathrm{d}z }{ \int_0^L |\ve_0(z)| \, \mathrm{d}z } \right|
+\end{align}
+für ultrarelativistische Teilchen ($v \approx c$), wobei die Phase $\varphi_0$ so zu wählen ist, dass der Laufzeitfaktor maximiert wird.
+Dadurch erhält man die effektive Beschleunigungsspannung~$U_\mathrm{eff}$:
+\begin{align}
+  U_\mathrm{eff} = \Lambda \cdot U
+\end{align}
+und damit den Energiegewinn beim Passieren des Resonators $\Delta E = q \cdot U_\mathrm{eff}$.
+Darüber hinaus definiert man als Maß für Effizienz der Beschleunigung die sog.\ Shuntimpedanz:
+\begin{align}
+  R_\mathrm{S} = \frac{U^2}{2 P_\mathrm{V}}
+\end{align}
+mit der in den Resonatorwänden dissipierten Leistung $P_\mathrm{V}$ und analog die effektive Shuntimpedanz:
+\begin{align}
+  R_\mathrm{S}^\mathrm{eff} = \frac{U_\mathrm{eff}^2}{2 P_\mathrm{V}} = \Lambda^2 \cdot R_\mathrm{S}
 \end{align}
 
+\todo{Differenzierung von longitudinal und transversal.}
+
+$R$ über $Q_0$\footnote{Unabhängig von Verlusten, nur Geometrieabhängig}: $R_\mathrm{S}/Q_0$
