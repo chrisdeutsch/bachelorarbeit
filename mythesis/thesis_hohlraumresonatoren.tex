@@ -22,7 +22,7 @@ Dabei unterscheidet man zwischen transversal-elektrischen (TE)-Moden, welche led
 Viele der in Beschleunigern verwendeten Kavitäten\footnote{von lat.\ \emph{cavum} "Höhle": Hohlraumresonator oftmals engl. \emph{Cavity}} basieren auf kreiszylindrischen Resonatoren\footnote{engl. \emph{Pillbox-Cavities}, für deren Ähnlichkeit mit einer Tablettenschachtel}, welche eine analytische Lösung der \textsc{Maxwell}-Gleichungen erlauben.
 Daher soll im Folgenden die Feldkonfiguration der verschiedenen Moden in einem solchen Resonator dargestellt werden und die in dieser Arbeit verwendete Notation eingeführt werden.
 Dabei genügt die Betrachtung der longitudinalen Felder eines zylindrischen Hohlraums mit Radius~$R$ und Länge~$L$ in Zylinderkoordinaten $(r, \theta, z)$, da durch diese die transversalen Feldkomponenten eindeutig festgelegt sind \cite[S.\ 4]{hillert}.
-Man findet für die Moden in dem kreiszylindrischen Resonator \cite[S. 28-32]{wangler}:
+Man findet für die Moden in dem kreiszylindrischen Resonator \cite[S. 28 ff.]{wangler}:
 \begin{subequations}
   \begin{align}
   \mathrm{TM}_{mnp}\text{-Mode:} \quad E_z = E_0 J_m(k_{mn} r) \cos(m \theta) \cos\left(\frac{p \pi z}{L}\right) \exp(i \omega_{mnp} t) \qquad B_z = 0\\
@@ -39,7 +39,7 @@ Aus den Gleichungen \eqref{eqs:felder_pillbox} folgt dann die Bedeutung der Indi
 Der Index $m$ ($m=0, 1, \dots$) beschreibt die Periodenzahl der Feldkomponente in azimutaler Richtung.
 Weiterhin wird durch $n$ ($n=1, 2, \dots$) die Anzahl der Knoten der longitudinalen Feldkomponente in radialer Richtung (ausgenommen Knoten im Ursprung mit $r=0$) gegeben.
 Schließlich gibt der Index $p$ (TM-Mode: $p= 0, 1, \dots$; TE-Mode: $p = 1, 2, \dots$) die Anzahl der halben Perioden in longitudinaler Richtung an.
-Die Kreisfrequenz~$\omega_{mnp}$ der einzelnen Moden ist dabei gegeben durch \cite[S.28-32]{wangler}:
+Die Kreisfrequenz~$\omega_{mnp}$ der einzelnen Moden ist dabei gegeben durch \cite[S.\ 28 ff.]{wangler}:
 \begin{align}
 \omega_{mnp}^{(\prime)} = c \cdot \sqrt{\left( k_{mn}^{(\prime)}\right)^2 + \left( \frac{p \pi}{L} \right)^2}
 \end{align}
@@ -60,7 +60,7 @@ Dazu wird in dieser Arbeit \emph{CST Microwave Studio\textsuperscript{\textregis
 Die elektrischen Eigenschaften von Hohlraumresonatoren können in einem kleinen Frequenzbereich um eine Resonanz durch das Modell des Parallelschwingkreises (siehe Abb.\ \ref{fig:rlc_circuit}) erklärt werden.
 Zur vollständigen Beschreibung ist die Angabe der drei Kenngrößen: Widerstand~$R$, Induktivität~$L$ und Kapazität~$C$ ausreichend.
 Für die Behandlung von Hohlraumresonatoren ist es zweckmäßig andere Parameter zur Beschreibung zu wählen.
-Daher verwendet man stattdessen die Eigenfrequenz~$\omega_0$, die Kreisgüte~$Q_0$ und der Widerstand~$R$ des Schwingkreises zur Beschreibung.
+Daher verwendet man stattdessen die Eigenfrequenz~$\omega_0$, die Kreisgüte~$Q_0$ und der Widerstand~$R$ zur Charakterisierung des Schwingkreises.
 Die Eigenfrequenz des Kreises folgt aus der \textsc{Thomson}schen Schwingungsgleichung:
 \begin{align}
   \omega_0 = \frac{1}{\sqrt{L C}}
@@ -79,13 +79,13 @@ Nach der Einführung dieser Kenngrößen kann die Impedanz des Kreises beziehung
 \begin{figure}[h]
   \centering
   \includegraphics[scale=1.4]{./figs/RLC_coupling.pdf}
-  \caption{Modell der induktiven Kopplung eines treibenden Hochfrequenzsignals $U_0$ über die Koppelschleife an den Resonator. Die Signalquelle ist mit einem Wellenleiter charakteristischer Impedanz~$Z_0$ mit der Koppelschleife verbunden. \todo{$Z$ und $Z^\prime$}}
+  \caption{Modell der induktiven Kopplung eines treibenden Hochfrequenzsignals $U_0$ über die Koppelschleife an den Resonator. Die Signalquelle ist mit einem Wellenleiter charakteristischer Impedanz~$Z_0$ mit der Koppelschleife verbunden. Die Impedanz des Resonators $Z$ im Sekundärkreis wird durch die induktive Kopplung zur Impedanz $Z^\prime$ im Primärkreis transformiert.}
   \label{fig:rlc_coupling}
 \end{figure}
 Bisher war die Betrachtung auf ungetriebene Resonatoren beschränkt und soll nun auf die Anregung durch ein externes Hochfrequenzsignal erweitert werden.
 Zur Übertragung der Leistung aus einem Wellenleiter mit charakteristischer Impedanz $Z_0$ in eine Schwingungsmode der Kavität können verschiedene Methoden verwendet werden.
 Eine ist die induktive Kopplung an das Magnetfeld der Mode, bei der der Wellenleiter mit einer Leiterschleife (die sog.\ Koppelschleife) im Resonator verbunden ist.
-Dadurch wird in der Leiterschleife ein hochfrequenter Wechselstrom angeregt, welcher ein zeitlich veränderliches Magnetfeld erzeugt. Dieses kann an das Magnetfeld verschiedener Moden der Kavität koppeln und diese resonant anregen\footnote{Dies ist nur möglich wenn die jeweilige Mode am Ort der Koppelschleife ein nicht verschwindendes Magnetfeld besitzt.}.
+Dadurch wird in der Leiterschleife ein hochfrequenter Wechselstrom angeregt, welcher ein zeitlich veränderliches Magnetfeld erzeugt. Dieses kann an das Magnetfeld verschiedener Moden der Kavität koppeln und diese resonant anregen.
 
 Im Modell des Parallelschwingkreises bedeutet dies, dass die Impedanz~$Z(\omega)$ der Kavität durch die induktive Kopplung transformiert wird.
 Direkt hinter der Koppelschleife habe der Resonator die transformierte Impedanz $Z^\prime(\omega)$.
@@ -102,7 +102,7 @@ Mit der Definition des Koppelfaktors und der Proportionalität $Z^\prime(\omega)
   \label{eq:impedanz_hinter_schleife}
 \end{align}
 
-Von besonderem Interesse ist der komplexe Reflexionskoeffizient $\rho$ zwischen Wellenleiter und Koppelschleife, da dieser direkt mit einem vektoriellen Netzwerkanalysators\footnote{kurz: VNA} zu messen ist.
+Von besonderem Interesse ist der komplexe Reflexionskoeffizient $\rho$ zwischen Wellenleiter und Koppelschleife, da dieser direkt mit einem vektoriellen Netzwerkanalysators (VNA) zu messen ist.
 Er beschreibt das Verhältnis der komplexen Spannungsamplituden von hin- und rücklaufender Welle in einem Wellenleiter.
 Aus der Leitungstheorie \cite[S.\ 57]{pozar} folgt für den Reflexionskoeffizienten am Übergang von einem Wellenleiter mit Wellenwiderstand $Z_0$ auf eine Abschlussimpedanz~$Z^\prime$:
 \begin{align}
@@ -113,7 +113,7 @@ Es folgt nach Einsetzen von \eqref{eq:impedanz_hinter_schleife} in \eqref{eq:ref
 \begin{align}
   \rho(\omega) = \frac{\frac{\kappa}{R} \cdot Z(\omega) - 1}{\frac{\kappa}{R} \cdot Z(\omega) + 1} = \frac{(\kappa - 1) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
 \end{align}
-\todo{Abschlusssatz}
+Diese Gleichung ermöglicht den experimentellen Zugang zur Bestimmung von Koppelfaktor, Güte und Resonanzfrequenz von Hohlraumresonatoren, indem der komplexe Reflexionsfaktor mit einem VNA an der Einkopplung gemessen wird.
 
 
 %------------------------------------------------------------------------------
