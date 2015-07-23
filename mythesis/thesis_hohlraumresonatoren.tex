@@ -109,7 +109,7 @@ Aus der Leitungstheorie \cite[S.\ 57]{pozar} folgt für den Reflexionskoeffizien
   \rho = \frac{Z^\prime - Z_0}{Z^\prime + Z_0}
   \label{eq:reflexionskoeff_trans_line}
 \end{align}
-Es folgt nach Einsetzen von \eqref{eq:impedanz_hinter_schleife} in \eqref{eq:reflexionskoeff_trans_line} der Ausdruck für den Reflexionskoeffizienten 
+Es folgt nach Einsetzen von \eqref{eq:impedanz_hinter_schleife} in \eqref{eq:reflexionskoeff_trans_line} der Ausdruck für den Reflexionskoeffizienten:
 \begin{align}
   \rho(\omega) = \frac{\frac{\kappa}{R} \cdot Z(\omega) - 1}{\frac{\kappa}{R} \cdot Z(\omega) + 1} = \frac{(\kappa - 1) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + i  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
 \end{align}
@@ -158,31 +158,31 @@ Diese Größe ist unabhängig von der in den Resonator eingekoppelten Leistung u
 \section{Charakteristische Größen von Beschleunigungsresonatoren}
 \label{sec:resonator_charakteristiken}
 %------------------------------------------------------------------------------
-\todo{Mehr auf Moden eingehen}
-Eine der wichtigsten Kenngrößen von Beschleunigungsresonatoren ist die \todo{axiale} Beschleunigungsspannung~$U$:
+Eine wichtige Kenngrößen von Moden in Beschleunigungsresonatoren ist die Beschleunigungsspannung~$U$ die ein Teilchen erfährt, das einen Resonator der Länge~$L$ instantan durchquert:
 \begin{align}
   U = \int_0^L |\ve_0 (z)| \, \mathrm{d}z
 \end{align}
-Um ein Maß für den Energiegewinn eines Teilchens beim Passieren eines Resonators zu erhalten, muss die endliche Geschwindigkeit des Teilchens und die harmonische Zeitabhängigkeit des Feldes beachtet werden.
-Dazu definiert man den Laufzeitfaktor~$\Lambda$:
+Um den effektiven Energiegewinn eines Teilchens zu erhalten, muss die endliche Geschwindigkeit des Teilchens und die harmonische Zeitabhängigkeit des Feldes beachtet werden.
+Dazu definiert man den Laufzeitfaktor~$\Lambda$ für ultrarelativistische Teilchen ($v = c$):
 \begin{align}
-  \Lambda = \left| \frac{ \int_0^L |\ve_0(z)| \cdot \sin\left( \frac{\omega}{c} z + \varphi_0 \right) \, \mathrm{d}z }{ \int_0^L |\ve_0(z)| \, \mathrm{d}z } \right|
+  \Lambda = \left| \frac{ \int_0^L |\ve_0(z)| \cdot \sin\left( \frac{\omega_0}{c} z + \varphi_0 \right) \, \mathrm{d}z }{ \int_0^L |\ve_0(z)| \, \mathrm{d}z } \right|
 \end{align}
-für ultrarelativistische Teilchen ($v \approx c$), wobei die Phase $\varphi_0$ so zu wählen ist, dass der Laufzeitfaktor maximiert wird.
+wobei die Phase $\varphi_0$ so zu wählen ist, dass der Laufzeitfaktor maximiert wird.
 Dadurch erhält man die effektive Beschleunigungsspannung~$U_\mathrm{eff}$:
 \begin{align}
   U_\mathrm{eff} = \Lambda \cdot U
 \end{align}
-und damit den Energiegewinn beim Passieren des Resonators $\Delta E = q \cdot U_\mathrm{eff}$.
-Darüber hinaus definiert man als Maß für Effizienz der Beschleunigung die sog.\ Shuntimpedanz:
+und damit die Änderung der Energie eines ultrarelativistischen Teilchens der Ladung $q$ beim Passieren des Resonators $\Delta E = q \cdot U_\mathrm{eff}$.
+Darüber hinaus definiert man als Maß für Effizienz der Beschleunigung die sog.\ Shuntimpedanz~$R_\mathrm{S}$:
 \begin{align}
   R_\mathrm{S} = \frac{U^2}{2 P_\mathrm{V}}
 \end{align}
-mit der in den Resonatorwänden dissipierten Leistung $P_\mathrm{V}$ und analog die effektive Shuntimpedanz:
+mit der in den Resonatorwänden dissipierten Leistung $P_\mathrm{V}$ und analog die effektive Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$:
 \begin{align}
   R_\mathrm{S}^\mathrm{eff} = \frac{U_\mathrm{eff}^2}{2 P_\mathrm{V}} = \Lambda^2 \cdot R_\mathrm{S}
 \end{align}
+In Abhängigkeit der im Resonator angeregten Moden unterscheidet man zwischen longitudinaler und transversaler Beschleunigungsspannung/Shuntimpedanz.
+Dies liegt darin begründet, dass TM-Moden nur elektrische Felder mit longitudinaler und TE-Moden mit transversaler Ausrichtung aufweisen und dementsprechend nur zur longitudinalen/transversalen Beschleunigung der Teilchen führen.
 
-\todo{Differenzierung von longitudinal und transversal.}
 
-$R$ über $Q_0$\footnote{Unabhängig von Verlusten, nur Geometrieabhängig}: $R_\mathrm{S}/Q_0$
+%$R$ über $Q_0$\footnote{Unabhängig von Verlusten, nur Geometrieabhängig}: $R_\mathrm{S}/Q_0$
