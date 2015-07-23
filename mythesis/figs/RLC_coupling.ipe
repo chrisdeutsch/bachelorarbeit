@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.5">
-<info created="D:20150628163424" modified="D:20150721222153"/>
+<info created="D:20150628163424" modified="D:20150722195945"/>
 <preamble>\usepackage{amsmath}
 \usepackage{rotating}</preamble>
 <ipestyle name="basic">
@@ -471,13 +471,13 @@ h
 </path>
 </group>
 <text matrix="1 0 0 1 6 0" transformations="translations" pos="88 756" stroke="black" type="label" width="11.272" height="6.812" depth="1.49" halign="right" valign="center">$U_0$</text>
-<path stroke="0.216 0.494 0.722" pen="0.3">
+<path stroke="0.216 0.494 0.722">
 206 788 m
 206 792 l
 272 792 l
 272 788 l
 </path>
-<path matrix="1 0 0 1 0 4" stroke="0.302 0.686 0.29" pen="0.3">
+<path matrix="1 0 0 1 0 4" stroke="0.302 0.686 0.29">
 188 720 m
 188 716 l
 272 716 l
