@@ -46,7 +46,7 @@ Die Kreisfrequenz~$\omega_{mnp}$ der einzelnen Moden ist dabei gegeben durch \ci
 
 Eine analytische Berechnung der Moden von komplexeren Resonatorgeometrien ist im Allgemeinen nicht möglich und es muss auf numerische Methoden zurückgegriffen werden.
 Dazu wird in dieser Arbeit \emph{CST Microwave Studio\textsuperscript{\textregistered}} verwendet, welches die Lösung der Maxwell-Gleichungen diskretisiert und auf ein Eigenwertproblem zurückführt.
-
+\todo{TM010}
 
 %------------------------------------------------------------------------------
 \section{Kenngrößen von Resonatoren am Modell des RLC-Parallelkreises}
@@ -166,6 +166,7 @@ Um den effektiven Energiegewinn eines Teilchens zu erhalten, muss die endliche G
 Dazu definiert man den Laufzeitfaktor~$\Lambda$ für ultrarelativistische Teilchen ($v = c$):
 \begin{align}
   \Lambda = \left| \frac{ \int_0^L |\ve_0(z)| \cdot \sin\left( \frac{\omega_0}{c} z + \varphi_0 \right) \, \mathrm{d}z }{ \int_0^L |\ve_0(z)| \, \mathrm{d}z } \right|
+  \label{eq:laufzeitfaktor}
 \end{align}
 wobei die Phase $\varphi_0$ so zu wählen ist, dass der Laufzeitfaktor maximiert wird.
 Dadurch erhält man die effektive Beschleunigungsspannung~$U_\mathrm{eff}$:
