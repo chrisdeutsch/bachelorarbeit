@@ -10,28 +10,31 @@
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.8\textwidth]{./figs/cavity/cavity.pdf}
-  \caption{Schematischer Darstellung des Querschnitts eines siebenzelligen PETRA-Resonators mit Koppelschleife und zwei Abstimmstempeln}
+  \caption{Schematischer Darstellung des Querschnitts eines siebenzelligen PETRA-Resonators mit Koppelschleife und zwei Abstimmstempeln. Der Abstand zwei benachbarter Zellenmitten beträgt \SI{30}{\centi\metre}.}
   \label{fig:petra_cavity}
 \end{figure}
 Im Rahmen dieser Arbeit wird das elektrische Feld von zwei siebenzelligen Beschleunigungsresonatoren vom Typ PETRA \cite{desy_petra} vermessen, welche in Kooperation von DESY und Balzers Hochvakuum GmbH (1982/83) hergestellt wurden.
 Der Querschnitt dieser Kavität ist in Abbildung \ref{fig:petra_cavity} schematisch dargestellt.
 Die einzelnen Zellen werden durch leitende Kupferwände voneinander getrennt, wobei deren spezielle Form der Maximierung des Laufzeitsfaktors \eqref{eq:laufzeitfaktor} dient.
+Jede der Zellen des PETRA-Resonators stellt einen Hohlraumresonator dar, der durch vier Koppelschlitze in der trennenden Kupferwand an die jeweiligen Nachbarzellen gekoppelt ist.
+Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N = 7$ die Anzahl der Zellen ist.
+Die $N$ Moden der Resonatorkette unterscheiden sich neben der Resonanzfrequenz $\omega_0$ auch im Phasenvorschub $\Delta \varphi$ zwei benachbarter Zellen und kann ausgedrückt werden durch \cite[S.\ 24]{tenenbaum}:
+\begin{align}
+  \Delta \varphi_n = n \cdot \frac{\pi}{N-1} \quad \text{mit} \quad n = 0, \dots, N-1
+\end{align}
+In der Regel werden die Moden der Resonatorkette nach ihrem Phasenvorschub benannt (z.B.\ $\pi$-Mode für $\Delta \varphi = \pi$).
+
+
 In der mittleren Zelle befindet sich die Koppelschleife \cite{desy_schleife}, deren Geometrie auf den Resonator angepasst ist um eine kritische Kopplung an die $\mathrm{TM}_{010}$-Beschleunigermode zu ermöglichen.
 Eine Anpassung des Koppelfaktors kann durch Drehen der Schleife erreicht werden, da dies den magnetische Fluss durch die Fläche der Leiterschleife ändert.
+
 In den Zellen 2 und 6 sind Abstimmstempel \cite{desy_stempel} angebracht die durch Schrittmotoren in bzw.\ aus der Kavität gefahren werden können.
 Das Verstellen der Stempel führt zu einer Änderung der Geometrie des Resonators und folglich zu einer Verschiebung der Resonanzfrequenz.
 Dies kann zum Stimmen der Resonanzfrequenz einer Mode in einem kleinen Frequenzbereich genutzt werden.
 Die zwei weiteren Vakuumflansche in den Zellen 1 und 7 dienen dem Anschluss von Vakuumpumpen.
 
-\todo{Koppelschlitze}
 
-Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III und -IV bezeichnet\footnote{Die fünfzelligen Resonatoren PETRA-I und -II sind im Stretcherring von ELSA verbaut.}.
-
-
-
-%------------------------------------------------------------------------------
-\subsection{Kopplung mehrerer Resonatoren}
-%------------------------------------------------------------------------------
+Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III und -IV bezeichnet\footnote{Die fünfzelligen Resonatoren PETRA-I und -II sind im Stretcherring von ELSA verbaut.}. Der Resonator PETRA-IV wurde durch eine Gasentladung gereinigt.
 
 
 %------------------------------------------------------------------------------
