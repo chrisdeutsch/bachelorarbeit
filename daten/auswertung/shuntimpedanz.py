@@ -19,7 +19,7 @@ v0 = ufloat(499.67E+6, 0.01E+6)
 
 # Resonanzfrequenz Luft->Vakuum
 epsilon_r_air = 1.0005364
-v0 *= 0.5 * (3.0 - epsilon_r_air)
+v0 /= 0.5 * (3.0 - epsilon_r_air)
 
 # Messfehler:
 dv_err = 100.0
