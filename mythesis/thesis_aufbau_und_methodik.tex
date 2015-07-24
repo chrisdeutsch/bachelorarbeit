@@ -14,6 +14,7 @@
   \label{fig:petra_cavity}
 \end{figure}
 Im Rahmen dieser Arbeit wird das elektrische Feld von zwei siebenzelligen Beschleunigungsresonatoren vom Typ PETRA \cite{desy_petra} vermessen, welche in Kooperation von DESY und Balzers Hochvakuum GmbH (1982/83) hergestellt wurden.
+Der Resonator ist ausgelegt auf die Beschleunigung von ultrarelativistischen Elektronen und Positronen durch die $\mathrm{TM}_{010}$-Mode bei einer Frequenz von \SI{499.67}{MHz}.
 Der Querschnitt dieser Kavität ist in Abbildung \ref{fig:petra_cavity} schematisch dargestellt.
 Die einzelnen Zellen werden durch leitende Kupferwände voneinander getrennt, wobei deren spezielle Form der Maximierung des Laufzeitsfaktors \eqref{eq:laufzeitfaktor} dient.
 Jede der Zellen des PETRA-Resonators stellt einen Hohlraumresonator dar, der durch vier Koppelschlitze in der trennenden Kupferwand an die jeweiligen Nachbarzellen gekoppelt ist.
@@ -23,12 +24,11 @@ Die Benennung der Moden der Resonatorkette erfolgt nach ihrem Phasenvorschub $\D
 \begin{align}
   \Delta \varphi = 0,\; \frac{1}{6} \pi,\; \frac{1}{3} \pi,\; \frac{1}{2} \pi,\; \frac{2}{3} \pi,\; \frac{5}{6} \pi,\; \pi
 \end{align}
-
 In der mittleren Zelle des PETRA-Resonators befindet sich die Koppelschleife \cite{desy_schleife}, deren Geometrie auf den Resonator angepasst ist um eine kritische Kopplung an die $\mathrm{TM}_{010}$-Beschleuniger\-mode zu ermöglichen.
-Eine Anpassung des Koppelfaktors kann durch Drehen der Schleife erreicht werden, da dies den \todo{magnetischen Fluss} durch die Fläche der Leiterschleife ändert.
+Eine Anpassung des Koppelfaktors kann durch Drehen der Schleife erreicht werden, da dies die effektive Fläche der Leiterschleife senkrecht zum Magnetfeld der betrachteten Resonatormode verändert.
 In den Zellen~2 und 6 sind Abstimmstempel \cite{desy_stempel} angebracht die durch Schrittmotoren in bzw.\ aus der Kavität gefahren werden können.
 Das Verstellen der Stempel führt zu einer Änderung der Geometrie des Resonators und folglich zu einer Verschiebung der Resonanzfrequenz.
-Dies kann zum Stimmen der Resonanzfrequenz einer Mode in einem kleinen Frequenzbereich genutzt werden.
+Dies kann zum Stimmen der Resonanzfrequenz einer Mode in einem beschränkten Frequenzbereich genutzt werden.
 Die zwei weiteren Vakuumflansche in den Zellen~1 und 7 dienen dem Anschluss von Vakuumpumpen.
 
 
@@ -38,10 +38,14 @@ Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III un
 %------------------------------------------------------------------------------
 \section{Aufbau des Störkörpermessstandes}
 %------------------------------------------------------------------------------
+Zur Bestimmung des elektrischen Feldes auf der Strahlachse des Resonators wird ein kugelförmiger Störkörper mit einem Durchmesser $D = \SI{20.05 +- 0.02}{mm}$ mit einer zentrischen Bohrung mit Durchmesser $d = \SI{1.3 +- 0.05}{mm}$ auf einem reißfesten Kunststofffaden befestigt.
+
+
 \begin{sidewaysfigure}[p]
 	\centering
 	\includegraphics[width=1.0\textheight]{./figs/cavity/messaufbau.pdf}
 	\caption{Schematischer Aufbau des Störkörpermessstandes mit einem siebenzelligen PETRA-Resonator (a),  Koppelschleife (b), Abstimmstempeln (c), Blindflanschen (d), Kreuzblenden (e), Befestigung (f), MiniTec-Gestell (g) mit Umlenkrollen, Schrittmotor mit Antriebsrad (h), Kunststoffschnur mit Spannfeder (i), Teflon-Störkörper (j).}
+	\label{fig:stoerkoerpermessstand}
 \end{sidewaysfigure}
 
 
@@ -49,4 +53,5 @@ Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III un
 \section{Messmethodik}
 %------------------------------------------------------------------------------
 Fit der Resonanzkurve an die Güte\\
-Resonanzfrequenz aus dem Minimum der Resonanzkurve
+Resonanzfrequenz aus dem Minimum der Resonanzkurve\\
+Checkmode
