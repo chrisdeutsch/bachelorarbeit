@@ -38,20 +38,46 @@ Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III un
 %------------------------------------------------------------------------------
 \section{Aufbau des Störkörpermessstandes}
 %------------------------------------------------------------------------------
-Zur Bestimmung des elektrischen Feldes auf der Strahlachse des Resonators wird ein kugelförmiger Störkörper mit einem Durchmesser $D = \SI{20.05 +- 0.02}{mm}$ mit einer zentrischen Bohrung mit Durchmesser $d = \SI{1.3 +- 0.05}{mm}$ auf einem reißfesten Kunststofffaden befestigt.
-
-
 \begin{sidewaysfigure}[p]
 	\centering
 	\includegraphics[width=1.0\textheight]{./figs/cavity/messaufbau.pdf}
-	\caption{Schematischer Aufbau des Störkörpermessstandes mit einem siebenzelligen PETRA-Resonator (a),  Koppelschleife (b), Abstimmstempeln (c), Blindflanschen (d), Kreuzblenden (e), Befestigung (f), MiniTec-Gestell (g) mit Umlenkrollen, Schrittmotor mit Antriebsrad (h), Kunststoffschnur mit Spannfeder (i), Teflon-Störkörper (j).}
+	\caption{Schematischer Aufbau des Störkörpermessstandes für einen siebenzelligen PETRA-Resonator mit Abstimmstemplen und Einkoppelschleife (a), Montageträger (b), Gestell aus einem Aluminiumprofilsystem (c), Kreuzblenden (d), Polytetrafluorethylen-Störkörper (e), Spindel mit Schrittmotor (f) und Zugfeder (g).}
 	\label{fig:stoerkoerpermessstand}
 \end{sidewaysfigure}
+Zur Bestimmung des elektrischen Feldes auf der Strachachse des Resonators wird die in Abschnitt \ref{sec:resonante_stoerkoerpermessung} eingeführte resonante Störkörpermessung ausgenutzt.
+Dazu wird ein kugelförmiger Störkörper mit dem Durchmesser $D = \SI{20.05 +- 0.02}{mm}$ durch eine zentrische Bohrung des Durchmessers $d = \SI{1.3 +- 0.05}{mm}$ auf einem reißfesten Kunststofffaden befestigt.
+Wegen der verschwindenden magnetischen Suszeptibilität wurde der Störkörper aus Polytetrafluorethylen (Teflon\textsuperscript{\textregistered}) gefertigt, was die Verwendung von Gleichung \eqref{eq:skm_e_feld_normiert} für dielektrische Kugeln zur Bestimmung des Amplitude des elektrischen Feldes im Resonator erlaubt.
+Um diesen Störkörper auf der Strahlachse durch den Resonator bewegen zu können, wurde der Störkörpermessstand aus Abbildung \ref{fig:stoerkoerpermessstand} aufgebaut.
+Dieser besteht aus dem siebenzelligen PETRA-Resonator, welcher fest auf einem Montageträger befestigt wurde.
+Ein Gestell aus einem Aluminiumprofilsystem, welches fest mit dem Träger verbunden wurde, dient der Befestigung der weiteren Komponenten des Messstandes.
+Über ein System von Umlenkrollen kann der Kunststofffaden durch die Kavität geführt werden und schließlich beidseitig fest mit einer Aluminiumspindel verbunden werden, die wiederum auf der Welle eines Schrittmotors befestigt ist.
+Die Rückführung des Fadens auf die Spindel führt dazu, dass unabhängig von der Spannung des Fadens das Drehmoment auf der Welle des Schrittmotors kompensiert wird.
+Darüber hinaus verhindert die feste Verbindung des Fadens mit der Spindel ein longitudinales Verrutschen des Fadens in seiner Führung, was insbesondere für eine präzise Ortsbestimmung des Störkörpers relevant ist.
+
+Durch diesen Aufbau kann der Störkörper durch Drehen der Spindel auf der Strahlachse verschoben werden.
+Die Drehung der Spindel erfolgt dabei durch den Schrittmotor \textit{MDrive 23 Plus Motion Control} des Herstellers \textit{Schneider Electric}.
+Dieser Motor enthält bereits eine Steuereinheit, welche Befehle über eine serielle Schnittstelle erhalten kann und 
+\todo{Schrittverlust}
+
+An die Koppelschleife ist der vektorielle Netzwerkanalysator \textit{ZVC 1127.8600.62} des Herstellers \textit{Rhode \& Schwarz} angeschlossen.
+
+Die Steuerung der Komponenten erfolgt durch den Mikrocomputer Raspberry Pi mithilfe der Python3
+
+\todo{Einfluss des Fadens?}
+
+
+
+
 
 
 %------------------------------------------------------------------------------
 \section{Messmethodik}
 %------------------------------------------------------------------------------
+
+\subsection{Temperatur}
+Volumenänderung $\nu$, Leitfähigkeitänderung $Q$
+
 Fit der Resonanzkurve an die Güte\\
 Resonanzfrequenz aus dem Minimum der Resonanzkurve\\
+Längenmessung\\
 Checkmode
