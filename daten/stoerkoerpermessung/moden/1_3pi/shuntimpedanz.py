@@ -2,8 +2,31 @@ import numpy as np
 from uncertainties import ufloat
 import uncertainties.unumpy as unumpy
 import uncertainties.umath as umath
-from trapz import trapz
 from scipy.optimize import minimize_scalar
+import math
+
+def trapz(x, y, dy):
+    """ Integration nach Trapezregel mit Fehlerfortpflanzung """
+    data = list(zip(x, y, dy))
+    N = len(data)
+    
+    integral = 0
+    std_dev = 0
+    
+    for i in range(N-1):
+        integral += (x[i+1] - x[i]) * (y[i] + y[i+1])
+    
+    for i in range(1, N-1):
+        std_dev += ((x[i+1] - x[i-1]) * dy[i])**2
+    
+    # Randpunkte
+    std_dev += ((x[1] - x[0]) * dy[0])**2
+    std_dev += ((x[N-1] - x[N-2]) * dy[N-1])**2
+    
+    integral *= 0.5
+    std_dev = 0.5 * math.sqrt(std_dev)
+    
+    return integral, std_dev
 
 
 ### Berechnung des elektrischen Feldes ###
@@ -13,13 +36,13 @@ offset = 30.0 # [mm]
 
 
 # Güte und Resonanzfrequenz
-Q0 = ufloat(29000.0, 200.0)
-v0 = ufloat(499.67E+6, 0.01E+6)
+Q0 = ufloat(32730, 350.0)
+v0 = ufloat(505.24E+6, 0.01E+6)
 
 
 # Resonanzfrequenz Luft->Vakuum
-# epsilon_r_air = 1.0005364
-# v0 /= 0.5 * (3.0 - epsilon_r_air)
+#epsilon_r_air = 1.0005364
+#v0 /= 0.5 * (3.0 - epsilon_r_air)
 
 # Messfehler:
 dv_err = 100.0
@@ -46,7 +69,7 @@ alpha_s = 3.0 * (epsilon - 1.0) / (epsilon + 2.0) * epsilon0 * vol_s
 c0 = 299792458.0 # Lichtgeschwindigkeit
 
 # Daten einlesen
-data = np.loadtxt("pi_messung_1.tsv")
+data = np.loadtxt("1_3_pi_messung_2.tsv")
 
 # Position extrahieren [mm]
 pos = np.array([ufloat(pos, pos_err) for pos in data[:, 0]])
@@ -89,13 +112,13 @@ rs = 0.5 * voltage**2
 
 # Phase definieren TODO: Schön machen
 phase = np.zeros_like(x)
-phase[0:74-7] = 0
-phase[74-7:134-7] = np.pi
-phase[134-7:194-7] = 0
-phase[194-7:254-7] = np.pi
-phase[254-7:314-7] = 0
-phase[314-7:374-7] = np.pi
-phase[374-7:434] = 0
+phase[0:73-7] = 0
+phase[73-7:135-7] = 1 * 1.0 / 3.0 * np.pi
+phase[135-7:192-7] = 2 * 1.0 / 3.0 * np.pi
+phase[192-7:256-7] = 3 * 1.0 / 3.0 * np.pi
+phase[256-7:314-7] = 4 * 1.0 / 3.0 * np.pi
+phase[314-7:377-7] = 5 * 1.0 / 3.0 * np.pi
+phase[377-7:434] = 6 * 1.0 / 3.0 * np.pi
 
 # Funktion zur Berechnung der effektiven Spannung in Abhängigkeit der Eintritts-
 # phase des Teilchens in die Cavity (soll maximiert werden)
@@ -135,3 +158,9 @@ eff_field_out = np.column_stack((unumpy.nominal_values(pos), unumpy.std_devs(pos
 np.savetxt('feld.tsv', field_out, delimiter='\t')
 np.savetxt('eff_feld.tsv', eff_field_out, delimiter='\t')
 
+print("voltage:\t{}".format(voltage))
+print("rs:\t\t{}".format(rs))
+print("phi0:\t\t{}".format(phi0))
+print("delay coeff.:\t{}".format(delay_coeff))
+print("eff. voltage:\t{}".format(eff_voltage))
+print("eff. rs:\t{}".format(rs_eff))
