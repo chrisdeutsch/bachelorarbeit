@@ -56,17 +56,17 @@ Die Rückführung des Fadens auf die Spindel führt dazu, dass unabhängig von d
 Darüber hinaus verhindert die feste Verbindung des Fadens mit der Spindel ein longitudinales Verrutschen des Fadens in seiner Führung, was insbesondere für eine präzise Ortsbestimmung des Störkörpers relevant ist.
 
 Durch das Auf- beziehungsweise Abrollen des Fadens auf der Spindel, kann der Störkörper entlang der Strahlachse verschoben werden.
-Die Drehung der Spendel erfolgt dabei durch den 2-Phasen Schrittmotor \textit{MDrive\textsuperscript{\textregistered} 23 Plus Motion Control} des Herstellers \textit{Schneider Electric} \cite{motor_datasheet}.
+Die Drehung der Spindel erfolgt dabei durch den 2-Phasen Schrittmotor \textit{MDrive\textsuperscript{\textregistered} 23 Plus Motion Control} des Herstellers \textit{Schneider Electric} \cite{motor_datasheet}.
 Der Motor besitzt eine integrierte Steuereinheit, welche die direkte Ansteuerung über eine serielle Schnittstelle ermöglicht.
-Ein voller Schritt des Motors entspricht einem Drehwinkel der Welle von \SI{1.8}{\degree}, was \num{200} Schritten pro Umdrehung entspricht.
+Ein voller Schritt des Motors entspricht einem Drehwinkel der Welle von \SI{1.8}{\degree} oder \num{200} Schritten pro Umdrehung.
 Durch eine spezielle Ansteuerungstechnik, welche in der Steuereinheit implementiert wurde, wird ein Schritt zusätzlich in \num{256} sogenannte \textit{Microsteps} eingeteilt.
-Die typische Stellgenaugikeit für Schrittmotoren (innerhalb der Betriebsparameter) liegt bei \SI{5}{\percent} eines Schrittes und entspricht einem Winkelfehler von \SI{0.09}{\degree}.
+Die Ortsinformation des Störkörpers entlang der Strahlachse kann dann aus der Anzahl der erfolgten Microsteps gewonnen werden.
+Aus der Geometrie der Spindel folgt für die zugehörige Proportionalitätskonstante \SI{0.005996}{\milli\metre\per\micro\step}.
+Die Stellgenauigkeit \todo{nicht additiv} des Schrittmotors liegt jedoch weit über der durch \textit{Microstepping} erreichbaren Auflösung und liegt typischerweise bei \SI{5}{\percent} eines vollen Schrittes.
+Dies entspricht einem Winkelfehler von \SI{0.09}{\degree} oder einem Fehler in der Störkörperposition von weniger als \SI{0.1}{\milli\metre}.
+\todo{Dadurch ist eine Positionierung des Störkörpers im Millimeterbereich möglich.}
 
 
-
-
-
-\todo{Schrittverlust}
 
 An die Koppelschleife ist der vektorielle Netzwerkanalysator \textit{ZVC 1127.8600.62} des Herstellers \textit{Rhode \& Schwarz} angeschlossen.
 
