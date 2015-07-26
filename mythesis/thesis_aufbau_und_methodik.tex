@@ -34,6 +34,7 @@ Die zwei weiteren Vakuumflansche in den Zellen~1 und 7 dienen dem Anschluss von 
 
 Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III und -IV bezeichnet\footnote{Die fünfzelligen Resonatoren PETRA-I und -II sind im Stretcherring von ELSA verbaut.}. Der Resonator PETRA-IV wurde durch eine Gasentladung gereinigt.
 
+\todo{Länge Flansch-Flansch}
 
 %------------------------------------------------------------------------------
 \section{Aufbau des Störkörpermessstandes}
@@ -54,16 +55,24 @@ Ein Gestell aus einem Aluminiumprofilsystem, welches fest mit dem Träger verbun
 Die Rückführung des Fadens auf die Spindel führt dazu, dass unabhängig von der Spannung des Fadens das Drehmoment auf der Welle des Schrittmotors kompensiert wird.
 Darüber hinaus verhindert die feste Verbindung des Fadens mit der Spindel ein longitudinales Verrutschen des Fadens in seiner Führung, was insbesondere für eine präzise Ortsbestimmung des Störkörpers relevant ist.
 
-Durch diesen Aufbau kann der Störkörper durch Drehen der Spindel auf der Strahlachse verschoben werden.
-Die Drehung der Spindel erfolgt dabei durch den Schrittmotor \textit{MDrive 23 Plus Motion Control} des Herstellers \textit{Schneider Electric}.
-Dieser Motor enthält bereits eine Steuereinheit, welche Befehle über eine serielle Schnittstelle erhalten kann und 
+Durch das Auf- beziehungsweise Abrollen des Fadens auf der Spindel, kann der Störkörper entlang der Strahlachse verschoben werden.
+Die Drehung der Spendel erfolgt dabei durch den 2-Phasen Schrittmotor \textit{MDrive\textsuperscript{\textregistered} 23 Plus Motion Control} des Herstellers \textit{Schneider Electric} \cite{motor_datasheet}.
+Der Motor besitzt eine integrierte Steuereinheit, welche die direkte Ansteuerung über eine serielle Schnittstelle ermöglicht.
+Ein voller Schritt des Motors entspricht einem Drehwinkel der Welle von \SI{1.8}{\degree}, was \num{200} Schritten pro Umdrehung entspricht.
+Durch eine spezielle Ansteuerungstechnik, welche in der Steuereinheit implementiert wurde, wird ein Schritt zusätzlich in \num{256} sogenannte \textit{Microsteps} eingeteilt.
+Die typische Stellgenaugikeit für Schrittmotoren (innerhalb der Betriebsparameter) liegt bei \SI{5}{\percent} eines Schrittes und entspricht einem Winkelfehler von \SI{0.09}{\degree}.
+
+
+
+
+
 \todo{Schrittverlust}
 
 An die Koppelschleife ist der vektorielle Netzwerkanalysator \textit{ZVC 1127.8600.62} des Herstellers \textit{Rhode \& Schwarz} angeschlossen.
 
 Die Steuerung der Komponenten erfolgt durch den Mikrocomputer Raspberry Pi mithilfe der Python3
 
-\todo{Einfluss des Fadens?}
+\todo{Einfluss des Fadens?, Durchhängen des Fadens}
 
 
 
