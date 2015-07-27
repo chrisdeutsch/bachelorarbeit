@@ -10,7 +10,7 @@
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.8\textwidth]{./figs/cavity/cavity.pdf}
-  \caption{Schematischer Darstellung des Querschnitts eines siebenzelligen PETRA-Resonators mit Koppelschleife und zwei Abstimmstempeln. Der Abstand zwei benachbarter Zellenmitten beträgt \SI{30}{\centi\metre}.}
+  \caption{Schematischer Darstellung des Querschnitts eines siebenzelligen PETRA-Resonators mit Koppelschleife und zwei Abstimmstempeln. Der Abstand zwei benachbarter Zellenmitten beträgt \SI{30}{\centi\metre} und die Gesamtlänge \SI{222}{\centi\metre}.}
   \label{fig:petra_cavity}
 \end{figure}
 Im Rahmen dieser Arbeit wird das elektrische Feld von zwei siebenzelligen Beschleunigungsresonatoren vom Typ PETRA \cite{desy_petra} vermessen, welche in Kooperation von DESY und Balzers Hochvakuum GmbH (1982/83) hergestellt wurden.
@@ -34,7 +34,6 @@ Die zwei weiteren Vakuumflansche in den Zellen~1 und 7 dienen dem Anschluss von 
 
 Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III und -IV bezeichnet\footnote{Die fünfzelligen Resonatoren PETRA-I und -II sind im Stretcherring von ELSA verbaut.}. Der Resonator PETRA-IV wurde durch eine Gasentladung gereinigt.
 
-\todo{Länge Flansch-Flansch}
 
 %------------------------------------------------------------------------------
 \section{Aufbau des Störkörpermessstandes}
@@ -75,15 +74,11 @@ Der verwendete VNA ermöglicht die Messung des Reflexionsfaktors an bis zu \num{
 Die Eingabe und Ausgabe erfolgt auch hier durch eine serielle Schnittstelle.
 \todo{AVG, Marker etc.?}
 
-Zur Realisierung einer automatisierten Störkörpermessung und der Koordination von Schrittmotor und Netzwerkanalysator dient der Mikrocomputer \textit{Raspberry Pi} (RPi).
-Die Kommunikation des RPi mit den einzelnen Komponenten erfolgt über deren serielle Schnittstelle.
-Dazu wurden die jeweiligen Kommunikationsprotokolle in der Programmiersprache \textit{Python\texttrademark}
+Zur Realisierung einer automatisierten Störkörpermessung und der Koordination von Schrittmotor und Netzwerkanalysator dient der Mikrocomputer \textit{Raspberry Pi} (RPi), der mit den Komponenten des Messaufbaus über serielle Schnittstellen kommunizieren kann.
+In der Programmiersprache \textit{Python} wurde dazu die serielle Kommunikation mit Motor und VNA, sowie die Steuerung des Messablaufs implementiert.
+Der genaue Ablauf einer Störkörpermessung wird im nächsten Abschnitt erläutert.
 
 \todo{Einfluss des Fadens?, Durchhängen des Fadens}
-
-
-
-
 
 
 %------------------------------------------------------------------------------
