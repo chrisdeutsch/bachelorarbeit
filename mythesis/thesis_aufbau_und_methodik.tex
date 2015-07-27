@@ -66,11 +66,18 @@ Die Stellgenauigkeit \todo{nicht additiv} des Schrittmotors liegt jedoch weit ü
 Dies entspricht einem Winkelfehler von \SI{0.09}{\degree} oder einem Fehler in der Störkörperposition von weniger als \SI{0.1}{\milli\metre}.
 \todo{Dadurch ist eine Positionierung des Störkörpers im Millimeterbereich möglich.}
 
+Zur Bestimmung der Resonanzfrequenz und Güte des Resonators dient der vektorielle Netzwerkanalysator \textit{Rohde \& Schwarz: ZVC 1127.8600.62}, welcher über ein \SI{50}{\ohm}-Koaxialkabel (RG~214/U) mit der Koppelschleife verbunden wird.
+Die Verbindung erfolgt dabei über einen Spezialadapter vom Typ-N Stecker des Kabels auf die $6\tfrac{1}{8}$-Zoll \SI{50}{\ohm}-Koaxialverbindung der Koppelschleife.
+Der VNA erzeugt ein sinusförmiges Signal variabler Frequenz und einer Leistung von \SI{6}{dBm}, welches an der Koppelschleife teilweise reflektiert wird.
+Ein Richtkoppler im VNA trennt das reflektierte vom ausgehenden Signal und ermöglicht eine Bestimmung des komplexen Reflexionsfaktors durch einen Vergleich von Phase und Leistung beider Signale.
+Um ein von der Dämpfung und Laufzeit im Koaxialkabel unabhängiges Ergebnis zu erhalten, kann eine Kalibration durchgeführt werden, indem das Ende der Messleitung durch einen offenen, kurzgeschlossenen und \SI{50}{\ohm}-Abschluss terminiert wird.
+Der verwendete VNA ermöglicht die Messung des Reflexionsfaktors an bis zu \num{2001} gleichverteilten Messpunkten auf einem vorgegebenen Frequenzintervall.
+Die Eingabe und Ausgabe erfolgt auch hier durch eine serielle Schnittstelle.
+\todo{AVG, Marker etc.?}
 
-
-An die Koppelschleife ist der vektorielle Netzwerkanalysator \textit{ZVC 1127.8600.62} des Herstellers \textit{Rhode \& Schwarz} angeschlossen.
-
-Die Steuerung der Komponenten erfolgt durch den Mikrocomputer Raspberry Pi mithilfe der Python3
+Zur Realisierung einer automatisierten Störkörpermessung und der Koordination von Schrittmotor und Netzwerkanalysator dient der Mikrocomputer \textit{Raspberry Pi} (RPi).
+Die Kommunikation des RPi mit den einzelnen Komponenten erfolgt über deren serielle Schnittstelle.
+Dazu wurden die jeweiligen Kommunikationsprotokolle in der Programmiersprache \textit{Python\texttrademark}
 
 \todo{Einfluss des Fadens?, Durchhängen des Fadens}
 
@@ -89,4 +96,5 @@ Volumenänderung $\nu$, Leitfähigkeitänderung $Q$
 Fit der Resonanzkurve an die Güte\\
 Resonanzfrequenz aus dem Minimum der Resonanzkurve\\
 Längenmessung\\
-Checkmode
+Checkmode\\
+Einschwingzeit
