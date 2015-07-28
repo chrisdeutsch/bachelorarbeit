@@ -112,22 +112,13 @@ Nachdem der Frequenzbereich für die Messung gefunden wurde, muss der Netzwerkan
 Die automatisierte Messung kann dann mit dem im Rahmen dieser Arbeit entwickelten Störkörpermessprogramm erfolgen.
 
 Das Programm misst dabei die Verschiebung der Resonanzfrequenz durch den Störkörper an verschiedenen Stellen im Resonator, indem die in Abschnitt \ref{sec:temperaturabh_resonanzfrequenz} zur temperaturunabhängigen Messung eingeführte Methode ausgenutzt wird.
-
-Zunächst wird der Störkörper an die Referenzposition gefahren,
-
-
-Störkörpermessprogramm:
-\begin{itemize}
-  \item Fahre durch den Resonator in \SI{5}{mm}-Schritten
-  \item Messe Referenzposition
-  \item Messe nächste Position
-  \item print pos, freq, fref, freq-fref
-\end{itemize}
-
-Miss: fahre zur Position; warte die Einschwingzeit ab; miss AVG-Sweeps mit dem VNA; Bestimme die Resonanzfrequenz durch die Minimumsfunktion des VNA.
-
-
-
+Die konkreten Schritte die durch das Programm durchgeführt werden, sollen hier knapp umrissen werden.
+Zur Bestimmung der Frequenzverschiebung an einer Position~$z$ wird der Störkörper auf die Referenzposition~$z_\mathrm{ref}$ gefahren, an der zunächst eine kurze Einschwingzeit (\SI{5}{s}) des Störkörpers gewartet wird.
+Anschließend wird mit dem VNA der Mittelwert des Reflexionsspektrums von fünf Messzyklen berechnet.
+Schließlich kann die Resonanzfrequenz~$\nu_\mathrm{ref}$ durch die Funktion des VNAs der Minimumssuche bestimmt werden.
+Danach wird der Störkörper auf die Position~$z$ gefahren, um dort analog die Resonanzfrequenz~$\nu$ zu bestimmen.
+Die Größen $z, \nu, \nu_\mathrm{ref}$ und $\nu - \nu_\mathrm{ref}$ werden dann auf dem Flash-Speicher des RPi gespeichert.
+Dieser Messschritt wird solange wiederholt, bis der Resonator auf der gesamten Länge in einer frei wählbaren Schrittweite vermessen wurde.
 
 
 Leitfähigkeitänderung $Q$
