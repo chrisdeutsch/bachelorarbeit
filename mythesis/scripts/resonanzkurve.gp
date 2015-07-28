@@ -7,6 +7,8 @@ set term epslatex color size 12cm,8cm
 set output './plots/resonanzkurve.tex'
 
 set key bottom right
+set key samplen 2
+
 set decimalsign '{,}'
 set format x "%.2f"
 set format y "%.1f"
@@ -16,8 +18,8 @@ set ytics 0.0,0.2,1.0
 
 set xrange [0.99:1.01]
 set yrange [0:1.0]
-set xlabel 'Frequenz $\frac{\omega}{\omega_0}$'
-set ylabel 'Reflektionskoeffizient $|\rho|$'
+set xlabel 'normierte Kreisfrequenz $\frac{\omega}{\omega_0}$'
+set ylabel 'Reflexionskoeffizient $|\rho|$'
 
 set samples 10000
 unset grid
