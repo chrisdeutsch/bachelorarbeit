@@ -33,7 +33,7 @@ Die zwei weiteren Vakuumflansche in den Zellen~1 und 7 dienen dem Anschluss von 
 
 
 Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III und -IV bezeichnet\footnote{Die fünfzelligen Resonatoren PETRA-I und -II sind im Stretcherring von ELSA verbaut.}. Der Resonator PETRA-IV wurde durch eine Gasentladung gereinigt.
-
+\todo{Kupfer}
 
 %------------------------------------------------------------------------------
 \section{Aufbau des Störkörpermessstandes}
@@ -53,7 +53,7 @@ Dieser Faden wird dann beidseitig fest mit einer Spindel verbunden, die wiederum
 Die Rückführung des Fadens auf die Spindel führt dazu, dass unabhängig von der Spannung des Fadens das Drehmoment auf der Welle des Schrittmotors kompensiert wird.
 Dadurch kann der Faden so stark gespannt werden, dass das Durchhängen des Störkörpers am Faden vernachlässigt werden kann, ohne dabei einen Schrittverlust durch ein überlastendes Drehmoment am Motor zu riskieren.
 Darüber hinaus verhindert die feste Verbindung des Fadens mit der Spindel ein longitudinales Verrutschen des Fadens in seiner Führung, was insbesondere für eine präzise Ortsbestimmung des Störkörpers wichtig ist.
-Zusätzlich wurde an den Vakuumflanschen des Resonators Kreuzblenden installiert um einerseits ein Eindringen von Staub zu verhindern. Andererseits dient die Blende als ein Referenzpunkt zur Zentrierung des Störkörpers auf der Strahlachse.
+Zusätzlich wurde an den Vakuumflanschen des Resonators Kreuzblenden installiert um einerseits ein Eindringen von Staub zu vermindern. Andererseits dient die Blende als Referenzpunkt zur Zentrierung des Störkörpers auf der Strahlachse.
 
 Durch das Auf- beziehungsweise Abrollen des Fadens auf der Spindel, kann der Störkörper entlang der Strahlachse verschoben werden.
 Die Drehung der Spindel erfolgt dabei durch den 2-Phasen Schrittmotor \textit{MDrive\textsuperscript{\textregistered} 23 Plus Motion Control} des Herstellers \textit{Schneider Electric} \cite{motor_datasheet}.
@@ -82,8 +82,26 @@ Der genaue Ablauf einer Störkörpermessung wird im nächsten Abschnitt erläute
 \section{Messmethodik}
 %------------------------------------------------------------------------------
 
-\subsection{Temperatur}
-Volumenänderung $\nu$, Leitfähigkeitänderung $Q$
+%------------------------------------------------------------------------------
+\subsection{Temperaturabhängigkeit der Resonanzfrequenz}
+%------------------------------------------------------------------------------
+Für die resonante Störkörpermessung gilt es die Verschiebung der Resonanzfrequenz $\Delta \nu$ durch den Störkörper an verschiedenen Positionen im Resonator zu messen.
+Dabei muss man beachten, dass es neben der Frequenzverschiebung durch den Störkörper auch zu einer Verstimmung aufgrund von Temperaturänderungen des Resonators kommt.
+Kommt es beispielsweise zu einer Erwärmung des Resonators, so führt diese zu einer Ausdehnung des Kupfers und folglich zu einer Vergrößerung des Resonatorvolumens.
+Diese Geometrieänderung des Hohlraums führt zu einer Reduzierung der Resonanzfrequenz des Resonators.
+Analog führt ein Abkühlen des Resonators zur Kontraktion des Resonators, die wiederum eine Erhöhung der Resonanzfrequenz zur Folge hat.
+
+Für die vermessenen PETRA-Resonatoren liegt die Verstimmung durch Temperaturänderung bei ungefähr \SI{8}{\kilo\hertz\per\celsius}.
+Diese Resonanzfrequenzverschiebung liegt in der gleichen Größenordnung wie die Verschiebung durch den Störkörper, weshalb eine Korrektur dieses Effektes unabdingbar ist.
+Eine Möglichkeit ist die präzise Temperaturregulierung der Kavität durch einen thermisch stabilisierten Messraum oder durch den Kühlkreislauf des Resonators.
+Für die Messungen im Rahmen dieser Arbeit wurde jedoch eine andere Methode genutzt, um temperaturunabhängige Ergebnisse zu erhalten, welche im Folgenden näher erläutert werden soll.
+
+
+
+
+
+
+Leitfähigkeitänderung $Q$
 
 Fit der Resonanzkurve an die Güte\\
 Resonanzfrequenz aus dem Minimum der Resonanzkurve\\
