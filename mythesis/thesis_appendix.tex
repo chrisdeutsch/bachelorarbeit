@@ -14,8 +14,8 @@ Bei Verwendung der komplexen Darstellung der stehenden Welle im Resonator, kann 
 \begin{subequations}
   \label{eq:skm_felder}
   \begin{align}
-  &\ve_{0,1}(x,y,z,t) = \ve_{0,1}(x,y,z) \, e^{i \omega_{0,1} t}\\
-  &\vh_{0,1}(x,y,z,t) = \vh_{0,1}(x,y,z) \, e^{i \omega_{0,1} t}
+  &\ve_{0,1}(x,y,z,t) = \ve_{0,1}(x,y,z) \, \E^{\I \omega_{0,1} t}\\
+  &\vh_{0,1}(x,y,z,t) = \vh_{0,1}(x,y,z) \, \E^{\I \omega_{0,1} t}
   \end{align}
 \end{subequations}
 wobei die Phasenbeziehung von elektrischem und magnetischem Feld in den komplexen Amplituden $\ve_{0,1}(x,y,z)$ und $\vh_{0,1}(x,y,z)$. enthalten ist.
@@ -31,8 +31,8 @@ Setzt man die gestörten und ungestörten Felder \eqref{eq:skm_felder} in die \t
 \begin{subequations}
   \label{eq:skm_zeitunabhaengig}
   \begin{align}
-    &\vnabla \times \ve_{0,1} = - i \omega_{0,1} \vb_{0,1} \\
-    &\vnabla \times \vh_{0,1} = i \omega_{0,1} \vd_{0,1}
+    &\vnabla \times \ve_{0,1} = - \I \omega_{0,1} \vb_{0,1} \\
+    &\vnabla \times \vh_{0,1} = \I \omega_{0,1} \vd_{0,1}
   \end{align}
 \end{subequations}
 Man verwendet diese zeitunabhängigen Gleichungen und die Produktregel der Divergenz für das Kreuzprodukt um die folgenden Identitäten zu finden:
@@ -40,10 +40,10 @@ Man verwendet diese zeitunabhängigen Gleichungen und die Produktregel der Diver
   \label{eq:skm_vektoridentitaeten}
   \begin{align}
   \vnabla \cdot \left( \ve_0^* \times \vh_1\right) &= \vh_1 \cdot \left( \vnabla \times \ve_0^* \right) - \ve_0^* \cdot \left( \vnabla \times \vh_1 \right) \nonumber \\
-  &= i \omega_0 \vb_0^* \vh_1 - i \omega_1 \ve_0^* \vd_1 \label{eq:e0h1} \\[0.5em]
+  &= \I \omega_0 \vb_0^* \vh_1 - \I \omega_1 \ve_0^* \vd_1 \label{eq:e0h1} \\[0.5em]
   %
   \vnabla \cdot \left( \ve_1 \times \vh_0^* \right) &= \vh_0^* \cdot \left( \vnabla \times \ve_1 \right) - \ve_1 \cdot \left( \vnabla \times \vh_0^* \right) \nonumber \\
-  &= i \omega_0 \ve_1 \vd_0^* - i \omega_1 \vb_1 \vh_0^* \label{eq:e1h0}
+  &= \I \omega_0 \ve_1 \vd_0^* - \I \omega_1 \vb_1 \vh_0^* \label{eq:e1h0}
   \end{align}
 \end{subequations}
 Anschließend bildet man die Summe der Gleichungen \eqref{eq:skm_vektoridentitaeten} und führt eine Integration über das Resonatorvolumen $V$ durch.
