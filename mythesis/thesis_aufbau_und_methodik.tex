@@ -94,8 +94,34 @@ Analog führt ein Abkühlen des Resonators zur Kontraktion des Resonators, die w
 Für die vermessenen PETRA-Resonatoren liegt die Verstimmung durch Temperaturänderung bei ungefähr \SI{8}{\kilo\hertz\per\celsius}.
 Diese Resonanzfrequenzverschiebung liegt in der gleichen Größenordnung wie die Verschiebung durch den Störkörper, weshalb eine Korrektur dieses Effektes unabdingbar ist.
 Eine Möglichkeit ist die präzise Temperaturregulierung der Kavität durch einen thermisch stabilisierten Messraum oder durch den Kühlkreislauf des Resonators.
+
 Für die Messungen im Rahmen dieser Arbeit wurde jedoch eine andere Methode genutzt, um temperaturunabhängige Ergebnisse zu erhalten, welche im Folgenden näher erläutert werden soll.
 
+
+%------------------------------------------------------------------------------
+\subsection{Ablauf der Störkörpermessung}
+%------------------------------------------------------------------------------
+In diesem Abschnitt soll der Ablauf einer Störkörpermessung dargestellt werden.
+Zunächst wird der Frequenzbereich des VNA um eine Resonanz der ungestörten Kavität zentriert und eine Kalibration durchgeführt.
+Anschließend wird das Reflexionsspektrum $\rho(\nu)$ des Resonators vermessen, was der späteren Bestimmung von Resonanzfrequenz und Güte dient.
+Danach wird der Störkörper in den Resonator gefahren und seine Nullstellung festgelegt.
+Nun muss der Frequenzbereich des VNA so eingestellt werden, dass die Resonanzkurve (vgl.\ Abb.\ ???) der zu vermessenden Resonatormode stets in den Messbereich des VNA fällt.
+Dabei ist insbesondere die pertubative Verstimmung durch den Störkörper, aber auch die thermische Verstimmung zu beachten.
+Nachdem der Frequenzbereich für die Messung gefunden wurde, muss der Netzwerkanalysator auf diesem erneut kalibriert werden.
+Die automatisierte Messung kann dann mit dem im Rahmen dieser Arbeit entwickelten Störkörpermessprogramm erfolgen.
+
+\todo{ABC.}
+
+
+Störkörpermessprogramm:
+\begin{itemize}
+  \item Fahre durch den Resonator in \SI{5}{mm}-Schritten
+  \item Messe Referenzposition
+  \item Messe nächste Position
+  \item print pos, freq, fref, freq-fref
+\end{itemize}
+
+Miss: fahre zur Position; warte die Einschwingzeit ab; miss AVG-Sweeps mit dem VNA; Bestimme die Resonanzfrequenz durch die Minimumsfunktion des VNA.
 
 
 
