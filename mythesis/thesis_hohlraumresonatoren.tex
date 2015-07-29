@@ -118,6 +118,19 @@ Es folgt nach Einsetzen von Gl.~\eqref{eq:impedanz_hinter_schleife} in Gl.~\eqre
 \end{align}
 Diese Gleichung ermöglicht den experimentellen Zugang zur Bestimmung von Koppelfaktor~$\kappa$, Güte~$Q_0$ und Resonanzfrequenz~$\omega_0$ von Hohlraumresonatoren.
 
+\todo{Resonanzkurve erklären}
+\begin{figure}[h]
+  \centering
+  \input{./plots/resonanzkurve.tex}
+  \caption[Resonanzkurve]{Resonanzkurve}
+  \label{fig:resonanzkurve}
+\end{figure}
+
+\begin{align}
+  | \rho(\omega) | = \sqrt{\frac{(\kappa - 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}{(\kappa + 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}}
+\end{align}
+
+
 %------------------------------------------------------------------------------
 \section{Resonante Störkörpermessung}
 \label{sec:resonante_stoerkoerpermessung}
