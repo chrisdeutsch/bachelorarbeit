@@ -130,7 +130,7 @@ Nun muss der Frequenzbereich des VNA so eingestellt werden, dass die Resonanzkur
 Dabei ist insbesondere die pertubative Verstimmung durch den Störkörper aber auch die thermische Verstimmung zu beachten.
 Nachdem ein geeigneter Frequenzbereich gefunden wurde, muss der Netzwerkanalysator erneut kalibriert werden.
 Die automatisierte Messung kann dann mit dem im Rahmen dieser Arbeit entwickelten Störkörpermessprogramm erfolgen.
-\cite{schedler_prog}
+\todo{Credit Manuel?}\cite{schedler_prog}
 
 Das Programm misst dabei die Verschiebung der Resonanzfrequenz durch den Störkörper an verschiedenen Stellen im Resonator, indem die in Abschnitt \ref{sec:temperaturabh_resonanzfrequenz} zur temperaturunabhängigen Messung eingeführte Methode ausgenutzt wird.
 Die vom Störkörpermessprogramm durchgeführten Schritte zur Bestimmung der Resonanzfrequenzverschiebung an einer Position~$z$ sollen kurz dargestellt werden:
@@ -138,27 +138,8 @@ Die vom Störkörpermessprogramm durchgeführten Schritte zur Bestimmung der Res
 	\item Der Störkörper wird auf die Referenzposition~$z_\mathrm{ref}$ gefahren.
 	\item Es wird gewartet (\SI{5}{s}) bis die Schwingung des Störkörpers abgeklungen ist.
 	\item Der VNA bildet den laufenden Mittelwert des Reflexionsspektrums $|\rho(\nu)|$ über fünf Messzyklen.
-	\item Die Resonanzfrequenz~$\nu_\mathrm{ref}$ wird am Minimum des gemittelten Reflexionsspektrums bestimmt. 
+	\item Die Resonanzfrequenz~$\nu_\mathrm{ref}$ wird durch das Minimum des gemittelten Reflexionsspektrums bestimmt.
 	\item Die Schritte 1.\ bis 4.\ werden an der Position~$z$ wiederholt und die Resonanzfrequenz $\nu_0(z)$ bestimmt.
-	\item Die gemessenen Daten werden abgespeichert.
+	\item Die gemessenen Daten $z, \nu_0(z), \nu_\mathrm{ref}$ und die Differenz $\nu_0(z) - \nu_\mathrm{ref}$ wird abgespeichert.
 \end{enumerate}
-Rinse and repeat
-
-
-
-Die konkreten Schritte die durch das Programm durchgeführt werden, sollen hier knapp umrissen werden.
-Zur Bestimmung der Frequenzverschiebung an einer Position~$z$ wird der Störkörper auf die Referenzposition~$z_\mathrm{ref}$ gefahren, an der zunächst eine kurze Einschwingzeit (\SI{5}{s}) des Störkörpers gewartet wird.
-Anschließend wird mit dem VNA der Mittelwert des Reflexionsspektrums von fünf Messzyklen berechnet.
-Schließlich kann die Resonanzfrequenz~$\nu_\mathrm{ref}$ durch die Funktion des VNAs der Minimumssuche bestimmt werden.
-Danach wird der Störkörper auf die Position~$z$ gefahren, um dort analog die Resonanzfrequenz~$\nu$ zu bestimmen.
-Die Größen $z, \nu, \nu_\mathrm{ref}$ und $\nu - \nu_\mathrm{ref}$ werden dann auf dem Flash-Speicher des RPi gespeichert.
-Dieser Messschritt wird solange wiederholt, bis der Resonator auf der gesamten Länge in einer frei wählbaren Schrittweite vermessen wurde.
-
-
-Leitfähigkeitänderung $Q$
-
-Fit der Resonanzkurve an die Güte\\
-Resonanzfrequenz aus dem Minimum der Resonanzkurve\\
-Längenmessung\\
-Checkmode\\
-Einschwingzeit
+Diese Messschritte werden solange wiederholt, bis der Resonator auf der gesamten Länge in einer frei wählbaren Schrittweite vermessen wurde.
