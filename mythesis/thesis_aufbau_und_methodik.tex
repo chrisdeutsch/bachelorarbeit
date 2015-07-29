@@ -74,14 +74,20 @@ Die Stellgenauigkeit von Schrittmotoren liegt typischerweise bei \SI{5}{\percent
 Der limitierende Faktor für die Genauigkeit der Störkörperpositon liegt demnach nicht in der Stellgenaugikeit des Motors, sondern in der ungleichen mechanischen Verspannung des Kunststofffadens aufgrund von Reibung in den Lagern der Umlenkrollen.
 Mit dem verwendeten Messaufbau können so Fehler der Positionsbestimmung von unter \SI{0.5}{mm} erreicht werden, was eine ausreichende Genaugikeit für die Vermessung der Resonatoren darstellt.
 
-Zur Bestimmung der Resonanzfrequenz und Güte des Resonators dient der vektorielle Netzwerkanalysator \textit{Rohde \& Schwarz: ZVC 1127.8600.62}, welcher über ein \SI{50}{\ohm}-Koaxialkabel (RG~214/U) mit der Koppelschleife verbunden wird.
-Die Verbindung erfolgt dabei über einen Spezialadapter vom Typ-N Stecker des Kabels auf die $6\tfrac{1}{8}$-Zoll \SI{50}{\ohm}-Koaxialverbindung der Koppelschleife.
-Der VNA erzeugt ein sinusförmiges Signal variabler Frequenz und einer Leistung von \SI{6}{dBm}, welches an der Koppelschleife teilweise reflektiert wird.
-Ein Richtkoppler im VNA trennt das reflektierte vom ausgehenden Signal und ermöglicht eine Bestimmung des komplexen Reflexionsfaktors durch einen Vergleich von Phase und Leistung beider Signale.
-Um ein von der Dämpfung und Laufzeit im Koaxialkabel unabhängiges Ergebnis zu erhalten, kann eine Kalibration durchgeführt werden, indem das Ende der Messleitung durch einen offenen, kurzgeschlossenen und \SI{50}{\ohm}-Abschluss terminiert wird.
-Der verwendete VNA ermöglicht die Messung des Reflexionsfaktors an bis zu \num{2001} gleichverteilten Messpunkten auf einem vorgegebenen Frequenzintervall.
-Die Eingabe und Ausgabe erfolgt auch hier durch eine serielle Schnittstelle.
-\todo{AVG, Marker, Sweep etc.?}
+Zur Bestimmung der Resonanzfrequenz und Güte einer Resonatormode dient der vektorielle Netzwerkanalysator \textit{ZVC 1127.8600.62} von \textit{Rohde \& Schwarz}.
+Dieser wird über ein \SI{50}{\ohm}-Koaxialkabel (RG~214/U) mit der Koppelschleife verbunden, wobei die Verbindung durch einen Spezialadapter vom Typ-N Stecker des Kabels auf die $6\tfrac{1}{8}$-Zoll \SI{50}{\ohm}-Koaxialverbindung der Koppelschleife erfolgt.
+Im Allgemeinen dienen Netzwerkanalysatoren der Messung von Reflexion und Transmission eines Signals variabler Frequenz an elektrischen Netzwerken.
+Für die resonante Störkörpermessung, wie sie in dieser Arbeit durchgeführt wird, ist vorallem die Messung des Reflexionsfaktors~$\rho$ interessant, weshalb sich die folgende Beschreibung auf die Reflexionsmessung konzentriert.
+Der Signalgenerator im VNA erzeugt ein sinusförmiges Signal mit variabler Frequenz und konstanter Leistung (\SI{6}{dBm}), welches über einen Richtkoppler auf die angeschlossene Messleitung übertragen werden kann.
+Trifft das Signal auf die Koppelschleife, so wird es dort teilweise reflektiert und erreicht über die Messleitung erneut den Netzwerkanalysator.
+Durch den Richtkoppler wird nun das reflektierte vom auslaufenden Signal getrennt, was eine Bestimmung des komplexen Reflexionsfaktors~$\rho$ durch einen Vergleich von Phase und Leistung beider Signale erlaubt.
+Um ein von der Dämpfung und Laufzeit im Koaxialkabel unabhängiges Ergebnis zu erhalten, kann eine Kalibration durchgeführt werden, indem das Ende der Messleitung durch einen offenen, kurzgeschlossenen und angepassten \SI{50}{\ohm}-Abschluss terminiert wird.
+Dies ermöglicht die Berechnung eines Korrekturfaktors für den Reflexionskoeffizienten und kann automatisiert über die Software des VNA durchgeführt werden.
+Durch eine Variation der Signalfrequenz in einem sog.\ \textit{Sweep} kann das Reflexionsspektrum~$\rho(\nu)$ in einem begrenzten Frequenzbereich gemessen werden.
+Der verwendete VNA ermöglicht die Messung des Reflexionsspektrums durch bis zu 2001 gleichverteilte Messpunkte auf dem vorgegebenen Frequenzintervall.
+Außerdem ist es möglich einen laufenden Mittelwert des Spektrums über eine beliebige Anzahl von Sweeps zu bilden und auf den gemessenen Spektren typische mathematische Operationen, wie beispielsweise die Suche des Minimums der Reflexion $|\rho|$, durchzuführen.
+\todo{Die Eingabe und Ausgabe erfolgt auch hier durch eine serielle Schnittstelle.}
+
 
 Zur Realisierung einer automatisierten Störkörpermessung und der Koordination von Schrittmotor und Netzwerkanalysator dient der Mikrocomputer \textit{Raspberry Pi} (RPi), der mit den Komponenten des Messaufbaus über serielle Schnittstellen kommunizieren kann.
 In der Programmiersprache \textit{Python} wurde dazu die serielle Kommunikation mit Motor und VNA, sowie die Steuerung des Messablaufs implementiert.
