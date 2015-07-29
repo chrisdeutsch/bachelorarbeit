@@ -15,14 +15,23 @@
 Im Rahmen dieser Arbeit wird das elektrische Feld von zwei siebenzelligen Beschleunigungsresonatoren vom Typ PETRA \cite{desy_petra} vermessen, welche in Kooperation von DESY und Balzers Hochvakuum GmbH (1982/83) hergestellt wurden.
 Der Resonator ist ausgelegt auf die Beschleunigung von ultrarelativistischen Elektronen und Positronen durch die $\mathrm{TM}_{010}$-Mode bei einer Frequenz von \SI{499.67}{MHz}.
 Der Querschnitt dieser Kavität ist in Abbildung \ref{fig:petra_cavity} schematisch dargestellt.
-Die einzelnen Zellen werden durch leitende Kupferwände voneinander getrennt, wobei deren spezielle Form der Maximierung des Laufzeitsfaktors \eqref{eq:laufzeitfaktor} dient.
+Die Zellen werden durch leitende Kupferwände voneinander getrennt, die eine Verbreiterung an der Strahlachse des Resonators aufweisen.
+Diese sogenannten \textit{Nose Cones} erzeugen eine Erhöhung der elektrischen Feldstärke in der Zelle bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führt zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne Nose Cones \cite[S.\ 48]{wangler}.
+
 Jede der Zellen des PETRA-Resonators stellt einen Hohlraumresonator dar, der durch vier Koppelschlitze in der trennenden Kupferwand an die jeweiligen Nachbarzellen gekoppelt ist.
-Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N = 7$ die Anzahl der Zellen ist.
-Die $N$ Moden der Resonatorkette unterscheiden sich neben der Resonanzfrequenz $\omega_0$ auch in der Phasendifferenz $\Delta \varphi$ zwei benachbarter Zellen.
-Die Benennung der Moden der Resonatorkette erfolgt nach dem Phasenvorschub pro Zelle $\Delta \varphi$ (z.B.\ $\pi$-Mode für $\Delta \varphi = \pi$) und die für den siebenzelligen PETRA-Resonator möglichen Moden sind:
+Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N = 7$ die Anzahl der gekoppelten Zellen ist.
+Die $N$ Moden der Resonatorkette unterscheiden sich neben der Resonanzfrequenz $\omega_0$ auch in der Phasendifferenz des Feldes zwei benachbarter Zellen  $\Delta \varphi$.
+Die Benennung der Moden einer Resonatorkette erfolgt anhand dieses Phasenvorschubs pro Zelle~$\Delta \varphi$ (z.\ B.\ $\pi$-Mode für $\Delta \varphi = \pi$).
+Für eine Resonatorkette aus $N$ gekoppelten Resonatoren sind Moden mit dem Phasenvorschub
 \begin{align}
-  \Delta \varphi = 0,\; \frac{1}{6} \pi,\; \frac{1}{3} \pi,\; \frac{1}{2} \pi,\; \frac{2}{3} \pi,\; \frac{5}{6} \pi,\; \pi
+	\Delta \varphi = q \cdot \frac{\pi}{N-1} \qquad \text{mit} \qquad q = 0, 1, \dots, N-1
 \end{align}
+möglich \cite[S.\ 110]{wangler}.
+Es folgen die Moden der siebenzelligen Resonatorkette:
+\begin{align}
+  \Delta \varphi = 0,\, \frac{1}{6} \pi,\, \frac{1}{3} \pi,\, \frac{1}{2} \pi,\, \frac{2}{3} \pi,\, \frac{5}{6} \pi,\, \pi \eqdot
+\end{align}
+
 In der mittleren Zelle des PETRA-Resonators befindet sich die Koppelschleife \cite{desy_schleife}, deren Geometrie auf den Resonator angepasst ist um eine kritische Kopplung an die $\mathrm{TM}_{010}$-Beschleuniger\-mode zu ermöglichen.
 Eine Anpassung des Koppelfaktors kann durch Drehen der Schleife erreicht werden, da dies die effektive Fläche der Leiterschleife senkrecht zum Magnetfeld der betrachteten Resonatormode verändert.
 In den Zellen~2 und 6 sind Abstimmstempel \cite{desy_stempel} angebracht die durch Schrittmotoren in bzw.\ aus der Kavität gefahren werden können.
@@ -30,9 +39,9 @@ Das Verstellen der Stempel führt zu einer Änderung der Geometrie des Resonator
 Dies kann zum Stimmen der Resonanzfrequenz einer Mode in einem beschränkten Frequenzbereich genutzt werden.
 Die zwei weiteren Vakuumflansche in den Zellen~1 und 7 dienen dem Anschluss von Vakuumpumpen.
 
+Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III und -IV bezeichnet\footnote{Die fünfzelligen Resonatoren PETRA-I und -II sind im Stretcherring von ELSA verbaut.}.
+\todo{Die Kavität PETRA-IV wurde, in einer von dieser Arbeit unabhängigen Tätigkeit, durch eine Gasentladung gereinigt.}
 
-Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III und -IV bezeichnet\footnote{Die fünfzelligen Resonatoren PETRA-I und -II sind im Stretcherring von ELSA verbaut.}. Der Resonator PETRA-IV wurde durch eine Gasentladung gereinigt.
-\todo{Kupfer}
 
 %------------------------------------------------------------------------------
 \section{Aufbau des Störkörpermessstandes}
@@ -62,6 +71,8 @@ Durch eine spezielle Ansteuerungstechnik, welche in der Steuereinheit implementi
 Die Ortsinformation des Störkörpers entlang der Strahlachse kann dann aus der Anzahl der erfolgten Microsteps gewonnen werden.
 Aus der Geometrie der Spindel folgt für die zugehörige Proportionalitätskonstante ca.\ \SI{0.006}{\milli\metre\per\micro\step}.
 Die Stellgenauigkeit von Schrittmotoren liegt typischerweise bei \SI{5}{\percent} eines vollen Schrittes \cite{gecko}, was einem Winkelfehler von \SI{0.09}{\degree} oder einem Fehler in der Störkörperposition von weniger als \SI{0.1}{\milli\metre} entspricht.
+Der limitierende Faktor für die Genauigkeit der Störkörperpositon liegt demnach nicht in der Stellgenaugikeit des Motors, sondern in der ungleichen mechanischen Verspannung des Kunststofffadens aufgrund von Reibung in den Lagern der Umlenkrollen.
+Mit dem verwendeten Messaufbau können so Fehler der Positionsbestimmung von unter \SI{0.5}{mm} erreicht werden, was eine ausreichende Genaugikeit für die Vermessung der Resonatoren darstellt.
 
 Zur Bestimmung der Resonanzfrequenz und Güte des Resonators dient der vektorielle Netzwerkanalysator \textit{Rohde \& Schwarz: ZVC 1127.8600.62}, welcher über ein \SI{50}{\ohm}-Koaxialkabel (RG~214/U) mit der Koppelschleife verbunden wird.
 Die Verbindung erfolgt dabei über einen Spezialadapter vom Typ-N Stecker des Kabels auf die $6\tfrac{1}{8}$-Zoll \SI{50}{\ohm}-Koaxialverbindung der Koppelschleife.
