@@ -86,8 +86,7 @@ Dies ermöglicht die Berechnung eines Korrekturfaktors für den Reflexionskoeffi
 Durch eine Variation der Signalfrequenz in einem sog.\ \textit{Sweep} kann das Reflexionsspektrum~$\rho(\nu)$ in einem begrenzten Frequenzbereich gemessen werden.
 Der verwendete VNA ermöglicht die Messung des Reflexionsspektrums durch bis zu 2001 gleichverteilte Messpunkte auf dem vorgegebenen Frequenzintervall.
 Außerdem ist es möglich einen laufenden Mittelwert des Spektrums über eine beliebige Anzahl von Sweeps zu bilden und auf den gemessenen Spektren typische mathematische Operationen, wie beispielsweise die Suche des Minimums der Reflexion $|\rho|$, durchzuführen.
-\todo{Die Eingabe und Ausgabe erfolgt auch hier durch eine serielle Schnittstelle.}
-
+Die Ein- und Ausgabe kann auch hier über eine serielle Schnittstelle erfolgen.
 
 Zur Realisierung einer automatisierten Störkörpermessung und der Koordination von Schrittmotor und Netzwerkanalysator dient der Mikrocomputer \textit{Raspberry Pi} (RPi), der mit den Komponenten des Messaufbaus über serielle Schnittstellen kommunizieren kann.
 In der Programmiersprache \textit{Python} wurde dazu die serielle Kommunikation mit Motor und VNA, sowie die Steuerung des Messablaufs implementiert.
@@ -105,11 +104,11 @@ Der genaue Ablauf einer Störkörpermessung wird im nächsten Abschnitt erläute
 Für die resonante Störkörpermessung gilt es die Verschiebung der Resonanzfrequenz $\Delta \nu$ durch den Störkörper an verschiedenen Positionen im Resonator zu messen.
 Dabei muss man beachten, dass es neben der Frequenzverschiebung durch den Störkörper auch zu einer Verstimmung aufgrund von Temperaturänderungen des Resonators kommt.
 Eine Erwärmung führt beispielsweise zu einer thermischen Ausdehnung des Resonators und folglich zu einer Vergrößerung des Hohlraumvolumens.
-Diese Geometrieänderung des Hohlraums führt zu einer Reduzierung der Resonanzfrequenz der Kavität.
+Diese Geometrieänderung des Hohlraums führt zu einer Reduzierung der Resonanzfrequenz der Resonatormoden.
 Analog führt ein Abkühlen des Resonators zur Kontraktion desselben, die wiederum eine Erhöhung der Resonanzfrequenz zur Folge hat. Für die vermessenen PETRA-Resonatoren liegt die Verstimmung durch Temperaturänderung bei ungefähr \SI{8}{\kilo\hertz\per\celsius} \cite{desy_petra} und liegt in der gleichen Größenordnung wie die Verschiebung durch den verwendeten Störkörper.
 Aus diesem Grund muss die Temperaturabhängigkeit der Resonanzfrequenz beachtet werden.
 
-Sei dazu durch $\nu_0(z)$ die Resonanzfrequenz des Resonators mit dem Störkörper auf der Position~$z$ gegeben.
+Sei dazu durch $\nu_0(z)$ die Resonanzfrequenz des Resonators mit dem Störkörper auf der Position~$z$ entlang der Strahlenachse gegeben.
 Außerdem sei eine Referenzposition des Störkörpers~$z_\mathrm{ref}$ mit zugehöriger Resonanzfrequenz~$\nu_\mathrm{ref} = \nu_0(z_\mathrm{ref})$ definiert.
 Einzeln betrachtet sind die soeben eingeführten Größen~$\nu_0(z)$ und~$\nu_\mathrm{ref}$ temperaturabhängig.
 Wird jedoch die Differenz~$\nu_0(z) - \nu_\mathrm{ref}$ betrachtet, so stellt man fest, dass diese, im Hinblick auf typische Temperaturänderungen während einer Messung, konstant ist \cite{schedler_pm}.
