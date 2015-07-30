@@ -18,8 +18,8 @@ set ytics 0.0,0.2,1.0
 
 set xrange [0.99:1.01]
 set yrange [0:1.0]
-set xlabel 'normierte Kreisfrequenz $\frac{\omega}{\omega_0}$'
-set ylabel 'Reflexionskoeffizient $|\rho|$'
+set xlabel '$\frac{\omega}{\omega_0}$'
+set ylabel '$|\rho|$'
 
 set samples 10000
 unset grid

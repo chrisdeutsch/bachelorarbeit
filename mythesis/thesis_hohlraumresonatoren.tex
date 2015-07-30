@@ -115,20 +115,20 @@ Aus der Leitungstheorie \cite[S.\ 57]{pozar} folgt für den Reflexionskoeffizien
 Es folgt nach Einsetzen von Gl.~\eqref{eq:impedanz_hinter_schleife} in Gl.~\eqref{eq:reflexionskoeff_trans_line} der Ausdruck für den Reflexionskoeffizienten:
 \begin{align}
   \rho(\omega) = \frac{\frac{\kappa}{R} \cdot Z(\omega) - 1}{\frac{\kappa}{R} \cdot Z(\omega) + 1} = \frac{(\kappa - 1) + \I  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + \I  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
+  \label{eq:reflexionskoeff_komplex}
 \end{align}
-Diese Gleichung ermöglicht den experimentellen Zugang zur Bestimmung von Koppelfaktor~$\kappa$, Güte~$Q_0$ und Resonanzfrequenz~$\omega_0$ von Hohlraumresonatoren.
-
-\todo{Resonanzkurve erklären}
+Betrachtet man außerdem den Absolutbetrag des Reflexionskoeffizienten
+\begin{align}
+  | \rho(\omega) | = \sqrt{\frac{(\kappa - 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}{(\kappa + 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}} \eqcomma
+\end{align}
+so ergeben sich charakteristische Resonanzkurven, wie in Abbildung \ref{fig:resonanzkurve} für verschiedene Güten und Koppelfaktoren dargestellt.
 \begin{figure}[h]
   \centering
   \input{./plots/resonanzkurve.tex}
-  \caption[Resonanzkurve]{Resonanzkurve}
+  \caption[Verhalten des Reflexionskoeffizienten $|\rho|$ für Resonanzen verschiedener Güten~$Q_0$ und Koppelfaktoren~$\kappa$]{Verhalten des Reflexionskoeffizienten $|\rho|$ in Abhängigkeit der auf die Resonanzfrequenz normierten Frequenz~$\frac{\omega}{\omega_0}$ für Resonanzen verschiedener Güten~$Q_0$ und Koppelfaktoren~$\kappa$.}
   \label{fig:resonanzkurve}
 \end{figure}
-
-\begin{align}
-  | \rho(\omega) | = \sqrt{\frac{(\kappa - 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}{(\kappa + 1)^2 + Q_0^2 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)^2}}
-\end{align}
+Diese Gleichungen ermöglichen den experimentellen Zugang zur Bestimmung von Koppelfaktor~$\kappa$, Güte~$Q_0$ und Resonanzfrequenz~$\omega_0$ von Hohlraumresonatoren.
 
 
 %------------------------------------------------------------------------------
