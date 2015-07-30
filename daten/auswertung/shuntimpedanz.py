@@ -26,7 +26,7 @@ dv_err = 100.0
 pos_err = 0.5
 
 # Berechnung der Störkörperkonstante
-radius = 0.5 * ufloat(20.05E-3, 0.02E-3) # 0.5*diameter
+radius = 0.5 * ufloat(20.05E-3, 0.05E-3) # 0.5*diameter
 epsilon = ufloat(2.1, 0.05)
 epsilon0 = 8.85418781762E-12
 
