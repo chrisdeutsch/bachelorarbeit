@@ -2,31 +2,9 @@
 \chapter{Störkörpermessung}
 \label{sec:stoerkoerpermessung}
 %------------------------------------------------------------------------------
-Störkörperkonstante\\
-Vorspann (Abstimmen auf Luft, Symmetriesierung des Feldes)\\
-Resonanzfrequenz und Güte\\
-Berechnung des elektrischen Feldes\\
-Berechnung von Beschleunigungsspannung, Shuntimpedanz und Laufzeitfaktor\\
-Ergebnisse ...\\
-
-
-
-PTFE hat verschwindende magnetische Suszeptibilität [QUELLE] und erlaubt die Verwendung vonweshalb Gleichung \eqref{eq:skm_e_feld_normiert} für dielektrische Kugeln zur Bestimmung der Amplitude des elektrischen Feldes im Resonator genutzt werden kann.
-
-Alle anderen Moden (5/6, 1/2, 1/6) haben verschwindende Felder in der zentralen Zelle und können damit nicht gekoppelt werden.
-
-Messung Güte: Erwärmung des Resonators führt zu einer Verringerung der Leitfähigkeit des Kupfers und somit zu einer Reduzierung der Güte.
-
-Leitfähigkeitänderung $Q$
-
-Fit der Resonanzkurve an die Güte\\
-Längenmessung\\
-
-Permittivität Teflon \cite{CRC}(S. 2201) $\epsilon_\mathrm{r} = \num{2.1}$.
-Berechnen der Störkörperkonstante \todo{Fehler ist noch nicht richtig!}:
-\begin{align}
-  \alpha_\mathrm{s} = \SI{2.985 +- 0.092e-17}{\ampere\second\metre\squared\per\volt}
-\end{align}
+\section{Vorbereitung}
+\subsection{Vorbereitung}
+Abstimmen auf Luft, Symmetrisierung des Feldes
 
 Unterschied Vakuum--Luft \cite{pozar} (S. 308):
 \begin{align}
@@ -36,6 +14,26 @@ Permittivität Luft (trocken und CO2-frei) \cite{CRC} (S.1093):
 \begin{align}
 \epsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}
 \end{align}
+
+
+
+
+\subsection{Störkörperkonstante}
+Berechnung der Störkörperkonstante
+
+PTFE hat verschwindende magnetische Suszeptibilität [QUELLE] und erlaubt die Verwendung vonweshalb Gleichung \eqref{eq:skm_e_feld_normiert} für dielektrische Kugeln zur Bestimmung der Amplitude des elektrischen Feldes im Resonator genutzt werden kann.
+
+
+Permittivität Teflon \cite{CRC}(S. 2201) $\epsilon_\mathrm{r} = \num{2.1}$.
+Berechnen der Störkörperkonstante \todo{Fehler ist noch nicht richtig!}:
+\begin{align}
+  \alpha_\mathrm{s} = \SI{2.985 +- 0.092e-17}{\ampere\second\metre\squared\per\volt}
+\end{align}
+
+
+\subsection{Messung von Resonanzfrequenz und Güte}
+Resonanzfrequenz und Güte (fit)
+Messung Güte: Erwärmung des Resonators führt zu einer Verringerung der Leitfähigkeit des Kupfers und somit zu einer Reduzierung der Güte.
 
 \begin{figure}[ht]
   \centering
@@ -50,3 +48,14 @@ Ergebnisse des Fits:
 Q_0 &= \num{29560 +- 13}\\
 \nu_0 &= \SI{499.507 +- 0.001}{MHz}
 \end{align}
+
+\section{Vermessung der TM010 Beschleunigermode}
+Berechnung des elektrischen Feldes\\
+Berechnung der charakteristischen Größen des Resonators: Beschleunigungsspannung, Shuntimpedanz und Laufzeitfaktor
+
+Alle anderen Moden (5/6, 1/2, 1/6) haben verschwindende Felder in der zentralen Zelle und können damit nicht gekoppelt werden.
+
+Längenmessung vom Flansch erklären.
+
+
+\section{Vermessung von Moden höherer Ordnung (PETRA-III)}
