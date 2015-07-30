@@ -16,10 +16,10 @@ Im Rahmen dieser Arbeit wird das elektrische Feld von zwei siebenzelligen Beschl
 Der Resonator ist ausgelegt auf die Beschleunigung von ultrarelativistischen Elektronen und Positronen durch die $\mathrm{TM}_{010}$-Mode bei einer Frequenz von \SI{499.67}{MHz}.
 Der Querschnitt dieser Kavität ist in Abbildung \ref{fig:petra_cavity} schematisch dargestellt.
 Die Zellen werden durch leitende Kupferwände voneinander getrennt, die eine Verbreiterung an der Strahlachse des Resonators aufweisen.
-Diese sogenannten \textit{Nose Cones} erzeugen eine Erhöhung der elektrischen Feldstärke in der Zelle bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führt zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne Nose Cones \cite[S.\ 48]{wangler}.
+Diese sogenannten \textit{Nose Cones} erzeugen eine Erhöhung der elektrischen Feldstärke in der Zelle bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führen zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne Nose Cones \cite[S.\ 48]{wangler}.
 
 Jede der Zellen des PETRA-Resonators stellt einen Hohlraumresonator dar, der durch vier Koppelschlitze in der trennenden Kupferwand an die jeweiligen Nachbarzellen gekoppelt ist.
-Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N = 7$ die Anzahl der gekoppelten Zellen ist.
+Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N$ die Anzahl der gekoppelten Zellen ist.
 Die $N$ Moden der Resonatorkette unterscheiden sich neben der Resonanzfrequenz $\omega_0$ auch in der Phasendifferenz des Feldes zwei benachbarter Zellen  $\Delta \varphi$.
 Die Benennung der Moden einer Resonatorkette erfolgt anhand dieses Phasenvorschubs pro Zelle~$\Delta \varphi$ (z.\ B.\ $\pi$-Mode für $\Delta \varphi = \pi$).
 Für eine Resonatorkette aus $N$ gekoppelten Resonatoren sind Moden mit dem Phasenvorschub
@@ -27,17 +27,19 @@ Für eine Resonatorkette aus $N$ gekoppelten Resonatoren sind Moden mit dem Phas
 	\Delta \varphi = q \cdot \frac{\pi}{N-1} \qquad \text{mit} \qquad q = 0, 1, \dots, N-1
 \end{align}
 möglich \cite[S.\ 110]{wangler}.
-Es folgen die Moden der siebenzelligen Resonatorkette:
+Für den siebenzelligen PETRA-Resonator existieren demnach die Moden:
 \begin{align}
   \Delta \varphi = 0,\, \frac{1}{6} \pi,\, \frac{1}{3} \pi,\, \frac{1}{2} \pi,\, \frac{2}{3} \pi,\, \frac{5}{6} \pi,\, \pi \eqdot
 \end{align}
 
-In der mittleren Zelle des PETRA-Resonators befindet sich die Koppelschleife \cite{desy_schleife}, deren Geometrie auf den Resonator angepasst ist um eine kritische Kopplung an die $\mathrm{TM}_{010}$-Beschleuniger\-mode zu ermöglichen.
+Zum Anregen von Resonatormoden dient eine Koppelschleife \cite{desy_schleife} in der mittleren Zelle der Kavität.
+Dabei ist die Geometrie der Schleife angepasst, um eine kritische Kopplung ($\kappa = 1$) an die $\mathrm{TM}_{010}$-Beschleuniger\-mode ($\Delta \varphi = \pi$) zu ermöglichen.
+Eine kritische Kopplung ist wünschenswert, da in diesem Fall eine maximale Leistungstransmission vom treibenden Hochfrequenzsignal in das Feld der Resonatormode möglich ist.
 Eine Anpassung des Koppelfaktors kann durch Drehen der Schleife erreicht werden, da dies die effektive Fläche der Leiterschleife senkrecht zum Magnetfeld der betrachteten Resonatormode verändert.
 In den Zellen~2 und 6 sind Abstimmstempel \cite{desy_stempel} angebracht die durch Schrittmotoren in bzw.\ aus der Kavität gefahren werden können.
 Das Verstellen der Stempel führt zu einer Änderung der Geometrie des Resonators und folglich zu einer Verschiebung der Resonanzfrequenz.
 Dies kann zum Stimmen der Resonanzfrequenz einer Mode in einem beschränkten Frequenzbereich genutzt werden.
-Die zwei weiteren Vakuumflansche in den Zellen~1 und 7 dienen dem Anschluss von Vakuumpumpen.
+Die zwei weiteren Vakuumflansche in den Randzellen dienen dem Anschluss von Vakuumpumpen.
 
 Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III und -IV bezeichnet\footnote{Die fünfzelligen Resonatoren PETRA-I und -II sind im Stretcherring von ELSA verbaut.}.
 \todo{Die Kavität PETRA-IV wurde, in einer von dieser Arbeit unabhängigen Tätigkeit, durch eine Gasentladung gereinigt.}
@@ -49,7 +51,7 @@ Die in dieser Arbeit vermessenen Resonatoren seien im Folgenden mit PETRA-III un
 \begin{sidewaysfigure}[p]
 	\centering
 	\includegraphics[width=1.0\textheight]{./figs/cavity/messaufbau.pdf}
-	\caption[Schematischer Aufbau des Störkörpermessstandes]{Schematischer Aufbau des Störkörpermessstandes für einen siebenzelligen PETRA-Resonator mit Abstimmstemplen und Einkoppelschleife (a), Montageträger (b), Gestell aus einem Aluminiumprofilsystem (c), Kreuzblenden (d), Polytetrafluorethylen-Störkörper (e), Spindel mit Schrittmotor (f) und Zugfeder (g).}
+	\caption[Schematischer Aufbau des Störkörpermessstandes]{Schematischer Aufbau des Störkörpermessstandes für einen siebenzelligen PETRA-Resonator mit Abstimmstemplen und Einkoppelschleife (a), Montageträger (b), Gestell aus einem Aluminiumprofilsystem (c), Spindel mit Schrittmotor (d), Kreuzblenden (e), Polytetrafluorethylen-Störkörper (f) und Zugfeder (g).}
 	\label{fig:stoerkoerpermessstand}
 \end{sidewaysfigure}
 Zur Bestimmung des elektrischen Feldes auf der Strahlachse des Resonators wird die in Abschnitt \ref{sec:resonante_stoerkoerpermessung} eingeführte resonante Störkörpermessung genutzt.
@@ -61,7 +63,7 @@ Dieser Faden wird dann beidseitig fest mit einer Spindel verbunden, die wiederum
 Die Rückführung des Fadens auf die Spindel führt dazu, dass unabhängig von der Spannung des Fadens das Drehmoment auf der Welle des Schrittmotors kompensiert wird.
 Dadurch kann der Faden so stark gespannt werden, dass das Durchhängen des Störkörpers am Faden vernachlässigt werden kann, ohne dabei einen Schrittverlust durch ein überlastendes Drehmoment am Motor zu riskieren.
 Darüber hinaus verhindert die feste Verbindung des Fadens mit der Spindel ein longitudinales Verrutschen des Fadens in seiner Führung, was insbesondere für eine präzise Ortsbestimmung des Störkörpers wichtig ist.
-Zusätzlich wurde an den Vakuumflanschen des Resonators Kreuzblenden installiert um einerseits ein Eindringen von Staub zu vermindern. Andererseits dient die Blende als Referenzpunkt zur Zentrierung des Störkörpers auf der Strahlachse.
+Zusätzlich wurde an den Vakuumflanschen des Resonators Kreuzblenden installiert, um einerseits ein Eindringen von Staub zu vermindern. Andererseits dient die Blende als Referenzpunkt zur Zentrierung des Störkörpers auf der Strahlachse.
 
 Durch das Auf- beziehungsweise Abrollen des Fadens auf der Spindel, kann der Störkörper entlang der Strahlachse verschoben werden.
 Die Drehung der Spindel erfolgt dabei durch den 2-Phasen Schrittmotor \textit{MDrive\textsuperscript{\textregistered} 23 Plus Motion Control} des Herstellers \textit{Schneider Electric} \cite{motor_datasheet}.
@@ -82,13 +84,13 @@ Der Signalgenerator im VNA erzeugt ein sinusförmiges Signal mit variabler Frequ
 Trifft das Signal auf die Koppelschleife, so wird es dort teilweise reflektiert und erreicht über die Messleitung erneut den Netzwerkanalysator.
 Durch den Richtkoppler wird nun das reflektierte vom auslaufenden Signal getrennt, was eine Bestimmung des komplexen Reflexionsfaktors~$\rho$ durch einen Vergleich von Phase und Leistung beider Signale erlaubt.
 Um ein von der Dämpfung und Laufzeit im Koaxialkabel unabhängiges Ergebnis zu erhalten, kann eine Kalibration durchgeführt werden, indem das Ende der Messleitung durch einen offenen, kurzgeschlossenen und angepassten \SI{50}{\ohm}-Abschluss terminiert wird.
-Dies ermöglicht die Berechnung eines Korrekturfaktors für den Reflexionskoeffizienten und kann automatisiert über die Software des VNA durchgeführt werden.
+Dies ermöglicht die Berechnung eines Korrekturfaktors für den Reflexionskoeffizienten und kann automatisiert über die Software des VNA erfolgen.
 Durch eine Variation der Signalfrequenz in einem sog.\ \textit{Sweep} kann das Reflexionsspektrum~$\rho(\nu)$ in einem begrenzten Frequenzbereich gemessen werden.
 Der verwendete VNA ermöglicht die Messung des Reflexionsspektrums durch bis zu 2001 gleichverteilte Messpunkte auf dem vorgegebenen Frequenzintervall.
 Außerdem ist es möglich einen laufenden Mittelwert des Spektrums über eine beliebige Anzahl von Sweeps zu bilden und auf den gemessenen Spektren typische mathematische Operationen, wie beispielsweise die Suche des Minimums der Reflexion $|\rho|$, durchzuführen.
 Die Ein- und Ausgabe kann auch hier über eine serielle Schnittstelle erfolgen.
 
-Zur Realisierung einer automatisierten Störkörpermessung und der Koordination von Schrittmotor und Netzwerkanalysator dient der Mikrocomputer \textit{Raspberry Pi} (RPi), der mit den Komponenten des Messaufbaus über serielle Schnittstellen kommunizieren kann.
+Zur Realisierung einer automatisierten Störkörpermessung und der Koordination von Schrittmotor und Netzwerkanalysator dient der Mikrocomputer \textit{Raspberry Pi}, der mit den Komponenten des Messaufbaus über serielle Schnittstellen kommunizieren kann.
 In der Programmiersprache \textit{Python} wurde dazu die serielle Kommunikation mit Motor und VNA, sowie die Steuerung des Messablaufs implementiert.
 Der genaue Ablauf einer Störkörpermessung wird im nächsten Abschnitt erläutert.
 
@@ -129,8 +131,7 @@ Danach wird der Störkörper in den Resonator gefahren und die Referenzposition 
 Nun muss der Frequenzbereich des VNA so eingestellt werden, dass die Resonanzkurve (vgl.\ Abb.\ \ref{fig:resonanzkurve}) der zu vermessenden Resonatormode stets in den Messbereich fällt.
 Dabei ist insbesondere die pertubative Verstimmung durch den Störkörper aber auch die thermische Verstimmung zu beachten.
 Nachdem ein geeigneter Frequenzbereich gefunden wurde, muss der Netzwerkanalysator erneut kalibriert werden.
-Die automatisierte Messung kann dann mit dem im Rahmen dieser Arbeit entwickelten Störkörpermessprogramm erfolgen.
-\todo{Credit Manuel?}\cite{schedler_prog}
+Die automatisierte Messung kann dann mit dem im Rahmen dieser Arbeit implementierten Störkörpermessprogramm (basierend auf \cite{schedler_prog}) erfolgen.
 
 Das Programm misst dabei die Verschiebung der Resonanzfrequenz durch den Störkörper an verschiedenen Stellen im Resonator, indem die in Abschnitt \ref{sec:temperaturabh_resonanzfrequenz} zur temperaturunabhängigen Messung eingeführte Methode ausgenutzt wird.
 Die vom Störkörpermessprogramm durchgeführten Schritte zur Bestimmung der Resonanzfrequenzverschiebung an einer Position~$z$ sollen kurz dargestellt werden:
@@ -140,6 +141,6 @@ Die vom Störkörpermessprogramm durchgeführten Schritte zur Bestimmung der Res
 	\item Der VNA bildet den laufenden Mittelwert des Reflexionsspektrums $|\rho(\nu)|$ über fünf Messzyklen.
 	\item Die Resonanzfrequenz~$\nu_\mathrm{ref}$ wird durch das Minimum des gemittelten Reflexionsspektrums bestimmt.
 	\item Die Schritte 1.\ bis 4.\ werden an der Position~$z$ wiederholt und die Resonanzfrequenz $\nu_0(z)$ bestimmt.
-	\item Die gemessenen Daten $z, \nu_0(z), \nu_\mathrm{ref}$ und die Differenz $\nu_0(z) - \nu_\mathrm{ref}$ wird abgespeichert.
+	\item Die Störkörperposition~$z$, die gemessenen Frequenzen $\nu_0(z), \nu_\mathrm{ref}$ und die Differenz $\nu_0(z) - \nu_\mathrm{ref}$ werden abgespeichert.
 \end{enumerate}
 Diese Messschritte werden solange wiederholt, bis der Resonator auf der gesamten Länge in einer frei wählbaren Schrittweite vermessen wurde.

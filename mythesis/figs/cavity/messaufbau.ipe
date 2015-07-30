@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150716211205" modified="D:20150724133256"/>
+<info created="D:20150716211205" modified="D:20150730105628"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -1597,14 +1597,14 @@ h
 </group>
 </group>
 <text layer="Beschriftung" matrix="1 0 0 1 349.7 -248.6" transformations="translations" pos="304 592" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(a)</text>
-<text matrix="1 0 0 1 88 -279.2" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(b)</text>
+<text matrix="1 0 0 1 88 -279.3" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(b)</text>
 <text matrix="1 0 0 1 611.339 -279.2" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(b)</text>
-<text matrix="1 0 0 1 66.811 -167.06" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="right" valign="bottom">(d)</text>
-<text matrix="1 0 0 1 632.437 -167.06" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" valign="bottom">(d)</text>
-<text matrix="1 0 0 1 233.889 -25.7346" transformations="translations" pos="304 592" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(g)</text>
-<text matrix="1 0 0 1 -20.5178 -111.842" transformations="translations" pos="304 592" stroke="black" type="label" width="11.568" height="7.473" depth="2.49" halign="center" valign="center">(f)</text>
-<text matrix="1 0 0 1 -0.70463 1.23265" transformations="translations" pos="344.705 358.767" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(c)</text>
-<text matrix="1 0 0 1 605.195 1.233" transformations="translations" pos="344.705 358.767" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(c)</text>
-<text matrix="1 0 0 1 431.211 -173.336" transformations="translations" pos="304 592" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(e)</text>
+<text matrix="1 0 0 1 66.811 -167.06" transformations="translations" pos="304 592" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="right" valign="bottom">(e)</text>
+<text matrix="1 0 0 1 632.437 -167.06" transformations="translations" pos="304 592" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" valign="bottom">(e)</text>
+<text matrix="1 0 0 1 233.889 -25.0346" transformations="translations" pos="304 592" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(g)</text>
+<text matrix="1 0 0 1 -20.5178 -111.842" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(d)</text>
+<text matrix="1 0 0 1 -0.70463 1.53265" transformations="translations" pos="344.705 358.767" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(c)</text>
+<text matrix="1 0 0 1 605.195 1.533" transformations="translations" pos="344.705 358.767" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(c)</text>
+<text matrix="1 0 0 1 431.211 -173.336" transformations="translations" pos="304 592" stroke="black" type="label" width="11.568" height="7.473" depth="2.49" halign="center" valign="center">(f)</text>
 </page>
 </ipe>
