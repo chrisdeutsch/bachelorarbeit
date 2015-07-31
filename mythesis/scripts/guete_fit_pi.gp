@@ -17,8 +17,8 @@ set ytics 0.0,0.2,1.0
 
 set xrange [(499506965.541-30000)/1.0e6:(499506965.541+30000)/1.0e6]
 set yrange [0:1.0]
-set xlabel 'Frequenz $\nu$ / \si{MHz}'
-set ylabel 'Reflektionskoeffizient $|\rho|$'
+set xlabel '$\nu$ / \si{MHz}'
+set ylabel '$|\rho|$'
 
 set samples 10000
 set grid

@@ -17,35 +17,34 @@ Permittivität Luft (trocken und CO2-frei) \cite{CRC} (S.1093):
 
 
 
-
+%------------------------------------------------------------------------------
 \subsection{Störkörperkonstante}
+%------------------------------------------------------------------------------
+
 Zur Berechnung der Störkörperkonstante~$\alpha_\mathrm{s}$ des kugelförmigen Störkörpers aus PTFE kann Gleichung \eqref{eq:stoerkoerperkonstante} verwendet werden.
-Das Volumen des Störkörpers~$V_\mathrm{s}$ folgt aus den Dimensionen des Störkörpers (vgl.\ \ref{sec:aufbau_messstand})
+Die relative Permittivität von PTFE beträgt im Mittel $\varepsilon_\mathrm{r} = \num{2.1}$ und zeigt keine Frequenzabhängigkeit bis Frequenzen der Größenordnung \SI{1}{GHz} \cite[S.\ 2201]{CRC}.
+Außerdem variiert die relative Permittivität mit der Dichte und Kristallinität des Materials, weshalb für den verwendeten Werkstoff $\varepsilon_\mathrm{r} = \num{2.1 +- 0.05}$ angenommen werden muss.
+Unter Verwendung der Dimensionen des Störkörpers (vgl.\ \ref{sec:aufbau_messstand}) folgt die Störkörperkonstante
 \begin{align}
-	V_\mathrm{s} = \SI{4.2 +- 0.04}{\centi\metre\cubed}
+	\alpha_\mathrm{s} = \SI{2.99 +- 0.11e-17}{\ampere\second\metre\squared\per\volt} \eqcomma
+	\label{eq:stoerkoerperkonstante_ptfe}
 \end{align}
+wobei die zentrische Bohrung bei der Berechnung beachtet wurde.
 
-Mit den Dimensionen der Kugel (vgl.\ \ref{sec:aufbau_messstand}) und der relativen Permittivität von $\varepsilon_\mathrm{r} = \num{2.1 +- 0.05}$ folgt
+\todo{wirkt als statistischer Fehler}
 
-PTFE hat verschwindende magnetische Suszeptibilität [QUELLE] und erlaubt die Verwendung vonweshalb Gleichung \eqref{eq:skm_e_feld_normiert} für dielektrische Kugeln zur Bestimmung der Amplitude des elektrischen Feldes im Resonator genutzt werden kann.
-
-Permittivität Teflon bis \SI{1}{GHz} \cite{CRC}(S. 2201) $\varepsilon_\mathrm{r} = \num{2.1}$.
-Variiert mit den Eigenschaften des Werkstücks: $\Delta \varepsilon_\mathrm{r} = \num{0.05}$
-Berechnen der Störkörperkonstante \todo{Fehler ist noch nicht richtig!}:
-\begin{align}
-  \alpha_\mathrm{s} = \SI{2.985 +- 0.092e-17}{\ampere\second\metre\squared\per\volt}
-\end{align}
-
-
-\subsection{Messung von Resonanzfrequenz und Güte}
-Resonanzfrequenz und Güte (fit)
-Messung Güte: Erwärmung des Resonators führt zu einer Verringerung der Leitfähigkeit des Kupfers und somit zu einer Reduzierung der Güte.
-
-\begin{figure}[ht]
+%------------------------------------------------------------------------------
+\subsection{Bestimmung von Resonanzfrequenz und Güte}
+\label{sec:resfreq_guete}
+%------------------------------------------------------------------------------
+Die Bestimmung von Resonanzfrequenz und Güte der Resonatormoden kann anhand des gemessenen Reflexionsspektrums der jeweiligen Resonanz erfolgen.
+Dazu wird eine Kurve gemäß Gleichung \eqref{eq:resonanzkurve} nach der Methode der kleinsten Quadrate an das gemessene Spektrum angepasst.
+Am Beispiel der $\mathrm{TM}_{010}~\pi$-Beschleunigermode wurde dies in Abbildung \ref{fig:guetefit} dargestellt.
+\begin{figure}[htb]
   \centering
   \input{./plots/guete_fit_pi.tex}
   \caption{Gütefit}
-  \label{fig:gütefit}
+  \label{fig:guetefit}
 \end{figure}
 
 Ergebnisse des Fits:
