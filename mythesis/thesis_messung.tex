@@ -4,23 +4,26 @@
 %------------------------------------------------------------------------------
 \section{Vorbereitung}
 \subsection{Vorbereitung}
-Abstimmen auf Luft, Symmetrisierung des Feldes
 
-Unterschied Vakuum--Luft \cite{pozar} (S. 308):
+Vor der Vermessung der Eigenmoden eines Resonators, wurden die Abstimmstempel so eingestellt, dass sich im Resonator eine symmetrische Feldverteilung aufbaut.
+Außerdem muss beachtet werden, dass der Resonator für die Messung nicht evakuiert, sondern durch Luft gefüllt ist.
+Dadurch kommt es zu einer Verstimmung der Resonanzfrequenz aufgrund der dielektrischen Eigenschaften von Luft.
+Zur Quantifizierung dieses Effekts nutzt man, dass die Resonanzfrequenz~$\nu_0$ einer Resonatormode proportional zur Lichtgeschwindigkeit im Medium~$c$ ist (vgl.~Gl.~\eqref{eq:frequenz_pillbox}) \cite{pusch}.
+Da für die Lichtgeschwindigkeit im Medium mit der Permittivität~$\varepsilon$ und der Permeabilität~$\mu$ 
 \begin{align}
-\omega \approx \omega_0 \cdot \frac{3 - \epsilon_\mathrm{r}}{2}
+	c = \frac{1}{\sqrt{\varepsilon \mu}}
 \end{align}
-Permittivität Luft (trocken und CO2-frei) \cite{CRC} (S.1093):
+gilt, kann die Resonanzfrequenz einer Mode des durch
 \begin{align}
-\epsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}
+	\nu_0(\mathrm{Med.}) = \frac{\nu_0(\mathrm{Vak.})}{\sqrt{\varepsilon_\mathrm{r} \mu_\mathrm{r}}}
 \end{align}
+Mit der relativen Permittivität der Luft (trocken und CO2-frei) $\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ und der Designfrequenz im Vakuum $\SI{499.67}{MHz}$
 
 
 
 %------------------------------------------------------------------------------
 \subsection{Störkörperkonstante}
 %------------------------------------------------------------------------------
-
 Zur Berechnung der Störkörperkonstante~$\alpha_\mathrm{s}$ des kugelförmigen Störkörpers aus PTFE kann Gleichung \eqref{eq:stoerkoerperkonstante} verwendet werden.
 Die relative Permittivität von PTFE beträgt im Mittel $\varepsilon_\mathrm{r} = \num{2.1}$ und zeigt keine Frequenzabhängigkeit bis Frequenzen der Größenordnung \SI{1}{GHz} \cite[S.\ 2201]{CRC}.
 Außerdem variiert die relative Permittivität mit der Dichte und Kristallinität des Materials, weshalb für den verwendeten Werkstoff $\varepsilon_\mathrm{r} = \num{2.1 +- 0.05}$ angenommen werden muss.
@@ -39,20 +42,16 @@ wobei die zentrische Bohrung bei der Berechnung beachtet wurde.
 %------------------------------------------------------------------------------
 Die Bestimmung von Resonanzfrequenz und Güte der Resonatormoden kann anhand des gemessenen Reflexionsspektrums der jeweiligen Resonanz erfolgen.
 Dazu wird eine Kurve gemäß Gleichung \eqref{eq:resonanzkurve} nach der Methode der kleinsten Quadrate an das gemessene Spektrum angepasst.
-Am Beispiel der $\mathrm{TM}_{010}~\pi$-Beschleunigermode wurde dies in Abbildung \ref{fig:guetefit} dargestellt.
+Dies wurde, am Beispiel der $\mathrm{TM}_{010}~\pi$-Beschleunigermode von PETRA-III, in Abbildung \ref{fig:guetefit} dargestellt.
 \begin{figure}[htb]
   \centering
   \input{./plots/guete_fit_pi.tex}
-  \caption{Gütefit}
+  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.507 +- 0.001}{MHz}$, Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
   \label{fig:guetefit}
 \end{figure}
+Um eine bessere Abschätzung der Fehler zu erlauben, wurden zu jeder Resonatormode mehrere Reflexionsspektren 
 
-Ergebnisse des Fits:
-\begin{align}
-\kappa &= \num{1.01285 +- 0.00091}\\
-Q_0 &= \num{29560 +- 13}\\
-\nu_0 &= \SI{499.507 +- 0.001}{MHz}
-\end{align}
+
 
 \section{Vermessung der TM010 Beschleunigermode}
 Berechnung des elektrischen Feldes\\
