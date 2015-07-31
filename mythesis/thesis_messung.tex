@@ -17,9 +17,12 @@ gilt, kann die Resonanzfrequenz einer Mode des durch
 \begin{align}
 	\nu_0(\mathrm{Med.}) = \frac{\nu_0(\mathrm{Vak.})}{\sqrt{\varepsilon_\mathrm{r} \mu_\mathrm{r}}}
 \end{align}
-Mit der relativen Permittivität der Luft (trocken und CO2-frei) $\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ und der Designfrequenz im Vakuum $\SI{499.67}{MHz}$
-
-
+beschrieben werden.
+Mit der relativen Permittivität der Luft $\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ \cite{CRC} und der Designfrequenz der Beschleunigermode im Vakuum $\SI{499.67}{MHz}$ folgt die Frequenz
+\begin{align}
+	\nu_0(\mathrm{Luft}) = \SI{499.54}{MHz}
+\end{align}
+für den luftgefüllten Resonator.
 
 %------------------------------------------------------------------------------
 \subsection{Störkörperkonstante}
@@ -46,7 +49,7 @@ Dies wurde, am Beispiel der $\mathrm{TM}_{010}~\pi$-Beschleunigermode von PETRA-
 \begin{figure}[htb]
   \centering
   \input{./plots/guete_fit_pi.tex}
-  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.507 +- 0.001}{MHz}$, Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
+  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.537 +- 0.001}{MHz}$, Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
   \label{fig:guetefit}
 \end{figure}
 Um eine bessere Abschätzung der Fehler zu erlauben, wurden zu jeder Resonatormode mehrere Reflexionsspektren 
