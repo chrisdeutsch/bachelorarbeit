@@ -1,31 +1,38 @@
 %------------------------------------------------------------------------------
-\chapter{Störkörpermessung}
+\chapter{Störkörpermessungen}
 \label{sec:stoerkoerpermessung}
 %------------------------------------------------------------------------------
-\section{Vorbereitung}
-\subsection{Vorbereitung}
 
-Vor der Vermessung der Eigenmoden eines Resonators, wurden die Abstimmstempel so eingestellt, dass sich im Resonator eine symmetrische Feldverteilung aufbaut.
-Außerdem muss beachtet werden, dass der Resonator für die Messung nicht evakuiert, sondern durch Luft gefüllt ist.
-Dadurch kommt es zu einer Verstimmung der Resonanzfrequenz aufgrund der dielektrischen Eigenschaften von Luft.
-Zur Quantifizierung dieses Effekts nutzt man, dass die Resonanzfrequenz~$\nu_0$ einer Resonatormode proportional zur Lichtgeschwindigkeit im Medium~$c$ ist (vgl.~Gl.~\eqref{eq:frequenz_pillbox}) \cite{pusch}.
-Da für die Lichtgeschwindigkeit im Medium mit der Permittivität~$\varepsilon$ und der Permeabilität~$\mu$ 
-\begin{align}
-	c = \frac{1}{\sqrt{\varepsilon \mu}}
-\end{align}
-gilt, kann die Resonanzfrequenz einer Mode des durch
+
+%------------------------------------------------------------------------------
+\section{Vorbereitung?}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+\subsection{Vorbereitung des Resonators}
+%------------------------------------------------------------------------------
+Bevor mit der Störkörpermessung nach Abschnitt \ref{sec:messmethodik} begonnen werden kann, müssen noch Einstellungen am Resonator erfolgen.
+Zum einen wird die Koppelschleife so gedreht, dass eine nahezu kritische Einkopplung ($\kappa \approx 1$) an die $\mathrm{TM}_{010}~\pi$-Mode des Resonators realisiert wird.
+Außerdem werden beide Abstimmstempel so eingestellt, dass sich eine symmetrische Feldverteilung im Resonator ausbildet.
+Schließlich muss die Beschleunigermode auf ihre Sollfrequenz im Vakuum von $\SI{499.67}{MHz}$ abgestimmt werden.
+Dabei gilt es zu beachten, dass die Luft im Hohlraum des Resonators zu einer zusätzlichen Verstimmung führt.
+Ist der Resonator durch ein Medium der relativen Permittivität~$\varepsilon_\mathrm{r}$ und Permeabilität~$\mu_\mathrm{r}$ ausgefüllt, so kann die Verstimmung der Resonanzfrequenzen durch
 \begin{align}
 	\nu_0(\mathrm{Med.}) = \frac{\nu_0(\mathrm{Vak.})}{\sqrt{\varepsilon_\mathrm{r} \mu_\mathrm{r}}}
 \end{align}
-Mit der relativen Permittivität der Luft (trocken und CO2-frei) $\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ und der Designfrequenz im Vakuum $\SI{499.67}{MHz}$
-
-
+beschrieben werden \cite{pusch}.
+Mit der relativen Permittivität trockener Luft~$\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ unter Normalbedingungen \cite[S.\ 1093]{CRC} und der Sollfrequenz im Vakuum folgt die Frequenz der Beschleunigermode
+\begin{align}
+	\nu_0(\mathrm{Luft}) = \SI{499.54}{MHz}
+\end{align}
+für den luftgefüllten Resonator.
+Da diese Frequenz mit Temperatur und Luftfeuchtigkeit variiert, ist ein exaktes Abstimmen auf diese Frequenz nicht zweckmäßig und es genügt die grobe Einstellung.
 
 %------------------------------------------------------------------------------
-\subsection{Störkörperkonstante}
+\subsection{Bestimmung der Störkörperkonstanten}
 %------------------------------------------------------------------------------
 Zur Berechnung der Störkörperkonstante~$\alpha_\mathrm{s}$ des kugelförmigen Störkörpers aus PTFE kann Gleichung \eqref{eq:stoerkoerperkonstante} verwendet werden.
-Die relative Permittivität von PTFE beträgt im Mittel $\varepsilon_\mathrm{r} = \num{2.1}$ und zeigt keine Frequenzabhängigkeit bis Frequenzen der Größenordnung \SI{1}{GHz} \cite[S.\ 2201]{CRC}.
+Die relative Permittivität von PTFE beträgt im Mittel $\varepsilon_\mathrm{r} = \num{2.1}$ und zeigt eine vernachlässigbare Frequenzabhängigkeit für den in dieser Arbeit untersuchten Frequenzbereich \cite[S.\ 2201]{CRC}.
 Außerdem variiert die relative Permittivität mit der Dichte und Kristallinität des Materials, weshalb für den verwendeten Werkstoff $\varepsilon_\mathrm{r} = \num{2.1 +- 0.05}$ angenommen werden muss.
 Unter Verwendung der Dimensionen des Störkörpers (vgl.\ \ref{sec:aufbau_messstand}) folgt die Störkörperkonstante
 \begin{align}
@@ -34,7 +41,10 @@ Unter Verwendung der Dimensionen des Störkörpers (vgl.\ \ref{sec:aufbau_messst
 \end{align}
 wobei die zentrische Bohrung bei der Berechnung beachtet wurde.
 
-\todo{wirkt als statistischer Fehler}
+Bei der Bestimmung der elektrischen Felder gemäß Gleichung \eqref{eq:skm_e_feld_normiert}, wirkt der Fehler der Störkörperkonstanten systematisch auf das resultierende Feld.
+Dieser systematische Einfluss muss insbesondere bei der Integration des Feldes über die Störkörperposition (Bestimmung von Beschleunigungsspannung und Shuntimpedanz) gesondert betrachtet werden.
+Um diesen Fehler zu verringern, könnte eine direkte Bestimmung der Störkörperkonstanten in einem Referenzresonator durchgeführt werden.
+Darauf wurde jedoch in dieser Arbeit verzichtet, da mit einem relativen Fehler von unter $\SI{4}{\percent}$ eine ausreichende Genauigkeit vorliegt.
 
 %------------------------------------------------------------------------------
 \subsection{Bestimmung von Resonanzfrequenz und Güte}
@@ -46,20 +56,43 @@ Dies wurde, am Beispiel der $\mathrm{TM}_{010}~\pi$-Beschleunigermode von PETRA-
 \begin{figure}[htb]
   \centering
   \input{./plots/guete_fit_pi.tex}
-  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.507 +- 0.001}{MHz}$, Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
+  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.537 +- 0.001}{MHz}$ \todo{$\Delta$}, Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
   \label{fig:guetefit}
 \end{figure}
-Um eine bessere Abschätzung der Fehler zu erlauben, wurden zu jeder Resonatormode mehrere Reflexionsspektren 
+Um eine bessere Abschätzung der Fehler zu erlauben, wurden zu jeder Resonatormode mehrere Reflexionsspektren aufgenommen und an jedes Spektrum eine Anpassung durchgeführt.
+Die resultierenden Ergebnisse folgen aus der Bildung des Mittelwerts der angepassten Parameter.
+
+\todo{Frequenzgenauigkeit, Leitfähigkeit $\Delta Q_0 \approx \SI{1}{\percent}$}
+
+%------------------------------------------------------------------------------
+\section{Vermessung der $\mathrm{TM}_{010}$-Resonatormoden}
+%------------------------------------------------------------------------------
+Die folgenden Abschnitte widmen sich der Auswertung der Störkörpermessungen an den $\mathrm{TM}_{010}$-Resonatormoden von PETRA-III und -IV, welche gemäß soundso durchgeführt wurden.
+Für beide Resonatoren wurden die $\pi,\, 2/3~\pi, \, 1/3~\pi$ und $0$-Moden vermessen.
+Die restlichen Moden der siebenzelligen Resonatorkette, die nach den Erläuterungen in Abschnitt \ref{sec:petra_resonator} erwartet werden, konnten nicht vermessen werden.
+Dies ist der Fall, weil diese Moden ein verschwindendes Feld in der mittleren Zelle des PETRA-Resonators aufweisen 
 
 
+Entgegen der Erwartung in Abschnitt \ref{sec:petra_resonator}, können nur die $\pi,\, \frac{2}{3} \pi \, \frac{1}{3} \pi$ und $0$-Mode vermessen werden, 
 
-\section{Vermessung der TM010 Beschleunigermode}
-Berechnung des elektrischen Feldes\\
-Berechnung der charakteristischen Größen des Resonators: Beschleunigungsspannung, Shuntimpedanz und Laufzeitfaktor
+
+Einleitung: Was wird gemessen, was kann gemessen werden?
 
 Alle anderen Moden (5/6, 1/2, 1/6) haben verschwindende Felder in der zentralen Zelle und können damit nicht gekoppelt werden.
 
+Reflexionsspektrum?
+
+
 Längenmessung vom Flansch erklären.
+
+
+
+\subsection{Berechnung der Größen}
+Berechnung des elektrischen Feldes\\
+
+\subsection{Interpretation}
+Berechnung der charakteristischen Größen des Resonators: Beschleunigungsspannung, Shuntimpedanz und Laufzeitfaktor
+
 
 
 \section{Vermessung von Moden höherer Ordnung (PETRA-III)}
