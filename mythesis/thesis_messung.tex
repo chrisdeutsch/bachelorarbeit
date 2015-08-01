@@ -2,9 +2,15 @@
 \chapter{Störkörpermessungen}
 \label{sec:stoerkoerpermessung}
 %------------------------------------------------------------------------------
-\section{Vorbereitung?}
 
+
+%------------------------------------------------------------------------------
+\section{Vorbereitung?}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
 \subsection{Vorbereitung des Resonators}
+%------------------------------------------------------------------------------
 Bevor mit der Störkörpermessung nach Abschnitt \ref{sec:messmethodik} begonnen werden kann, müssen noch Einstellungen am Resonator erfolgen.
 Zum einen wird die Koppelschleife so gedreht, dass eine nahezu kritische Einkopplung ($\kappa \approx 1$) an die $\mathrm{TM}_{010}~\pi$-Mode des Resonators realisiert wird.
 Außerdem werden beide Abstimmstempel so eingestellt, dass sich eine symmetrische Feldverteilung im Resonator ausbildet.
@@ -23,10 +29,10 @@ für den luftgefüllten Resonator.
 Da diese Frequenz mit Temperatur und Luftfeuchtigkeit variiert, ist ein exaktes Abstimmen auf diese Frequenz nicht zweckmäßig und es genügt die grobe Einstellung.
 
 %------------------------------------------------------------------------------
-\subsection{Störkörperkonstante}
+\subsection{Bestimmung der Störkörperkonstanten}
 %------------------------------------------------------------------------------
 Zur Berechnung der Störkörperkonstante~$\alpha_\mathrm{s}$ des kugelförmigen Störkörpers aus PTFE kann Gleichung \eqref{eq:stoerkoerperkonstante} verwendet werden.
-Die relative Permittivität von PTFE beträgt im Mittel $\varepsilon_\mathrm{r} = \num{2.1}$ und zeigt keine Frequenzabhängigkeit bis Frequenzen der Größenordnung \SI{1}{GHz} \cite[S.\ 2201]{CRC}.
+Die relative Permittivität von PTFE beträgt im Mittel $\varepsilon_\mathrm{r} = \num{2.1}$ und zeigt eine vernachlässigbare Frequenzabhängigkeit für den in dieser Arbeit untersuchten Frequenzbereich \cite[S.\ 2201]{CRC}.
 Außerdem variiert die relative Permittivität mit der Dichte und Kristallinität des Materials, weshalb für den verwendeten Werkstoff $\varepsilon_\mathrm{r} = \num{2.1 +- 0.05}$ angenommen werden muss.
 Unter Verwendung der Dimensionen des Störkörpers (vgl.\ \ref{sec:aufbau_messstand}) folgt die Störkörperkonstante
 \begin{align}
@@ -35,7 +41,10 @@ Unter Verwendung der Dimensionen des Störkörpers (vgl.\ \ref{sec:aufbau_messst
 \end{align}
 wobei die zentrische Bohrung bei der Berechnung beachtet wurde.
 
-\todo{wirkt als systematisch Fehler}
+Bei der Bestimmung der elektrischen Felder gemäß Gleichung \eqref{eq:skm_e_feld_normiert}, wirkt der Fehler der Störkörperkonstanten systematisch auf das resultierende Feld.
+Dieser systematische Einfluss muss insbesondere bei der Integration des Feldes über die Störkörperposition (Bestimmung von Beschleunigungsspannung und Shuntimpedanz) gesondert betrachtet werden.
+Um diesen Fehler zu verringern, könnte eine direkte Bestimmung der Störkörperkonstanten in einem Referenzresonator durchgeführt werden.
+Darauf wurde jedoch in dieser Arbeit verzichtet, da mit einem relativen Fehler von unter $\SI{4}{\percent}$ eine ausreichende Genauigkeit vorliegt.
 
 %------------------------------------------------------------------------------
 \subsection{Bestimmung von Resonanzfrequenz und Güte}
