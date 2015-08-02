@@ -40,9 +40,12 @@ plot './data/PETRA-III/fundamental/pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"Am
 
 ### 2/3 PI ###
 set output './plots/PETRA-III/2_3_pi.tex'
+set key bottom right
 
 plot './data/PETRA-III/fundamental/2_3_pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
      './data/PETRA-III/fundamental/2_3_pi/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+
+set key top right
 
 ### 1/3 PI ###
 set output './plots/PETRA-III/1_3_pi.tex'
@@ -69,9 +72,12 @@ plot './data/PETRA-IV/fundamental/pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amp
 
 ### 2/3 PI ###
 set output './plots/PETRA-IV/2_3_pi.tex'
+set key bottom right
 
 plot './data/PETRA-IV/fundamental/2_3_pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
      './data/PETRA-IV/fundamental/2_3_pi/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+
+set key top right
 
 ### 1/3 PI ###
 set output './plots/PETRA-IV/1_3_pi.tex'

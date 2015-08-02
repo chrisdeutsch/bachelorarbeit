@@ -36,8 +36,8 @@ offset = 30.0 # [mm]
 
 
 # Güte und Resonanzfrequenz
-Q0 = ufloat(35445.0, 200.0)
-v0 = ufloat(508.47E+6, 0.01E+6)
+Q0 = ufloat(35445.0, 59.0)
+v0 = ufloat(508.470E+6, 0.001E+6)
 
 
 # Resonanzfrequenz Luft->Vakuum
@@ -49,8 +49,8 @@ dv_err = 100.0
 pos_err = 0.5
 
 # Berechnung der Störkörperkonstante
-radius = 0.5 * ufloat(20.05E-3, 0.02E-3) # 0.5*diameter
-epsilon = ufloat(2.1, 0.02)
+radius = 0.5 * ufloat(20.05E-3, 0.05E-3) # 0.5*diameter
+epsilon = ufloat(2.1, 0.05)
 epsilon0 = 8.85418781762E-12
 
 # Bohrung
