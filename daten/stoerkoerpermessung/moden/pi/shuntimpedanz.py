@@ -36,8 +36,8 @@ offset = 30.0 # [mm]
 
 
 # Güte und Resonanzfrequenz
-Q0 = ufloat(29555.0, 74.0)
-v0 = ufloat(499.51E+6, 0.01E+6)
+Q0 = ufloat(29555.0, 110.0)
+v0 = ufloat(499.537E+6, 0.001E+6)
 
 
 # Resonanzfrequenz Luft->Vakuum
@@ -49,8 +49,8 @@ dv_err = 50.0
 pos_err = 0.5
 
 # Berechnung der Störkörperkonstante
-radius = 0.5 * ufloat(20.05E-3, 0.02E-3) # 0.5*diameter
-epsilon = ufloat(2.1, 0.02)
+radius = 0.5 * ufloat(20.05E-3, 0.05E-3) # 0.5*diameter
+epsilon = ufloat(2.1, 0.05)
 epsilon0 = 8.85418781762E-12
 
 # Bohrung
@@ -62,9 +62,9 @@ alpha_s = 3.0 * (epsilon - 1.0) / (epsilon + 2.0) * epsilon0 * vol_s
 2
 
 # Systematischen Fehler abspalten (Berechne separat für alpha_s + dalpha und -dalpha)
-#alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
+alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
 #alpha_s -= err_alpha_s
-#alpha_s += err_alpha_s
+alpha_s += err_alpha_s
 
 c0 = 299792458.0 # Lichtgeschwindigkeit
 

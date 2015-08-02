@@ -11,13 +11,13 @@ set decimalsign '{,}'
 set format x "%.0f"
 set format y "%.0f"
 
-#set xtics start,step,stop
+#set xtics 210,300,2010
 #set ytics start,step,stop
 
 
 set xrange [0:2220]
 set yrange [*:*]
-set xlabel 'Position $z$ / \si{mm}'
+set xlabel '$z$ / \si{mm}'
 set ylabel '$\frac{E_0(z)}{\sqrt{P_\mathrm{V}}}$ / \si{\volt\per\metre\per\watt\tothe{0.5}}'
 
 set samples 10000
@@ -58,7 +58,7 @@ plot './data/PETRA-III/fundamental/0_pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"
 
 
 #################
-### PETRA-III ###
+### PETRA-IV ###
 #################
 
 ### PI ###
