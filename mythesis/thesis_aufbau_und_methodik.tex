@@ -13,14 +13,14 @@
   \caption[Schematische Darstellung des Querschnitts eines siebenzelligen PETRA-Resonators mit Koppelschleife und zwei Abstimmstempeln]{Schematischer Darstellung des Querschnitts eines siebenzelligen PETRA-Resonators mit Koppelschleife und zwei Abstimmstempeln. Der Abstand zwei benachbarter Zellenmitten beträgt \SI{30}{\centi\metre} und die Gesamtlänge des Resonators von Flansch zu Flansch \SI{222}{\centi\metre}.}
   \label{fig:petra_cavity}
 \end{figure}
-Im Rahmen dieser Arbeit wird das elektrische Feld von zwei siebenzelligen Beschleunigungsresonatoren vom Typ PETRA \cite{desy_petra} vermessen, welche in Kooperation von DESY und Balzers Hochvakuum GmbH (1982/83) hergestellt wurden.
+Im Rahmen dieser Arbeit wird das elektrische Feld von zwei siebenzelligen Beschleunigungsresonatoren vom Typ PETRA \cite{desy_petra} vermessen, welche in Kooperation von DESY und Balzers Hochvakuum GmbH hergestellt wurden.
 Der Resonator ist ausgelegt auf die Beschleunigung von ultrarelativistischen Elektronen und Positronen durch die $\mathrm{TM}_{010}$-Mode bei einer Frequenz von \SI{499.67}{MHz}.
 Der Querschnitt dieser Kavität ist in Abbildung \ref{fig:petra_cavity} schematisch dargestellt.
 Die Zellen werden durch leitende Kupferwände voneinander getrennt, die eine Verbreiterung an der Strahlachse des Resonators aufweisen.
-Diese sogenannten \textit{Nose Cones} erzeugen eine Erhöhung der elektrischen Feldstärke in der Zelle bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führen zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne Nose Cones \cite[S.\ 48]{wangler}.
+Diese sogenannten \textit{Nose Cones} erzeugen eine Erhöhung der elektrischen Feldstärke in der Zelle bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führen zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne \textit{Nose Cones} \cite[S.\ 48]{wangler}.
 
 Jede der Zellen des PETRA-Resonators stellt einen Hohlraumresonator dar, der durch vier Koppelschlitze in der trennenden Kupferwand an die jeweiligen Nachbarzellen gekoppelt ist.
-Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N$ die Anzahl der gekoppelten Zellen ist.
+Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der \glqq Resonatorkette\grqq\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N$ die Anzahl der gekoppelten Zellen ist.
 Die $N$ Moden der Resonatorkette unterscheiden sich neben der Resonanzfrequenz $\omega_0$ auch in der Phasendifferenz des Feldes zwei benachbarter Zellen  $\Delta \varphi$.
 Die Benennung der Moden einer Resonatorkette erfolgt anhand dieses Phasenvorschubs pro Zelle~$\Delta \varphi$ (z.\ B.\ $\pi$-Mode für $\Delta \varphi = \pi$).
 Für eine Resonatorkette aus $N$ gekoppelten Resonatoren sind Moden mit dem Phasenvorschub
@@ -40,6 +40,7 @@ Eine Anpassung des Koppelfaktors kann durch Drehen der Schleife erreicht werden,
 In den Zellen~2 und 6 sind Abstimmstempel \cite{desy_stempel} angebracht die durch Schrittmotoren in bzw.\ aus der Kavität gefahren werden können.
 Das Verstellen der Stempel führt zu einer Änderung der Geometrie des Resonators und folglich zu einer Verschiebung der Resonanzfrequenz.
 Dies kann zum Stimmen der Resonanzfrequenz einer Mode in einem beschränkten Frequenzbereich genutzt werden.
+Darüber hinaus haben die Stempel einen Einfluss auf die Feldverteilung im Resonator und können daher zur Symmetrisierung der Felder genutzt werden.
 Die zwei weiteren Vakuumflansche in den Randzellen dienen dem Anschluss von Vakuumpumpen.
 
 Die beiden in dieser Arbeit vermessenen Resonatoren seien im Folgenden (neben den fünfzelligen Beschleunigungsresonatoren PETRA-I und -II des ELSA Strecherrings) mit PETRA-III und -IV bezeichnet.
@@ -52,7 +53,7 @@ Die beiden in dieser Arbeit vermessenen Resonatoren seien im Folgenden (neben de
 \begin{sidewaysfigure}[p]
 	\centering
 	\includegraphics[width=1.0\textheight]{./figs/cavity/messaufbau.pdf}
-	\caption[Schematischer Aufbau des Störkörpermessstandes]{Schematischer Aufbau des Störkörpermessstandes für einen siebenzelligen PETRA-Resonator mit Abstimmstempeln und Einkoppelschleife (a), Montageträger (b), Gestell aus einem Aluminiumprofilsystem (c), Spindel mit Schrittmotor (d), Kreuzblenden (e), Polytetrafluorethylen-Störkörper (f) und Zugfeder (g).}
+	\caption[Schematischer Aufbau des Störkörpermessstandes]{Schematischer Aufbau des Störkörpermessstandes für einen siebenzelligen PETRA-Resonator mit Abstimmstempel und Einkoppelschleife (a), Montageträger (b), Gestell aus einem Aluminiumprofilsystem (c), Spindel mit Schrittmotor (d), Kreuzblenden (e), Polytetrafluorethylen-Störkörper (f) und Zugfeder (g).}
 	\label{fig:stoerkoerpermessstand}
 \end{sidewaysfigure}
 Zur Bestimmung des elektrischen Feldes auf der Strahlachse des Resonators wird die in Abschnitt \ref{sec:resonante_stoerkoerpermessung} eingeführte resonante Störkörpermessung genutzt.
@@ -110,14 +111,14 @@ Dabei muss man beachten, dass es neben der Frequenzverschiebung durch den Störk
 Eine Erwärmung führt beispielsweise zu einer thermischen Ausdehnung des Resonators und folglich zu einer Vergrößerung des Hohlraumvolumens.
 Diese Geometrieänderung des Hohlraums führt zu einer Reduzierung der Resonanzfrequenz der Resonatormoden.
 Analog führt ein Abkühlen des Resonators zur Kontraktion desselben, die wiederum eine Erhöhung der Resonanzfrequenz zur Folge hat. Für die vermessenen PETRA-Resonatoren liegt die Verstimmung durch Temperaturänderung bei ungefähr \SI{8}{\kilo\hertz\per\celsius} \cite{desy_petra} und liegt in der gleichen Größenordnung wie die Verschiebung durch den verwendeten Störkörper.
-Aus diesem Grund muss die Temperaturabhängigkeit der Resonanzfrequenz beachtet werden.
+Aus diesem Grund muss die Temperaturabhängigkeit der Resonanzfrequenz beim Messablauf berücksichtigt werden.
 
 Sei dazu durch $\nu_0(z)$ die Resonanzfrequenz einer Resonatormode, mit dem Störkörper auf der Position~$z$ entlang der Strahlenachse, gegeben.
 Außerdem sei eine Referenzposition des Störkörpers~$z_\mathrm{ref}$ mit zugehöriger Resonanzfrequenz~$\nu_\mathrm{ref} = \nu_0(z_\mathrm{ref})$ definiert.
 Die somit eingeführten Größen~$\nu_0(z)$ und~$\nu_\mathrm{ref}$ sind jeweils temperaturabhängig.
 Wird jedoch die Differenz~$\nu_0(z) - \nu_\mathrm{ref}$ betrachtet, so stellt man fest, dass diese, im Hinblick auf typische Temperaturänderungen während einer Messung, konstant ist \cite{schedler_pm}.
 Da die Messung an beiden Positionen nicht instantan erfolgen kann, muss als Anforderung gestellt werden, dass die Temperaturänderung über diesem Zeitraum vernachlässigbar ist.
-Um dies zu gewährleisten wurden die Messungen hauptsächlich über Nacht durchgeführt.
+Um dies zu gewährleisten wurden die Messungen hauptsächlich über Nacht durchgeführt, um schnelle Temperaturänderungen durch Sonneneinstrahlung zu vermeiden.
 Es ist praktisch die Referenzposition des Störkörpers so zu wählen, dass die Frequenz~$\nu_\mathrm{ref}$ der Resonanzfrequenz des ungestörten Resonators entspricht.
 Dies ist der Fall, wenn am Ort des Störkörpers das elektrische Feld verschwindet, wie beispielsweise unmittelbar vor der Kreuzblende am Vakuumflansch des Resonators (vgl.\ Abb.\ \ref{fig:stoerkoerpermessstand}).
 Dadurch entspricht die temperaturunabhängige Frequenzdifferenz der Verschiebung der Resonanzfrequenz~$\Delta \nu$ des gestörten vom ungestörten Resonator.
@@ -146,3 +147,6 @@ Die vom Störkörpermessprogramm durchgeführten Schritte zur Bestimmung der Res
 	\item Die Störkörperposition~$z$, die gemessenen Frequenzen $\nu_0(z), \nu_\mathrm{ref}$ und die Differenz $\nu_0(z) - \nu_\mathrm{ref}$ werden abgespeichert.
 \end{enumerate}
 Diese Messschritte werden solange wiederholt, bis der Resonator auf der gesamten Länge in einer frei wählbaren Schrittweite vermessen wurde.
+
+Die somit beschriebene Messmethode kann genutzt werden, um das elektrische Feld verschiedener Resonatormoden zu vermessen.
+Dies wurde in dieser Arbeit genutzt, um die $\mathrm{TM}_{010}$-Moden beider PETRA-Resonatoren und eine Auswahl von Moden höherer Ordnung des PETRA-III Resonators vermessen.
