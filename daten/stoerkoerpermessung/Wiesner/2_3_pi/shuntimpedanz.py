@@ -113,12 +113,12 @@ rs = 0.5 * voltage**2
 # Phase definieren TODO: Schön machen
 phase = np.zeros_like(x)
 phase[0:76-7] = 0
-phase[76-7:134-7] = 1 * 2.0 / 3.0 * np.pi
-phase[134-7:193-7] = 2 * 2.0 / 3.0 * np.pi
-phase[193-7:255-7] = 3 * 2.0 / 3.0 * np.pi
-phase[255-7:316-7] = 4 * 2.0 / 3.0 * np.pi
-phase[316-7:373-7] = 5 * 2.0 / 3.0 * np.pi
-phase[373-7:434] = 6 * 2.0 / 3.0 * np.pi
+phase[76-7:134-7] = np.pi
+phase[134-7:193-7] = np.pi
+phase[193-7:255-7] = 0
+phase[255-7:316-7] = np.pi
+phase[316-7:373-7] = np.pi
+phase[373-7:434] = 0
 
 
 
