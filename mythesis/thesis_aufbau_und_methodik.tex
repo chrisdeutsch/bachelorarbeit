@@ -20,7 +20,7 @@ Die Zellen werden durch leitende Kupferwände voneinander getrennt, die eine Ver
 Diese sogenannten \textit{Nose Cones} erzeugen eine Erhöhung der elektrischen Feldstärke in der Zelle bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führen zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne \textit{Nose Cones} \cite[S.\ 48]{wangler}.
 
 Jede der Zellen des PETRA-Resonators stellt einen Hohlraumresonator dar, der durch vier Koppelschlitze in der trennenden Kupferwand an die jeweiligen Nachbarzellen gekoppelt ist.
-Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der \glqq Resonatorkette\grqq\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N$ die Anzahl der gekoppelten Zellen ist.
+Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N$ die Anzahl der gekoppelten Zellen ist.
 Die $N$ Moden der Resonatorkette unterscheiden sich neben der Resonanzfrequenz $\omega_0$ auch in der Phasendifferenz des Feldes zwei benachbarter Zellen  $\Delta \varphi$.
 Die Benennung der Moden einer Resonatorkette erfolgt anhand dieses Phasenvorschubs pro Zelle~$\Delta \varphi$ (z.\ B.\ $\pi$-Mode für $\Delta \varphi = \pi$).
 Für eine Resonatorkette aus $N$ gekoppelten Resonatoren sind Moden mit dem Phasenvorschub
@@ -35,7 +35,7 @@ Für den siebenzelligen PETRA-Resonator existieren demnach die Moden:
 
 Zum Anregen von Resonatormoden dient eine Koppelschleife \cite{desy_schleife} in der mittleren Zelle der Kavität.
 Dabei ist die Geometrie der Schleife angepasst, um eine kritische Kopplung ($\kappa = 1$) an die $\mathrm{TM}_{010}$-Beschleuniger\-mode ($\Delta \varphi = \pi$) zu ermöglichen.
-Eine kritische Kopplung ist wünschenswert, da in diesem Fall eine maximale Leistungstransmission vom treibenden Hochfrequenzsignal in das Feld der Resonatormode möglich ist.
+Eine kritische Kopplung ist wünschenswert, da in diesem Fall die gesamte Leistung des treibenden Hochfrequenzsignals in den Resonator übertragen wird.
 Eine Anpassung des Koppelfaktors kann durch Drehen der Schleife erreicht werden, da dies die effektive Fläche der Leiterschleife senkrecht zum Magnetfeld der betrachteten Resonatormode verändert.
 In den Zellen~2 und 6 sind Abstimmstempel \cite{desy_stempel} angebracht die durch Schrittmotoren in bzw.\ aus der Kavität gefahren werden können.
 Das Verstellen der Stempel führt zu einer Änderung der Geometrie des Resonators und folglich zu einer Verschiebung der Resonanzfrequenz.
@@ -57,7 +57,9 @@ Die beiden in dieser Arbeit vermessenen Resonatoren seien im Folgenden (neben de
 	\label{fig:stoerkoerpermessstand}
 \end{sidewaysfigure}
 Zur Bestimmung des elektrischen Feldes auf der Strahlachse des Resonators wird die in Abschnitt \ref{sec:resonante_stoerkoerpermessung} eingeführte resonante Störkörpermessung genutzt.
-Dazu wird ein kugelförmiger Störkörper aus Polytetrafluorethylen (PTFE) mit einem Durchmesser $D = \SI{20.05 +- 0.05}{mm}$ verwendet, welcher durch eine zentrische Bohrung $d = \SI{1.3 +- 0.05}{mm}$ auf einem Kunststofffaden befestigt werden kann.
+Dazu wird ein kugelförmiger Störkörper verwendet, welcher durch eine zentrische Bohrung auf einem Kunststofffaden befestigt werden kann.
+Der Störkörper wurde dabei aus Polytetrafluorethylen (PTFE) gefertigt, da dieses eine verschwindende magnetische Suszeptibilität aufweist \cite{keyjeff} und damit eine relative Permeabilität~$\mu_\mathrm{r} \approx 1$, was eine direkte Bestimmung des elektrischen Feldes durch Gleichung \eqref{eq:skm_e_feld_normiert} erlaubt.
+Außerdem zeigt PTFE keine signifikante Frequenzabhängigkeit der relativen Permittivität~$\varepsilon_\mathrm{r}$ auf dem in dieser Arbeit betrachteten Frequenzbereich \cite[S.\ 2201]{CRC}.
 
 Um den Störkörper auf der Strahlachse durch den Resonator bewegen zu können, wurde der Störkörpermessstand aus Abbildung \ref{fig:stoerkoerpermessstand} aufgebaut.
 Über ein Gestell aus einem Aluminiumprofilsystem und einem System von Umlenkrollen, welche fest mit dem siebenzelligen PETRA-Resonator verbunden sind, kann ein Kunststofffaden, an dem der Störkörper befestigt ist, durch den Resonator gespannt werden.

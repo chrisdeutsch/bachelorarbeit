@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150803151625" modified="D:20150803151625"/>
+<info created="D:20150803151625" modified="D:20150803153702"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -370,9 +370,9 @@ h
 <text matrix="1 0 0 1 48 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="5.455" height="7.03" depth="0" halign="center" valign="center" size="11">$0$</text>
 <text matrix="1 0 0 1 80 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="6.61" height="4.697" depth="0" halign="center" valign="center" size="11">$\pi$</text>
 <text matrix="1 0 0 1 112 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="5.455" height="7.03" depth="0" halign="center" valign="center" size="11">$0$</text>
-<text matrix="1 0 0 1 176 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="5.455" height="7.03" depth="0" halign="center" valign="center" size="11">$0$</text>
-<text matrix="1 0 0 1 208 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="6.61" height="4.697" depth="0" halign="center" valign="center" size="11">$\pi$</text>
-<text matrix="1 0 0 1 240 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="5.455" height="7.03" depth="0" halign="center" valign="center" size="11">$0$</text>
+<text matrix="1 0 0 1 208 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="5.455" height="7.03" depth="0" halign="center" valign="center" size="11">$0$</text>
+<text matrix="1 0 0 1 176 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="6.61" height="4.697" depth="0" halign="center" valign="center" size="11">$\pi$</text>
+<text matrix="1 0 0 1 240 -260" transformations="translations" pos="176 744" stroke="black" type="label" width="6.61" height="4.697" depth="0" halign="center" valign="center" size="11">$\pi$</text>
 <text matrix="1 0 0 1 112 -195" transformations="translations" pos="176 776" stroke="black" type="label" width="16.809" height="5.446" depth="1.55" halign="center" valign="center" size="8">$2 \Delta \varphi$</text>
 <text matrix="1 0 0 1 144 -195" transformations="translations" pos="176 776" stroke="black" type="label" width="16.809" height="5.446" depth="1.55" halign="center" valign="center" size="8">$3 \Delta \varphi$</text>
 <text matrix="1 0 0 1 176 -195" transformations="translations" pos="176 776" stroke="black" type="label" width="16.809" height="5.446" depth="1.55" halign="center" valign="center" size="8">$4 \Delta \varphi$</text>
@@ -670,7 +670,7 @@ h
 <text matrix="1 0 0 1 176 -532" transformations="translations" pos="176 744" stroke="black" type="label" width="6.61" height="4.697" depth="0" halign="center" valign="center" size="11">$\pi$</text>
 <text matrix="1 0 0 1 112 -532" transformations="translations" pos="176 744" stroke="black" type="label" width="5.455" height="7.03" depth="0" halign="center" valign="center" size="11">$0$</text>
 <text matrix="1 0 0 1 80 -532" transformations="translations" pos="176 744" stroke="black" type="label" width="5.455" height="7.03" depth="0" halign="center" valign="center" size="11">$0$</text>
-<text matrix="1 0 0 1 204 -532" transformations="translations" pos="176 744" stroke="black" type="label" width="6.61" height="4.697" depth="0" halign="center" valign="center" size="11">$\pi$</text>
+<text matrix="1 0 0 1 208 -532" transformations="translations" pos="176 744" stroke="black" type="label" width="6.61" height="4.697" depth="0" halign="center" valign="center" size="11">$\pi$</text>
 <text matrix="1 0 0 1 240 -532" transformations="translations" pos="176 744" stroke="black" type="label" width="6.61" height="4.697" depth="0" halign="center" valign="center" size="11">$\pi$</text>
 <group matrix="1 0 0 1 48 -600">
 <path matrix="1 0 0 1 32 0" stroke="black" pen="0.6">
