@@ -20,24 +20,22 @@ Die Zellen werden durch leitende Kupferwände voneinander getrennt, die eine Ver
 Diese sogenannten \textit{Nose Cones} erzeugen eine Erhöhung der elektrischen Feldstärke in der Zelle bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führen zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne \textit{Nose Cones} \cite[S.\ 48]{wangler}.
 
 Jede der Zellen des PETRA-Resonators stellt einen Hohlraumresonator dar, der durch vier Koppelschlitze in der trennenden Kupferwand an die jeweiligen Nachbarzellen gekoppelt ist.
-Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N$ die Anzahl der gekoppelten Zellen ist.\\
-\\
-$N+1$ gekoppelte Oszillatoren:
-\begin{align}
-	\cos\left( \frac{\pi q n}{N}\right) \qquad \text{für} \qquad n=0,1,\dots,N \text{(oscillator)} \quad \text{und} \quad q=0,1,\dots,N \text{(mode)}
-\end{align}
-Die $N$ Moden der Resonatorkette unterscheiden sich neben der Resonanzfrequenz $\omega_0$ auch in der Phasendifferenz des Feldes zwei benachbarter Zellen  $\Delta \varphi$.
-Die Benennung der Moden einer Resonatorkette erfolgt anhand dieses Phasenvorschubs pro Zelle~$\Delta \varphi$ (z.\ B.\ $\pi$-Mode für $\Delta \varphi = \pi$).
-Für eine Resonatorkette aus $N$ gekoppelten Resonatoren sind Moden mit dem Phasenvorschub
+Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls verschiedene Schwingungsmoden aufweisen.}, wobei $N$ die Anzahl der gekoppelten Zellen ist.
+Die $N$ Moden der Resonatorkette unterscheiden sich neben der Resonanzfrequenz $\omega_0$ auch in der Phase des Feldes in den einzelnen Zellen.
+Um diese Phasenbeziehung zu verstehen, betrachtet man einen $N$-zelligen Hohlraumresonator, mit einer Zelle, die durch ein externes Hochfrequenzsignal getrieben wird.
+Durch die Kopplung von benachbarten Zellen, werden diese ebenfalls zur Schwingung angeregt, wobei ein Phasendifferenz des Feldes zwischen zwei benachbarten Zellen~$\Delta \varphi$ auftritt.
+Dieser Phasenvorschub ist charakteristisch für die jeweilige Mode der Resonatorkette und kann die Werte
 \begin{align}
 	\Delta \varphi = q \cdot \frac{\pi}{N-1} \qquad \text{mit} \qquad q = 0, 1, \dots, N-1
 \end{align}
-möglich \cite[S.\ 110]{wangler}.
-Für den siebenzelligen PETRA-Resonator existieren demnach die Moden:
+annehmen \cite[S.\ 110]{wangler}, weshalb die Benennung der Moden anhand dessen erfolgt (z.\ B.\ $\pi$-Mode für $\Delta \varphi = \pi$).
+Demnach existieren für den siebenzelligen PETRA-Resonator die Moden:
 \begin{align}
   \Delta \varphi = 0,\, \frac{1}{6} \pi,\, \frac{1}{3} \pi,\, \frac{1}{2} \pi,\, \frac{2}{3} \pi,\, \frac{5}{6} \pi,\, \pi \eqdot
 \end{align}
-\todo{Überlagerung}
+Um die resultierende Phasenbeziehung zwischen den Zellen des Resonators zu erhalten, muss Superposition von hin- und rückläufiger Welle auf der Resonatorkette beachtet werden.
+Diese Überlagerung führt dazu, dass zwischen dem Feld zwei benachbarter Zellen nur Phasendifferenzen von $0$ und $\pi$ möglich sind oder die Felder in einzelnen Zellen durch destruktive Interferenz ausgelöscht werden.
+Für den siebenzelligen PETRA-Resonator wurde diese Phasenbeziehung für alle möglichen Moden in Abbildung \ref{fig:phasenbeziehung} aufgetragen.
 
 Zum Anregen von Resonatormoden dient eine Koppelschleife \cite{desy_schleife} in der mittleren Zelle der Kavität.
 Dabei ist die Geometrie der Schleife angepasst, um eine kritische Kopplung ($\kappa = 1$) an die $\mathrm{TM}_{010}$-Beschleuniger\-mode ($\Delta \varphi = \pi$) zu ermöglichen.
