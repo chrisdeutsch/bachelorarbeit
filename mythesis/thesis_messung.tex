@@ -21,7 +21,7 @@ Ist der Resonator durch ein Medium der relativen Permittivität~$\varepsilon_\ma
 	\nu_0(\mathrm{Med.}) = \frac{\nu_0(\mathrm{Vak.})}{\sqrt{\varepsilon_\mathrm{r} \mu_\mathrm{r}}}
 \end{align}
 beschrieben werden \cite{pusch}.
-Mit der relativen Permittivität trockener Luft~$\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ unter Normalbedingungen \cite[S.\ 1093]{CRC} und der Sollfrequenz im Vakuum folgt die Frequenz der Beschleunigermode
+Mit der relativen Permittivität trockener Luft~$\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ unter Normalbedingungen \cite[S.\ 1093]{CRC}, vernachlässigbarer relativer Permeabilität~($\mu_\mathrm{r} \approx 1$) und der Sollfrequenz im Vakuum folgt die Frequenz der Beschleunigermode
 \begin{align}
 	\nu_0(\mathrm{Luft}) = \SI{499.54}{MHz}
 \end{align}
@@ -72,12 +72,14 @@ Die resultierenden Ergebnisse folgen aus der Bildung des Mittelwerts der angepas
 Die folgenden Abschnitte widmen sich der Auswertung der Störkörpermessungen an den $\mathrm{TM}_{010}$-Resonatormoden von PETRA-III und -IV, welche gemäß Abschnitt \ref{sec:messmethodik} durchgeführt wurden.
 Für beide Resonatoren wurden die $\pi,\, 2/3~\pi, \, 1/3~\pi$ und $0$-Moden vermessen.
 Die restlichen Moden der siebenzelligen Resonatorkette, die nach den Erläuterungen in Abschnitt \ref{sec:petra_resonator} erwartet werden, konnten nicht vermessen werden.
-Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010}, \ref{fig:feldverteilung_tm010}) und daher nicht mit der Koppelschleife angeregt werden können.
+Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010}, \ref{fig:phasenbeziehung}) und daher nicht mit der Koppelschleife angeregt werden können.
 
 \subsection{Auswertung der Messdaten}
 Nachdem die Güte~$Q_0$, Resonanzfrequenz~$\nu_0$ und Störkörperkonstante~$\alpha_\mathrm{s}$ bestimmt wurde, kann die Amplitude des elektrischen Feldes (normiert auf die Wurzel der Verlustleistung $P_\mathrm{V}$) gemäß Gleichung \eqref{eq:skm_e_feld_normiert} berechnet werden.
 Außerdem kann das effektive elektrische Feld, das ein ultrarelativistisches Teilchen erfährt, welches den Resonator passiert, berechnet werden.
-Dazu muss neben der harmonischen Zeitabhängigkeit (analog zu Gl.\ \eqref{eq:laufzeitfaktor}) auch der Phasenvorschub $\Delta \varphi$ zwischen den einzelnen Zellen beachtet werden.
+Dazu muss neben der harmonischen Zeitabhängigkeit (analog zu Gl.\ \eqref{eq:laufzeitfaktor}) auch die Phasenbeziehung (vgl.\ Abb.\ \ref{fig:phasenbeziehung}) zwischen den einzelnen Zellen beachtet werden.
+Darüber hinaus wird die Eintrittsphase des Teilchens in die Kavität so gewählt, dass dieses eine maximale Beschleunigungsspannung~$U_\mathrm{eff}$ erfährt.
+
 Dies wurde am Beispiel der $\pi$-Mode des PETRA-III Resonators in Abbildung \ref{fig:bsp_feld_tm010pi_petra3} aufgetragen.
 Im Anhang \ref{app:tm010_felder} wurden die Felder aller vermessenen $\mathrm{TM}_{010}$-Resonatormoden beider Resonatoren zusammengestellt.  
 \begin{figure}[h]
@@ -87,7 +89,18 @@ Im Anhang \ref{app:tm010_felder} wurden die Felder aller vermessenen $\mathrm{TM
 	\label{fig:bsp_feld_tm010pi_petra3}
 \end{figure}
 
-\begin{table}
+Zusätzlich soll die longitudinale Shuntimpedanzen $R_\mathrm{S}$ der Moden bestimmt werden.
+Diese folgt mit Gleichung \eqref{eq:beschleunigungsspannung} und \eqref{eq:shuntimpedanz} direkt durch Integration der auf die Verlustleistung~$P_\mathrm{V}$ normierte Amplitude des elektrischen Feldes~$|\ve_0|$
+\begin{align}
+	R_\mathrm{S} = \frac{1}{2} \left( \int_0^L \frac{|\ve_0(z)|}{\sqrt{P_\mathrm{V}}} \, \mathrm{d}z \right)^2
+\end{align}
+Laufzeitfaktor, effektive longitudinale Shuntimpedanz...
+
+
+
+
+
+\begin{table}[htb]
 	\begin{subtable}{1\textwidth}
 		\centering
 		\input{./tables/petra_3_tm010.tex}

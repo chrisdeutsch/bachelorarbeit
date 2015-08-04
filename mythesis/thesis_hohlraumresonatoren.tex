@@ -181,6 +181,7 @@ Diese Größe ist unabhängig von der in den Resonator eingekoppelten Leistung u
 Eine wichtige Kenngrößen von Moden in Beschleunigungsresonatoren ist die Beschleunigungsspannung~$U$, die ein Teilchen erfährt, das einen Resonator der Länge~$L$ instantan durchquert:
 \begin{align}
   U = \int_0^L |\ve_0 (z)| \, \mathrm{d}z \eqdot
+  \label{eq:beschleunigungsspannung}
 \end{align}
 Um den effektiven Energiegewinn eines Teilchens zu erhalten, muss die endliche Geschwindigkeit des Teilchens und die harmonische Zeitabhängigkeit des Feldes beachtet werden.
 Dazu definiert man den Laufzeitfaktor~$\Lambda$ für ultrarelativistische Teilchen ($v = c$):
@@ -192,15 +193,18 @@ wobei die Phase $\varphi_0$ so zu wählen ist, dass der Laufzeitfaktor maximiert
 Dadurch erhält man die effektive Beschleunigungsspannung~$U_\mathrm{eff}$:
 \begin{align}
   U_\mathrm{eff} = \Lambda \cdot U
+  \label{eq:eff_beschleunigungsspannung}
 \end{align}
 und damit die Änderung der Energie eines ultrarelativistischen Teilchens der Ladung $q$ beim Passieren des Resonators $\Delta E = q \cdot U_\mathrm{eff}$.
 Darüber hinaus definiert man als Maß für die Effizienz der Beschleunigung die sog.\ Shuntimpedanz~$R_\mathrm{S}$:
 \begin{align}
   R_\mathrm{S} = \frac{U^2}{2 P_\mathrm{V}}
+  \label{eq:shuntimpedanz}
 \end{align}
 mit der in den Resonatorwänden dissipierten Leistung $P_\mathrm{V}$ und analog die effektive Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$:
 \begin{align}
   R_\mathrm{S}^\mathrm{eff} = \frac{U_\mathrm{eff}^2}{2 P_\mathrm{V}} = \Lambda^2 \cdot R_\mathrm{S} \eqdot
+  \label{eq:eff_shuntimpedanz}
 \end{align}
 In Abhängigkeit der im Resonator angeregten Moden unterscheidet man zwischen longitudinaler und transversaler Beschleunigungsspannung/Shuntimpedanz.
 Dies liegt darin begründet, dass TM-Moden nur elektrische Felder mit longitudinaler und TE-Moden mit transversaler Ausrichtung aufweisen und dementsprechend nur zur longitudinalen/transversalen Beschleunigung der Teilchen führen.
