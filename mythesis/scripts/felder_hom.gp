@@ -32,7 +32,7 @@ load './scripts/gnuplot_linestyles.gp'
 set output './plots/HOM/702MHz.tex'
 
 plot './data/HOM/702/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
-     #'./data/HOM/702/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+     './data/HOM/702/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
 
 ### 712 MHz ###
 set output './plots/HOM/712MHz.tex'
@@ -50,13 +50,13 @@ plot './data/HOM/730/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 
 set output './plots/HOM/1047MHz.tex'
 
 plot './data/HOM/1047/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
-     #'./data/HOM/1047/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+     './data/HOM/1047/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
      
 ### 1375 MHz ###
 set output './plots/HOM/1375MHz.tex'
 
 plot './data/HOM/1375/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
-     #'./data/HOM/1375/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+     './data/HOM/1375/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
 
 ### 1458 MHz ###
 set output './plots/HOM/1458MHz.tex'

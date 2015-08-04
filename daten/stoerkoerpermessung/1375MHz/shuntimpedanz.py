@@ -40,7 +40,7 @@ Q0 = ufloat(59762.0, 415.0)
 v0 = ufloat(1375.423E+6, 0.001E+6)
 
 # Messfehler:
-dv_err = 50.0
+dv_err = 100.0
 pos_err = 0.5
 
 # Berechnung der Störkörperkonstante
@@ -107,13 +107,27 @@ rs = 0.5 * voltage**2
 
 # Phase definieren TODO: Schön machen
 phase = np.zeros_like(x)
-phase[0:74-7] = 0
-phase[74-7:134-7] = np.pi
-phase[134-7:194-7] = 0
-phase[194-7:254-7] = np.pi
-phase[254-7:314-7] = 0
-phase[314-7:374-7] = np.pi
-phase[374-7:434] = 0
+phase[0:41-7] = 0
+phase[41-7:72-7] = np.pi
+
+phase[72-7:104-7] = 0
+phase[104-7:132-7] = np.pi
+
+phase[132-7:164-7] = 0
+phase[164-7:194-7] = np.pi
+
+phase[194-7:224-7] = 0
+phase[224-7:255-7] = np.pi
+
+phase[255-7:284-7] = 0
+phase[284-7:315-7] = np.pi
+
+phase[315-7:344-7] = 0
+phase[344-7:378-7] = np.pi
+
+phase[378-7:407-7] = 0
+phase[407-7:434] = np.pi
+
 
 # Funktion zur Berechnung der effektiven Spannung in Abhängigkeit der Eintritts-
 # phase des Teilchens in die Cavity (soll maximiert werden)
