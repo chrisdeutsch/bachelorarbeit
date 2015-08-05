@@ -76,9 +76,9 @@ Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisc
 
 \subsection{Auswertung der Messdaten}
 Nachdem die Güte~$Q_0$, Resonanzfrequenz~$\nu_0$ und Störkörperkonstante~$\alpha_\mathrm{s}$ bestimmt wurde, kann die Amplitude des elektrischen Feldes (normiert auf die Wurzel der Verlustleistung $P_\mathrm{V}$) gemäß Gleichung \eqref{eq:skm_e_feld_normiert} berechnet werden.
-Außerdem kann das effektive elektrische Feld, das ein ultrarelativistisches Teilchen erfährt, welches den Resonator passiert, berechnet werden.
-Dazu muss neben der harmonischen Zeitabhängigkeit (analog zu Gl.\ \eqref{eq:laufzeitfaktor}) auch die Phasenbeziehung (vgl.\ Abb.\ \ref{fig:phasenbeziehung}) zwischen den einzelnen Zellen beachtet werden.
-Darüber hinaus wird die Eintrittsphase des Teilchens in die Kavität so gewählt, dass dieses eine maximale Beschleunigungsspannung~$U_\mathrm{eff}$ erfährt.
+Außerdem kann das effektive elektrische Feld, das ein ultrarelativistisches Teilchen erfährt, welches den Resonator passiert, berechnet werden und somit Laufzeitfaktor~$\Lambda$ \eqref{eq:laufzeitfaktor} bestimmen.
+Dazu muss neben der harmonischen Zeitabhängigkeit auch die Phasenbeziehung (vgl.\ Abb.\ \ref{fig:phasor}) zwischen den einzelnen Zellen beachtet werden.
+Darüber hinaus wird die Eintrittsphase des Teilchens in den Resonator so gewählt, dass der Laufzeitfaktor~$\Lambda$ maximiert wird.
 
 Dies wurde am Beispiel der $\pi$-Mode des PETRA-III Resonators in Abbildung \ref{fig:bsp_feld_tm010pi_petra3} aufgetragen.
 Im Anhang \ref{app:tm010_felder} wurden die Felder aller vermessenen $\mathrm{TM}_{010}$-Resonatormoden beider Resonatoren zusammengestellt.  
@@ -89,36 +89,35 @@ Im Anhang \ref{app:tm010_felder} wurden die Felder aller vermessenen $\mathrm{TM
 	\label{fig:bsp_feld_tm010pi_petra3}
 \end{figure}
 
-Zusätzlich soll die longitudinale Shuntimpedanzen $R_\mathrm{S}$ der Moden bestimmt werden.
-Diese folgt mit Gleichung \eqref{eq:beschleunigungsspannung} und \eqref{eq:shuntimpedanz} direkt durch Integration der auf die Verlustleistung~$P_\mathrm{V}$ normierte Amplitude des elektrischen Feldes~$|\ve_0|$
+Zusätzlich sollen die longitudinalen Shuntimpedanzen~$R_\mathrm{S}$ dieser Moden bestimmt werden.
+Diese folgen mit Gleichung \eqref{eq:beschleunigungsspannung} und \eqref{eq:shuntimpedanz} durch Integration der auf die Verlustleistung~$P_\mathrm{V}$ normierten Amplitude des elektrischen Feldes~$|\ve_0|$ über die Länge~$L$ des Resonators:
 \begin{align}
 	R_\mathrm{S} = \frac{1}{2} \left( \int_0^L \frac{|\ve_0(z)|}{\sqrt{P_\mathrm{V}}} \, \mathrm{d}z \right)^2
 \end{align}
-Laufzeitfaktor, effektive longitudinale Shuntimpedanz...
-
-
-
-
-
+Die Integration über die experimentellen Daten erfolgt dabei numerisch durch die Trapezregel.
+Um die effektive Shuntimpedanz der Moden zu bestimmen, muss außerdem der Laufzeitfaktor~$\Lambda$ berechnet werden.
+Mit Gleichung \eqref{eq:laufzeitfaktor}, dem effektiven Feld und der Feldamplitude kann der Laufzeitfaktor berechnet werden.
+Schließlich folgt die effektive Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$ unter Verwendung von Gleichung \ref{eq:eff_shuntimpedanz}.
+Diese Kenngrößen wurden in Tabelle \ref{tab:shuntimpedanzen_tm010} zusammengestellt.
 \begin{table}[htb]
 	\begin{subtable}{1\textwidth}
 		\centering
 		\input{./tables/petra_3_tm010.tex}
-		\caption{PETRA3}
+		\caption{PETRA-III}
 	\end{subtable}
 	\begin{subtable}{1\textwidth}
 		\centering
 		\input{./tables/petra_4_tm010.tex}
-		\caption{PETRA4}
+		\caption{PETRA-IV}
 	\end{subtable}
 	\caption{longitudinale Shuntimpedanzen von PETRA-III \todo{Klammer um Shuntimpedanz mit Fehler}}
+	\label{tab:shuntimpedanzen_tm010}
 \end{table}
-
-\todo{Shuntimpedanzkram (alles was in Python passiert), Gütezunahme mit der Mode (weniger Stromfluss in den Zwischenwänden)}
-
 
 \subsection{Interpretation}
 Berechnung der charakteristischen Größen des Resonators: Beschleunigungsspannung, Shuntimpedanz und Laufzeitfaktor
+
+\todo{Shuntimpedanzkram (alles was in Python passiert), Gütezunahme mit der Mode (weniger Stromfluss in den Zwischenwänden)}
 
 
 
