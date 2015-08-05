@@ -107,13 +107,27 @@ rs = 0.5 * voltage**2
 
 # Phase definieren TODO: Schön machen
 phase = np.zeros_like(x)
-phase[0:74-7] = 0
-phase[74-7:134-7] = np.pi
-phase[134-7:194-7] = 0
-phase[194-7:254-7] = np.pi
-phase[254-7:314-7] = 0
-phase[314-7:374-7] = np.pi
-phase[374-7:434] = 0
+phase[0:44-7] = 0
+phase[44-7:72-7] = np.pi
+
+phase[72-7:100-7] = 0
+phase[100-7:133-7] = np.pi
+
+phase[133-7:164-7] = np.pi
+phase[164-7:193-7] = 0
+
+phase[193-7:224-7] = 0
+phase[224-7:-255-7] = np.pi
+
+phase[255-7:285-7] = np.pi
+phase[285-7:313-7] = 0
+
+phase[313-7:340-7] = 0
+phase[340-7:375-7] = np.pi
+
+phase[375-7:404-7] = 0
+phase[404-7:434] = np.pi
+
 
 # Funktion zur Berechnung der effektiven Spannung in Abhängigkeit der Eintritts-
 # phase des Teilchens in die Cavity (soll maximiert werden)

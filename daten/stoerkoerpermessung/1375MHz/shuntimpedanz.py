@@ -110,23 +110,23 @@ phase = np.zeros_like(x)
 phase[0:41-7] = 0
 phase[41-7:72-7] = np.pi
 
-phase[72-7:104-7] = 0
-phase[104-7:132-7] = np.pi
+phase[72-7:104-7] = np.pi
+phase[104-7:132-7] = 0
 
 phase[132-7:164-7] = 0
 phase[164-7:194-7] = np.pi
 
 phase[194-7:224-7] = 0
-phase[224-7:255-7] = np.pi
+phase[224-7:255-7] = 0
 
-phase[255-7:284-7] = 0
-phase[284-7:315-7] = np.pi
+phase[255-7:284-7] = np.pi
+phase[284-7:315-7] = 0
 
 phase[315-7:344-7] = 0
 phase[344-7:378-7] = np.pi
 
-phase[378-7:407-7] = 0
-phase[407-7:434] = np.pi
+phase[378-7:407-7] = np.pi
+phase[407-7:434] = 0
 
 
 # Funktion zur Berechnung der effektiven Spannung in Abhängigkeit der Eintritts-

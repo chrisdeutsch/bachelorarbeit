@@ -44,7 +44,7 @@ plot './data/HOM/712/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 
 set output './plots/HOM/730MHz.tex'
 
 plot './data/HOM/730/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
-     #'./data/HOM/730/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+     './data/HOM/730/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
      
 ### 1047 MHz ###
 set output './plots/HOM/1047MHz.tex'
