@@ -10,6 +10,7 @@
 
 %------------------------------------------------------------------------------
 \subsection{Vorbereitung des Resonators}
+\label{sec:vorbereitung_resonator}
 %------------------------------------------------------------------------------
 Bevor mit der Störkörpermessung nach Abschnitt \ref{sec:messmethodik} begonnen werden kann, müssen noch Einstellungen am Resonator erfolgen.
 Zum einen wird die Koppelschleife so gedreht, dass eine nahezu kritische Einkopplung ($\kappa \approx 1$) an die $\mathrm{TM}_{010}~\pi$-Mode des Resonators realisiert wird.
@@ -19,6 +20,7 @@ Dabei gilt es zu beachten, dass die Luft im Hohlraum des Resonators zu einer zus
 Ist der Resonator durch ein Medium der relativen Permittivität~$\varepsilon_\mathrm{r}$ und Permeabilität~$\mu_\mathrm{r}$ ausgefüllt, so kann die Verstimmung der Resonanzfrequenzen durch
 \begin{align}
 	\nu_0(\mathrm{Med.}) = \frac{\nu_0(\mathrm{Vak.})}{\sqrt{\varepsilon_\mathrm{r} \mu_\mathrm{r}}}
+	\label{eq:resonanzfrequenz_medium}
 \end{align}
 beschrieben werden \cite{pusch}.
 Mit der relativen Permittivität trockener Luft~$\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ unter Normalbedingungen \cite[S.\ 1093]{CRC}, vernachlässigbarer relativer Permeabilität~($\mu_\mathrm{r} \approx 1$) und der Sollfrequenz im Vakuum folgt die Frequenz der Beschleunigermode
@@ -57,7 +59,7 @@ Dies wurde, am Beispiel der $\mathrm{TM}_{010}~\pi$-Beschleunigermode von PETRA-
 \begin{figure}[htb]
   \centering
   \input{./plots/guete_fit_pi.tex}
-  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.537 +- 0.001}{MHz}$ \todo{$\Delta$}, Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
+  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.537}{MHz}$ (Anpassungsfehler vernachlässigbar), Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
   \label{fig:guetefit}
 \end{figure}
 Um eine bessere Abschätzung der Fehler zu erlauben, wurden zu jeder Resonatormode mehrere Reflexionsspektren aufgenommen und an jedes Spektrum eine Anpassung durchgeführt.
@@ -72,12 +74,12 @@ Die resultierenden Ergebnisse folgen aus der Bildung des Mittelwerts der angepas
 Die folgenden Abschnitte widmen sich der Auswertung der Störkörpermessungen an den $\mathrm{TM}_{010}$-Resonatormoden von PETRA-III und -IV, welche gemäß Abschnitt \ref{sec:messmethodik} durchgeführt wurden.
 Für beide Resonatoren wurden die $\pi,\, 2/3~\pi, \, 1/3~\pi$ und $0$-Moden vermessen.
 Die restlichen Moden der siebenzelligen Resonatorkette, die nach den Erläuterungen in Abschnitt \ref{sec:petra_resonator} erwartet werden, konnten nicht vermessen werden.
-Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010}, \ref{fig:phasenbeziehung}) und daher nicht mit der Koppelschleife angeregt werden können.
+Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010}, \ref{fig:phasenbeziehung}) und daher nicht oder nur schwach mit der Koppelschleife angeregt werden können.
 
 \subsection{Auswertung der Messdaten}
 Nachdem die Güte~$Q_0$, Resonanzfrequenz~$\nu_0$ und Störkörperkonstante~$\alpha_\mathrm{s}$ bestimmt wurde, kann die Amplitude des elektrischen Feldes (normiert auf die Wurzel der Verlustleistung $P_\mathrm{V}$) gemäß Gleichung \eqref{eq:skm_e_feld_normiert} berechnet werden.
-Außerdem kann das effektive elektrische Feld, das ein ultrarelativistisches Teilchen erfährt, welches den Resonator passiert, berechnet werden und somit Laufzeitfaktor~$\Lambda$ \eqref{eq:laufzeitfaktor} bestimmen.
-Dazu muss neben der harmonischen Zeitabhängigkeit auch die Phasenbeziehung (vgl.\ Abb.\ \ref{fig:phasor}) zwischen den einzelnen Zellen beachtet werden.
+Außerdem kann das effektive elektrische Feld, das ein ultrarelativistisches Teilchen erfährt, welches den Resonator passiert, berechnet und somit der Laufzeitfaktor~$\Lambda$ aus Gleichung \eqref{eq:laufzeitfaktor} bestimmt werden.
+Dazu muss neben der harmonischen Zeitabhängigkeit auch die Phasenbeziehung (vgl.\ Abb.\ \ref{fig:phasenbeziehung}) zwischen den einzelnen Zellen beachtet werden.
 Darüber hinaus wird die Eintrittsphase des Teilchens in den Resonator so gewählt, dass der Laufzeitfaktor~$\Lambda$ maximiert wird.
 
 Dies wurde am Beispiel der $\pi$-Mode des PETRA-III Resonators in Abbildung \ref{fig:bsp_feld_tm010pi_petra3} aufgetragen.
@@ -89,16 +91,19 @@ Im Anhang \ref{app:tm010_felder} wurden die Felder aller vermessenen $\mathrm{TM
 	\label{fig:bsp_feld_tm010pi_petra3}
 \end{figure}
 
-Zusätzlich sollen die longitudinalen Shuntimpedanzen~$R_\mathrm{S}$ dieser Moden bestimmt werden.
-Diese folgen mit Gleichung \eqref{eq:beschleunigungsspannung} und \eqref{eq:shuntimpedanz} durch Integration der auf die Verlustleistung~$P_\mathrm{V}$ normierten Amplitude des elektrischen Feldes~$|\ve_0|$ über die Länge~$L$ des Resonators:
+Schließlich können die charakteristischen Größen der $\mathrm{TM}_{010}$-Moden bestimmt werden, wobei die folgenden Überlegungen auf dem Inhalt von Abschnitt \ref{sec:resonator_charakteristiken} basieren.
+Zunächst erfolgt die Berechnung der longitudinalen Shuntimpedanzen~$R_\mathrm{S}$, indem Gleichung \eqref{eq:beschleunigungsspannung} in \eqref{eq:shuntimpedanz} eingesetzt wird, sodass man
 \begin{align}
 	R_\mathrm{S} = \frac{1}{2} \left( \int_0^L \frac{|\ve_0(z)|}{\sqrt{P_\mathrm{V}}} \, \mathrm{d}z \right)^2
 \end{align}
-Die Integration über die experimentellen Daten erfolgt dabei numerisch durch die Trapezregel.
-Um die effektive Shuntimpedanz der Moden zu bestimmen, muss außerdem der Laufzeitfaktor~$\Lambda$ berechnet werden.
-Mit Gleichung \eqref{eq:laufzeitfaktor}, dem effektiven Feld und der Feldamplitude kann der Laufzeitfaktor berechnet werden.
-Schließlich folgt die effektive Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$ unter Verwendung von Gleichung \ref{eq:eff_shuntimpedanz}.
-Diese Kenngrößen wurden in Tabelle \ref{tab:shuntimpedanzen_tm010} zusammengestellt.
+erhält.
+Demnach kann die Shuntimpedanz durch Integration der (normierten) elektrischen Feldamplitude über die Länge~$L$ des Resonators gewonnen werden.
+Diese Integration, sowie die hierauf Folgenden, erfolgen dabei numerisch durch die Trapezregel.
+Ebenso kann der Laufzeitfaktor~$\Lambda$ als das Verhältnis des Integrals von effektivem Feld zum Integral der Feldamplitude berechnet werden.
+Dieser dient der Berechnung der effektiven Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$, die nun durch Gleichung \eqref{eq:eff_shuntimpedanz} bestimmt werden kann.
+Alternativ kann die effektive Shuntimpedanz durch Integration über das effektive Feld, analog zur Berechnung der Shuntimpedanz, ermittelt werden.
+
+Diese Kenngrößen wurden in Tabelle \ref{tab:shuntimpedanzen_tm010} zusammengestellt.\todo{Umrechnung auf Vakuum}
 \begin{table}[htb]
 	\begin{subtable}{1\textwidth}
 		\centering
