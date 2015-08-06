@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150716211205" modified="D:20150723135455"/>
+<info created="D:20150716211205" modified="D:20150806131044"/>
+<preamble>\usepackage{siunitx}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -1076,5 +1077,140 @@ h
 h
 </path>
 </group>
+<path stroke="black" dash="dashed" pen="0.4">
+373.733 389.406 m
+373.733 320 l
+</path>
+<path stroke="black" dash="dashed" pen="0.4">
+933.501 389.406 m
+933.501 320 l
+</path>
+<path matrix="1 0 0 1 0 -17.406" stroke="black" arrow="normal/small" rarrow="normal/small">
+933.501 337.406 m
+373.733 337.406 l
+</path>
+<text matrix="1 0 0 1 5.78204 -10" transformations="translations" pos="648 332" stroke="black" type="label" width="41.411" height="9.245" depth="0" halign="center" valign="bottom" size="14">$\SI{222}{\centi\metre}$</text>
+<path matrix="1 0 0 1 0.500356 -0.425909" stroke="black" dash="dashed">
+501.854 393.878 m
+501.854 332 l
+</path>
+<path matrix="1 0 0 1 76.1934 -0.425909" stroke="black" dash="dashed">
+501.854 393.878 m
+501.854 332 l
+</path>
+<path matrix="1 0 0 1 34.7144 -32.0869" stroke="black" arrow="normal/small" rarrow="normal/small">
+467.64 363.661 m
+543.333 363.661 l
+</path>
+<text matrix="1 0 0 1 5.8 -8" transformations="translations" pos="648 520" stroke="black" type="label" width="103.944" height="9.962" depth="2.79" halign="center" valign="bottom" size="14">Abstimmstempel</text>
+<group matrix="1 0 0 1 0.0182756 0.574091">
+<text matrix="1 0 0 1 12.3 -3" transformations="translations" pos="528 336" stroke="black" type="label" width="34.387" height="9.245" depth="0" halign="center" valign="baseline" size="14">$\SI{30}{\centi\metre}$</text>
+</group>
+<path stroke="black" arrow="normal/normal">
+596 516 m
+536 496 l
+</path>
+<path stroke="black" pen="0.6" arrow="normal/normal">
+596 516 m
+536 496 l
+</path>
+<path matrix="-1 0 0 1 1307.8 0" stroke="black" pen="0.6" arrow="normal/normal">
+596 516 m
+536 496 l
+</path>
+<text matrix="1 0 0 1 -2.3 4.7" transformations="translations" pos="656 472" stroke="black" type="label" width="87.868" height="9.962" depth="2.79" halign="center" valign="baseline" size="14">Koppelschleife</text>
+<path stroke="black" pen="0.6" arrow="normal/normal">
+653.74 472.501 m
+653.74 429.451 l
+</path>
+<path matrix="1 0 0 1 -1.8 43" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 2.2 43" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 6.2 43" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 10.2 43" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 14.2 43" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 -1.8 36" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 2.2 36" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 6.2 36" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 10.2 36" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 14.2 36" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 -1.814 117.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 2.186 117.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 6.186 117.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 10.186 117.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 14.186 117.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 -1.814 110.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 2.186 110.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 6.186 110.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 10.186 110.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<path matrix="1 0 0 1 14.186 110.345" stroke="black" pen="0.4">
+760 332 m
+762 332 l
+</path>
+<text matrix="1 0 0 1 28.3183 -6.42591" transformations="translations" pos="776 340" stroke="black" type="label" width="89.038" height="9.962" depth="2.79" halign="center" valign="baseline" size="14">Koppelschlitze</text>
+<path stroke="black" pen="0.6" arrow="normal/normal">
+800.02 345.306 m
+779.369 366.335 l
+</path>
+<path stroke="black" pen="0.6" arrow="normal/normal">
+809.356 345.683 m
+776.82 439.9 l
+</path>
 </page>
 </ipe>
