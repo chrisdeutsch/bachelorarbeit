@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150716211205" modified="D:20150806131044"/>
+<info created="D:20150716211205" modified="D:20150806133752"/>
 <preamble>\usepackage{siunitx}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
@@ -1203,14 +1203,23 @@ h
 760 332 m
 762 332 l
 </path>
-<text matrix="1 0 0 1 28.3183 -6.42591" transformations="translations" pos="776 340" stroke="black" type="label" width="89.038" height="9.962" depth="2.79" halign="center" valign="baseline" size="14">Koppelschlitze</text>
+<text matrix="1 0 0 1 -47.6817 -6.42591" transformations="translations" pos="776 340" stroke="black" type="label" width="89.038" height="9.962" depth="2.79" halign="center" valign="baseline" size="14">Koppelschlitze</text>
 <path stroke="black" pen="0.6" arrow="normal/normal">
-800.02 345.306 m
-779.369 366.335 l
+738.464 347.169 m
+756.254 365.946 l
 </path>
 <path stroke="black" pen="0.6" arrow="normal/normal">
-809.356 345.683 m
-776.82 439.9 l
+730.018 347.328 m
+757.424 439.775 l
+</path>
+<text matrix="1 0 0 1 109.318 -6.42591" transformations="translations" pos="776 340" stroke="black" type="label" width="67.577" height="9.962" depth="2.79" halign="center" valign="baseline" size="14">Nasenkegel</text>
+<path stroke="black" pen="0.6" arrow="normal/normal">
+889.877 347.916 m
+904.815 389.937 l
+</path>
+<path matrix="-1 0 0 1 1760.96 0.138274" stroke="black" pen="0.6" arrow="normal/normal">
+889.877 347.916 m
+904.815 389.937 l
 </path>
 </page>
 </ipe>
