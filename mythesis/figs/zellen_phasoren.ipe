@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150803151625" modified="D:20150806160508"/>
+<info created="D:20150803151625" modified="D:20150806165014"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -1207,8 +1207,8 @@ h
 216 144 m
 232 144 l
 </path>
-<text matrix="1 0 0 1 -4 0" transformations="translations" pos="440 568" stroke="black" type="label" width="58.8" height="5.535" depth="1.55" valign="center" size="8">hinl\&quot;aufige Welle</text>
-<text matrix="1 0 0 1 -4 0" transformations="translations" pos="440 536" stroke="black" type="label" width="63.041" height="5.535" depth="1.55" valign="center" size="8">r\&quot;uckl\&quot;aufige Welle</text>
+<text matrix="1 0 0 1 -4 0" transformations="translations" pos="440 568" stroke="black" type="label" width="65.622" height="5.535" depth="0" valign="center" size="8">hinlaufende Welle</text>
+<text matrix="1 0 0 1 -4 0" transformations="translations" pos="440 536" stroke="black" type="label" width="69.863" height="5.535" depth="0" valign="center" size="8">r\&quot;ucklaufende Welle</text>
 <text matrix="1 0 0 1 -4 0" transformations="translations" pos="440 552" stroke="black" type="label" width="49.875" height="7.359" depth="1.55" valign="center" size="8">\&quot;Uberlagerung</text>
 </page>
 </ipe>

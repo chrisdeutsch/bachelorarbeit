@@ -32,7 +32,7 @@ annehmen \cite[S.\ 110]{wangler}. Die Benennung orientiert sich an den Werten vo
 \begin{align}
   \Delta \varphi = 0,\, \frac{1}{6} \pi,\, \frac{1}{3} \pi,\, \frac{1}{2} \pi,\, \frac{2}{3} \pi,\, \frac{5}{6} \pi,\, \pi \eqdot
 \end{align}
-Um die resultierende Phasenbeziehung zwischen den Zellen des Resonators zu erhalten, muss die Superposition von hin- und rückläufiger Welle auf der Resonatorkette beachtet werden.
+Um die resultierende Phasenbeziehung zwischen den Zellen des Resonators zu erhalten, muss die Superposition von hin- und rücklaufender Welle auf der Resonatorkette beachtet werden.
 Diese Überlagerung führt dazu, dass zwischen dem Feld zweier benachbarter Zellen nur Phasendifferenzen von $0$ und $\pi$ möglich sind oder die Felder in einzelnen Zellen durch destruktive Interferenz ausgelöscht werden.
 Für den siebenzelligen PETRA-Resonator wurde diese Phasenbeziehung für alle möglichen Moden in Abbildung \ref{fig:phasenbeziehung} aufgetragen.
 
@@ -120,11 +120,29 @@ Diese Geometrieänderung des Hohlraums führt zu einer Verringerung der Resonanz
 Analog führt ein Abkühlen des Resonators zur Kontraktion desselben, die wiederum eine Erhöhung der Resonanzfrequenz zur Folge hat. Für die vermessenen PETRA-Resonatoren liegt die Verstimmung durch Temperaturänderung bei ungefähr \SI{8}{\kilo\hertz\per\celsius} \cite{desy_petra} und liegt in der gleichen Größenordnung wie die Verschiebung durch den verwendeten Störkörper.
 Aus diesem Grund muss die Temperaturabhängigkeit der Resonanzfrequenz beim Messablauf berücksichtigt werden.
 
+
+
 Sei dazu durch $\nu_0(z)$ die Resonanzfrequenz einer Resonatormode, mit dem Störkörper auf der Position~$z$ entlang der Strahlenachse, gegeben.
 Außerdem sei eine Referenzposition des Störkörpers~$z_\mathrm{ref}$ mit zugehöriger Resonanzfrequenz~$\nu_\mathrm{ref} = \nu_0(z_\mathrm{ref})$ definiert.
 Die somit eingeführten Größen~$\nu_0(z)$ und~$\nu_\mathrm{ref}$ sind jeweils temperaturabhängig.
+Wird eine Messung von $\nu_\mathrm{ref}$ und $\nu_0(z)$ mit zeitlich kurzem Abstand, sodass die Temperaturänderung vernachlässigt werden kann, durchgeführt
+
+
+bei fester Resonatortemperatur durchgeführt und die Differenz~$\nu_0(z) - \nu_\mathrm{ref}$ gebildet.
+Man stellt fest, dass die Differenz 
+
+
+
+Wird eine Messung von $\nu_\mathrm{ref}$ und $\nu_0(z)$ bei fester Resonatortemperatur durchgeführt und die Differenz~$\nu_0(z) - \nu_\mathrm{ref}$ betrachtet, so stellt man fest, dass diese für kleine Temperaturänderungen konstant beibt.
+
+
+
 Wird jedoch die Differenz~$\nu_0(z) - \nu_\mathrm{ref}$ betrachtet, so stellt man fest, dass diese im Hinblick auf typische Temperaturänderungen während einer Messung konstant ist \cite{schedler_pm}\todo{???}.
+
+
 Da die Messung an beiden Positionen nicht instantan erfolgen kann, muss als Anforderung gestellt werden, dass die Temperaturänderung über diesem Zeitraum vernachlässigbar ist.
+
+
 Um dies zu gewährleisten wurden die Messungen hauptsächlich über Nacht durchgeführt, um schnelle Temperaturänderungen durch Sonneneinstrahlung zu vermeiden.
 Es ist praktisch, die Referenzposition des Störkörpers so zu wählen, dass die Frequenz~$\nu_\mathrm{ref}$ der Resonanzfrequenz des ungestörten Resonators entspricht.
 Dies ist der Fall, wenn am Ort des Störkörpers das elektrische Feld verschwindet, wie beispielsweise unmittelbar vor der Kreuzblende am Vakuumflansch des Resonators (vgl.\ Abb.\ \ref{fig:stoerkoerpermessstand}).
