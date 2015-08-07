@@ -40,7 +40,7 @@ Q0 = ufloat(11162.0, 18.0)
 v0 = ufloat(702.509E+6, 0.001E+6)
 
 # Messfehler:
-dv_err = 100.0
+dv_err = 50.0
 pos_err = 0.5
 
 # Berechnung der Störkörperkonstante
@@ -108,11 +108,11 @@ rs = 0.5 * voltage**2
 # Phase definieren TODO: Schön machen
 phase = np.zeros_like(x)
 phase[0:75-7] = 0
-phase[75-7:131-7] = np.pi
+phase[75-7:131-7] = 0
 phase[131-7:192-7] = np.pi
 phase[192-7:254-7] = 0
 phase[254-7:317-7] = np.pi
-phase[317-7:372-7] = np.pi
+phase[317-7:372-7] = 0
 phase[372-7:434] = 0
 
 # Funktion zur Berechnung der effektiven Spannung in Abhängigkeit der Eintritts-
