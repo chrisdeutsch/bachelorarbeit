@@ -4,14 +4,19 @@
 		S[table-format=5.0(3), table-align-uncertainty = true]
 		S[table-format=2.1(3), table-align-uncertainty = true]
 		S[table-format=0.3(1), table-align-uncertainty = true]
-		S[table-format=3.2(2)e1, table-align-uncertainty = true]
+		p{-1mm}
+		S[table-format=2.2]
+		@{ $\pm$ }
+		S[table-format= 1.2]
+		@{\,) $\cdot$ }
+		l
 		}
 	\toprule
-	{$\Delta \varphi$} & {$\nu_0$ / \si{MHz}} & {$Q_0$} & {$R_\mathrm{S}$ / \si{\mega\ohm}} & {$\Lambda$} & {$R_\mathrm{S}^\mathrm{eff}$ / \si{\ohm}} \\
+	{$\Delta \varphi$} & {$\nu_0$ / \si{MHz}} & {$Q_0$} & {$R_\mathrm{S}$ / \si{\mega\ohm}} & {$\Lambda$} & \multicolumn{4}{c}{$R_\mathrm{S}^\mathrm{eff}$ / \si{\ohm}} \\
 	\midrule
-	$\pi$ & 499.67 & 28200+-176 & 41.6+-1.5 & 0.767+-0.001 & 24.47+-0.87e6 \\[0.25em]
-	$\frac{2}{3}\pi$ & 501.17 & 31356+-218 & 37.5+-1.4 & 0.056+-0.001 & 115.3+-4.1e3 \\[0.25em]
-	$\frac{1}{3}\pi$ & 505.43 & 32732+-54 & 42.3+-1.5 & 0.041+-0.001 & 69.8+-2.4e3 \\[0.25em]
-	$0$ & 508.61 & 35445+-59 & 45.4+-1.6 & 0.013+-0.001 & 7.7+-0.6e3 \\
+	$\pi$ & 499.67 & 28200+-176 & 41.6+-1.5 & 0.767+-0.001 & ( & 24.47 & 0.87 & $10^6$ \\[0.25em]
+	$\frac{2}{3}\pi$ & 501.17 & 31356+-218 & 37.5+-1.4 & 0.056+-0.001 & ( & 115.3 & 4.1 & $10^3$ \\[0.25em]
+	$\frac{1}{3}\pi$ & 505.43 & 32732+-54 & 42.3+-1.5 & 0.041+-0.001 & ( & 69.8 & 2.4 & $10^3$ \\[0.25em]
+	$0$ & 508.61 & 35445+-59 & 45.4+-1.6 & 0.013+-0.001 & ( & 7.7 & 0.6 & $10^3$ \\
 	\bottomrule
 \end{tabular}
