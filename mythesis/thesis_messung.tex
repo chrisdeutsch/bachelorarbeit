@@ -120,23 +120,33 @@ Die Kenngrößen der verschiedenen $\mathrm{TM}_{010}$-Resonatormoden und deren 
 	\label{tab:shuntimpedanzen_tm010}
 \end{table}
 
-\subsection{Interpretation}
-nominale Güte, 
+\subsection{Interpretation der Ergebnisse}
+Wie zu erwarten, zeigt die $\pi$-Mode beider Resonatoren mit einem Laufzeitfaktor von \SI{76,7}{\percent} die höchste effektive Shuntimpedanz.
+Dies ist der Fall, da ein ultrarelativistisches Teilchen zum Durchqueren einer Zelle der Länge \SI{30}{\centi\metre} bei einer treibenden Hochfrequenz \SI{499.67}{MHz} genau eine halbe Periode der Hochfrequenz benötigt.
+Durch den Phasensprung von $\pi$ zwischen jeder Zelle bedeutet dies, dass das Teilchen stets ein elektrisches Feld erfährt, welches in dessen Bewegungsrichtung zeigt (vgl.\ Abb.\ in Abschnitt \ref{app:tm010_felder}).
+Im Vergleich dazu sind die restlichen $\mathrm{TM}_{010}$-Moden mit effektiven Shuntimpedanzen der Größenordnung von einigen \si{\kilo\ohm} ungeeignet für die effiziente Beschleunigung geladener Teilchen.
+Dahingehend soll sich die Diskussion auf die $\pi$-Beschleunigermode beschränken.
+
+Laut Herstellerangaben liegt die Güte der siebenzelligen PETRA-Resonatoren im Bereich von \num{29000} bis \num{36000} bei einem Nominalwert von \num{32800} \cite{desy_petra}.
+Somit fällt die Güte von PETRA-III mit \num{29556+-110} in den Bereich der Herstellerangaben.
+Lediglich PETRA-IV mit einer Güte von \num{28200+-176} fällt nicht in diese Grenzen.
+\todo{Beide Resonatoren unterschreiten die nominale Güte, was möglicherweise durch deren Belüftung zu erklären ist.}
+Im Folgenden wird diese Abweichung auch bei den Shuntimpedanzen auftreten, da diese linear Abhängigkeit von der Güte der Resonatormode aufweist.
+Demnach zeigt PETRA-III eine effektive Shuntimpedanz von \SI{25.65+-0.91}{\mega\ohm} und PETRA-IV \SI{24.47+-0.87}{\mega\ohm}.
+Da der Geometriefaktor unabhängig von den Verlusten des Resonators ist, sollte dieser 
+\begin{align}
+	\frac{R_\mathrm{S}^\mathrm{eff}}{Q_0} = \SI{868+-32}{\ohm}
+\end{align}
+Simulation mit MAFIA\texttrademark\footnote{Programm zur numerischen Simulation elektromagnetischer Felder und Vorgänger des \textit{CST Microwave Studio}.} liefert den Geometriefaktor \SI{856}{\ohm}
 
 
 
 
-R über Q:\\
-III: \SI{868+-31}{\ohm}\\
-IV: \SI{868+-32}{\ohm}\\
-Datenblatt: \SI{856}{\ohm} (MAFIA)
-
-Berechnung der charakteristischen Größen des Resonators: Beschleunigungsspannung, Shuntimpedanz und Laufzeitfaktor
-
-\todo{Shuntimpedanzkram (alles was in Python passiert), Gütezunahme mit der Mode (weniger Stromfluss in den Zwischenwänden)}
-\todo{Parameter der Messung}
++ $U_\mathrm{eff}$ bie $P_\mathrm{ELSA}$\\
+-andere Moden\\
 
 
+\todo{Gütezunahme mit der Mode (weniger Stromfluss in den Zwischenwänden)}
 
 \section{Vermessung von Moden höherer Ordnung (PETRA-III)}
 \label{sec:hom_messung}
