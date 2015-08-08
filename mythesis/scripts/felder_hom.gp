@@ -62,13 +62,13 @@ plot './data/HOM/1375/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt
 set output './plots/HOM/1458MHz.tex'
 
 plot './data/HOM/1458/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
-     #'./data/HOM/1458/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+     './data/HOM/1458/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
 
 ### 1460 MHz ###
 set output './plots/HOM/1460MHz.tex'
 
 plot './data/HOM/1460/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
-     #'./data/HOM/1460/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+     './data/HOM/1460/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
 
 ### 1465_L MHz ###
 set output './plots/HOM/1465_L_MHz.tex'

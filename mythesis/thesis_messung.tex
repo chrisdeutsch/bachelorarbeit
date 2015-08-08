@@ -13,7 +13,7 @@
 \label{sec:vorbereitung_resonator}
 %------------------------------------------------------------------------------
 Bevor mit der Störkörpermessung nach Abschnitt \ref{sec:messmethodik} begonnen werden kann, müssen noch Einstellungen am Resonator erfolgen.
-Zum einen wird die Koppelschleife so gedreht, dass eine nahezu kritische Einkopplung ($\kappa \approx 1$) an die $\mathrm{TM}_{010}~\pi$-Mode des Resonators realisiert wird.
+Zum einen wird die Koppelschleife so gedreht, dass eine nahezu kritische Einkopplung ($\kappa \approx 1$) an die $\mathrm{TM}_{010}\text{-}\pi$-Mode des Resonators realisiert wird.
 Außerdem werden beide Abstimmstempel so eingestellt, dass sich eine symmetrische Feldverteilung im Resonator ausbildet.
 Schließlich muss die Beschleunigermode auf ihre Sollfrequenz im Vakuum von $\SI{499.67}{MHz}$ abgestimmt werden.
 Dabei gilt es zu beachten, dass die Luft im Hohlraum des Resonators zu einer zusätzlichen Verstimmung führt.
@@ -55,11 +55,11 @@ Darauf wurde jedoch in dieser Arbeit verzichtet, da mit einem relativen Fehler v
 %------------------------------------------------------------------------------
 Die Bestimmung von Resonanzfrequenz und Güte der Resonatormoden kann anhand des gemessenen Reflexionsspektrums der jeweiligen Resonanz erfolgen.
 Dazu wird eine Kurve gemäß Gleichung \eqref{eq:resonanzkurve} nach der Methode der kleinsten Quadrate an das gemessene Spektrum angepasst.
-Dies wurde, am Beispiel der $\mathrm{TM}_{010}~\pi$-Beschleunigermode von PETRA-III, in Abbildung \ref{fig:guetefit} dargestellt.
+Dies wurde, am Beispiel der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigermode von PETRA-III, in Abbildung \ref{fig:guetefit} dargestellt.
 \begin{figure}[htb]
   \centering
   \input{./plots/guete_fit_pi.tex}
-  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.537}{MHz}$ (Anpassungsfehler vernachlässigbar), Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
+  \caption[Anpassung der Resonanzkurve an das Reflexionsspektrum der $\mathrm{TM}_{010}~\pi$-Mode von PETRA-III]{Anpassung der Resonanzkurve~\eqref{eq:resonanzkurve} an ein gemessenes Reflexionsspektrum der $\mathrm{TM}_{010}\text{-}\pi$-Mode von PETRA-III. Aus Gründen der Übersicht wurde nur jeder 10.\ Messpunkt des VNA aufgetragen. Die Anpassung liefert die Resonanzfrequenz~$\nu_0 = \SI{499.537}{MHz}$ (Anpassungsfehler vernachlässigbar), Güte~$Q_0 = \num{29560 +- 20}$ und den Koppelfaktor~$\kappa = \num{1.013 +- 0.001}$.}
   \label{fig:guetefit}
 \end{figure}
 Um eine bessere Abschätzung der Fehler zu erlauben, wurden zu jeder Resonatormode mehrere Reflexionsspektren aufgenommen und an jedes Spektrum eine Anpassung durchgeführt.
@@ -86,7 +86,7 @@ Im Anhang \ref{app:tm010_felder} wurden die Felder aller vermessenen $\mathrm{TM
 \begin{figure}[h]
 	\centering
 	\input{./plots/PETRA-III/pi.tex}
-	\caption[Elektrische Feldverteilung der $\mathrm{TM}_{010}~\pi$-Beschleunigermode von PETRA-III]{Elektrische Feldverteilung der $\mathrm{TM}_{010}~\pi$-Beschleunigermode von PETRA-III. Die Position~$z$ ist relativ zum Vakuumflansch angegeben.}
+	\caption[Elektrische Feldverteilung der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigermode von PETRA-III]{Elektrische Feldverteilung der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigermode von PETRA-III. Die Position~$z$ ist relativ zum Vakuumflansch angegeben.}
 	\label{fig:bsp_feld_tm010pi_petra3}
 \end{figure}
 
@@ -122,6 +122,7 @@ Die Kenngrößen der verschiedenen $\mathrm{TM}_{010}$-Resonatormoden und deren 
 Berechnung der charakteristischen Größen des Resonators: Beschleunigungsspannung, Shuntimpedanz und Laufzeitfaktor
 
 \todo{Shuntimpedanzkram (alles was in Python passiert), Gütezunahme mit der Mode (weniger Stromfluss in den Zwischenwänden)}
+\todo{Parameter der Messung}
 
 
 
@@ -129,5 +130,9 @@ Berechnung der charakteristischen Größen des Resonators: Beschleunigungsspannu
 \label{sec:hom_messung}
 Außerdem wurden einige Moden höherer Ordnung für den Resonator PETRA-III vermessen.
 
-
+\begin{table}[htb]
+	\centering
+	\input{./tables/petra_3_hom.tex}
+	\caption{PETRA-III Homs}
+\end{table}
 

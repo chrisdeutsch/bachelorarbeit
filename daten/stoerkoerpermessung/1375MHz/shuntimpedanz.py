@@ -57,9 +57,9 @@ alpha_s = 3.0 * (epsilon - 1.0) / (epsilon + 2.0) * epsilon0 * vol_s
 2
 
 # Systematischen Fehler abspalten (Berechne separat für alpha_s + dalpha und -dalpha)
-#alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
+alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
 #alpha_s -= err_alpha_s
-#alpha_s += err_alpha_s
+alpha_s += err_alpha_s
 
 c0 = 299792458.0 # Lichtgeschwindigkeit
 

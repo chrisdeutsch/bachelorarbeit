@@ -57,9 +57,9 @@ alpha_s = 3.0 * (epsilon - 1.0) / (epsilon + 2.0) * epsilon0 * vol_s
 2
 
 # Systematischen Fehler abspalten (Berechne separat für alpha_s + dalpha und -dalpha)
-#alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
+alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
 #alpha_s -= err_alpha_s
-#alpha_s += err_alpha_s
+alpha_s += err_alpha_s
 
 c0 = 299792458.0 # Lichtgeschwindigkeit
 
@@ -108,24 +108,24 @@ rs = 0.5 * voltage**2
 # Phase definieren TODO: Schön machen
 phase = np.zeros_like(x)
 phase[0:44-7] = 0
-phase[44-7:72-7] = np.pi
+phase[44-7:74-7] = np.pi
 
-phase[72-7:100-7] = 0
-phase[100-7:133-7] = np.pi
+phase[74-7:104-7] = 0
+phase[104-7:134-7] = np.pi
 
-phase[133-7:164-7] = np.pi
-phase[164-7:193-7] = 0
+phase[134-7:164-7] = np.pi
+phase[164-7:194-7] = 0
 
-phase[193-7:224-7] = 0
-phase[224-7:-255-7] = np.pi
+phase[194-7:224-7] = 0
+phase[224-7:-254-7] = np.pi
 
-phase[255-7:285-7] = np.pi
-phase[285-7:313-7] = 0
+phase[254-7:286-7] = np.pi
+phase[286-7:314-7] = 0
 
-phase[313-7:340-7] = 0
-phase[340-7:375-7] = np.pi
+phase[314-7:344-7] = 0
+phase[344-7:374-7] = np.pi
 
-phase[375-7:404-7] = 0
+phase[374-7:404-7] = 0
 phase[404-7:434] = np.pi
 
 
