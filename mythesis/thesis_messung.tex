@@ -128,24 +128,37 @@ Im Vergleich dazu sind die restlichen $\mathrm{TM}_{010}$-Moden mit effektiven S
 Dahingehend soll sich die Diskussion auf die $\pi$-Beschleunigermode beschränken.
 
 Laut Herstellerangaben liegt die Güte der siebenzelligen PETRA-Resonatoren im Bereich von \num{29000} bis \num{36000} bei einem Nominalwert von \num{32800} \cite{desy_petra}.
-Somit fällt die Güte von PETRA-III mit \num{29556+-110} in den Bereich der Herstellerangaben.
-Lediglich PETRA-IV mit einer Güte von \num{28200+-176} fällt nicht in diese Grenzen.
-\todo{Beide Resonatoren unterschreiten die nominale Güte, was möglicherweise durch deren Belüftung zu erklären ist.}
-Im Folgenden wird diese Abweichung auch bei den Shuntimpedanzen auftreten, da diese linear Abhängigkeit von der Güte der Resonatormode aufweist.
-Demnach zeigt PETRA-III eine effektive Shuntimpedanz von \SI{25.65+-0.91}{\mega\ohm} und PETRA-IV \SI{24.47+-0.87}{\mega\ohm}.
-Da der Geometriefaktor unabhängig von den Verlusten des Resonators ist, sollte dieser 
+PETRA-IV unterschreitet somit die Untergrenze der Güte um etwa \num{800} und lediglich PETRA-III fällt in den angegebenen Bereich.
+Außerdem unterschreiten beide deutlich die nominale Güte, was möglicherweise darauf zurückzuführen ist, dass beide Hohlräume belüftet waren und sich somit Anlagerungen (Staub, etc.) auf der Kupferoberfläche gebildet haben könnten, die eine Vergrößerung der Verluste des Resonators zur Folge hat.
+Im Folgenden wird diese Abweichung auch bei den Shuntimpedanzen auftreten, da diese eine lineare Abhängigkeit von der Güte der Resonatormode aufweist.
+
+Der Hersteller gibt eine nominale (effektive) Shuntimpedanz von \SI{28.1}{\mega\ohm} an \cite{desy_petra}, welche gemäß der vorigen Erläuterungen nicht erreicht werden kann.
+Ein Vergleich ist dennoch möglich, wenn der Geometriefaktor $R_\mathrm{S}^\mathrm{eff} / Q_0$ der Beschleunigermode betrachtet wird.
+Für beide Resonatoren erhält man den Geometriefaktor der $\pi$-Mode
 \begin{align}
-	\frac{R_\mathrm{S}^\mathrm{eff}}{Q_0} = \SI{868+-32}{\ohm}
+	\frac{R_\mathrm{S}^\mathrm{eff}}{Q_0} = \SI{868+-32}{\ohm} \eqcomma
 \end{align}
-Simulation mit MAFIA\texttrademark\footnote{Programm zur numerischen Simulation elektromagnetischer Felder und Vorgänger des \textit{CST Microwave Studio}.} liefert den Geometriefaktor \SI{856}{\ohm}
+welcher unabhängig von der Verlustleistung des jeweiligen Resonators ist.
+Gemäß der Simulation der Kavität durch den Hersteller mit MAFIA\texttrademark\footnote{Programm zur numerischen Simulation elektromagnetischer Felder und Vorgänger des \textit{CST Microwave Studio\textsuperscript{\textregistered}}.} beträgt der Geometriefaktor \SI{856}{\ohm} \cite{desy_petra} und steht somit in guter Übereinstimmung mit den gemessenen Werten.
+
+Wird eine treibende Hochfrequenzleistung~$P_\mathrm{HF}$ bei kritischer Kopplung (die Verlustleistung~$P_\mathrm{V}$ entspricht dann $P_\mathrm{HF}$) des Resonators angenommen, so erhält man die effektive Beschleunigungsspannung gemäß Gleichung \eqref{eq:eff_shuntimpedanz}
+\begin{align}
+	U_\mathrm{eff} = \sqrt{2 R_\mathrm{S}^\mathrm{eff} P_\mathrm{HF}} \eqdot
+\end{align}
+Wird beispielsweise zum Betrieb der Resonatoren ein $\SI{200}{\kilo\watt}$-Klystron\footnote{Verstärker für Hochfrequenzsignale} genutzt, dessen Leistung durch ein magisches T (Leistungsteiler auf Hohlleiterbasis) gleichmäßig auf beide Resonatoren aufgeteilt wird, so erhält man effektive Beschleunigungsspannungen
+\begin{align}
+	U_\mathrm{eff}^\mathrm{P-III} = \SI{2.265 +- 0.041}{\mega\volt} \qquad U_\mathrm{eff}^\mathrm{P-IV} = \SI{2.212 +- 0.040}{\mega\volt} 
+\end{align}
+unter der Verwendung der gemessenen Shuntimpedanzen.
+Der Vergleich mit den aktuell in ELSA verbauten fünfzelligen Resonatoren vom Typ PETRA mit einer effektiven Shuntimpedanz von \SI{15}{\mega\ohm} liefert bei gleicher eingekoppelter Leistung eine effektive Beschleunigungsspannung $U_\mathrm{eff} = \SI{1.73}{\mega\volt}$.
+Dies zeigt eine wesentlich effizientere Beschleunigung in den siebenzelligen Resonatoren gegenüber den Fünfzelligen und ist der Hauptgrund für die Konstruktion mehrzelliger Beschleunigungsresonatoren.
+
+
+Aufgrund der longitudinalen Fokussierung in Kreisbeschleunigern wird in der Praxis nicht die volle Beschleunigungsspannung genutzt...
 
 
 
-
-+ $U_\mathrm{eff}$ bie $P_\mathrm{ELSA}$\\
 -andere Moden\\
-
-
 \todo{Gütezunahme mit der Mode (weniger Stromfluss in den Zwischenwänden)}
 
 \section{Vermessung von Moden höherer Ordnung (PETRA-III)}
