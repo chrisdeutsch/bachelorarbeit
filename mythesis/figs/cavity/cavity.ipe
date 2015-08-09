@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
-<ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150716211205" modified="D:20150806133752"/>
+<ipe version="70005" creator="Ipe 7.1.5">
+<info created="D:20150716211205" modified="D:20150809094958"/>
 <preamble>\usepackage{siunitx}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
@@ -1212,7 +1212,7 @@ h
 730.018 347.328 m
 757.424 439.775 l
 </path>
-<text matrix="1 0 0 1 109.318 -6.42591" transformations="translations" pos="776 340" stroke="black" type="label" width="67.577" height="9.962" depth="2.79" halign="center" valign="baseline" size="14">Nasenkegel</text>
+<text matrix="1 0 0 1 105.318 -6.42591" transformations="translations" pos="776 340" stroke="black" type="label" width="67.577" height="9.962" depth="2.79" halign="center" valign="baseline" size="14">Nasenkegel</text>
 <path stroke="black" pen="0.6" arrow="normal/normal">
 889.877 347.916 m
 904.815 389.937 l

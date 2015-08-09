@@ -36,7 +36,7 @@ offset = 30.0 # [mm]
 
 
 # Güte und Resonanzfrequenz
-Q0 = ufloat(16043.0, 50.0)
+Q0 = ufloat(16043.0, 62.0)
 v0 = ufloat(1459.944E+6, 0.001E+6)
 
 # Messfehler:
@@ -57,9 +57,9 @@ alpha_s = 3.0 * (epsilon - 1.0) / (epsilon + 2.0) * epsilon0 * vol_s
 2
 
 # Systematischen Fehler abspalten (Berechne separat für alpha_s + dalpha und -dalpha)
-#alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
+alpha_s, err_alpha_s = alpha_s.n, alpha_s.s
 #alpha_s -= err_alpha_s
-#alpha_s += err_alpha_s
+alpha_s += err_alpha_s
 
 c0 = 299792458.0 # Lichtgeschwindigkeit
 
@@ -107,13 +107,24 @@ rs = 0.5 * voltage**2
 
 # Phase definieren TODO: Schön machen
 phase = np.zeros_like(x)
-phase[0:74-7] = 0
-phase[74-7:134-7] = np.pi
+phase[0:42-7] = 0
+phase[42-7:78-7] = np.pi
+
+
+phase[78-7:102-7] = np.pi
+phase[102-7:139-7] = 0
+
+
 phase[134-7:194-7] = 0
-phase[194-7:254-7] = np.pi
+phase[194-7:254-7] = 0
 phase[254-7:314-7] = 0
-phase[314-7:374-7] = np.pi
-phase[374-7:434] = 0
+
+
+phase[314-7:346-7] = np.pi
+phase[346-7:369-7] = 0
+
+phase[369-7:407-7] = 0
+phase[407-7:434] = np.pi
 
 # Funktion zur Berechnung der effektiven Spannung in Abhängigkeit der Eintritts-
 # phase des Teilchens in die Cavity (soll maximiert werden)
