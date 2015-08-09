@@ -153,21 +153,64 @@ unter der Verwendung der gemessenen Shuntimpedanzen.
 Der Vergleich mit den aktuell in ELSA verbauten fünfzelligen Resonatoren vom Typ PETRA mit einer effektiven Shuntimpedanz von \SI{15}{\mega\ohm} liefert bei gleicher eingekoppelter Leistung eine effektive Beschleunigungsspannung $U_\mathrm{eff} = \SI{1.73}{\mega\volt}$.
 Dies zeigt eine wesentlich effizientere Beschleunigung in den siebenzelligen Resonatoren gegenüber den Fünfzelligen und ist der Hauptgrund für die Konstruktion mehrzelliger Beschleunigungsresonatoren.
 
-
-Aufgrund der longitudinalen Fokussierung in Kreisbeschleunigern wird in der Praxis nicht die volle Beschleunigungsspannung genutzt...
+Letztlich sei erwähnt, dass bei der Beschleunigung von ultrarelativistischen Teilchen in Kreisbeschleunigern \todo{Overvoltage Factor?}
 
 
 
 -andere Moden\\
 \todo{Gütezunahme mit der Mode (weniger Stromfluss in den Zwischenwänden)}
 
-\section{Vermessung von Moden höherer Ordnung (PETRA-III)}
+\section{Vermessung von Moden höherer Ordnung}
 \label{sec:hom_messung}
-Außerdem wurden einige Moden höherer Ordnung für den Resonator PETRA-III vermessen.
+Schließlich wurde eine Vermessung von Moden höherer Ordnung von PETRA-III durchgeführt.
+Die Vermessung und Teile der Auswertung dieser Moden erfolgt analog zu Abschnitt \ref{sec:tm010_messung} und soll daher nicht wiederholt werden.
+Die Abweichungen werden im folgenden Abschnitt dargestellt.
+
+\subsection{Auswertung der Messdaten}
+Zur Auswertung vermessenen Feldverteilungen musste zunächst die Phasenbeziehung der Felder in den einzelnen Zellen bestimmt werden.
+Dazu wurden Simulationen der Eigenmoden eines vereinfachten Modells des siebenzelligen PETRA-Resonators \todo{Schedler} mit \textit{CST Microwave Studio\textsuperscript{\textregistered}} (CST) durchgeführt.
+Dadurch das ein vereinfachtes Modell der Kavität genutzt wurde, kam es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
+Darüber hinaus traten Diskrepanzen zwischen simulierten und gemessenen Feldamplituden auf.
+Diese Abweichungen sind unter anderem auf die rudimentäre Modellierung der Nasenkegel und der Abstimmstempel zurückzuführen.
+Dennoch ist eine Identifizierung der meisten vermessenen Resonatormoden anhand charakteristischer Merkmale der Feldverteilung zu vollziehen.
+In Abbildung \ref{fig:cst_sim} wurde exemplarisch die
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\textwidth]{./figs/TM021-CST/1465_R_cut.png}
+	\caption{Simulation des elektrischen Feldes einer der vermessenen $\mathrm{TM}_{021}$-Moden mit der gemessenen Resonanzfrequenz $\nu_0 = \SI{1465.83}{MHz}$. Gezeigt ist der Querschnitt des Modells mit der Strahlenachse in der Ebene. Die Farbe/Größe zeigt Feldstärke. Phase maximalen elektrischen Feldes.}
+	\label{fig:cst_sim}
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\input{./plots/HOM/1465_R_MHz.tex}
+	\caption{Kram2}
+	\label{fig:ex_tm021_mode}
+\end{figure}	
 
 \begin{table}[htb]
 	\centering
 	\input{./tables/petra_3_hom.tex}
 	\caption{PETRA-III Homs}
 \end{table}
+
+\subsection{Interpretation der Ergebnisse}
+
+Interpretation:\\
++ Auflösungsvermögen\\
+- für HOM Vermessung besser kleinerer Störkörper \textrightarrow Temperaturstabilisierung von Resonator und VNA nötig!\\
+
++ Phasensprünge (vgl.\ mit realem Fall)
++ Wieso sieht man die Moden mit Feld = 0 ?
++ Was ist mit den Scheiß Nullfeldern?
+
+
+
+
 
