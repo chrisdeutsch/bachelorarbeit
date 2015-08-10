@@ -70,7 +70,7 @@ Da die Resonanzfrequenz der Moden mit der Temperatur der Kavität schwankt, wird
 \section{Vermessung der $\mathrm{TM}_{010}$-Resonatormoden}
 \label{sec:tm010_messung}
 %------------------------------------------------------------------------------
-Die folgenden Abschnitte widmen sich der Auswertung der Störkörpermessungen an den $\mathrm{TM}_{010}$-Resonatormoden von PETRA-III und -IV, welche gemäß Abschnitt \ref{sec:messmethodik} durchgeführt wurden.
+Die folgenden Abschnitte widmen sich der Auswertung der Störkörpermessungen an den $\mathrm{TM}_{010}$-Resonatormoden von PETRA-III und PETRA-IV, welche gemäß Abschnitt \ref{sec:messmethodik} durchgeführt wurden.
 Für beide Resonatoren wurden die $\pi,\, 2/3~\pi, \, 1/3~\pi$ und $0$-Moden vermessen.
 Die restlichen Moden der siebenzelligen Resonatorkette, die nach den Erläuterungen in Abschnitt \ref{sec:petra_resonator} erwartet werden, konnten nicht vermessen werden.
 Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010}, \ref{fig:phasenbeziehung}) und daher nicht oder nur schwach mit der Koppelschleife angeregt werden können.
@@ -129,7 +129,7 @@ Dahingehend soll sich die Diskussion auf die $\pi$-Beschleunigermode beschränke
 
 Laut Herstellerangaben liegt die Güte der siebenzelligen PETRA-Resonatoren im Bereich von \num{29000} bis \num{36000} bei einem Nominalwert von \num{32800} \cite{desy_petra}.
 PETRA-IV unterschreitet somit die Untergrenze der Güte um etwa \num{800} und lediglich PETRA-III fällt in den angegebenen Bereich.
-Außerdem unterschreiten beide deutlich die nominale Güte, was möglicherweise darauf zurückzuführen ist, dass beide Hohlräume belüftet waren und sich somit Anlagerungen (Staub, etc.) auf der Kupferoberfläche gebildet haben könnten, die eine Vergrößerung der Verluste des Resonators zur Folge hat.
+Außerdem unterschreiten beide deutlich die nominale Güte, was möglicherweise darauf zurückzuführen ist, dass beide Hohlräume belüftet waren und sich somit Anlagerungen (Staub, etc.) auf der Kupferoberfläche gebildet haben könnten, die eine Vergrößerung der Verluste des Resonators zur Folge haben.
 Im Folgenden wird diese Abweichung auch bei den Shuntimpedanzen auftreten, da diese eine lineare Abhängigkeit von der Güte der Resonatormode aufweist.
 
 Der Hersteller gibt eine nominale (effektive) Shuntimpedanz von \SI{28.1}{\mega\ohm} an \cite{desy_petra}, welche gemäß der vorigen Erläuterungen nicht erreicht werden kann.
@@ -156,16 +156,18 @@ Dies zeigt eine wesentlich effizientere Beschleunigung in den siebenzelligen Res
 \section{Vermessung von Moden höherer Ordnung}
 \label{sec:hom_messung}
 Schließlich wurde eine Vermessung von Moden höherer Ordnung von PETRA-III durchgeführt.
+Eine Vorauswahl der zu vermessenen Moden wurde dabei anhand deren Güte getroffen, so dass nur Resonanzen mit Güten der Größenordnung $10^4$ und größer in Betrachtung gezogen wurden.
+Außerdem wurde ein Schwerpunkt auf die $\mathrm{TM}_{021}$-Mode bei ca. \SI{1.46}{GHz} gesetzt, da diese gemäß \cite{schedler} eine effektive Shuntimpedanz in der Größenordnung der Fundamentalmode besitzt.
 Die Vermessung und Teile der Auswertung dieser Moden erfolgt analog zu Abschnitt \ref{sec:tm010_messung} und soll daher nicht wiederholt werden.
 Die Abweichungen werden im folgenden Abschnitt dargestellt.
 
 \subsection{Auswertung der Messdaten}
-Zur Auswertung vermessenen Feldverteilungen musste zunächst die Phasenbeziehung der Felder in den einzelnen Zellen bestimmt werden.
-Dazu wurden Simulationen der Eigenmoden eines vereinfachten Modells des siebenzelligen PETRA-Resonators \todo{Schedler} mit \textit{CST Microwave Studio\textsuperscript{\textregistered}} (CST-MWS) durchgeführt.
-Dadurch das ein vereinfachtes Modell der Kavität genutzt wurde, kam es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
-Darüber hinaus traten Diskrepanzen zwischen simulierten und gemessenen Feldamplituden auf.
+Zur Auswertung vermessenen Feldverteilungen muss zunächst die Phasenbeziehung der Felder in den einzelnen Zellen bestimmt werden.
+Dazu werden Simulationen der Eigenmoden eines vereinfachten Modells des siebenzelligen PETRA-Resonators \todo{Schedler} mit \textit{CST Microwave Studio\textsuperscript{\textregistered}} (CST-MWS) durchgeführt.
+Dadurch das ein vereinfachtes Modell der Kavität genutzt wird, kommt es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
+Darüber hinaus treten Diskrepanzen zwischen simulierten und gemessenen Feldamplituden auf.
 Diese Abweichungen sind unter anderem auf die rudimentäre Modellierung der Nasenkegel und der Abstimmstempel zurückzuführen.
-Außerdem wurde die Zelle der Einkopplung ohne Koppelschleife modelliert.
+Außerdem ist die Zelle der Einkopplung ohne Koppelschleife modelliert.
 Dennoch ist eine Identifizierung der meisten vermessenen Resonatormoden anhand charakteristischer Merkmale der Feldverteilung zu vollziehen.
 In Abbildung \ref{fig:cst_sim_tm111} wurde exemplarisch die elektrische Feldstärke der vermessenen $\mathrm{TM}_{111}$-Mode bei fester Phase aufgetragen. 
 \begin{figure}[h]
@@ -175,26 +177,30 @@ In Abbildung \ref{fig:cst_sim_tm111} wurde exemplarisch die elektrische Feldstä
 	\label{fig:cst_sim_tm111}
 \end{figure}
 Ein wichtiges Merkmal ist das Verschwinden des elektrischen Feldes zwischen Zellen mit einem Phasensprung des elektrischen Feldes von $\pi$.
-Dies ist zwischen der zweiten und dritten Zelle in Abbildung \ref{fig:cst_sim_tm111} zu beobachten und wurde konnte zur eindeutigen Identifikation der meisten Resonatormoden und deren Phasenbeziehung genutzt werden.
-Für zwei der vermessenen Moden war keine eindeutige Bestimmung der Phasenbeziehung möglich, weshalb dort der Fall höchster Shuntimpedanz betrachtet wurde.
+Dies ist zwischen der zweiten und dritten Zelle in Abbildung \ref{fig:cst_sim_tm111} zu beobachten und kann zur eindeutigen Identifikation der meisten Resonatormoden und deren Phasenbeziehung genutzt werden.
+Für zwei der vermessenen Moden ist keine eindeutige Bestimmung der Phasenbeziehung möglich, weshalb dort der Fall höchster effektiver Shuntimpedanz betrachtet wird.
 
-Für Moden höherer Ordnung können gemäß Abschnitt \ref{sec:em_felder_in_resonatoren} Vorzeichenwechsel des elektrischen Feldes in den Zellen auftreten.\todo{Den Kram erklären}
+Für Moden höherer Ordnung können gemäß Abschnitt \ref{sec:em_felder_in_resonatoren} auch $\pi$-Phasensprünge innerhalb einer Zelle stattfinden (z.\ B.\ bei den $\mathrm{TM}_{021}$-Moden), welche ebenfalls bei der Auswertung beachtet werden müssen.
 
-Die restliche Auswertung folgt analog zu \ref{sec:tm010_messung} und die Ergebnisse wurden in Tabelle \ref{tab:shuntimpedanzen_hom} zusammengefasst.
+Die restliche Auswertung folgt analog zu Abschnitt \ref{sec:tm010_messung} und die Ergebnisse wurden in Tabelle \ref{tab:shuntimpedanzen_hom} dargestellt.
 Die Darstellungen der elektrischen Felder wurde in Abschnitt \ref{app:hom_felder} zusammengefasst.
 \begin{table}[htb]
 	\centering
 	\input{./tables/petra_3_hom.tex}
-	\caption{PETRA-III Homs}
+	\caption{Longitudinale/Transversale Shuntimpedanzen der vermessenen Moden höherer Ordnung von PETRA-III. Die Resonanzfrequenz $\nu_0$ wurde gemäß Abschnitt \ref{sec:vorbereitung_resonator} auf die Frequenz des evakuierten Resonators umgerechnet.}
 	\label{tab:shuntimpedanzen_hom}
 \end{table}
 
 
 \subsection{Interpretation der Ergebnisse}
+Beim Betrachten der Feldverteilungen in Abschnitt \ref{app:hom_felder} fällt auf, dass es teilweise zu Sprüngen des effektiven elektrischen Feldes kommt.
+Diese Sprünge entstehen an Stellen an denen das elektrische Feld einen Phasensprung vollzieht und ist zurückzuführen auf das begrenzte Auflösungsvermögen des verwendeten Störkörpers.
+Eine Möglichkeit diese Sprünge zu Vermindern ist die Verwendung eines kleineren Störkörpers, was jedoch mit einer reduzierten Frequenzverschiebung zusammenhängt und unter Umständen eine Temperaturstabilisierung von Resonator und VNA voraussetzt.
 
-Interpretation:\\
-+ Auflösungsvermögen\\
-- für HOM Vermessung besser kleinerer Störkörper \textrightarrow Temperaturstabilisierung von Resonator und VNA nötig!\\
+
+
+
+
 
 + Phasensprünge (vgl.\ mit realem Fall)
 + Wieso sieht man die Moden mit Feld = 0 ?
