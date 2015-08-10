@@ -2,11 +2,27 @@
 \chapter{Einleitung}
 \label{sec:einleitung}
 %==============================================================================
-\todo{Klare Erläuterung der Zielsetzung dieser Bachelorarbeit}
 
 \section{ELSA}
+Die Elektronen-Stretcher-Anlage ELSA am physikalischen Institut der Universität Bonn ist eine dreistufige Beschleunigeranlage für Elektronen.
+In der ersten Stufe werden die Elektronen durch den Linearbeschleuniger LINAC2 auf eine Energie von \SI{26}{MeV} beschleunigt, wobei wahlweise unpolarisierte oder spinpolarisierte Elektronen genutzt werden können.
+Anschließend wird der Elektronenstrahl in ein Booster-Synchrotron injiziert, welches die Elektronenpakete (engl.\ Bunches) auf Energien bis zu \SI{1.2}{GeV} beschleunigt.
+In der letzten Stufe folgt die Injektion in den Stretcherring, in dem die Beschleunigung finale Energien von bis zu \SI{3.2}{GeV} vollzogen wird.
+Schließlich können die (spinpolarisierten) Elektronen mit Strahlströmen von bis zu \SI{20}{mA} einem von zwei Hadronenexperimenten bereitgestellt werden.
 
-\section{Neue HF}
-\cite{schedler}
 
-\section{Multibunch-Moden (Motivation)}
+\section{Erweiterung des maximalen Strahlstroms an ELSA}
+Um den Hadronenexperimenten höhere Strahlintensitäten bereitstellen zu können, ist eine Erweiterung des Strahlstroms auf \SI{200}{mA} geplant.
+Derzeitig wird der maximale Strahlstrom durch die begrenzte Hochfrequenzleistung der HF-Station des Stretcherrings limitiert \cite{schedler}.
+Aktuell besteht diese aus einem \todo{P-?}Klystron\footnote{Verstärker für Hochfrequenzsignale}, welches zwei fünfzellige Hohlraumresonatoren vom Typ PETRA treibt.
+Eine Erweiterung des Stretcherrings durch eine zweite HF-Station soll schließlich Strahlströme von \SI{200}{mA} ermöglichen.
+Diese Station wird aus zwei siebenzelligen Hohlraumresonatoren vom Typ PETRA (detaillierte Beschreibung des Resonators folgt in Abschnitt \ref{sec:petra_resonator}) und einem weiteren Klystron bestehen.
+
+\section{Zielsetzung}
+Im Rahmen dieser Erweiterung und der vorliegenden Arbeit sollen die elektrischen Felder in den siebenzelligen PETRA-Resonatoren charakterisiert werden.
+Dazu kann die Methode der resonanten Störkörpermessung, welche in Abschnitt \ref{sec:resonante_stoerkoerpermessung} eingeführt wird, genutzt werden.
+Ziel dieser Arbeit ist die Bestimmung des elektrischen Feldes verschiedener Moden der Resonatoren und die folgliche Bestimmung derer Shuntimpedanzen\footnote{Maß für die Beschleunigungseffizienz geladener Teilchen einer Resonatormode}.
+Insbesondere wird dabei die Fundamentalmode\footnote{Resonatormode mit der niedrigsten Resonanzfrequenz}, die der Beschleunigung der ultrarelativistischen Elektronen im Stretcherring dient, untersucht.
+Darüber hinaus werden noch einige Moden höherer Ordnung\footnote{Erklärung} betrachtet, welche durch die periodischen Elektronenpakete im Beschleuniger angeregt werden können.
+Die Rückwirkung solcher Moden auf die Bunches kann zur Ausbildung von sog.\ Multi-Bunch-Instabilitäten führen, welche durch aktive oder passive Methoden gedämpft werden müssen und daher ebenfalls von Interesse sind.
+Insbesondere liegt der Schwerpunkt auf den $\mathrm{TM}_{021}$-Moden, die gemäß Simulationen in \cite{schedler} Shuntimpedanzen der Größenordnung der Fundamentalmode aufweisen und somit ein signifikante Quelle für die Anregung von Multi-Bunch-Instabilitäten sein können.
