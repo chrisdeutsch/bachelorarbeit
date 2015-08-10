@@ -164,16 +164,16 @@ Die Abweichungen werden im folgenden Abschnitt dargestellt.
 \subsection{Auswertung der Messdaten}
 Zur Auswertung vermessenen Feldverteilungen muss zunächst die Phasenbeziehung der Felder in den einzelnen Zellen bestimmt werden.
 Dazu werden Simulationen der Eigenmoden eines vereinfachten Modells des siebenzelligen PETRA-Resonators \todo{Schedler} mit \textit{CST Microwave Studio\textsuperscript{\textregistered}} (CST-MWS) durchgeführt.
-Dadurch das ein vereinfachtes Modell der Kavität genutzt wird, kommt es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
+Dadurch dass ein vereinfachtes Modell der Kavität genutzt wird, kommt es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
 Darüber hinaus treten Diskrepanzen zwischen simulierten und gemessenen Feldamplituden auf.
 Diese Abweichungen sind unter anderem auf die rudimentäre Modellierung der Nasenkegel und der Abstimmstempel zurückzuführen.
 Außerdem ist die Zelle der Einkopplung ohne Koppelschleife modelliert.
 Dennoch ist eine Identifizierung der meisten vermessenen Resonatormoden anhand charakteristischer Merkmale der Feldverteilung zu vollziehen.
-In Abbildung \ref{fig:cst_sim_tm111} wurde exemplarisch die elektrische Feldstärke der vermessenen $\mathrm{TM}_{111}$-Mode bei fester Phase aufgetragen. 
+In Abbildung \ref{fig:cst_sim_tm111} wurde das elektrische Feld (qualitativ) der vermessenen $\mathrm{TM}_{111}$-Mode zu einem festen Zeitpunkt aufgetragen. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.0\textwidth]{./figs/TM111-CST/TM111_cut.png}
-	\caption{Simulation des elektrischen Feldes durch CST-MWS. Gezeigt ist der Querschnitt des Resonator-Modells mit der Strahlenachse in der Ebene. $\mathrm{TM}_{111}$-Mode mit der gemessenen Resonanzfrequenz $\nu_0 = \SI{1047.23}{MHz}$. \todo{Caption Schön}}
+	\caption{Qualitative Darstellung des elektrischen Feldes der $\mathrm{TM}_{111}$-Mode zu einem festen Zeitpunkt (Simulation durch CST-MWS). Gezeigt ist der Querschnitt des Resonator-Modells mit der Strahlenachse in der Ebene.}
 	\label{fig:cst_sim_tm111}
 \end{figure}
 Ein wichtiges Merkmal ist das Verschwinden des elektrischen Feldes zwischen Zellen mit einem Phasensprung des elektrischen Feldes von $\pi$.
@@ -196,6 +196,12 @@ Die Darstellungen der elektrischen Felder wurde in Abschnitt \ref{app:hom_felder
 Beim Betrachten der Feldverteilungen in Abschnitt \ref{app:hom_felder} fällt auf, dass es teilweise zu Sprüngen des effektiven elektrischen Feldes kommt.
 Diese Sprünge entstehen an Stellen an denen das elektrische Feld einen Phasensprung vollzieht und ist zurückzuführen auf das begrenzte Auflösungsvermögen des verwendeten Störkörpers.
 Eine Möglichkeit diese Sprünge zu Vermindern ist die Verwendung eines kleineren Störkörpers, was jedoch mit einer reduzierten Frequenzverschiebung zusammenhängt und unter Umständen eine Temperaturstabilisierung von Resonator und VNA voraussetzt.
+
+Entgegen der Erwartungen konnte keine $\mathrm{TM}_{021}$-Mode mit effektiver Shuntimpedanze in der Größenordnung der Fundamentalmode gefunden werden.
+
+
+
+Die höchste effektive Shuntimpedanz der vermessenen Resonatormoden zeigt die $\mathrm{TE}_{111}$-Mode mit \SI{326+-11}{\kilo\ohm} (transversal).
 
 
 
