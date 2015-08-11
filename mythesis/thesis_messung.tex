@@ -200,14 +200,20 @@ Bei der Bestimmung der Shuntimpedanzen durch Integration stellen die Sprungstell
 Dennoch stellt die Verwendung eines kleineren Störkörpers eine Möglichkeit dar, die Sprünge zu Vermindern.
 Jedoch steht dies mit einer reduzierten Frequenzverschiebung zusammen und erfordert unter Umständen eine Temperaturstabilisierung von Resonator und VNA.
 
-Ferner fällt auf, dass kleine elektrische Felder nicht gut aufgelöst werden können, da der Zusammenhang
+Ferner fällt auf, dass kleine elektrische Feldamplituden nicht gut aufgelöst werden können.
+Dies ist zurückzuführen auf das begrenzte (Frequenz-)Auflösungsvermögen des VNA und der Abhängigkeit der (normierten) elektrischen Feldamplitude von der Frequenzverschiebung $\Delta \omega$ durch den Störkörper:
 \begin{align}
-	\frac{|\ve_0|}{\sqrt{P_\mathrm{V}}} \propto \sqrt{\Delta \omega}
+	\frac{|\ve_0|}{\sqrt{P_\mathrm{V}}} \propto \sqrt{\Delta \omega} \eqdot
 \end{align}
-und die endliche Anzahl der Messpunkte des VNA keine beliebig kleinen Frequenzverschiebung 
+Dies ist auch der Grund weshalb einige der $\mathrm{TM}_{021}$-Moden mit Frequenzen von  trotz scheinbar verschwindendem elektrischem Feld in der mittleren Resonatorzelle (vgl.\ Abb.\ \ref{fig:tm021_1458})(und damit auch magnetischem Feld) eine Kopplung stattfinden konnte.
 
-
+Schließlich sollen die effektiven Shuntimpedanzen der einzelnen Moden diskutiert werden.
+Die größte effektive Shuntimpedanz zeigt die $\mathrm{TE_{111}}$-Mode mit $R_\mathrm{S}^\mathrm{eff} = \SI{326 +- 11}{\kilo\ohm}$ (transversal), was einem Geometriefaktor von \SI{29.21 +- 0.05}{\ohm} entspricht.
 Entgegen der Erwartungen konnte keine $\mathrm{TM}_{021}$-Mode mit einer effektiven Shuntimpedanz in der Größenordnung der Fundamentalmode ($R_\mathrm{S}^\mathrm{eff} \approx \SI{25}{\mega\ohm}$) gefunden werden.
+Die höchste effektive Shuntimpedanz der $\mathrm{TM}_{021}$-Moden zeigt die Mode mit der Frequenz \SI{1465.83}{MHz} mit einer effektiven Shuntimpedanz von $\SI{183.0 +- 6.4}{\kilo\ohm}$
+
+
+
 Die Resonanz bei $\nu_0 = \SI{1465.83}{MHz}$ zeigt die größte effektive Shuntimpedanz der vermessenen $\mathrm{TM}_{021}$-Moden mit $R_\mathrm{S}^\mathrm{eff} = \SI{183.0 +- 6.4}{\kilo\ohm}$ und liegt somit zwei Größenordnung unterhalb der Fundamentalmode.
 
 
