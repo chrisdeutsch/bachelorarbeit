@@ -164,12 +164,12 @@ Die Abweichungen werden im folgenden Abschnitt dargestellt.
 \subsection{Auswertung der Messdaten}
 Zur Auswertung vermessenen Feldverteilungen muss zunächst die Phasenbeziehung der Felder in den einzelnen Zellen bestimmt werden.
 Dazu werden Simulationen der Eigenmoden eines vereinfachten Modells des siebenzelligen PETRA-Resonators \todo{Schedler} mit \textit{CST Microwave Studio\textsuperscript{\textregistered}} (CST-MWS) durchgeführt.
-Dadurch dass ein vereinfachtes Modell der Kavität genutzt wird, kommt es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
+Aufgrund der Tatsache, dass ein vereinfachtes Modell der Kavität genutzt wird, kommt es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
 Darüber hinaus treten Diskrepanzen zwischen simulierten und gemessenen Feldamplituden auf.
 Diese Abweichungen sind unter anderem auf die rudimentäre Modellierung der Nasenkegel und Abstimmstempel zurückzuführen.
 Außerdem ist die Zelle der Einkopplung ohne Koppelschleife modelliert.
 Dennoch ist eine Identifizierung der meisten vermessenen Resonatormoden anhand charakteristischer Merkmale der Feldverteilung zu vollziehen.
-In Abbildung \ref{fig:cst_sim_tm111} wurde das elektrische Feld (qualitativ) der vermessenen $\mathrm{TM}_{111}$-Mode zu einem festen Zeitpunkt aufgetragen. 
+In Abbildung \ref{fig:cst_sim_tm111} wurden exemplarisch die (qualitativen) Ergebnisse einer Simulation der vermessenen $\mathrm{TM}_{111}$-Mode durch CST-MWS aufgetragen. 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}{1\textwidth}
@@ -182,7 +182,7 @@ In Abbildung \ref{fig:cst_sim_tm111} wurde das elektrische Feld (qualitativ) der
 		\hspace*{-8mm}\input{./plots/tm111_abs_sim.tex}
 		\caption{Amplitude des elektrischen Feldes in Abhängigkeit der Position auf der Strahlenachse.}
 	\end{subfigure}
-	\caption{Simulation der $\mathrm{TM}_{111}$-Eigenmode durch CST-MWS.}
+	\caption{Simulation der vermessenen $\mathrm{TM}_{111}$-Eigenmode durch CST-MWS.}
 	\label{fig:cst_sim_tm111}
 \end{figure}
 Ein wichtiges Merkmal ist das Verschwinden des elektrischen Feldes zwischen Zellen mit einem Phasensprung des elektrischen Feldes von $\pi$.
@@ -215,12 +215,16 @@ Ferner ist die Auflösung mit der die Amplitude des elektrischen Feldes bestimmt
 \frac{|\ve_0|}{\sqrt{P_\mathrm{V}}} \propto \sqrt{\Delta \omega}
 \end{align}
 und der konstanten Frequenzauflösung des VNA beschränkt.
-Dies äußert sich in einer Abnahme der Auflösungsvermögens bei kleinen Frequenzverschiebungen~$\Delta \omega$, was dazu führt, dass
+Dies führt zu einer Abnahme des Auflösungsvermögens bei kleinen Amplituden des elektrischen Feldes (oder kleinen Frequenzverschiebungen~$\Delta \omega$).
+Dadurch kann an manche Moden mit scheinbar verschwindendem elektrischen Feld (und damit auch magnetischem Feld) in der mittleren Resonatorzelle (vgl.\ Abb.\ \ref{fig:tm021_1458} ff.) eine Kopplung stattfinden.
+Der Grund dafür ist, dass in der mittleren Zelle ein elektrisches Feld existiert, welches unterhalb der Auflösungsgrenze der Messung fällt.
 
-Dies ist auch der Grund weshalb einige der $\mathrm{TM}_{021}$-Moden mit Frequenzen von  trotz scheinbar verschwindendem elektrischem Feld in der mittleren Resonatorzelle (vgl.\ Abb.\ \ref{fig:tm021_1458})(und damit auch magnetischem Feld) eine Kopplung stattfinden konnte.
+Abschließend soll die Diskussion der effektiven Shuntimpedanzen der einzelnen Moden folgen.
+Die größte effektive Shuntimpedanz der im Rahmen dieser Arbeit vermessenen Moden zeigt die $\mathrm{TE_{111}}$-Mode
 
-Schließlich sollen die effektiven Shuntimpedanzen der einzelnen Moden diskutiert werden.
-Die größte effektive Shuntimpedanz zeigt die $\mathrm{TE_{111}}$-Mode mit $R_\mathrm{S}^\mathrm{eff} = \SI{326 +- 11}{\kilo\ohm}$ (transversal), was einem Geometriefaktor von \SI{29.21 +- 0.05}{\ohm} entspricht.
+
+
+Die größte effektive Shuntimpedanz zeigt die  mit $R_\mathrm{S}^\mathrm{eff} = \SI{326 +- 11}{\kilo\ohm}$ (transversal), was einem Geometriefaktor von \SI{29.21 +- 0.05}{\ohm} entspricht.
 Entgegen der Erwartungen konnte keine $\mathrm{TM}_{021}$-Mode mit einer effektiven Shuntimpedanz in der Größenordnung der Fundamentalmode ($R_\mathrm{S}^\mathrm{eff} \approx \SI{25}{\mega\ohm}$) gefunden werden.
 Die höchste effektive Shuntimpedanz der $\mathrm{TM}_{021}$-Moden zeigt die Mode mit der Frequenz \SI{1465.83}{MHz} mit einer effektiven Shuntimpedanz von $\SI{183.0 +- 6.4}{\kilo\ohm}$
 

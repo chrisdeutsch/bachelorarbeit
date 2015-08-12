@@ -29,7 +29,7 @@ load './scripts/gnuplot_linestyles.gp'
 ### HEADER ENDE
 filename = "./data/spektrum_tm010.tsv"
 
-plot filename u ($1/1.0e6):2 smooth unique ls 1 t'Spektrum'
+plot filename u ($1/1.0e6):2 smooth unique ls 1 t''
 
 ### FOOTER START
 unset output
