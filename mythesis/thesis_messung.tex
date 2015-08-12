@@ -42,7 +42,7 @@ Es folgt die Störkörperkonstante
 	\alpha_\mathrm{s} = \SI{2.99 +- 0.11e-17}{\ampere\second\metre\squared\per\volt} \eqcomma
 	\label{eq:stoerkoerperkonstante_ptfe}
 \end{align}
-wobei das Volumen der zentrischen Bohrung beachtet wurde.
+wobei das fehlende Volumen der zentrischen Bohrung beachtet wurde.
 
 Bei der Bestimmung der elektrischen Felder gemäß Gleichung \eqref{eq:skm_e_feld_normiert}, wirkt der Fehler der Störkörperkonstanten systematisch auf das resultierende Feld.
 Dieser systematische Einfluss muss insbesondere bei der Integration des Feldes über die Störkörperposition (Bestimmung von Beschleunigungsspannung und Shuntimpedanz) gesondert betrachtet werden.
@@ -73,7 +73,7 @@ Da die Resonanzfrequenz der Moden mit der Temperatur der Kavität schwankt, wird
 Die folgenden Abschnitte widmen sich der Auswertung der Störkörpermessungen an den $\mathrm{TM}_{010}$-Resonatormoden von PETRA-III und PETRA-IV, welche gemäß Abschnitt \ref{sec:messmethodik} durchgeführt wurden.
 Für beide Resonatoren wurden die $\pi,\, 2/3~\pi, \, 1/3~\pi$ und $0$-Moden vermessen.
 Die restlichen Moden der siebenzelligen Resonatorkette, die nach den Erläuterungen in Abschnitt \ref{sec:petra_resonator} erwartet werden, konnten nicht vermessen werden.
-Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010}, \ref{fig:phasenbeziehung}) und daher nicht oder nur schwach mit der Koppelschleife angeregt werden können.
+Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010}, \ref{fig:phasenbeziehung}) und daher nicht oder nur schwach über die Koppelschleife angeregt werden können.
 Die Resonatoren wurden mit einer Schrittweite des Störkörpers von \SI{5}{\milli\metre} vermessen, was \num{60} Messpunkten pro Zelle entspricht.
 Diese Schrittweite liegt unterhalb des Auflösungsvermögens, welches mit dem Störkörper mit dem Durchmesser von ca.\ \SI{2}{\centi\metre} erreicht werden kann.
 
@@ -99,7 +99,7 @@ Zunächst erfolgt die Berechnung der longitudinalen Shuntimpedanzen~$R_\mathrm{S
 \end{align}
 erhält.
 Demnach kann die Shuntimpedanz durch Integration der (normierten) elektrischen Feldamplitude über die Länge~$L$ des Resonators gewonnen werden.
-Diese Integration, sowie die hierauf Folgenden, erfolgen dabei numerisch durch die Trapezregel.
+Diese Integration, sowie die hierauf folgenden Integrationen, erfolgen dabei numerisch durch die Trapezregel.
 Ebenso kann der Laufzeitfaktor~$\Lambda$ als das Verhältnis des Integrals von effektivem Feld zum Integral der Feldamplitude berechnet werden.
 Dieser dient der Berechnung der effektiven Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$, die nun durch Gleichung \eqref{eq:eff_shuntimpedanz} bestimmt werden kann.
 Alternativ kann die effektive Shuntimpedanz durch Integration über das effektive Feld, analog zur Berechnung der Shuntimpedanz, ermittelt werden.
@@ -122,7 +122,7 @@ Die Kenngrößen der verschiedenen $\mathrm{TM}_{010}$-Resonatormoden und deren 
 
 \subsection{Vergleich und Interpretation der Ergebnisse}
 Wie zu erwarten, zeigt die $\pi$-Mode beider Resonatoren mit einem Laufzeitfaktor von \SI{76,7}{\percent} die höchste effektive Shuntimpedanz.
-Dies ist der Fall, da ein ultrarelativistisches Teilchen zum Durchqueren einer Zelle der Länge \SI{30}{\centi\metre} bei einer treibenden Hochfrequenz \SI{499.67}{MHz} genau eine halbe Periode der Hochfrequenz benötigt.
+Dies ist der Fall, da ein ultrarelativistisches Teilchen zum Durchqueren einer Zelle der Länge \SI{30}{\centi\metre} bei einer treibenden Hochfrequenz von \SI{499.67}{MHz} genau eine halbe Periode der Hochfrequenz benötigt.
 Durch den Phasensprung von $\pi$ zwischen jeder Zelle bedeutet dies, dass das Teilchen stets ein elektrisches Feld erfährt, welches in dessen Bewegungsrichtung zeigt (vgl.\ Abb.\ in Abschnitt \ref{app:tm010_felder}).
 Im Vergleich dazu sind die restlichen $\mathrm{TM}_{010}$-Moden mit effektiven Shuntimpedanzen der Größenordnung von einigen \si{\kilo\ohm} ungeeignet für die effiziente Beschleunigung geladener Teilchen.
 Dahingehend soll sich die Diskussion auf die $\pi$-Beschleunigermode beschränken.
@@ -150,7 +150,7 @@ Wird beispielsweise zum Betrieb der Resonatoren ein $\SI{200}{\kilo\watt}$-Klyst
 	U_\mathrm{eff}^\mathrm{P-III} = \SI{2.265 +- 0.041}{\mega\volt} \qquad U_\mathrm{eff}^\mathrm{P-IV} = \SI{2.212 +- 0.040}{\mega\volt} 
 \end{align}
 unter der Verwendung der gemessenen Shuntimpedanzen.
-Der Vergleich mit den aktuell in ELSA verbauten fünfzelligen Resonatoren vom Typ PETRA mit einer effektiven Shuntimpedanz von \SI{15}{\mega\ohm} liefert bei gleicher eingekoppelter Leistung eine effektive Beschleunigungsspannung $U_\mathrm{eff} = \SI{1.73}{\mega\volt}$.
+Der Vergleich mit den aktuell in \mbox{ELSA} verbauten fünfzelligen Resonatoren vom Typ PETRA mit einer effektiven Shuntimpedanz von \SI{15}{\mega\ohm} liefert bei gleicher eingekoppelter Leistung eine effektive Beschleunigungsspannung $U_\mathrm{eff} = \SI{1.73}{\mega\volt}$.
 Dies zeigt eine wesentlich effizientere Beschleunigung in den siebenzelligen Resonatoren gegenüber den Fünfzelligen und ist der Hauptgrund für die Konstruktion mehrzelliger Beschleunigungsresonatoren.
 
 \section{Vermessung von Moden höherer Ordnung}
