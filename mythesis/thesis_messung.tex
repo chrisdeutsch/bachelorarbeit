@@ -207,7 +207,7 @@ Einerseits fällt bei Betrachtung der Feldverteilungen in Abschnitt \ref{app:hom
 Diese entstehen an Stellen an denen das elektrische Feld einen Phasensprung vollzieht und ist auf die begrenzte Ortsauflösung des verwendeten Störkörpers zurückzuführen.
 %Dies ist der Fall, da an solchen Stellen ein Knoten der elektrischen Feldstärke vorliegt, welcher bei der Störkörpermessung nicht als solcher erscheint, da aufgrund der Ausdehnung des Störkörpers eine Frequenzverschiebung durch die umliegenden Stellen nicht-verschwindender Amplitude zu einer Frequenzverschiebung führen.
 Bei der Bestimmung der Shuntimpedanzen durch Integration stellen diese Sprungstellen keinen signifikanten Einfluss dar.
-Mit der Verwendung eines kleineren Störkörpers ist eine Möglichkeit gegeben diese Sprünge zu vermindern, was jedoch mit einer Abnahme der Frequenzverschiebung durch die Störung der Resonatormoden zusammenhängt.
+Mit der Verwendung eines kleineren Störkörpers ist dennoch eine Möglichkeit gegeben diese Sprünge zu vermindern, was jedoch mit einer Abnahme der Frequenzverschiebung durch die Störung der Resonatormoden zusammenhängt.
 Insbesondere bei den Moden höherer Ordnung, die im Vergleich zur Fundamentalmode kleine Feldstärken aufweisen, kann dies eine Temperaturstabilisierung von Resonator und VNA erfordern und wurde daher nicht ausgenutzt.
 
 Ferner ist die Auflösung mit der die Amplitude des elektrischen Feldes bestimmt werden kann durch den Zusammenhang
@@ -217,7 +217,7 @@ Ferner ist die Auflösung mit der die Amplitude des elektrischen Feldes bestimmt
 und der konstanten Frequenzauflösung des VNA beschränkt.
 Dies führt zu einer Abnahme des Auflösungsvermögens bei kleinen Amplituden des elektrischen Feldes (oder kleinen Frequenzverschiebungen~$\Delta \omega$).
 Dadurch kann an manche Moden mit scheinbar verschwindendem elektrischen Feld (und damit auch magnetischem Feld) in der mittleren Resonatorzelle (vgl.\ Abb.\ \ref{fig:tm021_1458} ff.) eine Kopplung stattfinden.
-Der Grund dafür ist, dass in der mittleren Zelle ein elektrisches Feld existiert, welches unterhalb der Auflösungsgrenze der Messung fällt.
+Der Grund dafür ist, dass in der mittleren Zelle ein elektrisches Feld existiert, welches unter die Auflösungsgrenze fällt.
 
 Abschließend soll die Diskussion der effektiven Shuntimpedanzen der Resonatormoden erfolgen.
 Die größte effektive Shuntimpedanz der im Rahmen dieser Arbeit vermessenen Moden zeigt die $\mathrm{TE_{111}}$-Mode mit $R_\mathrm{S}^\mathrm{eff} = \SI{326 +- 11}{\kilo\ohm}$ (transversal), was einem Geometriefaktor von \SI{29.21 +- 0.05}{\ohm} entspricht.
@@ -227,5 +227,5 @@ Diese liegt bei $R_\mathrm{S}^\mathrm{eff} = \SI{183.0 +- 6.4}{\kilo\ohm}$ und f
 
 Abschließend ist zu bemerken, dass keine der vermessenen Moden höherer Ordnung effektive Shuntimpedanzen in der Größenordnung der Fundamentalmode aufweist und daher die Gefahr kritische Multi-Bunch-Instabilitäten anzuregen, klein ist.
 Dennoch ist anzumerken, dass die Untersuchung dieser Moden keineswegs erschöpfend war, da zahlreiche Moden höherer Ordnung existieren.
-Bei einer weitergehenden Analyse ist eine Simulation des Impedanzspektrums (bsp) mit der korrekten Resonatorgeometrie zu empfehlen, da somit eine 
+Bei einer weitergehenden Analyse ist eine Simulation des Impedanzspektrums (bsp CST Particle Studio) mit der korrekten Resonatorgeometrie zu empfehlen, da somit eine 
 
