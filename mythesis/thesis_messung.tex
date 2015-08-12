@@ -14,8 +14,18 @@
 %------------------------------------------------------------------------------
 Bevor mit der Störkörpermessung nach Abschnitt \ref{sec:messmethodik} begonnen werden kann, müssen noch Einstellungen am Resonator erfolgen.
 Zum einen wird die Koppelschleife so gedreht, dass eine nahezu kritische Einkopplung ($\kappa \approx 1$) an die $\mathrm{TM}_{010}\text{-}\pi$-Mode des Resonators realisiert wird.
+Dies kann durch eine Messung des Reflexionskoeffizienten mit dem VNA überprüft werden, da für den Fall kritischer Kopplung gemäß Gleichung \eqref{eq:resonanzkurve}
+\begin{align}
+	|\rho(\omega = \omega_0)| = 0
+\end{align}
+gilt.
+
 Außerdem werden beide Abstimmstempel so eingestellt, dass sich eine symmetrische Feldverteilung im Resonator ausbildet.
-Schließlich muss die Beschleunigermode auf ihre Sollfrequenz im Vakuum von $\SI{499.67}{MHz}$ abgestimmt werden.
+Dazu dient ein Referenzpunkt in jeder Stempel-Zelle, an denen die Resonanzfrequenzverschiebung durch den Störkörper gemessen wird. 
+Anschließend werden die Stempel antiparallel verfahren und die Resonanzfrequenzverschiebung an beiden Stellen erneut gemessen.
+Eine symmetrische Feldverteilung ist erreicht, wenn an beiden Referenzpunkten die gleiche Frequenzverschiebung durch den Störkörper entsteht.
+
+Schließlich muss die Beschleunigermode auf ihre Sollfrequenz im Vakuum von $\SI{499.67}{MHz}$ durch paralleles Verfahren der Stempel abgestimmt werden.
 Dabei gilt es zu beachten, dass die Luft im Hohlraum des Resonators zu einer zusätzlichen Verstimmung führt.
 Ist der Resonator durch ein Medium der relativen Permittivität~$\varepsilon_\mathrm{r}$ und Permeabilität~$\mu_\mathrm{r}$ ausgefüllt, so kann die Verstimmung der Resonanzfrequenzen durch
 \begin{align}
@@ -163,7 +173,7 @@ Die Abweichungen werden im folgenden Abschnitt dargestellt.
 
 \subsection{Auswertung der Messdaten}
 Zur Auswertung vermessenen Feldverteilungen muss zunächst die Phasenbeziehung der Felder in den einzelnen Zellen bestimmt werden.
-Dazu werden Simulationen der Eigenmoden eines vereinfachten Modells des siebenzelligen PETRA-Resonators \todo{Schedler} mit \textit{CST Microwave Studio\textsuperscript{\textregistered}} (CST-MWS) durchgeführt.
+Dazu werden Simulationen der Eigenmoden eines vereinfachten Modells des siebenzelligen PETRA-Resonators von \cite{schedler_pm} mit \textit{CST Microwave Studio\textsuperscript{\textregistered}} (CST-MWS) durchgeführt.
 Aufgrund der Tatsache, dass ein vereinfachtes Modell der Kavität genutzt wird, kommt es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
 Darüber hinaus treten Diskrepanzen zwischen simulierten und gemessenen Feldamplituden auf.
 Diese Abweichungen sind unter anderem auf die rudimentäre Modellierung der Nasenkegel und Abstimmstempel zurückzuführen.
