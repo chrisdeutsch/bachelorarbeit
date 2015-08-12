@@ -172,8 +172,17 @@ Dennoch ist eine Identifizierung der meisten vermessenen Resonatormoden anhand c
 In Abbildung \ref{fig:cst_sim_tm111} wurde das elektrische Feld (qualitativ) der vermessenen $\mathrm{TM}_{111}$-Mode zu einem festen Zeitpunkt aufgetragen. 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1.0\textwidth]{./figs/TM111-CST/TM111_cut.png}
-	\caption{Qualitative Darstellung des elektrischen Feldes der $\mathrm{TM}_{111}$-Mode zu einem festen Zeitpunkt (Simulation durch CST-MWS). Gezeigt ist der Querschnitt des Resonator-Modells mit der Strahlenachse in der Ebene.}
+	\begin{subfigure}{1\textwidth}
+		\centering
+		\includegraphics[width=1.0\textwidth]{./figs/TM111-CST/TM111_cut.png}
+		\caption{Bla1}
+	\end{subfigure}
+	\begin{subfigure}{1\textwidth}
+		\centering
+		\hspace*{-8mm}\input{./plots/tm111_abs_sim.tex}
+		\caption{Bla2}
+	\end{subfigure}
+	\caption{Qualitative Darstellung des elektrischen Feldes der $\mathrm{TM}_{111}$-Mode zu einem festen Zeitpunkt (Simulation durch CST-MWS). Gezeigt ist der Querschnitt des Resonator-Modells mit der Strahlenachse in der Ebene. \todo{Captions}}
 	\label{fig:cst_sim_tm111}
 \end{figure}
 Ein wichtiges Merkmal ist das Verschwinden des elektrischen Feldes zwischen Zellen mit einem Phasensprung des elektrischen Feldes von $\pi$.
