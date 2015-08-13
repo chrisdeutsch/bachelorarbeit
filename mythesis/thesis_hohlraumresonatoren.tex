@@ -74,10 +74,11 @@ und die Kreisgüte aus ihrer Definition
   Q_0 &\coloneqq 2\pi \cdot \frac{\text{gespeicherte Energie}}{\text{Energieverlust pro Periode}} = \frac{\omega_0 W_0}{P_\mathrm{V}} = \omega_0 R C
   \label{eq:def_guete}
 \end{align}
-mit der im Kreis gespeicherten Energie $W_0$ und der Verlustleistung $P_\mathrm{V}$ aufgrund des \textsc{ohm}schen Widerstandes $R$.
+\cite{pozar} mit der im Kreis gespeicherten Energie $W_0$ und der Verlustleistung $P_\mathrm{V}$ aufgrund des \textsc{ohm}schen Widerstandes $R$.
 Nach der Einführung dieser Kenngrößen kann die Impedanz $Z(\omega)$ des Kreises beziehungsweise des Hohlraumresonators ausgedrückt werden als
 \begin{align}
   Z(\omega) = \left( \frac{1}{R} + \frac{1}{\I \omega L} + \I \omega C \right)^{-1} = \frac{R}{1 + \I Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)} \eqdot
+  \label{eq:impedanz_resonator}
 \end{align}
 
 Bisher war die Betrachtung auf ungetriebene Resonatoren beschränkt und soll nun auf die Anregung durch ein externes Hochfrequenzsignal erweitert werden.
@@ -115,7 +116,7 @@ Aus der Leitungstheorie \cite[S.\ 57]{pozar} folgt für den Reflexionskoeffizien
 \end{align}
 Es folgt nach Einsetzen von Gl.~\eqref{eq:impedanz_hinter_schleife} in Gl.~\eqref{eq:reflexionskoeff_trans_line} der Ausdruck für den Reflexionskoeffizienten:
 \begin{align}
-  \rho(\omega) = \frac{\frac{\kappa}{R} \cdot Z(\omega) - 1}{\frac{\kappa}{R} \cdot Z(\omega) + 1} = \frac{(\kappa - 1) + \I  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + \I  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
+  \rho(\omega) = \frac{\frac{\kappa}{R} \cdot Z(\omega) - 1}{\frac{\kappa}{R} \cdot Z(\omega) + 1} \stackrel{\eqref{eq:impedanz_resonator}}{=} \frac{(\kappa - 1) + \I  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}{\left( \kappa + 1 \right) + \I  Q_0 \left( \frac{\omega}{\omega_0}  - \frac{\omega_0}{\omega}\right)}
   \label{eq:reflexionskoeff_komplex}
 \end{align}
 Betrachtet man außerdem den Absolutbetrag des Reflexionskoeffizienten
@@ -211,7 +212,3 @@ In Abhängigkeit der im Resonator angeregten Moden unterscheidet man zwischen lo
 Eine Mode mit ausschließlich longitudinalen elektrischen Feldern auf der Strahlachse, wie beispielsweise die $\mathrm{TM}_{010}$-Moden, führt zu einer Beschleunigung geladener Teilchen in longitudinaler Richtung, weshalb von longitudinalen Beschleunigungsspannungen und Shuntimpedanzen gesprochen wird.
 Im umgekehrten Fall von transversalen elektrischen Feldern ($\mathrm{TE}$-Moden sowie manche $\mathrm{TM}$-Moden) spricht man von transversalen Beschleunigungsspannungen/Shuntimpedanzen.
 Schließlich folgt der sog.\ Geometriefaktor $R_\mathrm{S}^\mathrm{eff} / Q_0$, der unabhängig von den \textsc{ohm}schen Verlusten in der leitenden Oberfläche des Hohlraums ist und lediglich von der Geometrie des Resonators abhängt \cite[S.\ 47]{wangler}.
-
-
-
-\todo{mehr mit Zitaten hinterlegen}
