@@ -18,7 +18,7 @@ set format y "%.0f"
 set xrange [0:2220]
 set yrange [*:*]
 set xlabel '$z$ / \si{mm}'
-set ylabel '$\frac{E_0(z)}{\sqrt{P_\mathrm{V}}}$ / \si{\volt\per\metre\per\watt\tothe{0.5}}'
+set ylabel '$\frac{E_0(z)}{\sqrt{P_\mathrm{V}}}$ / \si{\volt\per\metre\per\watt\tothe{0{,}5}}'
 
 set samples 10000
 set grid
@@ -49,9 +49,12 @@ set key top right
 
 ### 1/3 PI ###
 set output './plots/PETRA-III/1_3_pi.tex'
+set key bottom right
 
 plot './data/PETRA-III/fundamental/1_3_pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
      './data/PETRA-III/fundamental/1_3_pi/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+
+set key top right
 
 ### 0 PI ###
 set output './plots/PETRA-III/0_pi.tex'
@@ -81,9 +84,12 @@ set key top right
 
 ### 1/3 PI ###
 set output './plots/PETRA-IV/1_3_pi.tex'
+set key bottom right
 
 plot './data/PETRA-IV/fundamental/1_3_pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
      './data/PETRA-IV/fundamental/1_3_pi/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+
+set key top right
 
 ### 0 PI ###
 set output './plots/PETRA-IV/0_pi.tex'

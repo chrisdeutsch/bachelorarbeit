@@ -18,7 +18,7 @@ set format y "%.0f"
 set xrange [0:2220]
 set yrange [*:*]
 set xlabel '$z$ / \si{mm}'
-set ylabel '$\frac{E_0(z)}{\sqrt{P_\mathrm{V}}}$ / \si{\volt\per\metre\per\watt\tothe{0.5}}'
+set ylabel '$\frac{E_0(z)}{\sqrt{P_\mathrm{V}}}$ / \si{\volt\per\metre\per\watt\tothe{0{,}5}}'
 
 set samples 10000
 set grid
@@ -60,15 +60,21 @@ plot './data/HOM/1375/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt
 
 ### 1458 MHz ###
 set output './plots/HOM/1458MHz.tex'
+set key bottom right
 
 plot './data/HOM/1458/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
      './data/HOM/1458/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
 
+set key top right
+
 ### 1460 MHz ###
 set output './plots/HOM/1460MHz.tex'
+set key bottom right
 
 plot './data/HOM/1460/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
      './data/HOM/1460/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+
+set key top right
 
 ### 1465_L MHz ###
 set output './plots/HOM/1465_L_MHz.tex'
@@ -78,9 +84,12 @@ plot './data/HOM/1465_L/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 
      
 ### 1465_M MHz ###
 set output './plots/HOM/1465_M_MHz.tex'
+set key bottom right
 
 plot './data/HOM/1465_M/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
      #'./data/HOM/1465_M/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+
+set key top right
      
 ### 1465_R MHz ###
 set output './plots/HOM/1465_R_MHz.tex'
