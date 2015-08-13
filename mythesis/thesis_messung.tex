@@ -216,7 +216,7 @@ Bevor eine Diskussion der resultierenden Shuntimpedanzen erfolgt, sollen die gem
 Einerseits fällt bei Betrachtung der Feldverteilungen in Abschnitt \ref{app:hom_felder} auf, dass Sprünge des effektiven elektrischen Feldes auftreten.
 Diese entstehen an Stellen an denen das elektrische Feld einen Phasensprung vollzieht und ist auf die begrenzte Ortsauflösung des verwendeten Störkörpers zurückzuführen.
 %Dies ist der Fall, da an solchen Stellen ein Knoten der elektrischen Feldstärke vorliegt, welcher bei der Störkörpermessung nicht als solcher erscheint, da aufgrund der Ausdehnung des Störkörpers eine Frequenzverschiebung durch die umliegenden Stellen nicht-verschwindender Amplitude zu einer Frequenzverschiebung führen.
-Bei der Bestimmung der Shuntimpedanzen durch Integration stellen diese Sprungstellen keinen signifikanten Einfluss dar.
+Bei der Bestimmung der Shuntimpedanzen durch Integration stellen diese Sprungstellen jedoch keinen signifikanten Einfluss dar und können vernachlässigt werden.
 Mit der Verwendung eines kleineren Störkörpers ist dennoch eine Möglichkeit gegeben diese Sprünge zu vermindern, was jedoch mit einer Abnahme der Frequenzverschiebung durch die Störung der Resonatormoden zusammenhängt.
 Insbesondere bei den Moden höherer Ordnung, die im Vergleich zur Fundamentalmode kleine Feldstärken aufweisen, kann dies eine Temperaturstabilisierung von Resonator und VNA erfordern und wurde daher nicht ausgenutzt.
 
@@ -224,18 +224,18 @@ Ferner ist die Auflösung mit der die Amplitude des elektrischen Feldes bestimmt
 \begin{align}
 \frac{|\ve_0|}{\sqrt{P_\mathrm{V}}} \propto \sqrt{\Delta \omega}
 \end{align}
-und der konstanten Frequenzauflösung des VNA beschränkt.
+und der kleinsten messbaren Frequenzverschiebung durch den VNA begrenzt.
 Dies führt zu einer Abnahme des Auflösungsvermögens bei kleinen Amplituden des elektrischen Feldes (oder kleinen Frequenzverschiebungen~$\Delta \omega$).
 Dadurch kann an manche Moden mit scheinbar verschwindendem elektrischen Feld (und damit auch magnetischem Feld) in der mittleren Resonatorzelle (vgl.\ Abb.\ \ref{fig:tm021_1458} ff.) eine Kopplung stattfinden.
 Der Grund dafür ist, dass in der mittleren Zelle ein elektrisches Feld existiert, welches unter die Auflösungsgrenze fällt.
 
-Abschließend soll die Diskussion der effektiven Shuntimpedanzen der Resonatormoden erfolgen.
-Die größte effektive Shuntimpedanz der im Rahmen dieser Arbeit vermessenen Moden zeigt die $\mathrm{TE_{111}}$-Mode mit $R_\mathrm{S}^\mathrm{eff} = \SI{326 +- 11}{\kilo\ohm}$ (transversal), was einem Geometriefaktor von \SI{29.21 +- 0.05}{\ohm} entspricht.
+Nachfolgend soll die Diskussion der effektiven Shuntimpedanzen der vermessenen Resonatormoden erfolgen.
+Die größte effektive Shuntimpedanz zeigt die $\mathrm{TE_{111}}$-Mode mit $\SI{326 +- 11}{\kilo\ohm}$ (transversal).
+Der Vergleich mit der effektiven Shuntimpedanz der Fundamentalmode von etwa \SI{25}{\mega\ohm} zeigt bereits, dass der parasitäre Einfluss dieser Mode gegenüber der Fundamentalmode klein ist.
+Darüber hinaus zeigt die Mode mit der Resonanzfrequenz \SI{1465.83}{MHz} die größte effektive Shuntimpedanz der $\mathrm{TM}_{021}$-Moden.
+Diese liegt bei \SI{183.0 +- 6.4}{\kilo\ohm} und fällt damit ebenfalls zwei Größenordnungen unter die effektive Shuntimpedanz der Fundamentalmode.
 
-Die größte effektive Shuntimpedanz der $\mathrm{TM}_{021}$-Moden zeigt die Mode mit der Resonanzfrequenz $\nu_0 = \SI{1465.83}{MHz}$.
-Diese liegt bei $R_\mathrm{S}^\mathrm{eff} = \SI{183.0 +- 6.4}{\kilo\ohm}$ und fällt damit zwei Größenordnungen unterhalb der effektiven Shuntimpedanz der Fundamentalmode.
-
-Abschließend ist zu bemerken, dass keine der vermessenen Moden höherer Ordnung effektive Shuntimpedanzen in der Größenordnung der Fundamentalmode aufweist und daher die Gefahr kritische Multi-Bunch-Instabilitäten anzuregen, klein ist.
+Abschließend ist zu bemerken, dass entgegen der Erwartung keine der vermessenen Moden höherer Ordnung effektive Shuntimpedanzen in der Größenordnung der Fundamentalmode aufweist.
 Dennoch ist anzumerken, dass die Untersuchung dieser Moden keineswegs erschöpfend war, da zahlreiche Moden höherer Ordnung existieren.
-Bei einer weitergehenden Analyse ist eine Simulation des Impedanzspektrums (bsp CST Particle Studio) mit der korrekten Resonatorgeometrie zu empfehlen, da somit eine 
-
+Bei einer weitergehenden Analyse ist eine Simulation des Impedanzspektrums (z.\ B.\ durch \textit{CST Particle Studio\textsuperscript{\textregistered}}) unter Verwendung eines detaillierteren Modells des Resonators zweckmäßig, da dadurch eine bessere Identifizierung der kritischen Moden vollzogen werden kann.
+Außerdem kann dadurch eine Untersuchung des Einflusses von Moden höherer Ordnung auf Multi-Bunch-Instabilitäten an ELSA durchgeführt werden.
