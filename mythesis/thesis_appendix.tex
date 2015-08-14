@@ -5,27 +5,27 @@
 
 
 %------------------------------------------------------------------------------
-\section{Herleitung der Frequenzverschiebung bei Störkörpermessung}
+\section{Herleitung der Frequenzverschiebung bei einer Störkörpermessung}
 \label{app:herleitung_frequenzverschiebung}
 %------------------------------------------------------------------------------
 Im Folgenden soll die Verschiebung der Resonanzfrequenz durch einen Störkörper im Hohlraumresonator (in Anlehnung an eine ähnliche Herleitung in \cite{pozar}) abgeleitet werden.
-Man betrachte das zeit- und ortsabhängige elektromagnetische Feld in einem Hohlraumresonators, charakterisiert durch elektrische Feldstärke~$\ve$ und magnetische Feldstärke~$\vh$.
+Man betrachte das zeit- und ortsabhängige elektromagnetische Feld in einem Hohlraumresonator, charakterisiert durch elektrische Feldstärke~$\ve$ und magnetische Feldstärke~$\vh$.
 Die Felder des ungestörten Resonators seien gegeben durch $(\ve_0, \vh_0)$ und die des gestörten Resonators durch $(\ve_1, \vh_1)$.
 Bei Verwendung der komplexen Darstellung der stehenden Welle im Resonator, kann das elektromagnetische Feld angegeben werden als:
 \begin{subequations}
   \label{eq:skm_felder}
   \begin{align}
   &\ve_{0,1}(x,y,z,t) = \ve_{0,1}(x,y,z) \, \E^{\I \omega_{0,1} t}\\
-  &\vh_{0,1}(x,y,z,t) = \vh_{0,1}(x,y,z) \, \E^{\I \omega_{0,1} t}
+  &\vh_{0,1}(x,y,z,t) = \vh_{0,1}(x,y,z) \, \E^{\I \omega_{0,1} t} \eqcomma
   \end{align}
 \end{subequations}
-wobei die Phasenbeziehung von elektrischem und magnetischem Feld in den komplexen Amplituden $\ve_{0,1}(x,y,z)$ und $\vh_{0,1}(x,y,z)$. enthalten ist.
+wobei die Phasenbeziehung von elektrischem und magnetischem Feld in den komplexen Amplituden $\ve_{0,1}(x,y,z)$ und $\vh_{0,1}(x,y,z)$ enthalten ist.
 Unabhängig von der Störung des Feldes gelten die \textsc{Maxwell}-Gleichungen \cite{jackson}:
 \begin{subequations}
   \label{eq:skm_maxwell}
   \begin{align}
     \vnabla \times \ve &= - \frac{\partial \vb}{\partial t}\\
-    \vnabla \times \vh &= \vec{j}_\mathrm{frei} + \frac{\partial \vd}{\partial t}
+    \vnabla \times \vh &= \vec{j}_\mathrm{frei} + \frac{\partial \vd}{\partial t} \eqdot
   \end{align}
 \end{subequations}
 Setzt man die gestörten und ungestörten Felder \eqref{eq:skm_felder} in die \textsc{Maxwell}-Gleichung \eqref{eq:skm_maxwell} ein, so erhält man unter der Annahme einer verschwindenden freien Stromdichte $\vec{j}_\mathrm{frei}$ im Hohlraum und nach Elimination der Zeitabhängigkeit:
@@ -33,10 +33,10 @@ Setzt man die gestörten und ungestörten Felder \eqref{eq:skm_felder} in die \t
   \label{eq:skm_zeitunabhaengig}
   \begin{align}
     &\vnabla \times \ve_{0,1} = - \I \omega_{0,1} \vb_{0,1} \\
-    &\vnabla \times \vh_{0,1} = \I \omega_{0,1} \vd_{0,1}
+    &\vnabla \times \vh_{0,1} = \I \omega_{0,1} \vd_{0,1} \eqdot
   \end{align}
 \end{subequations}
-Man verwendet diese zeitunabhängigen Gleichungen und die Produktregel der Divergenz für das Kreuzprodukt um die folgenden Identitäten zu finden:
+Man verwendet diese zeitunabhängigen Gleichungen und die Produktregel der Divergenz für das Kreuzprodukt, um die folgenden Identitäten zu finden:
 \begin{subequations}
   \label{eq:skm_vektoridentitaeten}
   \begin{align}
@@ -44,23 +44,23 @@ Man verwendet diese zeitunabhängigen Gleichungen und die Produktregel der Diver
   &= \I \omega_0 \vb_0^* \vh_1 - \I \omega_1 \ve_0^* \vd_1 \label{eq:e0h1} \\[0.5em]
   %
   \vnabla \cdot \left( \ve_1 \times \vh_0^* \right) &= \vh_0^* \cdot \left( \vnabla \times \ve_1 \right) - \ve_1 \cdot \left( \vnabla \times \vh_0^* \right) \nonumber \\
-  &= \I \omega_0 \ve_1 \vd_0^* - \I \omega_1 \vb_1 \vh_0^* \label{eq:e1h0}
+  &= \I \omega_0 \ve_1 \vd_0^* - \I \omega_1 \vb_1 \vh_0^* \label{eq:e1h0} \eqdot
   \end{align}
 \end{subequations}
 Anschließend bildet man die Summe der Gleichungen \eqref{eq:skm_vektoridentitaeten} und führt eine Integration über das Resonatorvolumen $V$ durch.
 Unter Verwendung des \textsc{Gauß}schen Integralsatzes erhält man:
 \begin{align}
-  \int_{V} \mathrm{d}V \left[ \vnabla \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right) \right] = \oint_{\partial V} \mathrm{d}S \left[ \vec{n} \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right)\right] \label{eq:volint}
+  \int_{V} \mathrm{d}V \left[ \vnabla \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right) \right] = \oint_{\partial V} \mathrm{d}S \left[ \vec{n} \cdot \left( \ve_0^* \times \vh_1 + \ve_1 \times \vh_0^* \right)\right] \label{eq:volint} \eqcomma
 \end{align}
 wobei $\vec{n}$ den Normaleneinheitsvektor auf dem Rand $\partial V$ des Resonatorhohlraums darstellt.
-Die Randbedingungen für das elektrische und magnetische Feld am idealen Leiter \eqref{eq:randbedingung_leiter} sorgen dafür, dass das Skalarprodukt im Integranden der rechten Seite auf dem Rand des Volumens $\partial V$ identisch verschwindet\footnote{Das Kreuzprodukt von elektrischer und magnetischer Feldstärke steht stehts senkrecht zum Normalenvektor der ideal leitenden Grenzfläche: $\ve \times \vh \perp \vec{n}$}.
-Setzt man die gefundenen Identitäten \eqref{eq:skm_vektoridentitaeten} in das Integral über das Resonatorvolumen ein, so erhält den Zusammenhang zwischen ungestörter~$\omega_0$ und gestörter Resonanzfrequenz~$\omega_1$:
+Die Randbedingungen für das elektrische und magnetische Feld am idealen Leiter (s.\ Gleichung~\eqref{eq:randbedingung_leiter}) sorgen dafür, dass das Skalarprodukt im Integranden der rechten Seite auf dem Rand des Volumens $\partial V$ identisch verschwindet\footnote{Das Kreuzprodukt von elektrischer und magnetischer Feldstärke steht stehts senkrecht zum Normalenvektor der ideal leitenden Grenzfläche: $\ve \times \vh \perp \vec{n}$}.
+Setzt man die gefundenen Identitäten \eqref{eq:skm_vektoridentitaeten} in das Integral über das Resonatorvolumen ein, so erhält man den Zusammenhang zwischen ungestörter~$\omega_0$ und gestörter Resonanzfrequenz~$\omega_1$:
 \begin{align}
-  \omega_0 \int_{V} \mathrm{d}V \left( \vb_0^* \cdot \vh_1 + \ve_1 \cdot \vd_0^* \right) = \omega_1 \int_{V} \mathrm{d}V \left( \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right)
+  \omega_0 \int_{V} \mathrm{d}V \left( \vb_0^* \cdot \vh_1 + \ve_1 \cdot \vd_0^* \right) = \omega_1 \int_{V} \mathrm{d}V \left( \vb_1 \cdot \vh_0^* + \ve_0^* \cdot \vd_1 \right) \eqdot
 \end{align}
 Dieser Zusammenhang ermöglicht es einen Ausdruck ermöglicht die Angabe der relativen Frequenzverschiebung:
 \begin{align}
-  \frac{\Delta \omega}{\omega_0}= \frac{\omega_1 - \omega_0}{\omega_0} = \frac{\int_{V} \mathrm{d}V \left[ \left( \ve_1 \cdot \vd_0^* - \ve_0^* \cdot \vd_1 \right) + \left( \vb_0^* \cdot \vh_1 - \vb_1 \cdot \vh_0^* \right)\right]}{\int_V \mathrm{d}V \left[\ve_0^* \cdot \vd_1 + \vb_1 \cdot \vh_0^* \right] }
+  \frac{\Delta \omega}{\omega_0}= \frac{\omega_1 - \omega_0}{\omega_0} = \frac{\int_{V} \mathrm{d}V \left[ \left( \ve_1 \cdot \vd_0^* - \ve_0^* \cdot \vd_1 \right) + \left( \vb_0^* \cdot \vh_1 - \vb_1 \cdot \vh_0^* \right)\right]}{\int_V \mathrm{d}V \left[\ve_0^* \cdot \vd_1 + \vb_1 \cdot \vh_0^* \right] } \eqdot
   \label{eq:skm_rel_freqabweichung_schritt}
 \end{align}
 Unter Verwendung der Definitionen für die magnetische Feldstärke $\vh$ und der elektrischen Flussdichte $\vd$:
@@ -75,10 +75,10 @@ mit den Vektorfeldern der Polarisation $\vec{P}$ und Magnetisierung $\vec{M}$ fo
   \frac{\Delta \omega}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vec{P} + \vb_0^* \cdot \vec{M} \right]}{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vd_1 + \vb_1 \cdot \vh_0^* \right]} \label{eq:skm_rel_freqabweichung_schritt2}
 \end{align}
 Schließlich wird angenommen, dass das Volumen des Störkörpers klein ist gegen das gesamte Resonatorvolumen.
-Dadurch können bei Integration über das Resonatorvolumen im Nenner von \eqref{eq:skm_rel_freqabweichung_schritt2}, die gestörten Felder im Integranden durch die Ungestörten genähert werden.
+Dadurch können bei Integration über das Resonatorvolumen im Nenner von \eqref{eq:skm_rel_freqabweichung_schritt2}, die gestörten Felder im Integranden durch die ungestörten genähert werden.
 Beachtet man weiterhin, dass die Phasendifferenz von elektrischem und magnetischem Feld bei stehenden elektromagnetischen Wellen $\pi / 2$ beträgt, so erhält man nach Ausführen der Integration im Nenner die vierfache im Feld des Resonators gespeicherte Energie~$W_0$:
 \begin{align}
-  \frac{\Delta \omega}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vec{P} + \vb_0^* \cdot \vec{M} \right]}{4 W_0}
+  \frac{\Delta \omega}{\omega_0} = - \frac{\int_V \mathrm{d}V \left[ \ve_0^* \cdot \vec{P} + \vb_0^* \cdot \vec{M} \right]}{4 W_0} \eqdot
 \end{align}
 Diese Gleichung verknüpft die Verschiebung der Resonanzfrequenz durch einen Störkörper mit den ungestörten elektrischen und magnetischen Feldern und ermöglicht die Messung der Felder bei geeigneter Wahl des Störkörpers.
 Insbesondere stellt man fest, dass die Frequenzverschiebung durch einen Störkörper~$\Delta \omega$ stets negativ ist.
@@ -100,7 +100,7 @@ Insbesondere stellt man fest, dass die Frequenzverschiebung durch einen Störkö
 	\centering
 	\hspace{2cm} %
 	\includegraphics[scale=1.0]{./figs/zellen_phasoren.pdf}
-	\caption[Phasenbeziehung in einer siebenzelligen Resonatorkette]{Darstellung der Phasenbeziehung in einer siebenzelligen Resonatorkette durch Überlagerung von hin- und rücklaufender Welle. Amplitude und Phase der einzelnen Komponenten werden als Phasoren dargestellt. Der grüne Phasor kennzeichnet die Überlagerung beider Wellen und zeigt, dass das resultierende Feld nur Phasensprünge von $\pi$ aufweist. Darüber hinaus kommt es in manchen Zellen zur destruktiven Interferenz.}
+	\caption[Phasenbeziehung in einer siebenzelligen Resonatorkette]{Darstellung der Phasenbeziehung in einer siebenzelligen Resonatorkette durch Überlagerung von hin- und rücklaufender Welle. Amplitude und Phase der einzelnen Komponenten werden als Phasoren dargestellt. Der grüne Phasor kennzeichnet die Überlagerung beider Wellen und zeigt, dass das resultierende Feld nur Phasensprünge von $\pi$ aufweist. Darüber hinaus kommt es in manchen Zellen zu destruktiver Interferenz.}
 	\label{fig:phasenbeziehung}
 \end{figure}
 
