@@ -29,6 +29,13 @@ load './scripts/gnuplot_linestyles.gp'
 ### HEADER ENDE
 filename = "./data/spektrum_tm010.tsv"
 
+set label '$\pi$' at 499.67, 0.1
+set label '$\frac{2}{3} \pi$' at 501.14, 0.33
+set label '$\frac{1}{3} \pi$' at 505.37, 0.39
+set label '$0$' at 508.61, 0.345
+
+set label '$\frac{5}{6} \pi$' at 499.6, 1.05
+
 plot filename u ($1/1.0e6):2 smooth unique ls 1 t''
 
 ### FOOTER START
