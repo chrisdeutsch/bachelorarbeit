@@ -18,7 +18,7 @@ set format y "%.0f"
 set xrange [0:2220]
 set yrange [0:10]
 set xlabel '$z$ / \si{mm}'
-set ylabel '$|E_0(z)|$ / willk.\ Einh.'
+set ylabel '$|\vec{E}_0(z)|$ / willk.\ Einh.'
 
 set samples 10000
 unset grid
