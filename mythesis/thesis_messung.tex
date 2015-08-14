@@ -25,29 +25,29 @@ Dazu dient ein Referenzpunkt in jeder Stempel-Zelle, an denen die Resonanzfreque
 Anschließend werden die Stempel antiparallel verfahren und die Resonanzfrequenzverschiebung an beiden Stellen erneut gemessen.
 Eine symmetrische Feldverteilung ist erreicht, wenn an beiden Referenzpunkten die gleiche Frequenzverschiebung durch den Störkörper entsteht.
 
-Schließlich muss die Beschleunigermode auf ihre Sollfrequenz im Vakuum von $\SI{499.67}{MHz}$ durch paralleles Verfahren der Stempel abgestimmt werden.
-Dabei gilt es zu beachten, dass die Luft im Hohlraum des Resonators zu einer zusätzlichen Verstimmung führt.
+Schließlich muss die Beschleunigungsmode auf ihre Sollfrequenz im Vakuum von $\SI{499.67}{MHz}$ durch paralleles Verfahren der Stempel abgestimmt werden.
+Dabei ist zu beachten, dass die Luft im Hohlraum des Resonators zu einer zusätzlichen Verstimmung führt.
 Ist der Resonator durch ein Medium der relativen Permittivität~$\varepsilon_\mathrm{r}$ und Permeabilität~$\mu_\mathrm{r}$ ausgefüllt, so kann die Verstimmung der Resonanzfrequenzen durch
 \begin{align}
-	\nu_0(\mathrm{Med.}) = \frac{\nu_0(\mathrm{Vak.})}{\sqrt{\varepsilon_\mathrm{r} \mu_\mathrm{r}}}
+	\nu_0^\mathrm{Med.} = \frac{\nu_0^\mathrm{Vak.}}{\sqrt{\varepsilon_\mathrm{r} \mu_\mathrm{r}}}
 	\label{eq:resonanzfrequenz_medium}
 \end{align}
 beschrieben werden \cite{pusch}.
-Mit der relativen Permittivität trockener Luft~$\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ unter Normalbedingungen \cite[S.\ 1093]{CRC}, vernachlässigbarer relativer Permeabilität~($\mu_\mathrm{r} \approx 1$) und der Sollfrequenz im Vakuum folgt die Frequenz der Beschleunigermode
+Mit der relativen Permittivität trockener Luft~$\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ unter Normalbedingungen \cite[S.\ 1093]{CRC}, vernachlässigbarer relativer Permeabilität~($\mu_\mathrm{r} \approx 1$) und der Sollfrequenz im Vakuum~$\nu_0^\mathrm{Vak.}$ folgt die Frequenz der Beschleunigermode
 \begin{align}
-	\nu_0(\mathrm{Luft}) = \SI{499.54}{MHz}
+	\nu_0^\mathrm{Luft} = \SI{499.54}{MHz}
 \end{align}
 für den luftgefüllten Resonator.
 Da diese Frequenz mit Temperatur und Luftfeuchtigkeit variiert, ist ein exaktes Abstimmen auf diese Frequenz nicht zweckmäßig und es genügt die grobe Einstellung.
 
 %------------------------------------------------------------------------------
-\subsection{Bestimmung der Störkörperkonstanten}
+\subsection{Bestimmung der Störkörperkonstante}
 %------------------------------------------------------------------------------
 
-Zur Berechnung der Störkörperkonstante~$\alpha_\mathrm{s}$ des kugelförmigen Störkörpers aus PTFE mit einem Durchmesser $D = \SI{20.05 +- 0.05}{mm}$ und der zentrischen Bohrung $d = \SI{1.3 +- 0.05}{mm}$ kann Gleichung \eqref{eq:stoerkoerperkonstante} verwendet werden.
+Zur Berechnung der Störkörperkonstante~$\alpha_\mathrm{s}$ des kugelförmigen Störkörpers aus PTFE mit einem Durchmesser $D = \SI{20.05 +- 0.05}{mm}$ und der zentrischen Bohrung mit Durchmesser $d = \SI{1.3 +- 0.05}{mm}$ kann Gleichung \eqref{eq:stoerkoerperkonstante} verwendet werden.
 Die relative Permittivität von PTFE beträgt im Mittel $\varepsilon_\mathrm{r} = \num{2.1}$ und variiert mit der Dichte und Kristallinität des Materials \cite[S.\ 2201]{CRC}.
 Daher wird für den verwendeten Störkörper $\varepsilon_\mathrm{r} = \num{2.1 +- 0.05}$ angenommen.
-Es folgt die Störkörperkonstante
+Es folgt für die Störkörperkonstante
 \begin{align}
 	\alpha_\mathrm{s} = \SI{2.99 +- 0.11e-17}{\ampere\second\metre\squared\per\volt} \eqcomma
 	\label{eq:stoerkoerperkonstante_ptfe}
@@ -65,7 +65,7 @@ Darauf wurde jedoch in dieser Arbeit verzichtet, da mit einem relativen Fehler v
 %------------------------------------------------------------------------------
 Die Bestimmung von Resonanzfrequenz und Güte der Resonatormoden kann anhand des gemessenen Reflexionsspektrums der jeweiligen Resonanz erfolgen.
 Dazu wird eine Kurve gemäß Gleichung \eqref{eq:resonanzkurve} nach der Methode der kleinsten Quadrate an das gemessene Spektrum angepasst.
-Dies wurde, am Beispiel der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigermode von PETRA-III, in Abbildung \ref{fig:guetefit} dargestellt.
+Dies wird, am Beispiel der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigermode von PETRA-III, in Abbildung \ref{fig:guetefit} dargestellt.
 \begin{figure}[htb]
   \centering
   \input{./plots/guete_fit_pi.tex}
@@ -83,7 +83,7 @@ Da die Resonanzfrequenz der Moden mit der Temperatur der Kavität schwankt, wird
 Die folgenden Abschnitte widmen sich der Auswertung der Störkörpermessungen an den $\mathrm{TM}_{010}$-Resonatormoden von PETRA-III und PETRA-IV, welche gemäß Abschnitt \ref{sec:messmethodik} durchgeführt wurden.
 Für beide Resonatoren wurden die $\pi,\, 2/3~\pi, \, 1/3~\pi$ und $0$-Moden vermessen.
 Die restlichen Moden der siebenzelligen Resonatorkette, die nach den Erläuterungen in Abschnitt \ref{sec:petra_resonator} erwartet werden, konnten nicht vermessen werden.
-Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010}, \ref{fig:phasenbeziehung}) und daher nicht oder nur schwach über die Koppelschleife angeregt werden können.
+Dies ist der Fall, da diese Moden ein verschwindendes elektrisches und magnetisches Feld in der mittleren Zelle des Resonators aufweisen (vgl.\ Abb.\ \ref{fig:spektrum_tm010} f.) und daher nicht oder nur schwach über die Koppelschleife angeregt werden können.
 Die Resonatoren wurden mit einer Schrittweite des Störkörpers von \SI{5}{\milli\metre} vermessen, was \num{60} Messpunkten pro Zelle entspricht.
 Diese Schrittweite liegt unterhalb des Auflösungsvermögens, welches mit dem Störkörper mit dem Durchmesser von ca.\ \SI{2}{\centi\metre} erreicht werden kann.
 
@@ -93,7 +93,7 @@ Außerdem kann das effektive elektrische Feld, das ein ultrarelativistisches Tei
 Dazu muss neben der harmonischen Zeitabhängigkeit auch die Phasenbeziehung (vgl.\ Abb.\ \ref{fig:phasenbeziehung}) zwischen den einzelnen Zellen beachtet werden.
 Darüber hinaus wird die Eintrittsphase des Teilchens in den Resonator so gewählt, dass der Laufzeitfaktor~$\Lambda$ / die effektive Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$ maximiert wird.
 
-Dies wurde am Beispiel der $\pi$-Mode des PETRA-III Resonators in Abbildung \ref{fig:bsp_feld_tm010pi_petra3} aufgetragen.
+Dies wurde am Beispiel der $\pi$-Mode des PETRA-III Resonators in Abbildung \ref{fig:bsp_feld_tm010pi_petra3} dargestellt.
 Im Anhang \ref{app:tm010_felder} wurden die Felder aller vermessenen $\mathrm{TM}_{010}$-Resonatormoden beider Resonatoren zusammengestellt.  
 \begin{figure}[h]
 	\centering
@@ -109,7 +109,7 @@ Zunächst erfolgt die Berechnung der longitudinalen Shuntimpedanzen~$R_\mathrm{S
 \end{align}
 erhält.
 Demnach kann die Shuntimpedanz durch Integration der (normierten) elektrischen Feldamplitude über die Länge~$L$ des Resonators gewonnen werden.
-Diese Integration, sowie die hierauf folgenden Integrationen, erfolgen dabei numerisch durch die Trapezregel.
+Diese Integration sowie die hierauf folgenden Integrationen erfolgen dabei numerisch durch die Trapezregel.
 Ebenso kann der Laufzeitfaktor~$\Lambda$ als das Verhältnis des Integrals von effektivem Feld zum Integral der Feldamplitude berechnet werden.
 Dieser dient der Berechnung der effektiven Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$, die nun durch Gleichung \eqref{eq:eff_shuntimpedanz} bestimmt werden kann.
 Alternativ kann die effektive Shuntimpedanz durch Integration über das effektive Feld, analog zur Berechnung der Shuntimpedanz, ermittelt werden.
@@ -133,7 +133,7 @@ Die Kenngrößen der verschiedenen $\mathrm{TM}_{010}$-Resonatormoden und deren 
 \subsection{Vergleich und Interpretation der Ergebnisse}
 Wie zu erwarten, zeigt die $\pi$-Mode beider Resonatoren mit einem Laufzeitfaktor von \SI{76,7}{\percent} die höchste effektive Shuntimpedanz.
 Dies ist der Fall, da ein ultrarelativistisches Teilchen zum Durchqueren einer Zelle der Länge \SI{30}{\centi\metre} bei einer treibenden Hochfrequenz von \SI{499.67}{MHz} genau eine halbe Periode der Hochfrequenz benötigt.
-Durch den Phasensprung von $\pi$ zwischen jeder Zelle bedeutet dies, dass das Teilchen stets ein elektrisches Feld erfährt, welches in dessen Bewegungsrichtung zeigt (vgl.\ Abb.\ in Abschnitt \ref{app:tm010_felder}).
+Durch den Phasensprung von $\pi$ zwischen jeder Zelle bedeutet dies, dass das Teilchen stets ein elektrisches Feld erfährt, welches in dessen Bewegungsrichtung zeigt (vgl.\ Abschnitt \ref{app:tm010_felder}).
 Im Vergleich dazu sind die restlichen $\mathrm{TM}_{010}$-Moden mit effektiven Shuntimpedanzen der Größenordnung von einigen \si{\kilo\ohm} ungeeignet für die effiziente Beschleunigung geladener Teilchen.
 Dahingehend soll sich die Diskussion auf die $\pi$-Beschleunigermode beschränken.
 
@@ -144,7 +144,7 @@ Im Folgenden wird diese Abweichung auch bei den Shuntimpedanzen auftreten, da di
 
 Der Hersteller gibt eine nominale (effektive) Shuntimpedanz von \SI{28.1}{\mega\ohm} an \cite{desy_petra}, welche gemäß der vorigen Erläuterungen nicht erreicht werden kann.
 Ein Vergleich ist dennoch möglich, wenn der Geometriefaktor $R_\mathrm{S}^\mathrm{eff} / Q_0$ der Beschleunigermode betrachtet wird.
-Für beide Resonatoren erhält man den Geometriefaktor der $\pi$-Mode
+Für beide Resonatoren erhält man den Geometriefaktor der $\pi$-Mode von
 \begin{align}
 	\frac{R_\mathrm{S}^\mathrm{eff}}{Q_0} = \SI{868+-32}{\ohm} \eqcomma
 \end{align}
@@ -155,37 +155,37 @@ Wird eine treibende Hochfrequenzleistung~$P_\mathrm{HF}$ bei kritischer Kopplung
 \begin{align}
 	U_\mathrm{eff} = \sqrt{2 R_\mathrm{S}^\mathrm{eff} P_\mathrm{HF}} \eqdot
 \end{align}
-Wird beispielsweise zum Betrieb der Resonatoren ein $\SI{200}{\kilo\watt}$-Klystron genutzt, dessen Leistung durch ein magisches T (Leistungsteiler auf Hohlleiterbasis) gleichmäßig auf beide Resonatoren aufgeteilt wird, so erhält man effektive Beschleunigungsspannungen
+Wird beispielsweise zum Betrieb der Resonatoren ein $\SI{200}{\kilo\watt}$-Klystron genutzt, dessen Leistung durch ein magisches T (Leistungsteiler auf Hohlleiterbasis) gleichmäßig auf beide Resonatoren aufgeteilt wird, so erhält man effektive Beschleunigungsspannungen von
 \begin{align}
-	U_\mathrm{eff}^\mathrm{P-III} = \SI{2.265 +- 0.041}{\mega\volt} \qquad U_\mathrm{eff}^\mathrm{P-IV} = \SI{2.212 +- 0.040}{\mega\volt} 
+	U_\mathrm{eff}^\mathrm{P-III} = \SI{2.265 +- 0.041}{\mega\volt} \qquad \text{und} \qquad U_\mathrm{eff}^\mathrm{P-IV} = \SI{2.212 +- 0.040}{\mega\volt} 
 \end{align}
 unter der Verwendung der gemessenen Shuntimpedanzen.
 Der Vergleich mit den aktuell in \mbox{ELSA} verbauten fünfzelligen Resonatoren vom Typ PETRA mit einer effektiven Shuntimpedanz von \SI{15}{\mega\ohm} liefert bei gleicher eingekoppelter Leistung eine effektive Beschleunigungsspannung $U_\mathrm{eff} = \SI{1.73}{\mega\volt}$.
-Dies zeigt eine wesentlich effizientere Beschleunigung in den siebenzelligen Resonatoren gegenüber den Fünfzelligen und ist der Hauptgrund für die Konstruktion mehrzelliger Beschleunigungsresonatoren.
+Dies zeigt eine wesentlich effizientere Beschleunigung in den siebenzelligen Resonatoren gegenüber den fünfzelligen und ist der Hauptgrund für die Konstruktion mehrzelliger Beschleunigungsresonatoren.
 
 \section{Vermessung von Moden höherer Ordnung}
 \label{sec:hom_messung}
 Schließlich wurde eine Vermessung von Moden höherer Ordnung von PETRA-III durchgeführt.
 Eine Vorauswahl der zu vermessenen Moden wurde dabei anhand deren Güte getroffen, so dass nur Resonanzen mit Güten der Größenordnung $10^4$ und größer in Betrachtung gezogen wurden.
 Außerdem wurde ein Schwerpunkt auf die $\mathrm{TM}_{021}$-Mode bei ca. \SI{1.46}{GHz} gesetzt, da diese gemäß \cite{schedler} eine effektive Shuntimpedanz in der Größenordnung der Fundamentalmode besitzt.
-Die Vermessung und Teile der Auswertung dieser Moden erfolgt analog zu Abschnitt \ref{sec:tm010_messung} und soll daher nicht wiederholt werden.
+Die Vermessung und Teile der Auswertung dieser Moden erfolgt analog zu Abschnitt~\ref{sec:tm010_messung} und soll daher nicht wiederholt werden.
 Die Abweichungen werden im folgenden Abschnitt dargestellt.
 
 \subsection{Auswertung der Messdaten}
-Zur Auswertung vermessenen Feldverteilungen muss zunächst die Phasenbeziehung der Felder in den einzelnen Zellen bestimmt werden.
+Zur Auswertung der vermessenen Feldverteilungen muss zunächst die Phasenbeziehung der Felder in den einzelnen Zellen bestimmt werden.
 Dazu werden Simulationen der Eigenmoden eines vereinfachten Modells des siebenzelligen PETRA-Resonators von \cite{schedler_pm} mit \textit{CST Microwave Studio\textsuperscript{\textregistered}} (CST-MWS) durchgeführt.
 Aufgrund der Tatsache, dass ein vereinfachtes Modell der Kavität genutzt wird, kommt es teilweise zu großen Abweichungen der Resonanzfrequenz zwischen Simulation und Messung.
 Darüber hinaus treten Diskrepanzen zwischen simulierten und gemessenen Feldamplituden auf.
 Diese Abweichungen sind unter anderem auf die rudimentäre Modellierung der Nasenkegel und Abstimmstempel zurückzuführen.
 Außerdem ist die Zelle der Einkopplung ohne Koppelschleife modelliert.
 Dennoch ist eine Identifizierung der meisten vermessenen Resonatormoden anhand charakteristischer Merkmale der Feldverteilung zu vollziehen.
-In Abbildung \ref{fig:cst_sim_tm111} wurden exemplarisch die (qualitativen) Ergebnisse einer Simulation der vermessenen $\mathrm{TM}_{111}$-Mode durch CST-MWS aufgetragen. 
+In Abbildung \ref{fig:cst_sim_tm111} wurden exemplarisch die (qualitativen) Ergebnisse einer Simulation der vermessenen $\mathrm{TM}_{111}$-Mode durch CST-MWS gezeigt. 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}{1\textwidth}
 		\centering
 		\includegraphics[width=1.0\textwidth]{./figs/TM111-CST/TM111_cut.png}
-		\caption{Qualitative Darstellung des elektrischen Feldes zu einem festen Zeitpunkt. Gezeigt ist der Querschnitt des Resonator-Modells mit der Strahlenachse in der Ebene.}
+		\caption{Qualitative Darstellung des elektrischen Feldes zu einem festen Zeitpunkt. Gezeigt ist der Querschnitt des Resonator-Modells mit der Strahlenachse in der Schnittebene.}
 	\end{subfigure}
 	\begin{subfigure}{1\textwidth}
 		\centering
@@ -201,8 +201,8 @@ Für zwei der vermessenen Moden ist keine eindeutige Bestimmung der Phasenbezieh
 
 Für Moden höherer Ordnung können gemäß Abschnitt \ref{sec:em_felder_in_resonatoren} auch $\pi$-Phasensprünge innerhalb einer Zelle stattfinden (z.\ B.\ bei den $\mathrm{TM}_{021}$-Moden), welche ebenfalls bei der Auswertung beachtet werden müssen.
 
-Die restliche Auswertung folgt analog zu Abschnitt \ref{sec:tm010_messung} und die Ergebnisse wurden in Tabelle \ref{tab:shuntimpedanzen_hom} dargestellt.
-Die Darstellungen der elektrischen Felder wurde in Abschnitt \ref{app:hom_felder} zusammengefasst.
+Die restliche Auswertung folgt analog zu Abschnitt \ref{sec:tm010_messung} und die Ergebnisse wurden in Tabelle~\ref{tab:shuntimpedanzen_hom} dargestellt.
+Die Darstellungen der elektrischen Felder wurde in Abschnitt~\ref{app:hom_felder} zusammengefasst.
 \begin{table}[htb]
 	\centering
 	\input{./tables/petra_3_hom.tex}
@@ -214,13 +214,13 @@ Die Darstellungen der elektrischen Felder wurde in Abschnitt \ref{app:hom_felder
 \subsection{Interpretation der Ergebnisse}
 Bevor eine Diskussion der resultierenden Shuntimpedanzen erfolgt, sollen die gemessenen Verteilungen des elektrischen Feldes erörtert werden.
 Einerseits fällt bei Betrachtung der Feldverteilungen in Abschnitt \ref{app:hom_felder} auf, dass Sprünge des effektiven elektrischen Feldes auftreten.
-Diese entstehen an Stellen an denen das elektrische Feld einen Phasensprung vollzieht und ist auf die begrenzte Ortsauflösung durch die Ausdehnung des verwendeten Störkörpers zurückzuführen.
+Diese entstehen an Stellen, an denen das elektrische Feld einen Phasensprung vollzieht und ist auf die begrenzte Ortsauflösung durch die Ausdehnung des verwendeten Störkörpers zurückzuführen.
 %Dies ist der Fall, da an solchen Stellen ein Knoten der elektrischen Feldstärke vorliegt, welcher bei der Störkörpermessung nicht als solcher erscheint, da aufgrund der Ausdehnung des Störkörpers eine Frequenzverschiebung durch die umliegenden Stellen nicht-verschwindender Amplitude zu einer Frequenzverschiebung führen.
 Bei der Bestimmung der Shuntimpedanzen durch Integration stellen diese Sprungstellen jedoch keinen signifikanten Einfluss dar und können vernachlässigt werden.
-Mit der Verwendung eines kleineren Störkörpers ist dennoch eine Möglichkeit gegeben diese Sprünge zu vermindern, was jedoch mit einer Abnahme der Frequenzverschiebung durch die Störung der Resonatormoden zusammenhängt.
+Mit der Verwendung eines kleineren Störkörpers wäre dennoch eine Möglichkeit gegeben, diese Sprünge zu vermindern, was jedoch mit einer Abnahme der Frequenzverschiebung durch die Störung der Resonatormoden zusammenhängen würde.
 Insbesondere bei den Moden höherer Ordnung, die im Vergleich zur Fundamentalmode kleine Feldstärken aufweisen, kann dies eine Temperaturstabilisierung von Resonator und VNA erfordern und wurde daher nicht ausgenutzt.
 
-Ferner ist die Auflösung mit der die Amplitude des elektrischen Feldes bestimmt werden kann durch den Zusammenhang
+Ferner ist die Auflösung, mit der die Amplitude des elektrischen Feldes bestimmt werden kann, durch den Zusammenhang
 \begin{align}
 \frac{|\ve_0|}{\sqrt{P_\mathrm{V}}} \propto \sqrt{\Delta \omega}
 \end{align}
