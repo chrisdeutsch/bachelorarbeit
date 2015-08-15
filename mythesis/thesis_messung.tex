@@ -225,14 +225,13 @@ Bei der Bestimmung der Shuntimpedanzen durch Integration stellen diese Sprungste
 Mit der Verwendung eines kleineren Störkörpers wäre dennoch eine Möglichkeit gegeben, diese Sprünge zu vermindern, was jedoch mit einer Abnahme der Frequenzverschiebung durch die Störung der Resonatormoden zusammenhängen würde.
 Insbesondere bei den Moden höherer Ordnung, die im Vergleich zur Fundamentalmode kleine Feldstärken aufweisen, kann dies eine Temperaturstabilisierung von Resonator und VNA erfordern und wurde daher nicht ausgenutzt.
 
-Ferner ist die Auflösung, mit der die Amplitude des elektrischen Feldes bestimmt werden kann, durch den Zusammenhang
+Ferner führt die über den Messbereich konstante Frequenzauflösung des VNA und die Proportionalität
 \begin{align}
 \frac{|\ve_0|}{\sqrt{P_\mathrm{V}}} \propto \sqrt{\Delta \omega}
 \end{align}
-und der kleinsten messbaren Frequenzverschiebung durch den VNA begrenzt.
-Dies führt zu einer Abnahme des Auflösungsvermögens bei kleinen Amplituden des elektrischen Feldes (oder kleinen Frequenzverschiebungen~$\Delta \omega$).
+aus Gl.\ \eqref{eq:skm_e_feld_normiert} zu einer Abnahme der Auflösung, mit der die Amplitude des elektrischen Feldes gemessen werden kann, bei kleinen Amplituden des Feldes.
+Dies führt dazu, dass Feldamplituden, die unter die Auflösungsgrenze fallen, nicht von einem verschwindenden elektrischen Feld zu unterscheiden sind.
 Dadurch kann an manche Moden mit scheinbar verschwindendem elektrischen Feld (und damit auch magnetischem Feld) in der mittleren Resonatorzelle (vgl.\ Abb.\ \ref{fig:tm021_1458} ff.) eine Kopplung stattfinden.
-Der Grund dafür ist, dass in der mittleren Zelle ein elektrisches Feld existiert, welches unter die Auflösungsgrenze fällt.
 
 Generell zeigen die meisten vermessenen Moden eine Shuntimpedanz~$R_\mathrm{S}^\mathrm{eff}$ von einigen \si{\mega\ohm}.
 Jedoch führen die kleinen Laufzeitfaktoren~$\Lambda$ gemäß Gl.\ \eqref{eq:eff_shuntimpedanz} zu einer Reduzierung der effektiven Shuntimpedanz um den Faktor $\Lambda^2$.
