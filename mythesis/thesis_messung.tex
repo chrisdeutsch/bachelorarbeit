@@ -25,7 +25,7 @@ Dazu wird die Resonanzfrequenzverschiebung durch den Störkörper in der Mitte b
 Ist die Frequenzverschiebung und somit auch die Amplitude elektrischen Feldes an beiden Stellen gleich, so liegt eine symmetrische Feldverteilung vor.
 Anderenfalls werden die Stempel solange gegeneinander Verfahren, bis eine Stempelstellung gefunden wurde, für die sich ein symmetrisches Feld im Resonator ausbildet.
 
-Schließlich muss die Beschleunigermode auf ihre Sollfrequenz im Vakuum von $\SI{499.67}{MHz}$ durch paralleles Verfahren der Stempel abgestimmt werden.
+Schließlich muss die Beschleunigungsmode auf ihre Sollfrequenz im Vakuum von $\SI{499.67}{MHz}$ durch paralleles Verfahren der Stempel abgestimmt werden.
 Dabei ist zu beachten, dass die Luft im Hohlraum des Resonators zu einer zusätzlichen Verstimmung führt.
 Ist der Resonator durch ein Medium der relativen Permittivität~$\varepsilon_\mathrm{r}$ und Permeabilität~$\mu_\mathrm{r}$ ausgefüllt, so kann die Verstimmung der Resonanzfrequenzen durch
 \begin{align}
@@ -33,7 +33,7 @@ Ist der Resonator durch ein Medium der relativen Permittivität~$\varepsilon_\ma
 	\label{eq:resonanzfrequenz_medium}
 \end{align}
 beschrieben werden \cite{pusch}.
-Mit der relativen Permittivität trockener Luft~$\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ unter Normalbedingungen \cite[S.\ 1093]{CRC}, vernachlässigbarer relativer Permeabilität~($\mu_\mathrm{r} \approx 1$) und der Sollfrequenz im Vakuum~$\nu_0^\mathrm{Vak.}$ folgt die Frequenz der Beschleunigermode
+Mit der relativen Permittivität trockener Luft~$\varepsilon_\mathrm{r}^\mathrm{Luft} = \num{1.0005364}$ unter Normalbedingungen \cite[S.\ 1093]{CRC}, vernachlässigbarer relativer Permeabilität~($\mu_\mathrm{r} \approx 1$) und der Sollfrequenz im Vakuum~$\nu_0^\mathrm{Vak.}$ folgt die Frequenz der Beschleunigungsmode
 \begin{align}
 	\nu_0^\mathrm{Luft} = \SI{499.54}{MHz}
 \end{align}
@@ -65,7 +65,7 @@ Darauf wurde jedoch in dieser Arbeit verzichtet, da mit einem relativen Fehler v
 %------------------------------------------------------------------------------
 Die Bestimmung von Resonanzfrequenz und Güte der Resonatormoden kann anhand des gemessenen Reflexionsspektrums der jeweiligen Resonanz erfolgen.
 Dazu wird eine Kurve gemäß Gleichung \eqref{eq:resonanzkurve} nach der Methode der kleinsten Quadrate an das gemessene Spektrum angepasst.
-Dies wird, am Beispiel der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigermode von PETRA-III, in Abbildung \ref{fig:guetefit} dargestellt.
+Dies wird, am Beispiel der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigungsmode von PETRA-III, in Abbildung \ref{fig:guetefit} dargestellt.
 \begin{figure}[htb]
   \centering
   \input{./plots/guete_fit_pi.tex}
@@ -100,7 +100,7 @@ Im Anhang \ref{app:tm010_felder} wurden die Felder aller vermessenen $\mathrm{TM
 \begin{figure}[h]
 	\centering
 	\input{./plots/PETRA-III/pi.tex}
-	\caption[Elektrische Feldverteilung der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigermode von PETRA-III]{Elektrische Feldverteilung der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigermode von PETRA-III. Die Position~$z$ ist relativ zum Vakuumflansch angegeben.}
+	\caption[Elektrische Feldverteilung der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigungsmode von PETRA-III]{Elektrische Feldverteilung der $\mathrm{TM}_{010}\text{-}\pi$-Beschleunigungsmode von PETRA-III. Die Position~$z$ ist relativ zum Vakuumflansch angegeben.}
 	\label{fig:bsp_feld_tm010pi_petra3}
 \end{figure}
 
@@ -137,7 +137,7 @@ Wie zu erwarten, zeigt die $\pi$-Mode beider Resonatoren mit einem Laufzeitfakto
 Dies ist der Fall, da ein ultrarelativistisches Teilchen zum Durchqueren einer Zelle der Länge \SI{30}{\centi\metre} bei einer treibenden Hochfrequenz von \SI{499.67}{MHz} genau eine halbe Periode der Hochfrequenz benötigt.
 Durch den Phasensprung von $\pi$ zwischen jeder Zelle bedeutet dies, dass das Teilchen stets ein elektrisches Feld erfährt, welches in dessen Bewegungsrichtung zeigt (vgl.\ Abschnitt \ref{app:tm010_felder}).
 Im Vergleich dazu sind die restlichen $\mathrm{TM}_{010}$-Moden mit effektiven Shuntimpedanzen der Größenordnung von einigen \si{\kilo\ohm} ungeeignet für die effiziente Beschleunigung geladener Teilchen.
-Dahingehend soll sich die Diskussion auf die $\pi$-Beschleunigermode beschränken.
+Dahingehend soll sich die Diskussion auf die $\pi$-Beschleunigungsmode beschränken.
 
 Laut Herstellerangaben liegt die Güte der siebenzelligen PETRA-Resonatoren im Bereich von \num{29000} bis \num{36000} bei einem Nominalwert von \num{32800} \cite{desy_petra}.
 PETRA-IV unterschreitet somit die Untergrenze der Güte um etwa \num{800} und lediglich PETRA-III fällt in den angegebenen Bereich.
@@ -145,7 +145,7 @@ Außerdem unterschreiten beide deutlich die nominale Güte, was möglicherweise 
 Im Folgenden wird diese Abweichung auch bei den Shuntimpedanzen auftreten, da diese eine lineare Abhängigkeit von der Güte der Resonatormode aufweist.
 
 Der Hersteller gibt eine nominale (effektive) Shuntimpedanz von \SI{28.1}{\mega\ohm} an \cite{desy_petra}, welche gemäß der vorigen Erläuterungen nicht erreicht werden kann.
-Ein Vergleich ist dennoch möglich, wenn der Geometriefaktor $R_\mathrm{S}^\mathrm{eff} / Q_0$ der Beschleunigermode betrachtet wird.
+Ein Vergleich ist dennoch möglich, wenn der Geometriefaktor $R_\mathrm{S}^\mathrm{eff} / Q_0$ der Beschleunigungsmode betrachtet wird.
 Für beide Resonatoren erhält man den Geometriefaktor der $\pi$-Mode von
 \begin{align}
 	\frac{R_\mathrm{S}^\mathrm{eff}}{Q_0} = \SI{868+-32}{\ohm} \eqcomma
