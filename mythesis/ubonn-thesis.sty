@@ -134,7 +134,7 @@
 % The DIV parameter tells it how many elements the page
 % should be split into.
 % \RequirePackage[scale=0.75]{geometry}
-\KOMAoptions{DIV=14,BCOR=8mm}
+\KOMAoptions{DIV=16,BCOR=10mm}
 \KOMAoptions{headinclude=true}
 % Header and footer
 \RequirePackage[headsepline]{scrpage2}
@@ -402,7 +402,7 @@
   % Adjust the \chapter heading
   % Taken from http://tex.stackexchange.com/questions/173389/chapter-title-adjusting-with-koma-script
   \def\@makechapterhead#1{%
-    \vspace*{10\p@}%
+    \vspace*{0\p@}%
     {\parindent \z@ \raggedleft \reset@font
       \sffamily \bfseries \Huge \MakeUppercase{\Large\@chapapp}  \thechapter\vspace*{-5\p@}
       \par\nobreak
