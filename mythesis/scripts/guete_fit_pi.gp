@@ -39,7 +39,7 @@ v0 = 499506965.541/1.0e6 + 0.03 # +- 1.02283884466
 set dummy v
 rho(v) = sqrt( ((kappa-1)**2 + Q0**2 *(v/v0 - v0/v)**2) / ((kappa+1)**2 + Q0**2 * (v/v0 - v0/v)**2) )
 
-plot filename u ($1/1.0e6 + 0.03):2:(0.01*$2) every 10 w yerror ls 1 t'Messpunkte', rho(v) ls 2 t'Anpassung'
+plot filename u ($1/1.0e6 + 0.03):2:(0.006*$2) every 10 w yerror ls 1 t'Messpunkte', rho(v) ls 2 t'Anpassung'
 
 ### FOOTER START
 unset output
