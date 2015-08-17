@@ -17,7 +17,7 @@ Im Rahmen dieser Arbeit wird das elektrische Feld von zwei siebenzelligen Beschl
 Der Resonator ist ausgelegt auf die Beschleunigung von ultrarelativistischen Elektronen und Positronen durch die $\mathrm{TM}_{010}\text{-}\pi$-Mode bei einer Frequenz von \SI{499.67}{MHz}.
 Der Querschnitt der Kavität ist in Abbildung \ref{fig:petra_cavity} schematisch dargestellt.
 Die Zellen werden durch leitende Kupferwände voneinander getrennt, die eine Verbreiterung an der Strahlachse des Resonators aufweisen.
-Diese sogenannten \textit{Nasenkegel} (engl.\ \textit{Nose Cones}) erzeugen eine Erhöhung der elektrischen Feldstärke auf der Strahlachse bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führen zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne \textit{Nasenkegel} \cite{wangler}.
+Diese sogenannten \textit{Nasenkegel} (engl.\ \textit{nose cones}) erzeugen eine Erhöhung der elektrischen Feldstärke auf der Strahlachse bei gleichzeitiger Verkürzung der Beschleunigungsstrecke und führen zu einem Anstieg des Laufzeitfaktors \eqref{eq:laufzeitfaktor} gegenüber einer Kavität ohne \textit{Nasenkegel} \cite{wangler}.
 
 Jede der sieben Zellen des PETRA-Resonators stellt einen Hohlraumresonator dar, der durch vier symmetrisch angeordnete Koppelschlitze in der trennenden Kupferwand an die jeweiligen Nachbarzellen gekoppelt ist.
 Dies führt zur Aufspaltung jeder Mode der Einzelzelle in $N$ Moden der Resonatorkette, wobei $N$ die Anzahl der gekoppelten Zellen ist.\footnote{Dies ist analog zu gekoppelten mechanischen Pendeln, welche ebenfalls $N$ verschiedene Schwingungsmoden aufweisen.}
@@ -82,7 +82,7 @@ Der Motor besitzt eine integrierte Steuereinheit, welche die direkte Ansteuerung
 Ein voller Schritt des Motors entspricht einem Drehwinkel der Welle von \SI{1.8}{\degree}.
 Durch eine spezielle Ansteuerungstechnik, welche in der Steuereinheit implementiert wurde, wird ein Schritt zusätzlich in \num{256} sogenannte \textit{Microsteps} eingeteilt.
 Die Ortsinformation des Störkörpers entlang der Strahlachse kann dann aus der Anzahl der erfolgten Microsteps gewonnen werden.
-Aus der Geometrie der Spindel folgt für die zugehörige Proportionalitätskonstante ca.\ \SI{0.006}{\milli\metre\per\micro\step}.
+Aus der Geometrie der Spindel folgt für die zugehörige Proportionalitätskonstante ca.\ \SI[per-mode = symbol]{0.006}{\milli\metre\per\micro\step}.
 Die Stellgenauigkeit von Schrittmotoren liegt typischerweise bei \SI{5}{\percent} eines vollen Schrittes \cite{gecko}, was einem Winkelfehler von \SI{0.09}{\degree} oder einem Fehler in der Störkörperposition von weniger als \SI{0.1}{\milli\metre} entspricht.
 Der limitierende Faktor für die Genauigkeit der Störkörperpositon liegt demnach nicht in der Stellgenaugikeit des Motors, sondern in der ungleichen mechanischen Verspannung des Kunststofffadens aufgrund von Reibung in den Lagern der Umlenkrollen.
 Mit dem verwendeten Messaufbau können so Fehler der Positionsbestimmung von unter \SI{0.5}{mm} erreicht werden, was eine ausreichende Genaugikeit für die Vermessung der Resonatoren darstellt.
@@ -119,7 +119,7 @@ Für die resonante Störkörpermessung gilt es die Verschiebung der Resonanzfreq
 Dabei muss man beachten, dass es neben der Frequenzverschiebung durch den Störkörper auch zu einer Verstimmung aufgrund von Temperaturänderungen des Resonators kommt.
 Eine Erwärmung führt beispielsweise zu einer thermischen Ausdehnung des Resonators und folglich zu einer Vergrößerung des Hohlraumvolumens.
 Diese Geometrieänderung des Hohlraums führt zu einer Verringerung der Resonanzfrequenz der Resonatormoden.
-Analog führt ein Abkühlen des Resonators zur Kontraktion desselben, die wiederum eine Erhöhung der Resonanzfrequenz zur Folge hat. Für die vermessenen PETRA-Resonatoren liegt die Verstimmung durch Temperaturänderung bei ungefähr \SI{8}{\kilo\hertz\per\celsius} \cite{desy_petra} und liegt in der gleichen Größenordnung wie die Verschiebung durch den verwendeten Störkörper.
+Analog führt ein Abkühlen des Resonators zur Kontraktion desselben, die wiederum eine Erhöhung der Resonanzfrequenz zur Folge hat. Für die vermessenen PETRA-Resonatoren liegt die Verstimmung durch Temperaturänderung bei ungefähr \SI[per-mode = symbol]{8}{\kilo\hertz\per\celsius} \cite{desy_petra} und liegt in der gleichen Größenordnung wie die Verschiebung durch den verwendeten Störkörper.
 Aus diesem Grund muss die Temperaturabhängigkeit der Resonanzfrequenz beim Messablauf berücksichtigt werden.
 
 Sei dazu durch $\nu_0(z)$ die Resonanzfrequenz einer Resonatormode, mit dem Störkörper auf der Position~$z$ entlang der Strahlenachse, gegeben.
