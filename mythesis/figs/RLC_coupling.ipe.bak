@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.5">
-<info created="D:20150628163424" modified="D:20150817221854"/>
+<info created="D:20150628163424" modified="D:20150817211024"/>
 <preamble>\usepackage{amsmath}
 \usepackage{rotating}</preamble>
 <ipestyle name="basic">
@@ -309,17 +309,17 @@ h
 <path stroke="black" pen="0.6" cap="1">
 128 752 m
 128 732 l
-72 732 l
-72 748 l
+104 732 l
+104 748 l
 </path>
 <path stroke="black" pen="0.6" cap="1">
 128 756 m
 120 756 l
 120 780 l
-72 780 l
-72 764 l
+104 780 l
+104 764 l
 </path>
-<group matrix="1 0 0 1 -16 16">
+<group matrix="1 0 0 1 16 16">
 <path matrix="1 0 0 1 -24 36" stroke="black" pen="0.6" cap="1">
 8 0 0 8 112 704 e
 </path>
@@ -426,7 +426,7 @@ h
 115.946 703.915 115.973 703.957 116 704 c
 </path>
 </group>
-<text matrix="1 0 0 1 -26 0" transformations="translations" pos="88 756" stroke="black" type="label" width="8.849" height="6.812" depth="1.49" halign="right" valign="center">$I_0$</text>
+<text matrix="1 0 0 1 6 0" transformations="translations" pos="88 756" stroke="black" type="label" width="11.272" height="6.812" depth="1.49" halign="right" valign="center">$U_0$</text>
 <path stroke="0.216 0.494 0.722">
 236 788 m
 236 792 l
@@ -497,9 +497,9 @@ h
 </path>
 <use matrix="1 0 0 1 8 68" name="mark/disk(sx)" pos="264 712" size="small" stroke="black"/>
 <use matrix="1 0 0 1 8 68" name="mark/disk(sx)" pos="264 664" size="small" stroke="black"/>
-<text matrix="1 0 0 1 30 64" transformations="translations" pos="244 700" stroke="black" type="label" width="6.78" height="6.808" depth="0" valign="center">$L$</text>
-<text matrix="1 0 0 1 46 68" transformations="translations" pos="252 696" stroke="black" type="label" width="7.833" height="6.808" depth="0" valign="center">$C$</text>
-<text matrix="1 0 0 1 -46 76" transformations="translations" pos="300 688" stroke="black" type="label" width="7.641" height="6.808" depth="0" valign="center">$R$</text>
+<text matrix="1 0 0 1 31 64" transformations="translations" pos="244 700" stroke="black" type="label" width="6.78" height="6.808" depth="0" valign="center">$L$</text>
+<text matrix="1 0 0 1 47 68" transformations="translations" pos="252 696" stroke="black" type="label" width="7.833" height="6.808" depth="0" valign="center">$C$</text>
+<text matrix="1 0 0 1 -45 76" transformations="translations" pos="300 688" stroke="black" type="label" width="7.641" height="6.808" depth="0" valign="center">$R$</text>
 <path stroke="black" pen="0.6" cap="1">
 248 780 m
 216 780 l
@@ -510,23 +510,5 @@ h
 </path>
 <use matrix="1 0 0 1 -16 68" name="mark/disk(sx)" pos="264 712" size="small" stroke="black"/>
 <use matrix="1 0 0 1 -16 68" name="mark/disk(sx)" pos="264 664" size="small" stroke="black"/>
-<path matrix="1 0 0 1 -192 68" stroke="black" pen="0.6" cap="1">
-284 700 m
-284 676 l
-292 676 l
-292 700 l
-h
-</path>
-<path matrix="1 0 0 1 -192 68" stroke="black" pen="0.6" cap="1">
-288 676 m
-288 664 l
-</path>
-<path matrix="1 0 0 1 -192 68" stroke="black" pen="0.6" cap="1">
-288 700 m
-288 712 l
-</path>
-<use matrix="1 0 0 1 -168 68" name="mark/disk(sx)" pos="264 712" size="small" stroke="black"/>
-<use matrix="1 0 0 1 -168 68" name="mark/disk(sx)" pos="264 664" size="small" stroke="black"/>
-<text matrix="1 0 0 1 -198 76" transformations="translations" pos="300 688" stroke="black" type="label" width="11.27" height="6.812" depth="1.49" valign="center">$Z_0$</text>
 </page>
 </ipe>

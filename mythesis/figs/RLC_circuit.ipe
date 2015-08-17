@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
-<ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150628163424" modified="D:20150727140928"/>
+<ipe version="70005" creator="Ipe 7.1.5">
+<info created="D:20150628163424" modified="D:20150817221425"/>
 <preamble>\usepackage{amsmath}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
@@ -297,8 +297,8 @@ h
 </path>
 <use matrix="1 0 0 1 -24 68" name="mark/disk(sx)" pos="264 712" size="small" stroke="black"/>
 <use matrix="1 0 0 1 -24 68" name="mark/disk(sx)" pos="264 664" size="small" stroke="black"/>
-<text matrix="1 0 0 1 -1 64" transformations="translations" pos="244 700" stroke="black" type="label" width="6.78" height="6.808" depth="0" valign="center">$L$</text>
-<text matrix="1 0 0 1 15 68" transformations="translations" pos="252 696" stroke="black" type="label" width="7.833" height="6.808" depth="0" valign="center">$C$</text>
-<text matrix="1 0 0 1 -77 76" transformations="translations" pos="300 688" stroke="black" type="label" width="7.641" height="6.808" depth="0" valign="center">$R$</text>
+<text matrix="1 0 0 1 -2 64" transformations="translations" pos="244 700" stroke="black" type="label" width="6.78" height="6.808" depth="0" valign="center">$L$</text>
+<text matrix="1 0 0 1 14 68" transformations="translations" pos="252 696" stroke="black" type="label" width="7.833" height="6.808" depth="0" valign="center">$C$</text>
+<text matrix="1 0 0 1 -78 76" transformations="translations" pos="300 688" stroke="black" type="label" width="7.641" height="6.808" depth="0" valign="center">$R$</text>
 </page>
 </ipe>
