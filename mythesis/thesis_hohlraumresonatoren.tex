@@ -63,7 +63,7 @@ Dazu wird in dieser Arbeit \emph{CST Microwave Studio\textsuperscript{\textregis
   \caption[Parallelschwingkreis als Modell für die elektrischen Eigenschaften eines Hohlraumresonators in der Nähe einer Resonanz]{Ein Parallelschwingkreis bestehend aus dem \textsc{ohm}schen Widerstand~$R$, der Induktivität~$L$ und der Kapazität~$C$ als Modell für die elektrischen Eigenschaften eines Hohlraumresonators in der Nähe einer Resonanz.}
   \label{fig:rlc_circuit}
 \end{figure}
-Die elektrischen Eigenschaften von Hohlraumresonatoren können in einem beschränkten Frequenzbereich um eine Resonanz durch das Modell des Parallelschwingkreises (siehe Abb.\ \ref{fig:rlc_circuit}) erklärt werden \cite{wille, pozar}.
+Die elektrischen Eigenschaften von Hohlraumresonatoren können in einem beschränkten Frequenzbereich um eine Resonanz durch das Modell des Parallelschwingkreises (siehe Abb.\ \ref{fig:rlc_circuit}) erklärt werden \cite{wangler, wille, pozar}.
 Zu dessen vollständiger Beschreibung ist die Angabe der drei Kenngrößen \textsc{ohm}scher Widerstand~$R$, Induktivität~$L$ und Kapazität~$C$ ausreichend.
 Für die Behandlung von Hohlraumresonatoren ist es zweckmäßig, andere Parameter zur Beschreibung zu wählen.
 Daher verwendet man stattdessen die Eigenfrequenz~$\omega_0$, die Kreisgüte~$Q_0$ und den Widerstand~$R$ zur Charakterisierung des Schwingkreises.
@@ -103,7 +103,7 @@ Man definiert als Maß für die Kopplung den sog.\ Koppelfaktor
 \end{align}
 mit dem Wellenwiderstand~$Z_0$ des Wellenleiters und unterscheidet zwischen unterkritischer \mbox{$(\kappa < 1)$}, kritischer $(\kappa = 1)$ und überkritischer Kopplung $(\kappa > 1)$.
 Im Falle von resonanter Anregung bei kritischer Kopplung folgert man aus Gleichung \eqref{eq:koppelfaktor}, dass der Wellenleiter mit seiner charakteristischen Impedanz abgeschlossen ist und somit keine Reflexionen an der Koppelschleife entstehen.
-Mit der Definition des Koppelfaktors~$\kappa$, der Proportionalität $Z^\prime(\omega) \propto Z(\omega)$ für ideale Transformatoren und der Impedanz des Resonators im Resonanzfall $Z(\omega_0) = R$ folgt die Frequenzabhängigkeit der Impedanz~$Z^\prime(\omega)$ des Systems bestehend aus Koppelschleife und Resonator:
+Mit der Definition des Koppelfaktors~$\kappa$, der Proportionalität $Z^\prime(\omega) \propto Z(\omega)$ für ideale Transformatoren und der Impedanz des Resonators im Resonanzfall $Z(\omega_0) = R$ folgt die Frequenzabhängigkeit der Impedanz~$Z^\prime(\omega)$ des Systems bestehend aus Koppelschleife und Resonator \cite{hillert}:
 \begin{align}
   Z^\prime(\omega) = \frac{Z^\prime(\omega_0)}{Z(\omega_0)} \cdot Z(\omega) = \kappa \frac{Z_0}{R} Z(\omega) \eqdot
   \label{eq:impedanz_hinter_schleife}
