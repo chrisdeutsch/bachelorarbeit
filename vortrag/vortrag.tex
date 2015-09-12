@@ -10,6 +10,7 @@
 \usepackage{amssymb}
 
 \usepackage{multirow}
+\usepackage{layouts}
 
 % Einheiten
 \usepackage{siunitx}
@@ -191,11 +192,13 @@ Seminar zur Bachelorarbeit SS15}
 \section{Störkörpermessungen}
 \begin{frame}{Störkörpermessungen}
 	Störkörpermessungen
+	\put(5,1){\input{./plots/resonanzkurve.tex}}
 \end{frame}
 
 \section{Ergebnisse}
 \begin{frame}{Ergebnisse}
 	Ergebnisse
+	\printinunitsof{cm}\prntlen{\textwidth}
 \end{frame}
 
 \begin{frame}{Literatur}
