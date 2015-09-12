@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.5">
-<info created="D:20150716211205" modified="D:20150912182530"/>
+<info created="D:20150716211205" modified="D:20150912183334"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -462,9 +462,18 @@ h
 <layer name="Cavity"/>
 <layer name="Minitec"/>
 <layer name="Beschriftung"/>
-<view layers="Cavity Minitec" active="Beschriftung"/>
-<group layer="Cavity" matrix="1 0 0 1 -256 -288">
-<group matrix="-1 0 0 -1 1819.81 1445.16">
+<view layers="Cavity Minitec" active="Minitec"/>
+<text layer="Beschriftung" matrix="1 0 0 1 349.7 -248.6" transformations="translations" pos="304 592" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(a)</text>
+<text matrix="1 0 0 1 88 -279.3" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(b)</text>
+<text matrix="1 0 0 1 611.339 -279.2" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(b)</text>
+<text matrix="1 0 0 1 66.811 -167.06" transformations="translations" pos="304 592" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="right" valign="bottom">(e)</text>
+<text matrix="1 0 0 1 632.437 -167.06" transformations="translations" pos="304 592" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" valign="bottom">(e)</text>
+<text matrix="1 0 0 1 233.889 -25.0346" transformations="translations" pos="304 592" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(g)</text>
+<text matrix="1 0 0 1 -20.5178 -111.842" transformations="translations" pos="304 592" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(d)</text>
+<text matrix="1 0 0 1 -0.70463 1.53265" transformations="translations" pos="344.705 358.767" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(c)</text>
+<text matrix="1 0 0 1 605.195 1.533" transformations="translations" pos="344.705 358.767" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(c)</text>
+<text matrix="1 0 0 1 431.211 -173.336" transformations="translations" pos="304 592" stroke="black" type="label" width="11.568" height="7.473" depth="2.49" halign="center" valign="center">(f)</text>
+<group layer="Cavity" matrix="-1 0 0 -1 1563.81 1157.16">
 <path matrix="1 0 0 1 608 96" stroke="black" fill="0.843 0.796 0.796">
 32.5748 709.16 m
 571.811 709.16 l
@@ -1113,15 +1122,14 @@ h
 </path>
 </group>
 </group>
-<group matrix="1 0 0 1 448 464">
-<path matrix="1 0 0 1 32 -240" stroke="black" fill="0.478">
+<path layer="Minitec" matrix="1 0 0 1 224 -64" stroke="black" fill="0.478">
 160 384 m
 160 416 l
 176 416 l
 176 384 l
 h
 </path>
-<group matrix="1 0 0 1 64 -240">
+<group matrix="1 0 0 1 256 -64">
 <path matrix="1 0 0 1 0 -36" stroke="black" fill="0.651">
 24 447.5 m
 24 452 l
@@ -1160,7 +1168,7 @@ h
 h
 </path>
 </group>
-<group matrix="1 0 0 1 36 -272">
+<group matrix="1 0 0 1 228 -96">
 <path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
 32 416 m
 32 392 l
@@ -1176,7 +1184,7 @@ h
 h
 </path>
 </group>
-<group matrix="-1 0 0 -1 268 600">
+<group matrix="-1 0 0 -1 460 776">
 <path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
 32 416 m
 32 392 l
@@ -1192,7 +1200,7 @@ h
 h
 </path>
 </group>
-<group matrix="0 2.38462 -1 0 552 94.7692">
+<group matrix="0 2.38462 -1 0 744 270.769">
 <path stroke="black" fill="0.651">
 128 444.5 m
 128 440 l
@@ -1215,7 +1223,7 @@ h
 h
 </path>
 </group>
-<group matrix="1 0 0 1 -56 -272">
+<group matrix="1 0 0 1 136 -96">
 <path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
 32 416 m
 32 392 l
@@ -1231,7 +1239,7 @@ h
 h
 </path>
 </group>
-<group matrix="0.384615 0 0 1 102.769 -217.437">
+<group matrix="0.384615 0 0 1 294.769 -41.437">
 <path stroke="black" fill="0.651">
 128 444.5 m
 128 440 l
@@ -1254,7 +1262,7 @@ h
 h
 </path>
 </group>
-<path matrix="1 0 0 1 -25.5 -109.437" stroke="black" fill="0.839">
+<path matrix="1 0 0 1 166.5 66.563" stroke="black" fill="0.839">
 137.5 344 m
 137.5 356 l
 140 356 l
@@ -1263,7 +1271,7 @@ h
 149.5 344 l
 h
 </path>
-<path matrix="0 -1 1 0 -232 360.063" stroke="black" fill="0.839">
+<path matrix="0 -1 1 0 -40 536.063" stroke="black" fill="0.839">
 137.5 344 m
 137.5 356 l
 140 356 l
@@ -1272,14 +1280,14 @@ h
 149.5 344 l
 h
 </path>
-<path matrix="-1 0 0 1 891.236 -240" stroke="black" fill="0.478">
+<path matrix="-1 0 0 1 1083.24 -64" stroke="black" fill="0.478">
 160 384 m
 160 416 l
 176 416 l
 176 384 l
 h
 </path>
-<group matrix="-0.738113 0 0 1 825.715 -240">
+<group matrix="-0.738113 0 0 1 1017.72 -64">
 <path matrix="1 0 0 1 0 -36" stroke="black" fill="0.651">
 24 447.5 m
 24 452 l
@@ -1318,7 +1326,7 @@ h
 h
 </path>
 </group>
-<group matrix="-1 0 0 1 887.236 -272">
+<group matrix="-1 0 0 1 1079.24 -96">
 <path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
 32 416 m
 32 392 l
@@ -1334,7 +1342,7 @@ h
 h
 </path>
 </group>
-<group matrix="1 0 0 -1 628 600">
+<group matrix="1 0 0 -1 820 776">
 <path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
 32 416 m
 32 392 l
@@ -1350,7 +1358,7 @@ h
 h
 </path>
 </group>
-<group matrix="0 1.92308 1 0 344 105.846">
+<group matrix="0 1.92308 1 0 536 281.846">
 <path stroke="black" fill="0.651">
 128 444.5 m
 128 440 l
@@ -1373,7 +1381,7 @@ h
 h
 </path>
 </group>
-<group matrix="-1 0 0 1 952 -272">
+<group matrix="-1 0 0 1 1144 -96">
 <path matrix="1 0 0 1 112 32" stroke="black" fill="0.839">
 32 416 m
 32 392 l
@@ -1389,7 +1397,7 @@ h
 h
 </path>
 </group>
-<group matrix="-1 0 0 1 896 -48">
+<group matrix="-1 0 0 1 1088 128">
 <path matrix="1 0 0 1 -64 -32" stroke="black" fill="0.839">
 164 432 m
 176 432 l
@@ -1406,7 +1414,7 @@ h
 4 0 0 4 144 444 e
 </path>
 </group>
-<group matrix="-1 0 0 1 896.086 -152.903">
+<group matrix="-1 0 0 1 1088.09 23.097">
 <path matrix="1 0 0 1 -64 -32" stroke="black" fill="0.839">
 164 432 m
 176 432 l
@@ -1423,7 +1431,7 @@ h
 4 0 0 4 144 444 e
 </path>
 </group>
-<group>
+<group matrix="1 0 0 1 192 176">
 <path matrix="1 0 0 1 0 -155.337" stroke="black" fill="0.651">
 4 0 0 4 144 384 e
 </path>
@@ -1431,7 +1439,7 @@ h
 4 0 0 4 144 444 e
 </path>
 </group>
-<group>
+<group matrix="1 0 0 1 192 176">
 <path matrix="1 0 0 1 -37.9943 -199.543" stroke="black" fill="0.651">
 4 0 0 4 144 384 e
 </path>
@@ -1439,7 +1447,7 @@ h
 4 0 0 4 144 444 e
 </path>
 </group>
-<group>
+<group matrix="1 0 0 1 192 176">
 <path matrix="1 0 0 1 -64 -32" stroke="black" fill="0.839">
 164 432 m
 176 432 l
@@ -1456,7 +1464,7 @@ h
 4 0 0 4 144 444 e
 </path>
 </group>
-<group matrix="0.766861 0 0 0.766861 -14.428 18.0649">
+<group matrix="0.766861 0 0 0.766861 177.572 194.065">
 <path stroke="black" fill="0.651">
 12 0 0 12 144 352 e
 </path>
@@ -1468,26 +1476,26 @@ h
 </path>
 </group>
 <path stroke="black" pen="heavier">
-353.678 380.915 m
-780.811 350.025 l
-6.26206 0 0 -6.26206 779.914 343.828 786.175 343.859 a
-786.261 238.884 l
-6.2619 0 0 -6.2619 780 238.925 779.935 232.663 a
-143.995 232.663 l
-4 0 0 4 144 228.663 141.067 231.383 a
-109.052 181.864 l
-4 0 0 -4 106.006 184.457 102.011 184.665 a
-105.202 288.097 l
-9.20233 0 0 9.20233 96 288 86.7982 287.901 a
-9.20233 0 0 9.20233 96 288 105.202 287.982 a
-109.846 391.312 l
-6.28389 0 0 -6.28389 116.108 391.83 115.858 398.109 a
-338 382.049 l
+746.119 542.391 m
+972.811 526.025 l
+6.26206 0 0 -6.26206 971.914 519.828 978.175 519.859 a
+978.261 414.884 l
+6.2619 0 0 -6.2619 972 414.925 971.935 408.663 a
+335.995 408.663 l
+4 0 0 4 336 404.663 333.067 407.383 a
+301.052 357.864 l
+4 0 0 -4 298.006 360.457 294.011 360.665 a
+297.202 464.097 l
+9.20233 0 0 9.20233 288 464 278.798 463.901 a
+9.20233 0 0 9.20233 288 464 297.202 463.982 a
+301.846 567.312 l
+6.28389 0 0 -6.28389 308.108 567.83 307.858 574.109 a
+730.669 543.535 l
 </path>
-<path matrix="0.203428 0 0 0.203428 510.663 180.586" stroke="black" fill="white">
+<path matrix="0.203428 0 0 0.203428 545.763 356.586" stroke="black" fill="white">
 16 0 0 16 160 256 e
 </path>
-<path matrix="0.997397 -0.0721114 0.0721114 0.997397 -143.375 10.5464" stroke="black" pen="heavier">
+<path matrix="0.997397 -0.0721114 0.0721114 0.997397 249.059 171.938" stroke="black" pen="heavier">
 467.035 403.359 m
 1.78983 0 0 1.94714 467.262 405.29 467.251 407.238 a
 466.115 407.238 l
@@ -1594,17 +1602,5 @@ h
 455.132 407.238 l
 -1.78983 0 0 -1.94714 455.121 405.291 455.348 403.359 a
 </path>
-</group>
-</group>
-<text layer="Beschriftung" matrix="1 0 0 1 349.7 -248.6" transformations="translations" pos="304 592" stroke="black" type="label" halign="center" valign="center">(a)</text>
-<text matrix="1 0 0 1 88 -279.3" transformations="translations" pos="304 592" stroke="black" type="label" halign="center" valign="center">(b)</text>
-<text matrix="1 0 0 1 611.339 -279.2" transformations="translations" pos="304 592" stroke="black" type="label" halign="center" valign="center">(b)</text>
-<text matrix="1 0 0 1 66.811 -167.06" transformations="translations" pos="304 592" stroke="black" type="label" halign="right" valign="bottom">(e)</text>
-<text matrix="1 0 0 1 632.437 -167.06" transformations="translations" pos="304 592" stroke="black" type="label" valign="bottom">(e)</text>
-<text matrix="1 0 0 1 233.889 -25.0346" transformations="translations" pos="304 592" stroke="black" type="label" halign="center" valign="center">(g)</text>
-<text matrix="1 0 0 1 -20.5178 -111.842" transformations="translations" pos="304 592" stroke="black" type="label" halign="center" valign="center">(d)</text>
-<text matrix="1 0 0 1 -0.70463 1.53265" transformations="translations" pos="344.705 358.767" stroke="black" type="label" halign="center" valign="center">(c)</text>
-<text matrix="1 0 0 1 605.195 1.533" transformations="translations" pos="344.705 358.767" stroke="black" type="label" halign="center" valign="center">(c)</text>
-<text matrix="1 0 0 1 431.211 -173.336" transformations="translations" pos="304 592" stroke="black" type="label" halign="center" valign="center">(f)</text>
 </page>
 </ipe>

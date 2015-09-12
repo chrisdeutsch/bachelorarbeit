@@ -10,7 +10,7 @@
 \usepackage{amssymb}
 
 \usepackage{multirow}
-\usepackage{layouts}
+\usepackage[percent]{overpic}
 
 % Einheiten
 \usepackage{siunitx}
@@ -190,15 +190,33 @@ Seminar zur Bachelorarbeit SS15}
 \end{frame}
 
 \section{Störkörpermessungen}
+\begin{frame}{Aufbau}
+	\includegraphics[width=1.\textwidth]{./figures/messaufbau.pdf}
+\end{frame}
 \begin{frame}{Störkörpermessungen}
-	Störkörpermessungen
-	\put(5,1){\input{./plots/resonanzkurve.tex}}
+	\vspace*{2cm}
+	\centering
+	\begin{overpic}[width=0.95\textwidth,tics=10]{./figures/messaufbau_refpos.pdf}
+		\put (45,20) {
+				\fcolorbox{Black}{White}{\input{./plots/resonanzkurve_ref.tex}}
+			}
+	\end{overpic}
+\end{frame}
+
+\begin{frame}{Störkörpermessungen}
+	\addtocounter{framenumber}{-1} 
+	\vspace*{2cm}
+	\centering
+	\begin{overpic}[width=0.95\textwidth,tics=10]{./figures/messaufbau_messpos.pdf}
+		\put (45,20) {
+			\fcolorbox{Black}{White}{\input{./plots/resonanzkurve.tex}}
+		}
+	\end{overpic}
 \end{frame}
 
 \section{Ergebnisse}
 \begin{frame}{Ergebnisse}
 	Ergebnisse
-	\printinunitsof{cm}\prntlen{\textwidth}
 \end{frame}
 
 \begin{frame}{Literatur}
