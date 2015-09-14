@@ -79,23 +79,41 @@ Seminar zur Bachelorarbeit SS15}
 	\tableofcontents
 \end{frame}
 
-\section{Einführung}
+\section{Motivation}
 %\frame{\tableofcontents[currentsection]} Inhaltsverzeichnis für die aktuelle Section
 % \setlength\itemsep{1em} in itemization zur abstandeinstellung
-\subsection{Motivation}
-\begin{frame}{Motivation}
+\begin{frame}{Motivation (Zuviel Text)}
 	\begin{itemize}
-		\item Begrenzung des internen Strahlstroms von ELSA durch fehlende Hochfrequenzleistung
-		\item Erweiterung des Stretcherrings durch zwei siebenzellige Resonatoren (PETRA) (int.\ Strahlströme bis \SI{200}{mA})
-		\item Störkörpermessung zur Bestimmung der Feldverteilung in den Resonatoren (Beschleunigungseffizienz \& HOM)
+		\item Begrenzung des internen Strahlstroms an ELSA durch fehlende Hochfrequenzleistung
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item max.\ interner Strahlstrom  $\sim\SI{20}{mA}$ bei \SI{3.2}{GeV}
+		\end{itemize}
+		\vfill
+		
+		\item Erweiterung des Stretcherrings durch zweite HF-Station
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item Klystron und zwei 7-zellige PETRA-Resonatoren
+			\item interne Strahlströme bis zu \SI{200}{mA}
+		\end{itemize}
+		\vfill
+		
+		\item Bestimmung der elektrischen Feldverteilung durch resonante Störkörpermessung
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item Beschleunigungsspannung
+			\item Beschleunigungseffizienz (Shuntimpedanz)
+			\item Moden höherer Ordnung
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 
 \section{Hohlraumresonatoren}
 
-\subsection{Felder \& Moden}
-\begin{frame}{Felder \& Moden}
+\subsection{Schwingungsmoden}
+\begin{frame}{Schwingungsmoden}
 	\begin{itemize}
 		\item Hohlraum mit (ideal) leitenden Wänden
 		
@@ -119,13 +137,21 @@ Seminar zur Bachelorarbeit SS15}
 \begin{frame}
 	\begin{columns}[T]
 		\column{0.5\textwidth}
-		\centering
-		\includegraphics[scale=0.4]{./figures/tm010.pdf}
+		\begin{figure}[h]
+			\centering
+			\hspace*{0.70cm}\includegraphics[scale=0.4]{./figures/tm010.pdf}
+			\vspace*{-0.2cm}
+			\caption{$\mathrm{TM}_{010}$}
+		\end{figure}
 		
 		\column{0.5\textwidth}
-		\includegraphics[scale=0.4]{./figures/tm210.pdf}
+		\begin{figure}[h]
+			\centering
+			\hspace*{0.70cm}\includegraphics[scale=0.4]{./figures/tm210.pdf}
+			\vspace*{-0.2cm}
+			\caption{$\mathrm{TM}_{210}$}
+		\end{figure}	
 	\end{columns}
-	\vspace*{0.4cm}
 	Rest zu Felder und Moden und Bilder der TM/TE Moden.
 	Vllt Bild einer Pillbox Cavity auf der vorigen Seite.
 \end{frame}
