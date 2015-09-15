@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70005" creator="Ipe 7.1.5">
-<info created="D:20150914182252" modified="D:20150914182252"/>
+<info created="D:20150914182252" modified="D:20150915130747"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -241,7 +241,7 @@ h
 192 576 m
 192 704 l
 </path>
-<text matrix="1 0 0 1 -2.87297 4.07004" transformations="translations" pos="384 640" stroke="black" type="label" width="5.971" height="5.147" depth="0" valign="baseline" size="12">$z$</text>
+<text matrix="1 0 0 1 -1.52632 4.33937" transformations="translations" pos="384 640" stroke="black" type="label" width="5.971" height="5.147" depth="0" valign="baseline" size="12">$z$</text>
 <path matrix="1 0 0 1 0 -3" stroke="black">
 368 646 m
 368 640 l
@@ -264,7 +264,25 @@ h
 180 688 m
 186 688 l
 </path>
-<group>
+<path matrix="1 0 0 1 9 -24" stroke="black">
+180 688 m
+186 688 l
+</path>
+<path matrix="1 0 0 1 9 -104" stroke="black">
+180 688 m
+186 688 l
+</path>
+<path matrix="1 0 0 1 9 -80" stroke="black">
+180 688 m
+186 688 l
+</path>
+<path matrix="1 0 0 1 9 -48" stroke="black">
+180 688 m
+186 688 l
+</path>
+<text matrix="1 0 0 1 28.1828 2.40344" transformations="translations" pos="251.817 689.597" stroke="0.894 0.102 0.11" type="label" width="23.277" height="6.428" depth="1.93" halign="center" valign="baseline">$p = 0$</text>
+<text matrix="1 0 0 1 28.183 -33.597" transformations="rigid" pos="251.817 689.597" stroke="0.216 0.494 0.722" type="label" width="23.277" height="6.428" depth="1.93" halign="center" valign="baseline">$p = 1$</text>
+<text matrix="1 0 0 1 28.183 -89.597" transformations="translations" pos="251.817 689.597" stroke="0.302 0.686 0.29" type="label" width="23.277" height="6.428" depth="1.93" halign="center" valign="baseline">$p = 2$</text>
 <path stroke="0.894 0.102 0.11" pen="0.6">
 192 688 m
 193.504 688 195.009 688 196.513 688 c
@@ -390,19 +408,6 @@ h
 355.966 683.7 357.47 684.713 358.974 685.53 c
 360.479 686.346 361.983 686.965 363.487 687.378 c
 364.991 687.792 366.496 687.999 368 688 c
-</path>
-</group>
-<path matrix="1 0 0 1 9 -24" stroke="black">
-180 688 m
-186 688 l
-</path>
-<path matrix="1 0 0 1 9 -104" stroke="black">
-180 688 m
-186 688 l
-</path>
-<path matrix="1 0 0 1 9 -80" stroke="black">
-180 688 m
-186 688 l
 </path>
 </page>
 </ipe>

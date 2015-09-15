@@ -179,36 +179,53 @@ Seminar zur Bachelorarbeit SS15}
 
 
 \subsection{elektrische Eigenschaften}
-\begin{frame}{elektrische Eigenschaften von Hohlraumresonatoren}
+\begin{frame}{Impedanzmodell für Hohlraumresonatoren}
 	\begin{columns}[c]
-		\column{0.6\textwidth}
+		\column{0.7\textwidth}
 		\begin{itemize}
-			\item $RLC$-Parallelschwingkreis
+			\item Parallelschwingkreis als Modell für Hohlraumresonatoren
 			\begin{itemize}
-				\item Eigenfrequenz $\omega_0$
-				\item Kreisgüte $Q_0$
-				\item Shuntimpedanz $R_\mathrm{S}$
+				\setlength\itemsep{0.25em}
+				\item gültig in der Nähe einer Resonanz
+				
+				\item beschrieben durch Eigenfrequenz $\omega_0$, Kreisgüte $Q_0$, Shuntimpedanz $R_\mathrm{S}$
 			\end{itemize}
 		\end{itemize}
 		
-		\column{0.4\textwidth}
+		\column{0.3\textwidth}
 		\centering
-		\includegraphics[width=0.6\textwidth]{./figures/RLC_circuit.pdf}
+		\includegraphics[scale=1.15]{./figures/RLC_circuit.pdf}
+	\end{columns}
+	\vfill
+	\begin{columns}[T]
+		\column{0.55\textwidth}
+		\begin{itemize}
+			\item Impedanzmodell:
+			\begin{align*}
+			Z(\omega) = \frac{R_\mathrm{S}}{1 + \mathrm{i} Q_0 \left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} \right)}
+			\end{align*}
+		\end{itemize}
+		
+		\column{0.45\textwidth}
+		\begin{itemize}
+			\item mittlere Verlustleistung:
+			\begin{align*}
+				P_\mathrm{V} = \frac{\left|U\right|^2}{2 R_\mathrm{S}}
+			\end{align*}
+		\end{itemize}
 	\end{columns}
 	
-	\begin{itemize}
-		\item Impedanzmodell:
-		\begin{align*}
-			Z(\omega) = \frac{R_\mathrm{S}}{1 + \mathrm{i} Q_0 \left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} \right)}
-		\end{align*}
-	\end{itemize}
+
 \end{frame}
 
-\begin{frame}{Kopplung}
+\begin{frame}{Kopplung mit externer Leistungsquelle}
 	\begin{columns}[c]
 		\column{0.65\textwidth}
 		\begin{itemize}
 			\item (induktive) Schleifenkopplung
+			\item Kopplung mit der äußeren Beschaltung
+			\item Transformation der Impedanz
+			\item $\kappa$
 		\end{itemize}
 		
 		\column{0.35\textwidth}
@@ -298,6 +315,10 @@ Seminar zur Bachelorarbeit SS15}
 
 \beginbackup
 % Hier die Backupfolien
+\begin{frame}{$p$}
+	\centering
+	\includegraphics[scale=1.0]{./figures/longitudinale_periode.pdf}
+\end{frame}
 \backupend
 
 \end{document}
