@@ -256,11 +256,23 @@ Seminar zur Bachelorarbeit SS15}
 	\begin{itemize}
 		\item komplexer Reflexionsfaktor:
 		\begin{align*}
-			\rho(\omega) = \frac{(\kappa - 1) + \mathrm{i} Q_0 \left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) }{(\kappa + 1) + \mathrm{i} Q_0 \left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} \right)}
+		\rho(\omega) = \frac{(\kappa - 1) + \mathrm{i} Q_0 \left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) }{(\kappa + 1) + \mathrm{i} Q_0 \left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} \right)}
 		\end{align*}
 	\end{itemize}
-	
-	Bild von Resonanzkurven (evtl. Phase?)
+	\vfill
+	\begin{columns}[c]
+		\column{0.7\textwidth}
+			\begin{small}
+				\centering
+				\input{./plots/resonanzkurve_2.tex}
+			\end{small}		
+		\column{0.3\textwidth}
+		\vspace*{-1.3cm}
+		\begin{flalign*}
+			Q_0 &= 300 &\\
+			\kappa &= 1{,}1 &
+		\end{flalign*}
+	\end{columns}
 \end{frame}
 	
 
@@ -332,9 +344,17 @@ Seminar zur Bachelorarbeit SS15}
 
 \beginbackup
 % Hier die Backupfolien
-\begin{frame}{$p$}
+\begin{frame}{Longitudinale Schwingungsmoden}
 	\centering
 	\includegraphics[scale=1.0]{./figures/longitudinale_periode.pdf}
+\end{frame}
+
+\begin{frame}{Resonanzkurven}
+	\begin{small}
+		\centering
+		\input{./plots/resonanzkurve_full.tex}
+	\end{small}
+
 \end{frame}
 \backupend
 
