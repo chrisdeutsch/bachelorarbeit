@@ -276,18 +276,27 @@ Seminar zur Bachelorarbeit SS15}
 \end{frame}
 	
 
-
-
 \section{Resonante Störkörpermessung}
 
-\begin{frame}{Störkörpermessung}
-	\begin{columns}[T]
+\begin{frame}{Resonante Störkörpermessung}
+	\begin{itemize}
+		\item Bestimmung von el.\ und mag.\ Feldamplituden in Resonatoren
+	\end{itemize}
+	\vspace*{0.12cm}
+	\begin{columns}[c,onlytextwidth]
 		\column{0.6\textwidth}
 		\begin{itemize}
-			\item Störung des Feldes durch dielektrische oder magnetische (Stör-)Körper (BILD?)
-			\item Abhängig von Feldamplitude am Ort des Störkörpers
-		\end{itemize}
+			\setlength\itemsep{1.25em}
+			\item lokalisierte Störung der Felder durch diel.\ oder mag.\ Störkörper
+			\begin{itemize}
+				\item Polarisation / Magnetisierung durch äußeres Feld
+			\end{itemize}
+			
+			\item Annahme: kleine Störkörper
+
+			\item Störung abhängig von Feld am Ort des Störkörpers
 		
+	\end{itemize}
 		\column{0.4\textwidth}
 		\centering
 		\includegraphics[scale=1.0]{./figures/stoerung.pdf}
@@ -296,28 +305,77 @@ Seminar zur Bachelorarbeit SS15}
 
 \end{frame}
 
-\begin{frame}{Resonante Störkörpermessung}
+\begin{frame}
 	\begin{itemize}
-		\item Verschiebung der Resonanzfrequenz (kleine Störung):
+		\setlength\itemsep{1.25em}
+		\item Verschiebung der Resonanzfrequenz:
 		\begin{align*}
-			\frac{\Delta \omega}{\omega_0} = \frac{\int_{V} \, \mathrm{d}V \left( \vec{E}_0^* \cdot \vec{P} + \vec{B}_0^* \cdot \vec{M} \right)}{4 W_0}
+			\frac{\Delta \omega}{\omega_0} = -\frac{\int_{V} \, \mathrm{d}V \left[ \vec{E}_0^* \cdot \vec{P} + \vec{B}_0^* \cdot \vec{M} \right]}{4 W_0}
 		\end{align*}
 	
-	\item Polarisation und Magnetisierung abhängig vom Körper (Material und Form)
-	
-	\item erlaubt die Bestimmung der Felder des ungestörten Resonators
-	
+	\item Polarisation $\vec{P}$ und Magnetisierung $\vec{M}$ abhängig von:
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item Material und Form des Störkörpers
+			\item Position des Störkörpers (\todo{ext.\ Feld})
+		\end{itemize}
+	\item Bestimmung der ortsabh.\ Feldamplituden des ungestörten Resonators möglich	
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\setlength\itemsep{1.25em}
+		\item el.\ Feldamplitude für dielektrische Störkörper ($\vec{M} = 0$):
+		\begin{align*}
+			|\vec{E}_0(\vec{x}_\mathrm{s})| = \sqrt{- 4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}} \quad \text{für} \quad \Delta \omega \leq 0
+		\end{align*}
+		
+		\item Störkörperkonstante $\alpha_\mathrm{s}$ (abh.\ von Form, Permittivität)
 	\end{itemize}
 \end{frame}
 
 \section{Störkörpermessungen}
+
+\begin{frame}{PETRA-Resonator}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.6]{./figures/cavity.pdf}
+	\end{figure}
+	
+	\begin{itemize}
+		\setlength\itemsep{1.0em}
+		\item Beschleunigung ultrarelativistischer Teilchen durch $\mathrm{TM}_{010}$-Mode bei $\nu_0 = \SI{499.67}{Hz}$
+		
+		\item Anregung der (gekoppelten) Zellen durch Koppelschleife
+		
+		\item Abstimmstempel zur Frequenzeinstellung
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Störkörpermessstand}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.\textwidth]{./figures/messaufbau.pdf}
+	\end{figure}
+	\begin{itemize}
+		\setlength\itemsep{0.5em}
+		\item Schrittmotor zur Bewegung des Störkörpers im Resonator
+		\item vektorieller Netzwerkanalysator an Koppelschleife
+		\begin{itemize}
+			\item Anregung durch Hochfrequenzsignal
+			\item Messung des (komplexen) Reflexionsfaktors
+		\end{itemize}
+		\item automatisierte Messung \todo{durch Computersteuerung}
+	\end{itemize}	
+\end{frame}
+
 \begin{frame}{Probleme}
 	Temperatur
 \end{frame}
 
-\begin{frame}{Aufbau}
-	\includegraphics[width=1.\textwidth]{./figures/messaufbau.pdf}
-\end{frame}
+
 \begin{frame}{Störkörpermessungen}
 	\vspace*{2cm}
 	\centering
@@ -357,7 +415,7 @@ Seminar zur Bachelorarbeit SS15}
 
 \beginbackup
 % Hier die Backupfolien
-\begin{frame}{Longitudinale Schwingungsmoden}
+\begin{frame}{Longitudinale Schwingungsmoden $\mathrm{TM}_{01p}$}
 	\centering
 	\includegraphics[scale=1.0]{./figures/longitudinale_periode.pdf}
 \end{frame}
@@ -367,7 +425,20 @@ Seminar zur Bachelorarbeit SS15}
 		\centering
 		\input{./plots/resonanzkurve_full.tex}
 	\end{small}
+\end{frame}
 
+\begin{frame}{Störkörperkonstante $\alpha_\mathrm{s}$}
+	\begin{itemize}
+		\item Polarisation einer dielektrischen Kugel im homogenen el.\ Feld:
+		\begin{align*}
+			  \vec{P} = 3 \, \frac{\varepsilon_\mathrm{r} - 1}{\varepsilon_\mathrm{r} + 2} \, \varepsilon_0 \vec{E}_0
+		\end{align*}
+		
+		\item resultierende Störkörperkonstante:
+		\begin{align*}
+			\alpha_\mathrm{s} = 3 \, \frac{\varepsilon_\mathrm{r} - 1}{\varepsilon_\mathrm{r} + 2} \, \varepsilon_0 V_\mathrm{s}
+		\end{align*}
+	\end{itemize}
 \end{frame}
 \backupend
 
