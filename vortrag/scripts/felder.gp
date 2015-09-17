@@ -12,7 +12,7 @@ set format x "%.0f"
 set format y "%.0f"
 
 #set xtics 210,300,2010
-#set ytics start,step,stop
+set ytics 0,2000,8000
 
 
 set xrange [0:2220]
@@ -35,8 +35,13 @@ load './scripts/gnuplot_linestyles.gp'
 ### PI ###
 set output './plots/messung_pi_1.tex'
 
+plot '../mythesis/data/PETRA-III/fundamental/pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4
+
+set output './plots/messung_pi_2.tex'
+
 plot '../mythesis/data/PETRA-III/fundamental/pi/feld.tsv' using 1:3:2:4 w xyerrorbars t"Amplitude" ls 1 pt 7 ps 0.4,\
 '../mythesis/data/PETRA-III/fundamental/pi/eff_feld.tsv' using 1:3:2:4 w xyerrorbars t"effektives Feld" ls 2 pt 7 ps 0.4
+
 
 ### FOOTER START
 unset output

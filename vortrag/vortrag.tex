@@ -367,14 +367,14 @@ Seminar zur Bachelorarbeit SS15}
 			\item Anregung durch Hochfrequenzsignal
 			\item Messung des (komplexen) Reflexionsfaktors
 		\end{itemize}
-		\item automatisierte Messung \todo{durch Computersteuerung}
+		\item automatisierte Messung
 	\end{itemize}	
 \end{frame}
 
 \begin{frame}{Problem}
 	\begin{itemize}
 		\setlength\itemsep{1.25em}
-		\item Resonator soll mit kleiner Schrittweite vermessen werden
+		\item Vermessung mit kleiner Schrittweite
 		\begin{itemize}
 			\setlength\itemsep{0.25em}
 			\item Messdauer: $\sim \SI{2}{\hour}$
@@ -420,11 +420,63 @@ Seminar zur Bachelorarbeit SS15}
 
 \section{Ergebnisse}
 \begin{frame}{Ergebnisse}
-	Ergebnisse
+	\begin{itemize}
+		\setlength\itemsep{1.25em}
+		\item Vermessung verschiedener Resonatormoden	
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item $\mathrm{TM}_{010}$-Moden
+			\item Moden höherer Ordnung
+		\end{itemize}
+		
+		\item Güte $Q_0$, Koppelfaktor $\kappa$, Resonanzfrequenz $\nu_0$ aus Reflexionsspektrum
+		
+		\item Berechnung des el. Feldes $E_0 / \sqrt{P_\mathrm{V}}$
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item unabhängig von eingekoppelter Leistung
+			\item einfache Berechnung der Shuntimpedanz:
+			\begin{align*}
+			R_\mathrm{S} = \frac{|U|^2}{2 P_\mathrm{V}}
+			\end{align*}
+			
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{$\text{TM}_{010}$-$\pi$-Mode}
+	\centering
+	\input{./plots/messung_pi_1.tex}
+\end{frame}
+\begin{frame}{$\text{TM}_{010}$-$\pi$-Mode}
+	\addtocounter{framenumber}{-1}
+	\centering
+	\input{./plots/messung_pi_2.tex}
 \end{frame}
 
 \begin{frame}
-	\input{./plots/messung_pi_1.tex}
+	\begin{itemize}
+		\setlength\itemsep{1.25em}
+		\item \textbf{Vermessung:} $\mathrm{TM}_{010}$-Beschleunigungsmode
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item Shuntimpedanz $R_\mathrm{S} \approx \SI{25}{\mega\ohm}$
+			\item Beschleunigungsspannung $U \approx \SI{2.2}{\mega\volt}$ (bei $P_\mathrm{V} = \SI{100}{kW}$)
+		\end{itemize}
+		
+		\item \textbf{Vergleich:} fünfzellige PETRA-Resonatoren (\SI{100}{\kilo\watt})
+		\begin{align*}
+			R_\mathrm{S} \approx \SI{15}{\mega\ohm} \qquad U \approx \SI{1.7}{\mega\volt}
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Moden höherer Ordnung}
+	TODO
+\end{frame}
+
+\begin{frame}{Abschluss}
+	TODO
 \end{frame}
 
 \begin{frame}{Literatur}
