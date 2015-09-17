@@ -371,12 +371,33 @@ Seminar zur Bachelorarbeit SS15}
 	\end{itemize}	
 \end{frame}
 
-\begin{frame}{Probleme}
-	Temperatur
+\begin{frame}{Problem}
+	\begin{itemize}
+		\setlength\itemsep{1.25em}
+		\item Resonator soll mit kleiner Schrittweite vermessen werden
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item Messdauer: $\sim \SI{2}{\hour}$
+			\item Temperaturänderung nicht zu vermeiden
+		\end{itemize}
+		
+		\item Resonanzfrequenz sensitiv auf Temperaturänderung: 
+		\begin{align*}
+			\frac{\Delta \nu}{\Delta T} \approx \SI{8}{\kilo\hertz\per\celsius}
+		\end{align*}
+		
+		\item typische Frequenzverschiebung durch Störkörper:
+		\begin{align*}
+			\Delta \nu \sim \SI{-10}{\kilo\hertz}
+		\end{align*}
+		
+		\item \textbf{Lösung:} messe Frequenzen relativ zu einer Referenzfrequenz
+		
+	\end{itemize}
 \end{frame}
 
 
-\begin{frame}{Störkörpermessungen}
+\begin{frame}{Messablauf}
 	\vspace*{2cm}
 	\centering
 	\begin{overpic}[width=0.95\textwidth,tics=10]{./figures/messaufbau_refpos.pdf}
@@ -386,7 +407,7 @@ Seminar zur Bachelorarbeit SS15}
 	\end{overpic}
 \end{frame}
 
-\begin{frame}{Störkörpermessungen}
+\begin{frame}{Messablauf}
 	\addtocounter{framenumber}{-1} 
 	\vspace*{2cm}
 	\centering
@@ -400,6 +421,10 @@ Seminar zur Bachelorarbeit SS15}
 \section{Ergebnisse}
 \begin{frame}{Ergebnisse}
 	Ergebnisse
+\end{frame}
+
+\begin{frame}
+	\input{./plots/messung_pi_1.tex}
 \end{frame}
 
 \begin{frame}{Literatur}
