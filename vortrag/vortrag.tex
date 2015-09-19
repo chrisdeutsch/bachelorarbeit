@@ -460,7 +460,7 @@ Seminar zur Bachelorarbeit}
 	\centering
 	{\def\arraystretch{2}\tabcolsep=10pt
 	\begin{tabular}{p{3.5cm}|cc} \toprule
-		$\mathrm{TM}_{010}$-$\pi$-Mode & \textbf{PETRA-I} & \textbf{PETRA-II} \\ \midrule
+		$\mathrm{TM}_{010}$-$\pi$-Mode & \textbf{PETRA-III} & \textbf{PETRA-IV} \\ \midrule
 		Kreisgüte $Q_0$ & \num{29560 +- 110} & \num{28200 +- 180} \\
 		Shuntimpedanz $R_\mathrm{S}$ & \SI{25.7 +- 1.0}{\mega\ohm} & \SI{24.5 +- 0.9}{\mega\ohm} \\
 		Beschleunigungs\-spannung~$U$\newline($P_\mathrm{V} = \SI{100}{\kilo\watt}$)& \SI{2.27 +- 0.05}{\mega\volt} & \SI{2.21 +- 0.04}{\mega\volt} \\
@@ -468,7 +468,7 @@ Seminar zur Bachelorarbeit}
 	}
 	\vspace*{0.5cm}
 	\begin{itemize}
-		\item \textbf{Vergleich:} fünfzellige PETRA-Resonatoren (\SI{100}{kW})
+		\item \textbf{Vergleich:} fünfzellige PETRA-Resonatoren (\SI{100}{kW}) \cite{desy_petra5}
 		\begin{align*}
 			R_\mathrm{S} \approx \SI{15}{\mega\ohm} \qquad U \approx \SI{1.7}{\mega\volt}
 		\end{align*}
@@ -478,37 +478,51 @@ Seminar zur Bachelorarbeit}
 \begin{frame}{Moden höherer Ordnung}
 	\begin{itemize}
 		\setlength\itemsep{1.25em}
-		\item \textbf{Erwartung:} hohe Shuntimpedanz der $\mathrm{TM}_{021}$-Moden
+		\item unendliche Anzahl von Moden höherer Ordnung
 		\begin{itemize}
-			\item größte Shuntimpedanz (4/7)
-			\begin{align*}
-				\nu_0 = \SI{1465.8}{\mega\hertz}\qquad R_\mathrm{S} = \SI{183.0 +- 6.4}{\kilo\ohm}
-			\end{align*}
-			
-			\item mehrere Größenordnungen unter der Beschleunigermode
+			\item Vorauswahl durch Simulationen \cite{schedler} und Güte
 		\end{itemize}
 		
-		\item höchte gemessene Shuntimpedanz:
+		\item \textbf{Erwartung:} hohe Shuntimpedanz einer $\mathrm{TM}_{021}$-Mode
+		\begin{itemize}
+			\item größte Shuntimpedanz dieser Moden:
+			\begin{align*}
+			\nu_0 = \SI{1465.8}{\mega\hertz}\qquad R_\mathrm{S} = \SI{183.0 +- 6.4}{\kilo\ohm}
+			\end{align*}
+			\item zwei Größenordnungen unter der Beschleunigermode
+		\end{itemize}
+		
+		\item höchste gemessene Shuntimpedanz:
 		\begin{align*}
 			\mathrm{TE}_{111}: \quad \nu_0 = \SI{702.7}{\mega\hertz} \qquad R_\mathrm{S} = \SI{326 +- 11}{\kilo\ohm}
 		\end{align*}
-		\begin{itemize}
-			\item Interpretation
-		\end{itemize}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Abschluss}
-	TODO
+
+\begin{frame}{Zusammenfassung}
+	\begin{itemize}
+		\setlength\itemsep{1.25em}
+		\item Störkörpermessung zuverlässige Methode zur Feldvermessung
+		
+		\item Resonatoren erfüllen Erwartungen
+		
+		\item HOMS muss weiter überprüft werden (Strahlspektrum)
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Literatur}
 	\begin{thebibliography}{9}
-		\bibitem{foot}
-		Christopher J. Foot,
-		\emph{Atomic Physics},
-		Oxford University Press 2005
+		\bibitem{desy_petra5}
+		DESY-MHFe,
+		\emph{Data Sheet: 500 MHz, 5-Cell Cavity}
 		
+		\bibitem{schedler}
+		M.\ Schedler et al.,
+		\emph{A New RF station for the ELSA Stretcher Ring},
+		IPAC'15 Conf.\ Proc.\ (2015)
+		
+			
 	\end{thebibliography}
 	
 \end{frame}
