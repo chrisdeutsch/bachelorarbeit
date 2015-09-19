@@ -9,7 +9,9 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
+\usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{array}
 \usepackage[percent]{overpic}
 
 % Einheiten
@@ -55,8 +57,8 @@
 %\logo{}
 
 \institute[]
-{Rheinische Friedrich-Wilhelms-Universität Bonn \\
-Seminar zur Bachelorarbeit SS15}
+{Physikalisches Institut der Universität Bonn\\
+Seminar zur Bachelorarbeit}
 
 \date{24. September 2015}
 
@@ -455,16 +457,18 @@ Seminar zur Bachelorarbeit SS15}
 \end{frame}
 
 \begin{frame}
+	\centering
+	{\def\arraystretch{2}\tabcolsep=10pt
+	\begin{tabular}{p{3.5cm}|cc} \toprule
+		$\mathrm{TM}_{010}$-$\pi$-Mode & \textbf{PETRA-I} & \textbf{PETRA-II} \\ \midrule
+		Kreisgüte $Q_0$ & \num{29560 +- 110} & \num{28200 +- 180} \\
+		Shuntimpedanz $R_\mathrm{S}$ & \SI{25.7 +- 1.0}{\mega\ohm} & \SI{24.5 +- 0.9}{\mega\ohm} \\
+		Beschleunigungs\-spannung~$U$\newline($P_\mathrm{V} = \SI{100}{\kilo\watt}$)& \SI{2.27 +- 0.05}{\mega\volt} & \SI{2.21 +- 0.04}{\mega\volt} \\
+	\end{tabular}
+	}
+	\vspace*{0.5cm}
 	\begin{itemize}
-		\setlength\itemsep{1.25em}
-		\item \textbf{Vermessung:} $\mathrm{TM}_{010}$-Beschleunigungsmode
-		\begin{itemize}
-			\setlength\itemsep{0.25em}
-			\item Shuntimpedanz $R_\mathrm{S} \approx \SI{25}{\mega\ohm}$
-			\item Beschleunigungsspannung $U \approx \SI{2.2}{\mega\volt}$ (bei $P_\mathrm{V} = \SI{100}{kW}$)
-		\end{itemize}
-		
-		\item \textbf{Vergleich:} fünfzellige PETRA-Resonatoren (\SI{100}{\kilo\watt})
+		\item \textbf{Vergleich:} fünfzellige PETRA-Resonatoren (\SI{100}{kW})
 		\begin{align*}
 			R_\mathrm{S} \approx \SI{15}{\mega\ohm} \qquad U \approx \SI{1.7}{\mega\volt}
 		\end{align*}
@@ -538,7 +542,11 @@ Seminar zur Bachelorarbeit SS15}
 \end{frame}
 
 \begin{frame}{Moden einer Resonatorkette}
-	Bild mit Phasoren
+	\includegraphics[scale=0.9]{./figures/phasoren_top.pdf}
+\end{frame}
+
+\begin{frame}
+	\includegraphics[scale=0.9]{./figures/phasoren_bottom.pdf}
 \end{frame}
 \backupend
 
