@@ -44,8 +44,6 @@
 % Navigationsleiste ausschalten
 \beamertemplatenavigationsymbolsempty
 
-\DeclareMathOperator{\divergence}{div}
-
 \author[Christopher Deutsch]
 {Christopher Deutsch}
 
@@ -84,9 +82,9 @@ Seminar zur Bachelorarbeit}
 \section{Motivation}
 %\frame{\tableofcontents[currentsection]} Inhaltsverzeichnis für die aktuelle Section
 % \setlength\itemsep{1em} in itemization zur abstandeinstellung
-\begin{frame}{Motivation (Zuviel Text)}
+\begin{frame}{Motivation}
 	\begin{itemize}
-		\item Begrenzung des internen Strahlstroms an ELSA durch fehlende Hochfrequenzleistung
+		\item Begrenzung des internen Strahlstroms an ELSA
 		\begin{itemize}
 			\setlength\itemsep{0.25em}
 			\item max.\ interner Strahlstrom  $\sim\SI{20}{mA}$ bei \SI{3.2}{GeV}
@@ -101,11 +99,10 @@ Seminar zur Bachelorarbeit}
 		\end{itemize}
 		\vfill
 		
-		\item Bestimmung der elektrischen Feldverteilung durch resonante Störkörpermessung
+		\item Bestimmung der elektrischen Feldverteilung durch Störkörpermessung
 		\begin{itemize}
 			\setlength\itemsep{0.25em}
-			\item Beschleunigungsspannung
-			\item Beschleunigungseffizienz (Shuntimpedanz)
+			\item Beschleunigungsspannung und Shuntimpedanz
 			\item Moden höherer Ordnung
 		\end{itemize}
 	\end{itemize}
@@ -114,8 +111,8 @@ Seminar zur Bachelorarbeit}
 
 \section{Hohlraumresonatoren}
 
-\subsection{Schwingungsmoden}
-\begin{frame}{Schwingungsmoden}
+\subsection{Felder und Schwingungsmoden}
+\begin{frame}{Felder und Schwingungsmoden}
 	\begin{columns}[T]
 		\column{0.60\textwidth}
 		\begin{itemize}
@@ -180,7 +177,7 @@ Seminar zur Bachelorarbeit}
 \end{frame}
 
 
-\subsection{elektrische Eigenschaften}
+\subsection{Impedanzmodell}
 \begin{frame}{Impedanzmodell für Hohlraumresonatoren}
 	\begin{columns}[c]
 		\column{0.7\textwidth}
@@ -319,7 +316,7 @@ Seminar zur Bachelorarbeit}
 		\begin{itemize}
 			\setlength\itemsep{0.25em}
 			\item Material und Form des Störkörpers
-			\item Position des Störkörpers (\todo{ext.\ Feld})
+			\item Position des Störkörpers
 		\end{itemize}
 	\item Bestimmung der ortsabh.\ Feldamplituden des ungestörten Resonators möglich	
 	\end{itemize}
@@ -337,7 +334,7 @@ Seminar zur Bachelorarbeit}
 	\end{itemize}
 \end{frame}
 
-\section{Störkörpermessungen}
+\section{Störkörpermessungen an PETRA-Resonatoren}
 
 \begin{frame}{PETRA-Resonator}
 	\begin{figure}
@@ -511,7 +508,7 @@ Seminar zur Bachelorarbeit}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Literatur}
+\begin{frame}{Quellen}
 	\begin{thebibliography}{9}
 		\bibitem{desy_petra5}
 		DESY-MHFe,
@@ -529,6 +526,12 @@ Seminar zur Bachelorarbeit}
 
 \beginbackup
 % Hier die Backupfolien
+
+\begin{frame}
+	\centering
+	\textbf{Zusätzliche Folien:}
+\end{frame}
+
 \begin{frame}{Longitudinale Schwingungsmoden $\mathrm{TM}_{01p}$}
 	\centering
 	\includegraphics[scale=1.0]{./figures/longitudinale_periode.pdf}
