@@ -111,7 +111,6 @@ Seminar zur Bachelorarbeit}
 
 \section{Hohlraumresonatoren}
 
-\subsection{Felder und Schwingungsmoden}
 \begin{frame}{Felder und Schwingungsmoden}
 	\begin{columns}[T]
 		\column{0.60\textwidth}
@@ -146,38 +145,6 @@ Seminar zur Bachelorarbeit}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[t]
-	\begin{columns}[T]
-		\column{0.5\textwidth}
-		\begin{figure}[h]
-			\centering
-			\hspace*{0.70cm}\includegraphics[scale=0.4]{./figures/tm010.pdf}
-			\vspace*{-0.2cm}
-			\caption{$\mathrm{TM}_{010}$}
-		\end{figure}
-		
-		\column{0.5\textwidth}
-		\begin{figure}[h]
-			\centering
-			\hspace*{0.70cm}\includegraphics[scale=0.4]{./figures/tm210.pdf}
-			\vspace*{-0.2cm}
-			\caption{$\mathrm{TM}_{210}$}
-		\end{figure}
-	\end{columns}
-	\vfill
-	\begin{itemize}
-		\item $\mathrm{TM}_{mnp}$ / $\mathrm{TE}_{mnp}$:
-		\begin{itemize}
-			\setlength\itemsep{0.25em}
-			\item $m$: azimuthale Perioden
-			\item $n$: radiale Knoten
-			\item $p$: halbe longitudinale Perioden
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-
-\subsection{Impedanzmodell}
 \begin{frame}{Impedanzmodell für Hohlraumresonatoren}
 	\begin{columns}[c]
 		\column{0.7\textwidth}
@@ -233,7 +200,7 @@ Seminar zur Bachelorarbeit}
 				\setlength\itemsep{0.25em}
 				\item Transformation der Impedanz $Z \rightarrow Z^\prime$
 				\begin{align*}
-					Z^\prime(\omega) = \kappa \frac{Z_0}{R_\mathrm{S}} Z(\omega)
+					Z^\prime(\omega) \propto Z(\omega)
 				\end{align*}
 			\end{itemize}
 			
@@ -309,10 +276,10 @@ Seminar zur Bachelorarbeit}
 		\setlength\itemsep{1.25em}
 		\item Verschiebung der Resonanzfrequenz:
 		\begin{align*}
-			\frac{\Delta \omega}{\omega_0} = -\frac{\int_{V} \, \mathrm{d}V \left[ \vec{E}_0^* \cdot \vec{P} + \vec{B}_0^* \cdot \vec{M} \right]}{4 W_0}
+			\frac{\Delta \omega}{\omega_0} = -\frac{\int_{V} \, \mathrm{d}V \left[ \textcolor{Green}{\vec{E}_0^*} \cdot \textcolor{Red}{\vec{P}} + \textcolor{Green}{\vec{B}_0^*} \cdot \textcolor{Red}{\vec{M}} \right]}{4 W_0}
 		\end{align*}
 	
-	\item Polarisation $\vec{P}$ und Magnetisierung $\vec{M}$ abhängig von:
+	\item Polarisation $\textcolor{Red}{\vec{P}}$ und Magnetisierung $\textcolor{Red}{\vec{M}}$ abhängig von:
 		\begin{itemize}
 			\setlength\itemsep{0.25em}
 			\item Material und Form des Störkörpers
@@ -327,7 +294,7 @@ Seminar zur Bachelorarbeit}
 		\setlength\itemsep{1.25em}
 		\item el.\ Feldamplitude für dielektrische Störkörper ($\vec{M} = 0$):
 		\begin{align*}
-			|\vec{E}_0(\vec{x}_\mathrm{s})| = \sqrt{- 4 \cdot \frac{W_0}{\alpha_\mathrm{s}} \cdot \frac{\Delta \omega}{\omega_0}} \quad \text{für} \quad \Delta \omega \leq 0
+			|\vec{E}_0(\textcolor{Red}{\vec{x}_\mathrm{s}})| = \sqrt{- 4 \cdot \frac{W_0}{\textcolor{Red}{\alpha_\mathrm{s}}} \cdot \frac{\textcolor{Red}{\Delta \omega}}{\omega_0}} \quad \text{für} \quad \Delta \omega \leq 0
 		\end{align*}
 		
 		\item Störkörperkonstante $\alpha_\mathrm{s}$ (abh.\ von Form, Permittivität)
@@ -370,7 +337,7 @@ Seminar zur Bachelorarbeit}
 	\end{itemize}	
 \end{frame}
 
-\begin{frame}{Problem}
+\begin{frame}{Temperaturabhängigkeit}
 	\begin{itemize}
 		\setlength\itemsep{1.25em}
 		\item Vermessung mit kleiner Schrittweite
@@ -380,14 +347,14 @@ Seminar zur Bachelorarbeit}
 			\item Temperaturänderung nicht zu vermeiden
 		\end{itemize}
 		
-		\item Resonanzfrequenz sensitiv auf Temperaturänderung: 
+		\item Resonanzfrequenz sensitiv auf Temperaturänderung \cite{desy_petra7}: 
 		\begin{align*}
 			\frac{\Delta \nu}{\Delta T} \approx \SI{8}{\kilo\hertz\per\celsius}
 		\end{align*}
 		
 		\item typische Frequenzverschiebung durch Störkörper:
 		\begin{align*}
-			\Delta \nu \sim \SI{-10}{\kilo\hertz}
+			\Delta \nu \sim \SI{10}{\kilo\hertz}
 		\end{align*}
 		
 		\item \textbf{Lösung:} messe Frequenzen relativ zu einer Referenzfrequenz
@@ -443,6 +410,10 @@ Seminar zur Bachelorarbeit}
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{$\text{TM}_{010}$-$\pi$-Mode}
+	\centering
+	\input{./plots/frequenzverschiebung.tex}
+\end{frame}
 \begin{frame}{$\text{TM}_{010}$-$\pi$-Mode}
 	\centering
 	\input{./plots/messung_pi_1.tex}
@@ -513,6 +484,10 @@ Seminar zur Bachelorarbeit}
 
 \begin{frame}{Quellen}
 	\begin{thebibliography}{9}
+		\bibitem{desy_petra7}
+		DESY-MHFe,
+		\emph{Data Sheet: 500 MHz, 7-Cell Cavity}
+		
 		\bibitem{desy_petra5}
 		DESY-MHFe,
 		\emph{Data Sheet: 500 MHz, 5-Cell Cavity}
@@ -535,7 +510,37 @@ Seminar zur Bachelorarbeit}
 	\textbf{Zusätzliche Folien:}
 \end{frame}
 
-\begin{frame}{Longitudinale Schwingungsmoden $\mathrm{TM}_{01p}$}
+\begin{frame}{Resonatormoden $\mathrm{TM}_{m10}$}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+		\begin{figure}[h]
+			\centering
+			\hspace*{0.70cm}\includegraphics[scale=0.4]{./figures/tm010.pdf}
+			\vspace*{-0.2cm}
+			\caption{$\mathrm{TM}_{010}$}
+		\end{figure}
+		
+		\column{0.5\textwidth}
+		\begin{figure}[h]
+			\centering
+			\hspace*{0.70cm}\includegraphics[scale=0.4]{./figures/tm210.pdf}
+			\vspace*{-0.2cm}
+			\caption{$\mathrm{TM}_{210}$}
+		\end{figure}
+	\end{columns}
+	\vfill
+	\begin{itemize}
+		\item $\mathrm{TM}_{mnp}$ / $\mathrm{TE}_{mnp}$:
+		\begin{itemize}
+			\setlength\itemsep{0.25em}
+			\item $m$: azimuthale Perioden
+			\item $n$: radiale Knoten
+			\item $p$: halbe longitudinale Perioden
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Resonatormoden $\mathrm{TM}_{01p}$}
 	\centering
 	\includegraphics[scale=1.0]{./figures/longitudinale_periode.pdf}
 \end{frame}
