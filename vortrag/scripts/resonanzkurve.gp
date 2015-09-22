@@ -45,6 +45,9 @@ rho1(x) = sqrt( ((kappa-1)**2 + Q0**2 * (x/omega1 - omega1/x)**2) / ((kappa+1)**
 
 set output './plots/resonanzkurve_ref.tex'
 
+set arrow from 499.675, 0.0 to 499.675, 0.04 nohead front
+set label '\scriptsize{$\omega_0$}' at 499.675, -0.06 center front
+
 plot rho0(x) ls 1 t''
 
 set output './plots/resonanzkurve.tex'
@@ -52,6 +55,8 @@ set output './plots/resonanzkurve.tex'
 # Arrow
 set arrow from 499.645, 0.2 to 499.675, 0.2 as 1 front
 set label '$\Delta \omega$' at 499.660, 0.27 center front
+set arrow from 499.645, 0.0 to 499.645, 0.04 nohead front
+set label '\scriptsize{$\omega_1$}' at 499.645, -0.06 center front
 
 plot rho0(x) ls 2 t'', rho1(x) ls 1 t''
 
