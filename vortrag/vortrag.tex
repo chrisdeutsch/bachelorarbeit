@@ -82,33 +82,31 @@ Seminar zur Bachelorarbeit}
 \section{Motivation}
 %\frame{\tableofcontents[currentsection]} Inhaltsverzeichnis für die aktuelle Section
 % \setlength\itemsep{1em} in itemization zur abstandeinstellung
+
 \begin{frame}{Motivation}
-	\begin{itemize}
-		\item Begrenzung des internen Strahlstroms an ELSA
-		\begin{itemize}
-			\setlength\itemsep{0.25em}
-			\item max.\ interner Strahlstrom  $\sim\SI{20}{mA}$ bei \SI{3.2}{GeV}
-		\end{itemize}
-		\vfill
-		
-		\item Erweiterung des Stretcherrings durch zweite HF-Station
-		\begin{itemize}
-			\setlength\itemsep{0.25em}
-			\item Klystron und zwei 7-zellige PETRA-Resonatoren
-			\item interne Strahlströme bis zu \SI{200}{mA}
-		\end{itemize}
-		\vfill
-		
-		\item Bestimmung der elektrischen Feldverteilung durch Störkörpermessung
-		\begin{itemize}
-			\setlength\itemsep{0.25em}
-			\item Beschleunigungsspannung und Shuntimpedanz
-		\end{itemize}
-	\end{itemize}
+	\centering
+	\begin{overpic}[width=1.0\textwidth,tics=20]{./figures/elsa.pdf}
+		\put (81,55) {
+			\begin{minipage}[t]{0.3\textwidth}
+				HF-1:\\
+				$I_\mathrm{S} \approx \SI{20}{mA}$\\
+				(bei \SI{3.2}{GeV})
+			\end{minipage}
+			}
+		\put (33,5) {
+			\begin{minipage}[t]{0.3\textwidth}
+				HF-1 + HF-2:\\
+				$I_\mathrm{S} \approx \SI{200}{mA}$\\
+				(bei \SI{3.2}{GeV})
+			\end{minipage}
+			}
+	\end{overpic}
 \end{frame}
 
 
-\section{Hohlraumresonatoren}
+\section{Grundlagen}
+
+\subsection{Hohlraumresonatoren}
 
 \begin{frame}{Felder und Schwingungsmoden}
 	\begin{columns}[T]
@@ -268,7 +266,7 @@ Seminar zur Bachelorarbeit}
 \end{frame}
 	
 
-\section{Resonante Störkörpermessung}
+\subsection{Resonante Störkörpermessung}
 
 \begin{frame}{Resonante Störkörpermessung}
 	\begin{itemize}
@@ -522,11 +520,6 @@ Seminar zur Bachelorarbeit}
 \begin{frame}
 	\centering
 	\textbf{Zusätzliche Folien:}
-\end{frame}
-
-\begin{frame}
-	\centering
-	\includegraphics[width=\textwidth]{./figures/elsa.pdf}
 \end{frame}
 
 \begin{frame}{Resonatormoden $\mathrm{TM}_{01p}$}
