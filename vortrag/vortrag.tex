@@ -190,81 +190,59 @@ Seminar zur Bachelorarbeit}
 		\includegraphics[scale=1.15]{./figures/RLC_circuit.pdf}
 	\end{columns}
 	\vfill
-	\begin{columns}[T]
-		\column{0.55\textwidth}
-		\begin{itemize}
-			\item Impedanzmodell:
-			\begin{align*}
-			Z(\omega) = \frac{R_\mathrm{S}}{1 + \mathrm{i} Q_0 \left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} \right)}
-			\end{align*}
-		\end{itemize}
-		
-		\column{0.45\textwidth}
-		\begin{itemize}
-			\item mittlere Verlustleistung:
-			\begin{align*}
-				P_\mathrm{V} = \frac{\left|U\right|^2}{2 R_\mathrm{S}}
-			\end{align*}
-		\end{itemize}
-	\end{columns}
-	
-
+	\begin{itemize}
+		\item mittlere Verlustleistung:
+		\begin{align*}
+		P_\mathrm{V} = \frac{\left|U\right|^2}{2 R_\mathrm{S}}
+		\end{align*}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Kopplung mit externer Leistungsquelle}
 	\begin{columns}[c]
 		\column{0.65\textwidth}
 		\begin{itemize}
-			\setlength\itemsep{1.25em}
-			\item Übertragung von Energie in Resonatormode
-			\begin{itemize}
-				\setlength\itemsep{0.25em}
-				\item induktive Schleifenkopplung
-			\end{itemize}
-			
-			\item Kopplung an die äußere Beschaltung
-			\begin{itemize}
-				\setlength\itemsep{0.25em}
-				\item Transformation der Impedanz $Z \rightarrow Z^\prime$
-			\end{itemize}
-			
-			\item Koppelfaktor $\kappa$:
-			\begin{itemize}
-				\setlength\itemsep{0.25em}
-				\item Maß für Kopplung zwischen Wellenleiter und Resonator\setlength\itemsep{0.25em}
-			\end{itemize}
+			\item<2-> Ersatzschaltbild:
 		\end{itemize}
-		
+		\vspace*{0.2cm}
+		\centering
+		\includegraphics<2>[scale=1.15]{./figures/RLC_coupling_step_1.pdf}
+		\includegraphics<3>[scale=1.15]{./figures/RLC_coupling_step_2.pdf}
+		\includegraphics<4>[scale=1.15]{./figures/RLC_coupling_step_3.pdf}
 		\column{0.35\textwidth}
 		\centering
-		\includegraphics[scale=0.8]{./figures/pillbox_loop.pdf}
+		\includegraphics<1->[scale=0.8]{./figures/pillbox_loop.pdf}
 	\end{columns}
 	
 \end{frame}
 
-\begin{frame}
-	\begin{itemize}
-		\item komplexer Reflexionsfaktor:
-		\begin{align*}
-		\rho(\omega) = \frac{(\kappa - 1) + \mathrm{i} Q_0 \left(\frac{\omega}{\omega_0} - \frac{\omega_0}{\omega}\right) }{(\kappa + 1) + \mathrm{i} Q_0 \left( \frac{\omega}{\omega_0} - \frac{\omega_0}{\omega} \right)}
-		\end{align*}
-	\end{itemize}
-	\vfill
-	\begin{columns}[c]
-		\column{0.7\textwidth}
-			\begin{small}
-				\centering
-				\input{./plots/resonanzkurve_2.tex}
-			\end{small}		
-		\column{0.3\textwidth}
-		\vspace*{-1.3cm}
-		\begin{flalign*}
-			Q_0 &= 300 &\\
-			\kappa &= 1{,}1 &
-		\end{flalign*}
-	\end{columns}
+\begin{frame}{Resonanzkurve}
+	\centering
+	\begin{small}
+		\input{./plots/resonanzkurve_step_1.tex}
+	\end{small}
 \end{frame}
-	
+\begin{frame}{Resonanzkurve}
+	\addtocounter{framenumber}{-1}
+	\centering
+	\begin{small}
+		\input{./plots/resonanzkurve_step_2.tex}
+	\end{small}
+\end{frame}
+\begin{frame}{Resonanzkurve}
+	\addtocounter{framenumber}{-1}
+	\centering
+	\begin{small}
+		\input{./plots/resonanzkurve_step_3.tex}
+	\end{small}
+\end{frame}
+\begin{frame}{Resonanzkurve}
+	\addtocounter{framenumber}{-1}
+	\centering
+	\begin{small}
+		\input{./plots/resonanzkurve_step_4.tex}
+	\end{small}
+\end{frame}
 
 \subsection{Resonante Störkörpermessung}
 
@@ -504,14 +482,10 @@ Seminar zur Bachelorarbeit}
 		\item $\mathrm{TM}_{010}$-Mode beider Resonatoren erfüllt die Erwartungen
 		
 		\item keine Moden höherer Ordnung mit hoher Shuntimpedanz identifiziert
-		\begin{itemize}
-			\item Einfluss auf Instabilitäten
-		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Vielen Dank für die Aufmerksamkeit}
-	Bildsche
 \end{frame}
 
 \beginbackup
@@ -525,13 +499,6 @@ Seminar zur Bachelorarbeit}
 \begin{frame}{Resonatormoden $\mathrm{TM}_{01p}$}
 	\centering
 	\includegraphics[scale=1.0]{./figures/longitudinale_periode.pdf}
-\end{frame}
-
-\begin{frame}{Resonanzkurven}
-	\begin{small}
-		\centering
-		\input{./plots/resonanzkurve_full.tex}
-	\end{small}
 \end{frame}
 
 \begin{frame}{Störkörperkonstante $\alpha_\mathrm{s}$}
